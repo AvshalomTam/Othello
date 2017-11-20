@@ -8,8 +8,8 @@ using namespace std;
 HumanPlayer::HumanPlayer(int numplayer) : Player(numplayer) {}
 
 Coordinates HumanPlayer::getMove() const {
-  string s;
-  cin >> s;
-  cin.get();
-  return Coordinates(s);
+    string s;
+    cin >> s;
+    cin.get();
+    return Coordinates(s);
 }

@@ -48,59 +48,13 @@ RM = /home/steve/Documents/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/steve/Desktop/Reversi
+CMAKE_SOURCE_DIR = /home/steve/Desktop/Othello
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/steve/Desktop/Reversi/cmake-build-debug
+CMAKE_BINARY_DIR = /home/steve/Desktop/Othello/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/steve/Documents/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/steve/Documents/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/steve/Documents/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/steve/Documents/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/steve/Documents/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/steve/Documents/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -126,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Othello/cmake-build-debug/CMakeFiles /home/steve/Desktop/Othello/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Othello/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -157,82 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Test
+# Target rules for targets named Othello
 
 # Build rule for target.
-Test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Test
-.PHONY : Test
+Othello: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Othello
+.PHONY : Othello
 
 # fast build rule for target.
-Test/fast:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
-.PHONY : Test/fast
-
-#=============================================================================
-# Target rules for targets named Reversi
-
-# Build rule for target.
-Reversi: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Reversi
-.PHONY : Reversi
-
-# fast build rule for target.
-Reversi/fast:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/build
-.PHONY : Reversi/fast
-
-#=============================================================================
-# Target rules for targets named gmock_main
-
-# Build rule for target.
-gmock_main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
-.PHONY : gmock_main
-
-# fast build rule for target.
-gmock_main/fast:
-	$(MAKE) -f gtest_src/googlemock/CMakeFiles/gmock_main.dir/build.make gtest_src/googlemock/CMakeFiles/gmock_main.dir/build
-.PHONY : gmock_main/fast
-
-#=============================================================================
-# Target rules for targets named gmock
-
-# Build rule for target.
-gmock: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gmock
-.PHONY : gmock
-
-# fast build rule for target.
-gmock/fast:
-	$(MAKE) -f gtest_src/googlemock/CMakeFiles/gmock.dir/build.make gtest_src/googlemock/CMakeFiles/gmock.dir/build
-.PHONY : gmock/fast
-
-#=============================================================================
-# Target rules for targets named gtest_main
-
-# Build rule for target.
-gtest_main: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
-.PHONY : gtest_main
-
-# fast build rule for target.
-gtest_main/fast:
-	$(MAKE) -f gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-.PHONY : gtest_main/fast
-
-#=============================================================================
-# Target rules for targets named gtest
-
-# Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gtest
-.PHONY : gtest
-
-# fast build rule for target.
-gtest/fast:
-	$(MAKE) -f gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
+Othello/fast:
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/build
+.PHONY : Othello/fast
 
 src/AIplayer.o: src/AIplayer.cpp.o
 
@@ -240,8 +129,7 @@ src/AIplayer.o: src/AIplayer.cpp.o
 
 # target to build an object file
 src/AIplayer.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/AIplayer.cpp.o
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/AIplayer.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/AIplayer.cpp.o
 .PHONY : src/AIplayer.cpp.o
 
 src/AIplayer.i: src/AIplayer.cpp.i
@@ -250,8 +138,7 @@ src/AIplayer.i: src/AIplayer.cpp.i
 
 # target to preprocess a source file
 src/AIplayer.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/AIplayer.cpp.i
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/AIplayer.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/AIplayer.cpp.i
 .PHONY : src/AIplayer.cpp.i
 
 src/AIplayer.s: src/AIplayer.cpp.s
@@ -260,8 +147,7 @@ src/AIplayer.s: src/AIplayer.cpp.s
 
 # target to generate assembly for a file
 src/AIplayer.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/AIplayer.cpp.s
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/AIplayer.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/AIplayer.cpp.s
 .PHONY : src/AIplayer.cpp.s
 
 src/BasicRules.o: src/BasicRules.cpp.o
@@ -270,7 +156,7 @@ src/BasicRules.o: src/BasicRules.cpp.o
 
 # target to build an object file
 src/BasicRules.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/BasicRules.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/BasicRules.cpp.o
 .PHONY : src/BasicRules.cpp.o
 
 src/BasicRules.i: src/BasicRules.cpp.i
@@ -279,7 +165,7 @@ src/BasicRules.i: src/BasicRules.cpp.i
 
 # target to preprocess a source file
 src/BasicRules.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/BasicRules.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/BasicRules.cpp.i
 .PHONY : src/BasicRules.cpp.i
 
 src/BasicRules.s: src/BasicRules.cpp.s
@@ -288,7 +174,7 @@ src/BasicRules.s: src/BasicRules.cpp.s
 
 # target to generate assembly for a file
 src/BasicRules.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/BasicRules.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/BasicRules.cpp.s
 .PHONY : src/BasicRules.cpp.s
 
 src/Board.o: src/Board.cpp.o
@@ -297,7 +183,7 @@ src/Board.o: src/Board.cpp.o
 
 # target to build an object file
 src/Board.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/Board.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Board.cpp.o
 .PHONY : src/Board.cpp.o
 
 src/Board.i: src/Board.cpp.i
@@ -306,7 +192,7 @@ src/Board.i: src/Board.cpp.i
 
 # target to preprocess a source file
 src/Board.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/Board.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Board.cpp.i
 .PHONY : src/Board.cpp.i
 
 src/Board.s: src/Board.cpp.s
@@ -315,7 +201,7 @@ src/Board.s: src/Board.cpp.s
 
 # target to generate assembly for a file
 src/Board.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/Board.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Board.cpp.s
 .PHONY : src/Board.cpp.s
 
 src/CharBoard.o: src/CharBoard.cpp.o
@@ -324,7 +210,7 @@ src/CharBoard.o: src/CharBoard.cpp.o
 
 # target to build an object file
 src/CharBoard.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/CharBoard.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/CharBoard.cpp.o
 .PHONY : src/CharBoard.cpp.o
 
 src/CharBoard.i: src/CharBoard.cpp.i
@@ -333,7 +219,7 @@ src/CharBoard.i: src/CharBoard.cpp.i
 
 # target to preprocess a source file
 src/CharBoard.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/CharBoard.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/CharBoard.cpp.i
 .PHONY : src/CharBoard.cpp.i
 
 src/CharBoard.s: src/CharBoard.cpp.s
@@ -342,7 +228,7 @@ src/CharBoard.s: src/CharBoard.cpp.s
 
 # target to generate assembly for a file
 src/CharBoard.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/CharBoard.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/CharBoard.cpp.s
 .PHONY : src/CharBoard.cpp.s
 
 src/Coordinates.o: src/Coordinates.cpp.o
@@ -351,7 +237,7 @@ src/Coordinates.o: src/Coordinates.cpp.o
 
 # target to build an object file
 src/Coordinates.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/Coordinates.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Coordinates.cpp.o
 .PHONY : src/Coordinates.cpp.o
 
 src/Coordinates.i: src/Coordinates.cpp.i
@@ -360,7 +246,7 @@ src/Coordinates.i: src/Coordinates.cpp.i
 
 # target to preprocess a source file
 src/Coordinates.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/Coordinates.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Coordinates.cpp.i
 .PHONY : src/Coordinates.cpp.i
 
 src/Coordinates.s: src/Coordinates.cpp.s
@@ -369,7 +255,7 @@ src/Coordinates.s: src/Coordinates.cpp.s
 
 # target to generate assembly for a file
 src/Coordinates.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/Coordinates.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Coordinates.cpp.s
 .PHONY : src/Coordinates.cpp.s
 
 src/Game.o: src/Game.cpp.o
@@ -378,7 +264,7 @@ src/Game.o: src/Game.cpp.o
 
 # target to build an object file
 src/Game.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/Game.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Game.cpp.o
 .PHONY : src/Game.cpp.o
 
 src/Game.i: src/Game.cpp.i
@@ -387,7 +273,7 @@ src/Game.i: src/Game.cpp.i
 
 # target to preprocess a source file
 src/Game.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/Game.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Game.cpp.i
 .PHONY : src/Game.cpp.i
 
 src/Game.s: src/Game.cpp.s
@@ -396,7 +282,7 @@ src/Game.s: src/Game.cpp.s
 
 # target to generate assembly for a file
 src/Game.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/Game.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
 src/GameLogic.o: src/GameLogic.cpp.o
@@ -405,7 +291,7 @@ src/GameLogic.o: src/GameLogic.cpp.o
 
 # target to build an object file
 src/GameLogic.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/GameLogic.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameLogic.cpp.o
 .PHONY : src/GameLogic.cpp.o
 
 src/GameLogic.i: src/GameLogic.cpp.i
@@ -414,7 +300,7 @@ src/GameLogic.i: src/GameLogic.cpp.i
 
 # target to preprocess a source file
 src/GameLogic.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/GameLogic.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameLogic.cpp.i
 .PHONY : src/GameLogic.cpp.i
 
 src/GameLogic.s: src/GameLogic.cpp.s
@@ -423,7 +309,7 @@ src/GameLogic.s: src/GameLogic.cpp.s
 
 # target to generate assembly for a file
 src/GameLogic.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/GameLogic.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameLogic.cpp.s
 .PHONY : src/GameLogic.cpp.s
 
 src/HumanPlayer.o: src/HumanPlayer.cpp.o
@@ -432,7 +318,7 @@ src/HumanPlayer.o: src/HumanPlayer.cpp.o
 
 # target to build an object file
 src/HumanPlayer.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/HumanPlayer.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o
 .PHONY : src/HumanPlayer.cpp.o
 
 src/HumanPlayer.i: src/HumanPlayer.cpp.i
@@ -441,7 +327,7 @@ src/HumanPlayer.i: src/HumanPlayer.cpp.i
 
 # target to preprocess a source file
 src/HumanPlayer.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/HumanPlayer.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/HumanPlayer.cpp.i
 .PHONY : src/HumanPlayer.cpp.i
 
 src/HumanPlayer.s: src/HumanPlayer.cpp.s
@@ -450,7 +336,7 @@ src/HumanPlayer.s: src/HumanPlayer.cpp.s
 
 # target to generate assembly for a file
 src/HumanPlayer.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/HumanPlayer.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/HumanPlayer.cpp.s
 .PHONY : src/HumanPlayer.cpp.s
 
 src/Player.o: src/Player.cpp.o
@@ -459,7 +345,7 @@ src/Player.o: src/Player.cpp.o
 
 # target to build an object file
 src/Player.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/Player.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Player.cpp.o
 .PHONY : src/Player.cpp.o
 
 src/Player.i: src/Player.cpp.i
@@ -468,7 +354,7 @@ src/Player.i: src/Player.cpp.i
 
 # target to preprocess a source file
 src/Player.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/Player.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Player.cpp.i
 .PHONY : src/Player.cpp.i
 
 src/Player.s: src/Player.cpp.s
@@ -477,7 +363,7 @@ src/Player.s: src/Player.cpp.s
 
 # target to generate assembly for a file
 src/Player.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/Player.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -486,7 +372,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -495,7 +381,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -504,98 +390,8 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
-
-test/factorial.o: test/factorial.cpp.o
-
-.PHONY : test/factorial.o
-
-# target to build an object file
-test/factorial.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/factorial.cpp.o
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/test/factorial.cpp.o
-.PHONY : test/factorial.cpp.o
-
-test/factorial.i: test/factorial.cpp.i
-
-.PHONY : test/factorial.i
-
-# target to preprocess a source file
-test/factorial.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/factorial.cpp.i
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/test/factorial.cpp.i
-.PHONY : test/factorial.cpp.i
-
-test/factorial.s: test/factorial.cpp.s
-
-.PHONY : test/factorial.s
-
-# target to generate assembly for a file
-test/factorial.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/factorial.cpp.s
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/test/factorial.cpp.s
-.PHONY : test/factorial.cpp.s
-
-test/gtest_main.o: test/gtest_main.cpp.o
-
-.PHONY : test/gtest_main.o
-
-# target to build an object file
-test/gtest_main.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/gtest_main.cpp.o
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/test/gtest_main.cpp.o
-.PHONY : test/gtest_main.cpp.o
-
-test/gtest_main.i: test/gtest_main.cpp.i
-
-.PHONY : test/gtest_main.i
-
-# target to preprocess a source file
-test/gtest_main.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/gtest_main.cpp.i
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/test/gtest_main.cpp.i
-.PHONY : test/gtest_main.cpp.i
-
-test/gtest_main.s: test/gtest_main.cpp.s
-
-.PHONY : test/gtest_main.s
-
-# target to generate assembly for a file
-test/gtest_main.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/gtest_main.cpp.s
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/test/gtest_main.cpp.s
-.PHONY : test/gtest_main.cpp.s
-
-test/test_factorial.o: test/test_factorial.cpp.o
-
-.PHONY : test/test_factorial.o
-
-# target to build an object file
-test/test_factorial.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/test_factorial.cpp.o
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/test/test_factorial.cpp.o
-.PHONY : test/test_factorial.cpp.o
-
-test/test_factorial.i: test/test_factorial.cpp.i
-
-.PHONY : test/test_factorial.i
-
-# target to preprocess a source file
-test/test_factorial.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/test_factorial.cpp.i
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/test/test_factorial.cpp.i
-.PHONY : test/test_factorial.cpp.i
-
-test/test_factorial.s: test/test_factorial.cpp.s
-
-.PHONY : test/test_factorial.s
-
-# target to generate assembly for a file
-test/test_factorial.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/test_factorial.cpp.s
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/test/test_factorial.cpp.s
-.PHONY : test/test_factorial.cpp.s
 
 # Help Target
 help:
@@ -603,18 +399,9 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/strip"
-	@echo "... install/local"
-	@echo "... install"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Test"
-	@echo "... Reversi"
-	@echo "... gmock_main"
-	@echo "... gmock"
-	@echo "... gtest_main"
-	@echo "... gtest"
+	@echo "... Othello"
 	@echo "... src/AIplayer.o"
 	@echo "... src/AIplayer.i"
 	@echo "... src/AIplayer.s"
@@ -645,15 +432,6 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... test/factorial.o"
-	@echo "... test/factorial.i"
-	@echo "... test/factorial.s"
-	@echo "... test/gtest_main.o"
-	@echo "... test/gtest_main.i"
-	@echo "... test/gtest_main.s"
-	@echo "... test/test_factorial.o"
-	@echo "... test/test_factorial.i"
-	@echo "... test/test_factorial.s"
 .PHONY : help
 
 

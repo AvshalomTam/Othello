@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Othello"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/steve/Desktop/Othello/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/steve/Desktop/Othello/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/steve/Desktop/Othello/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Othello">
+				<Option output="/home/steve/Desktop/Othello/cmake-build-debug/Othello" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/steve/Desktop/Othello/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 Othello"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Othello/fast">
+				<Option output="/home/steve/Desktop/Othello/cmake-build-debug/Othello" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/steve/Desktop/Othello/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 Othello/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/steve/Desktop/Othello/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/steve/Desktop/Othello/include/AIplayer.h">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/include/BasicRules.h">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/include/Board.h">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/include/CharBoard.h">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/include/Coordinates.h">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/include/Game.h">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/include/GameLogic.h">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/include/HumanPlayer.h">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/include/Player.h">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/src/AIplayer.cpp">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/src/BasicRules.cpp">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/src/Board.cpp">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/src/CharBoard.cpp">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/src/Coordinates.cpp">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/src/Game.cpp">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/src/GameLogic.cpp">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/src/HumanPlayer.cpp">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/src/Player.cpp">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/src/main.cpp">
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/steve/Desktop/Othello/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

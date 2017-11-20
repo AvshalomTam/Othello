@@ -12,7 +12,7 @@ using namespace std;
 Game::Game() : frst_player_(true) {}
 
 void Game::initialize() {
-  this->board_ = new CharBoard();
+  this->board_ = new CharBoard(3);
   this->frst_player_ = true;
   this->judge_ = new BasicRules();
   this->pl1_ = new HumanPlayer(first_player);

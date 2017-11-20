@@ -54,292 +54,45 @@ RM = /home/steve/Documents/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/steve/Desktop/Reversi
+CMAKE_SOURCE_DIR = /home/steve/Desktop/Othello
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/steve/Desktop/Reversi/cmake-build-debug
+CMAKE_BINARY_DIR = /home/steve/Desktop/Othello/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/Test.dir
+# Target rules for target CMakeFiles/Othello.dir
 
 # All Build rule for target.
-CMakeFiles/Test.dir/all: gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/all
-CMakeFiles/Test.dir/all: gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/depend
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles --progress-num=15,16,17,18,19 "Built target Test"
-.PHONY : CMakeFiles/Test.dir/all
+CMakeFiles/Othello.dir/all:
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/depend
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/steve/Desktop/Othello/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target Othello"
+.PHONY : CMakeFiles/Othello.dir/all
 
 # Include target in all.
-all: CMakeFiles/Test.dir/all
+all: CMakeFiles/Othello.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 9
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/Test.dir/rule
+CMakeFiles/Othello.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Othello/cmake-build-debug/CMakeFiles 11
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Othello.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Othello/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/Othello.dir/rule
 
 # Convenience name for target.
-Test: CMakeFiles/Test.dir/rule
+Othello: CMakeFiles/Othello.dir/rule
 
-.PHONY : Test
-
-# clean rule for target.
-CMakeFiles/Test.dir/clean:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/clean
-.PHONY : CMakeFiles/Test.dir/clean
+.PHONY : Othello
 
 # clean rule for target.
-clean: CMakeFiles/Test.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/Reversi.dir
-
-# All Build rule for target.
-CMakeFiles/Reversi.dir/all: gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/all
-CMakeFiles/Reversi.dir/all: gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/depend
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target Reversi"
-.PHONY : CMakeFiles/Reversi.dir/all
-
-# Include target in all.
-all: CMakeFiles/Reversi.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Reversi.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 18
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Reversi.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/Reversi.dir/rule
-
-# Convenience name for target.
-Reversi: CMakeFiles/Reversi.dir/rule
-
-.PHONY : Reversi
+CMakeFiles/Othello.dir/clean:
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/clean
+.PHONY : CMakeFiles/Othello.dir/clean
 
 # clean rule for target.
-CMakeFiles/Reversi.dir/clean:
-	$(MAKE) -f CMakeFiles/Reversi.dir/build.make CMakeFiles/Reversi.dir/clean
-.PHONY : CMakeFiles/Reversi.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/Reversi.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory gtest_src
-
-# Convenience name for "all" pass in the directory.
-gtest_src/all: gtest_src/googlemock/all
-
-.PHONY : gtest_src/all
-
-# Convenience name for "clean" pass in the directory.
-gtest_src/clean: gtest_src/googlemock/clean
-
-.PHONY : gtest_src/clean
-
-# Convenience name for "preinstall" pass in the directory.
-gtest_src/preinstall: gtest_src/googlemock/preinstall
-
-.PHONY : gtest_src/preinstall
-
-#=============================================================================
-# Directory level rules for directory gtest_src/googlemock
-
-# Convenience name for "all" pass in the directory.
-gtest_src/googlemock/all: gtest_src/googlemock/CMakeFiles/gmock_main.dir/all
-gtest_src/googlemock/all: gtest_src/googlemock/CMakeFiles/gmock.dir/all
-gtest_src/googlemock/all: gtest_src/googlemock/gtest/all
-
-.PHONY : gtest_src/googlemock/all
-
-# Convenience name for "clean" pass in the directory.
-gtest_src/googlemock/clean: gtest_src/googlemock/CMakeFiles/gmock_main.dir/clean
-gtest_src/googlemock/clean: gtest_src/googlemock/CMakeFiles/gmock.dir/clean
-gtest_src/googlemock/clean: gtest_src/googlemock/gtest/clean
-
-.PHONY : gtest_src/googlemock/clean
-
-# Convenience name for "preinstall" pass in the directory.
-gtest_src/googlemock/preinstall: gtest_src/googlemock/gtest/preinstall
-
-.PHONY : gtest_src/googlemock/preinstall
-
-#=============================================================================
-# Target rules for target gtest_src/googlemock/CMakeFiles/gmock_main.dir
-
-# All Build rule for target.
-gtest_src/googlemock/CMakeFiles/gmock_main.dir/all:
-	$(MAKE) -f gtest_src/googlemock/CMakeFiles/gmock_main.dir/build.make gtest_src/googlemock/CMakeFiles/gmock_main.dir/depend
-	$(MAKE) -f gtest_src/googlemock/CMakeFiles/gmock_main.dir/build.make gtest_src/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles --progress-num=23,24,25,26 "Built target gmock_main"
-.PHONY : gtest_src/googlemock/CMakeFiles/gmock_main.dir/all
-
-# Include target in all.
-all: gtest_src/googlemock/CMakeFiles/gmock_main.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-gtest_src/googlemock/CMakeFiles/gmock_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 gtest_src/googlemock/CMakeFiles/gmock_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 0
-.PHONY : gtest_src/googlemock/CMakeFiles/gmock_main.dir/rule
-
-# Convenience name for target.
-gmock_main: gtest_src/googlemock/CMakeFiles/gmock_main.dir/rule
-
-.PHONY : gmock_main
-
-# clean rule for target.
-gtest_src/googlemock/CMakeFiles/gmock_main.dir/clean:
-	$(MAKE) -f gtest_src/googlemock/CMakeFiles/gmock_main.dir/build.make gtest_src/googlemock/CMakeFiles/gmock_main.dir/clean
-.PHONY : gtest_src/googlemock/CMakeFiles/gmock_main.dir/clean
-
-# clean rule for target.
-clean: gtest_src/googlemock/CMakeFiles/gmock_main.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target gtest_src/googlemock/CMakeFiles/gmock.dir
-
-# All Build rule for target.
-gtest_src/googlemock/CMakeFiles/gmock.dir/all:
-	$(MAKE) -f gtest_src/googlemock/CMakeFiles/gmock.dir/build.make gtest_src/googlemock/CMakeFiles/gmock.dir/depend
-	$(MAKE) -f gtest_src/googlemock/CMakeFiles/gmock.dir/build.make gtest_src/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles --progress-num=20,21,22 "Built target gmock"
-.PHONY : gtest_src/googlemock/CMakeFiles/gmock.dir/all
-
-# Include target in all.
-all: gtest_src/googlemock/CMakeFiles/gmock.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-gtest_src/googlemock/CMakeFiles/gmock.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 gtest_src/googlemock/CMakeFiles/gmock.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 0
-.PHONY : gtest_src/googlemock/CMakeFiles/gmock.dir/rule
-
-# Convenience name for target.
-gmock: gtest_src/googlemock/CMakeFiles/gmock.dir/rule
-
-.PHONY : gmock
-
-# clean rule for target.
-gtest_src/googlemock/CMakeFiles/gmock.dir/clean:
-	$(MAKE) -f gtest_src/googlemock/CMakeFiles/gmock.dir/build.make gtest_src/googlemock/CMakeFiles/gmock.dir/clean
-.PHONY : gtest_src/googlemock/CMakeFiles/gmock.dir/clean
-
-# clean rule for target.
-clean: gtest_src/googlemock/CMakeFiles/gmock.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory gtest_src/googlemock/gtest
-
-# Convenience name for "all" pass in the directory.
-gtest_src/googlemock/gtest/all: gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/all
-gtest_src/googlemock/gtest/all: gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/all
-
-.PHONY : gtest_src/googlemock/gtest/all
-
-# Convenience name for "clean" pass in the directory.
-gtest_src/googlemock/gtest/clean: gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
-gtest_src/googlemock/gtest/clean: gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/clean
-
-.PHONY : gtest_src/googlemock/gtest/clean
-
-# Convenience name for "preinstall" pass in the directory.
-gtest_src/googlemock/gtest/preinstall:
-
-.PHONY : gtest_src/googlemock/gtest/preinstall
-
-#=============================================================================
-# Target rules for target gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir
-
-# All Build rule for target.
-gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/all
-	$(MAKE) -f gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
-	$(MAKE) -f gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles --progress-num=29,30 "Built target gtest_main"
-.PHONY : gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/all
-
-# Include target in all.
-all: gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 0
-.PHONY : gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
-
-# Convenience name for target.
-gtest_main: gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/rule
-
-.PHONY : gtest_main
-
-# clean rule for target.
-gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/clean:
-	$(MAKE) -f gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
-.PHONY : gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
-
-# clean rule for target.
-clean: gtest_src/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target gtest_src/googlemock/gtest/CMakeFiles/gtest.dir
-
-# All Build rule for target.
-gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/all:
-	$(MAKE) -f gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/depend
-	$(MAKE) -f gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles --progress-num=27,28 "Built target gtest"
-.PHONY : gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/all
-
-# Include target in all.
-all: gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Reversi/cmake-build-debug/CMakeFiles 0
-.PHONY : gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/rule
-
-# Convenience name for target.
-gtest: gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/rule
-
-.PHONY : gtest
-
-# clean rule for target.
-gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/clean:
-	$(MAKE) -f gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/clean
-.PHONY : gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/clean
-
-# clean rule for target.
-clean: gtest_src/googlemock/gtest/CMakeFiles/gtest.dir/clean
+clean: CMakeFiles/Othello.dir/clean
 
 .PHONY : clean
 
