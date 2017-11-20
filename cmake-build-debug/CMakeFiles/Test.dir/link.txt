@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Test.dir/test/gtest_main.cpp.o CMakeFiles/Test.dir/test/factorial.cpp.o CMakeFiles/Test.dir/test/test_factorial.cpp.o CMakeFiles/Test.dir/src/AIplayer.cpp.o  -o Test gtest_src/googlemock/gtest/libgtest.a gtest_src/googlemock/gtest/libgtest_main.a gtest_src/googlemock/gtest/libgtest.a -lpthread 

@@ -1,2 +1,2 @@
-# Othello
-Avshalom &amp; Steve
+# Reversi
+Game of Reversi
