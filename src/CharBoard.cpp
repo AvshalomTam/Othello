@@ -1,6 +1,5 @@
-//
-// Created by steve on 05/11/17.
-//
+// EM168887 Steve Gutfreund
+// 203829478 Avshalom Tam
 
 #include "../include/CharBoard.h"
 #include <iostream>

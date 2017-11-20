@@ -1,5 +1,4 @@
-//
-// Created by steve on 11/16/17.
-//
+// EM168887 Steve Gutfreund
+// 203829478 Avshalom Tam
 
 #include "../include/AIplayer.h"

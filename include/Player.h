@@ -1,5 +1,5 @@
-// EM168887
-// Steve Gutfreund
+// EM168887 Steve Gutfreund
+// 203829478 Avshalom Tam
 
 #ifndef PLAYER_H
 #define PLAYER_H

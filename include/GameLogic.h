@@ -1,6 +1,5 @@
-//
-// Created by steve on 11/9/17.
-//
+// EM168887 Steve Gutfreund
+// 203829478 Avshalom Tam
 
 #ifndef GAMELOGIC_H
 #define GAMELOGIC_H
