@@ -6,7 +6,7 @@
 #include "Board.h"
 
 class CharBoard : public Board {
-public:
+  public:
     /**
      * Default constructor. Sets the board size as 8.
      */
@@ -20,6 +20,12 @@ public:
      * Method for printing the board on the console.
      */
     void printBoard() const;
+   /**
+    * Deep copy of board.
+    * @param board board to be copied
+    * @return copied board
+    */
+    Board* copy() const;
 };
 
 #endif //CHARBOARD_H

@@ -32,16 +32,23 @@ public:
      * @param c coordinates of a cell
      * @return the Tile
      */
-    int getCell(const Coordinates &c) const;
+    cell getCell(const Coordinates &c) const;
     /**
      * Sets a Tile in the cell.
      * @param c coordinates of cell
      * @param num_player player's id
      */
-    void setCell(const Coordinates &c, cell num_player);
+    void setCell(Coordinates c, cell num_player);
+   /**
+    * Deep copy of board.
+    * @param board board to be copied
+    * @return copied board
+    */
+    virtual Board* copy() const = 0;
     /**
      * Destructor.
      */
+    int getScore(cell num_player);
     ~Board();
 private:
     // a 2D array representing the status of the board

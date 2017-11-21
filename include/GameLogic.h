@@ -13,7 +13,7 @@ public:
      * @param num_player player's number
      * @return list of coordinates
      */
-    virtual list <Coordinates> getOptions(Board &board, cell num_player) const = 0;
+    virtual list <Coordinates> getOptions(const Board &board, cell num_player) const = 0;
     /**
      * Check if the choice c num_player has chosen, is valid.
      * @param board game board
@@ -27,7 +27,7 @@ public:
      * @param c coordinates
      * @param num_player the player who wants to turn some tiles
      */
-    virtual void turnTiles(Board &board, const Coordinates &c, cell num_player) = 0;
+    virtual void turnTiles(Board &board, Coordinates &c, cell num_player) = 0;
     /**
      * Checks who's the winner of the game.
      * @return number of player who won and 0 for a draw

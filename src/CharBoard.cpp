@@ -25,11 +25,11 @@ void CharBoard::printBoard() const {
         for (int j = 0; j < size; j++) {
             cout << " ";
             switch (this->getCell(Coordinates(i, j))) {
-                case (0): cout << " ";
+                case (empty): cout << " ";
                     break;
-                case (1): cout << "X";
+                case (first_player): cout << "X";
                     break;
-                case (2): cout << "O";
+                case (second_player): cout << "O";
                     break;
                 default: break;
             }
@@ -41,4 +41,16 @@ void CharBoard::printBoard() const {
         }
         cout << endl;
     }
+}
+
+Board* CharBoard::copy() const {
+    Board* copy = new CharBoard(this->getSize());
+
+    for (int i = 0; i < this->getSize(); i++) {
+        for (int j = 0; j < this->getSize(); j++) {
+            copy->setCell(Coordinates(i, j), this->getCell(Coordinates(i, j)));
+        }
+    }
+
+    return copy;
 }
