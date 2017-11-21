@@ -5,6 +5,11 @@
 #define PLAYER_H
 #include "Coordinates.h"
 
+#ifndef CELL
+#define CELL
+enum cell {empty, first_player, second_player};
+#endif
+
 /**
  * Representing a player in the game.
  */
@@ -13,7 +18,7 @@ public:
     /**
      * Constructor.
      */
-    Player(int num_player);
+    Player(cell num_player);
     /**
      * Sets the name of the player for this game.
      * @param name string
@@ -41,10 +46,10 @@ public:
     /**
      * @return number of the player, 1 or 2
      */
-    int getId() const;
+    cell getId() const;
 private:
     bool had_move_;
-    int player_id_;
+    cell player_id_;
     string name_;
 };
 

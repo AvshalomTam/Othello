@@ -11,7 +11,7 @@ public:
      * Constructor.
      * @param numplayer 1 or 2
      */
-    HumanPlayer(int numplayer);
+    HumanPlayer(cell numplayer);
     /**
      * Gets coordinates in board where the player wants to put his tile
      * @return coordinates

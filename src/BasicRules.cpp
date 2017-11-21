@@ -4,8 +4,6 @@
 #include <iostream>
 #include "../include/BasicRules.h"
 
-enum {empty, first_player, second_player};
-
 /**
  * Checks if cell c is a valid option for num_player.
  * @param board board game
@@ -13,7 +11,7 @@ enum {empty, first_player, second_player};
  * @param num_player number of player
  * @return true if valid, false otherwise
  */
-bool isValidOption(Board &board, const Coordinates &c, int num_player);
+bool isValidOption(Board &board, const Coordinates &c, cell num_player);
 /**
  * Checks if from c there is a valid path for num_player in direction vector.
  * @param board
@@ -22,9 +20,9 @@ bool isValidOption(Board &board, const Coordinates &c, int num_player);
  * @param vector coordinates of direction
  * @return true if there a valid cell, false otherwise
  */
-bool isValidPath(Board &board, const Coordinates &c, int num_player, const Coordinates &vector);
+bool isValidPath(Board &board, const Coordinates &c, cell num_player, const Coordinates &vector);
 
-list<Coordinates> BasicRules::getOptions(Board &board, int num_player) const {
+list<Coordinates> BasicRules::getOptions(Board &board, cell num_player) const {
     //iterating over the whole board in order to check every cell
     list <Coordinates> options;
     int current_cell;
@@ -41,7 +39,7 @@ list<Coordinates> BasicRules::getOptions(Board &board, int num_player) const {
     return options;
 }
 
-bool isValidOption(Board &board, const Coordinates &c, int num_player) {
+bool isValidOption(Board &board, const Coordinates &c, cell num_player) {
     //array containing all the 8 directions
     Coordinates vector[8] = {Coordinates(0, -1), Coordinates(0, 1), Coordinates(1, -1), Coordinates(1, 0),
                              Coordinates(1, 1), Coordinates(-1, -1), Coordinates(-1, 0), Coordinates(-1, 1)};
@@ -53,7 +51,7 @@ bool isValidOption(Board &board, const Coordinates &c, int num_player) {
     return false;
 }
 
-bool isValidPath(Board &board, const Coordinates &c,int num_player, const Coordinates &vector) {
+bool isValidPath(Board &board, const Coordinates &c, cell num_player, const Coordinates &vector) {
     bool other_sign = false;
     Coordinates tmp = c.move(vector);
     while ((tmp.getX() < board.getSize() && (tmp.getX() >= 0)
@@ -72,7 +70,7 @@ bool isValidPath(Board &board, const Coordinates &c,int num_player, const Coordi
     return false;
 }
 
-void BasicRules::turnTiles(Board &board, const Coordinates &c, int num_player) {
+void BasicRules::turnTiles(Board &board, const Coordinates &c, cell num_player) {
     if (!isValidOption(board, c, num_player)) {
         return;
     }
@@ -128,7 +126,7 @@ bool BasicRules::boardIsFull(Board &board) const {
     return true;
 }
 
-bool BasicRules::isValidChoice(Board &board, Coordinates c, int num_player) const {
+bool BasicRules::isValidChoice(Board &board, Coordinates c, cell num_player) const {
     if (c.getX() < 0 || c.getX() >= board.getSize() || c.getY() < 0 || c.getY() >= board.getSize()) {
         throw "Out of the game borders!";
     }

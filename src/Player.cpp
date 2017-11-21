@@ -3,7 +3,7 @@
 
 #include "../include/Player.h"
 
-Player::Player(int num_player) : had_move_(false), player_id_(num_player) {}
+Player::Player(cell num_player) : had_move_(false), player_id_(num_player) {}
 
 void Player::setName(string name) {
     this->name_ = name;
@@ -21,6 +21,6 @@ bool Player::played() const {
     return this->had_move_;
 }
 
-int Player::getId() const {
+cell Player::getId() const {
     return this->player_id_;
 }

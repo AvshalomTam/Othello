@@ -5,7 +5,7 @@
 #include "../include/HumanPlayer.h"
 using namespace std;
 
-HumanPlayer::HumanPlayer(int numplayer) : Player(numplayer) {}
+HumanPlayer::HumanPlayer(cell numplayer) : Player(numplayer) {}
 
 Coordinates HumanPlayer::getMove() const {
     string s;

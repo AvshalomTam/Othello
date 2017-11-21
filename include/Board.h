@@ -5,6 +5,11 @@
 #define BOARD_H
 
 #include "Coordinates.h"
+#ifndef CELL
+#define CELL
+enum cell {empty, first_player, second_player};
+#endif
+
 /**
  * Defines the gameboard in the game called 'Reversi'.
  */
@@ -33,14 +38,14 @@ public:
      * @param c coordinates of cell
      * @param num_player player's id
      */
-    void setCell(const Coordinates &c, int num_player);
+    void setCell(const Coordinates &c, cell num_player);
     /**
      * Destructor.
      */
     ~Board();
 private:
     // a 2D array representing the status of the board
-    int** cells_;
+    cell** cells_;
     int size_;
 };
 

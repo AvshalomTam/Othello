@@ -6,7 +6,6 @@
 #include "../include/CharBoard.h"
 #include "../include/BasicRules.h"
 
-enum {first_player = 1, second_player};
 using namespace std;
 
 Game::Game() : frst_player_(true) {}

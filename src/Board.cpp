@@ -6,17 +6,17 @@ using namespace std;
 
 Board::Board(int size) {
     this->size_ = size;
-    this->cells_ = new int*[size];
+    this->cells_ = new cell*[size];
     for (int i = 0; i < size; i++) {
-        this->cells_[i] = new int[size];
+        this->cells_[i] = new cell[size];
         for (int j = 0; j < size; j++) {
-            this->cells_[i][j] = 0;
+            this->cells_[i][j] = empty;
         }
     }
-    this->cells_[size / 2 - 1][size / 2 - 1] = 2;
-    this->cells_[size / 2][size / 2] = 2;
-    this->cells_[size / 2 - 1][size / 2] = 1;
-    this->cells_[size / 2][size / 2 - 1] = 1;
+    this->cells_[size / 2 - 1][size / 2 - 1] = second_player;
+    this->cells_[size / 2][size / 2] = second_player;
+    this->cells_[size / 2 - 1][size / 2] = first_player;
+    this->cells_[size / 2][size / 2 - 1] = first_player;
 }
 
 int Board::getSize() const {
@@ -27,7 +27,7 @@ int Board::getCell(const Coordinates &c) const {
     return this->cells_[c.getX()][c.getY()];
 }
 
-void Board::setCell(const Coordinates &c, int num_player) {
+void Board::setCell(const Coordinates &c, cell num_player) {
     this->cells_[c.getX()][c.getY()] = num_player;
 }
 
