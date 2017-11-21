@@ -9,7 +9,7 @@ class HumanPlayer : public Player {
 public:
     /**
      * Constructor.
-     * @param numplayer 1 or 2
+     * @param numplayer first_player or second_player
      */
     HumanPlayer(cell numplayer);
     /**
