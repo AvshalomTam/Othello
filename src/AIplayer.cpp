@@ -4,7 +4,8 @@
 #include <list>
 #include "../include/AIplayer.h"
 
-AIplayer::AIplayer(const Board& board, const GameLogic& judge, cell numplayer) : Player(numplayer), board_(board), judge_(judge) {}
+AIplayer::AIplayer(const Board& board, const GameLogic& judge, cell numplayer) : Player(numplayer),
+                                                                                 board_(board), judge_(judge) {}
 
 Coordinates AIplayer::getMove() const {
   int score;
