@@ -13,7 +13,6 @@ Game::Game() : frst_player_(true) {}
 
 void Game::initialize() {
   this->board_ = new CharBoard();
-  this->frst_player_ = true;
   this->judge_ = new BasicRules();
   this->pl1_ = new HumanPlayer(first_player);
   this->pl2_ = new AIplayer(*this->board_, *this->judge_, second_player);
