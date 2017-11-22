@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b63f4bf1-12ec-42f2-bbeb-2064b0d6d96e" name="Default" comment="added decisions.docx file describing oop and other consideration while working on shared project.">
+    <list default="true" id="b63f4bf1-12ec-42f2-bbeb-2064b0d6d96e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -397,7 +397,7 @@
       <workItem from="1511188036769" duration="334000" />
       <workItem from="1511188527636" duration="2189000" />
       <workItem from="1511258380575" duration="2898000" />
-      <workItem from="1511263000492" duration="14565000" />
+      <workItem from="1511263000492" duration="14597000" />
     </task>
     <task id="LOCAL-00001" summary="adjusted the game flow to enable AIplayer">
       <created>1511349015676</created>
@@ -434,7 +434,14 @@
       <option name="project" value="LOCAL" />
       <updated>1511386661348</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="added decisions.docx file describing oop and other consideration while working on shared project.">
+      <created>1511386840597</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1511386840597</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -455,7 +462,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21247000" />
+    <option name="totallyTimeSpent" value="21279000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-11" width="1362" height="723" extended-state="6" />
