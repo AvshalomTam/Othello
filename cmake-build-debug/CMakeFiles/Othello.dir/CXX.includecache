@@ -6,105 +6,117 @@
 
 #IncludeRegexTransform: 
 
-/home/steve/Desktop/Othello/include/AIplayer.h
-
-/home/steve/Desktop/Othello/include/BasicRules.h
-Board.h
-/home/steve/Desktop/Othello/include/Board.h
+/home/avshalom/CLionProjects/Othello/include/AIplayer.h
 Coordinates.h
-/home/steve/Desktop/Othello/include/Coordinates.h
+/home/avshalom/CLionProjects/Othello/include/Coordinates.h
+Board.h
+/home/avshalom/CLionProjects/Othello/include/Board.h
 GameLogic.h
-/home/steve/Desktop/Othello/include/GameLogic.h
+/home/avshalom/CLionProjects/Othello/include/GameLogic.h
+Player.h
+/home/avshalom/CLionProjects/Othello/include/Player.h
+
+/home/avshalom/CLionProjects/Othello/include/BasicRules.h
+Board.h
+/home/avshalom/CLionProjects/Othello/include/Board.h
+Coordinates.h
+/home/avshalom/CLionProjects/Othello/include/Coordinates.h
+GameLogic.h
+/home/avshalom/CLionProjects/Othello/include/GameLogic.h
 list
 -
 
-/home/steve/Desktop/Othello/include/Board.h
+/home/avshalom/CLionProjects/Othello/include/Board.h
 Coordinates.h
-/home/steve/Desktop/Othello/include/Coordinates.h
+/home/avshalom/CLionProjects/Othello/include/Coordinates.h
 
-/home/steve/Desktop/Othello/include/CharBoard.h
+/home/avshalom/CLionProjects/Othello/include/CharBoard.h
 Board.h
-/home/steve/Desktop/Othello/include/Board.h
+/home/avshalom/CLionProjects/Othello/include/Board.h
 
-/home/steve/Desktop/Othello/include/Coordinates.h
+/home/avshalom/CLionProjects/Othello/include/Coordinates.h
 string
 -
 
-/home/steve/Desktop/Othello/include/Game.h
+/home/avshalom/CLionProjects/Othello/include/Game.h
 Board.h
-/home/steve/Desktop/Othello/include/Board.h
+/home/avshalom/CLionProjects/Othello/include/Board.h
 HumanPlayer.h
-/home/steve/Desktop/Othello/include/HumanPlayer.h
+/home/avshalom/CLionProjects/Othello/include/HumanPlayer.h
 GameLogic.h
-/home/steve/Desktop/Othello/include/GameLogic.h
+/home/avshalom/CLionProjects/Othello/include/GameLogic.h
 
-/home/steve/Desktop/Othello/include/GameLogic.h
+/home/avshalom/CLionProjects/Othello/include/GameLogic.h
 list
 -
 Coordinates.h
-/home/steve/Desktop/Othello/include/Coordinates.h
+/home/avshalom/CLionProjects/Othello/include/Coordinates.h
 Board.h
-/home/steve/Desktop/Othello/include/Board.h
+/home/avshalom/CLionProjects/Othello/include/Board.h
 
-/home/steve/Desktop/Othello/include/HumanPlayer.h
+/home/avshalom/CLionProjects/Othello/include/HumanPlayer.h
 Player.h
-/home/steve/Desktop/Othello/include/Player.h
+/home/avshalom/CLionProjects/Othello/include/Player.h
 
-/home/steve/Desktop/Othello/include/Player.h
+/home/avshalom/CLionProjects/Othello/include/Player.h
 Coordinates.h
-/home/steve/Desktop/Othello/include/Coordinates.h
+/home/avshalom/CLionProjects/Othello/include/Coordinates.h
 
-/home/steve/Desktop/Othello/src/AIplayer.cpp
+/home/avshalom/CLionProjects/Othello/src/AIplayer.cpp
+list
+-
 ../include/AIplayer.h
-/home/steve/Desktop/Othello/include/AIplayer.h
+/home/avshalom/CLionProjects/Othello/include/AIplayer.h
 
-/home/steve/Desktop/Othello/src/BasicRules.cpp
+/home/avshalom/CLionProjects/Othello/src/BasicRules.cpp
 iostream
 -
 ../include/BasicRules.h
-/home/steve/Desktop/Othello/include/BasicRules.h
+/home/avshalom/CLionProjects/Othello/include/BasicRules.h
 
-/home/steve/Desktop/Othello/src/Board.cpp
+/home/avshalom/CLionProjects/Othello/src/Board.cpp
 ../include/Board.h
-/home/steve/Desktop/Othello/include/Board.h
+/home/avshalom/CLionProjects/Othello/include/Board.h
 
-/home/steve/Desktop/Othello/src/CharBoard.cpp
+/home/avshalom/CLionProjects/Othello/src/CharBoard.cpp
 ../include/CharBoard.h
-/home/steve/Desktop/Othello/include/CharBoard.h
+/home/avshalom/CLionProjects/Othello/include/CharBoard.h
 iostream
 -
 
-/home/steve/Desktop/Othello/src/Coordinates.cpp
+/home/avshalom/CLionProjects/Othello/src/Coordinates.cpp
 ../include/Coordinates.h
-/home/steve/Desktop/Othello/include/Coordinates.h
+/home/avshalom/CLionProjects/Othello/include/Coordinates.h
 
-/home/steve/Desktop/Othello/src/Game.cpp
+/home/avshalom/CLionProjects/Othello/src/Game.cpp
 iostream
 -
 ../include/Game.h
-/home/steve/Desktop/Othello/include/Game.h
+/home/avshalom/CLionProjects/Othello/include/Game.h
 ../include/CharBoard.h
-/home/steve/Desktop/Othello/include/CharBoard.h
+/home/avshalom/CLionProjects/Othello/include/CharBoard.h
 ../include/BasicRules.h
-/home/steve/Desktop/Othello/include/BasicRules.h
+/home/avshalom/CLionProjects/Othello/include/BasicRules.h
+../include/AIplayer.h
+/home/avshalom/CLionProjects/Othello/include/AIplayer.h
 
-/home/steve/Desktop/Othello/src/GameLogic.cpp
+/home/avshalom/CLionProjects/Othello/src/GameLogic.cpp
 ../include/GameLogic.h
-/home/steve/Desktop/Othello/include/GameLogic.h
+/home/avshalom/CLionProjects/Othello/include/GameLogic.h
 
-/home/steve/Desktop/Othello/src/HumanPlayer.cpp
+/home/avshalom/CLionProjects/Othello/src/HumanPlayer.cpp
 iostream
 -
 ../include/HumanPlayer.h
-/home/steve/Desktop/Othello/include/HumanPlayer.h
+/home/avshalom/CLionProjects/Othello/include/HumanPlayer.h
 
-/home/steve/Desktop/Othello/src/Player.cpp
+/home/avshalom/CLionProjects/Othello/src/Player.cpp
 ../include/Player.h
-/home/steve/Desktop/Othello/include/Player.h
+/home/avshalom/CLionProjects/Othello/include/Player.h
 
-/home/steve/Desktop/Othello/src/main.cpp
+/home/avshalom/CLionProjects/Othello/src/main.cpp
 iostream
 -
 ../include/Game.h
-/home/steve/Desktop/Othello/include/Game.h
+/home/avshalom/CLionProjects/Othello/include/Game.h
 
