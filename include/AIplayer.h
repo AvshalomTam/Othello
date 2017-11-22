@@ -9,7 +9,7 @@
 #include "GameLogic.h"
 #include "Player.h"
 
-class AIplayer : Player {
+class AIplayer : public Player {
   public:
     AIplayer(const Board& board, const GameLogic& judge, cell numplayer);
     Coordinates getMove() const;

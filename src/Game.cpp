@@ -5,17 +5,18 @@
 #include "../include/Game.h"
 #include "../include/CharBoard.h"
 #include "../include/BasicRules.h"
+#include "../include/AIplayer.h"
 
 using namespace std;
 
 Game::Game() : frst_player_(true) {}
 
 void Game::initialize() {
-  this->board_ = new CharBoard(3);
+  this->board_ = new CharBoard();
   this->frst_player_ = true;
   this->judge_ = new BasicRules();
   this->pl1_ = new HumanPlayer(first_player);
-  this->pl2_ = new HumanPlayer(second_player);
+  this->pl2_ = new AIplayer(*this->board_, *this->judge_, second_player);
   this->pl1_->setName("X");
   this->pl2_->setName("O");
 }
@@ -59,6 +60,18 @@ void Game::playOneTurn() {
   else {
     pl = this->pl2_;
     pre_pl = this->pl1_;
+  }
+
+  if (!this->frst_player_) {
+    Coordinates input = pl->getMove();
+    if (this->judge_->getOptions(*this->board_, second_player).empty()) {
+      pl->hasMove(false);
+      return;
+    }
+    pl->hasMove(true);
+    this->judge_->turnTiles(*this->board_, input, pl->getId());
+    this->previous_move_ = input.move(Coordinates(1, 1));
+    return;
   }
 
   cout << "Current board:" << endl << endl;
@@ -106,7 +119,7 @@ void Game::playOneTurn() {
         break;
       }
       else {
-        throw "Thats none of your choices!";
+        throw "That's none of your choices!";
       }
     } catch (const char* error) {
       cout << endl << error << endl << endl;
