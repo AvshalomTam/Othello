@@ -62,11 +62,11 @@ void Game::playOneTurn() {
   }
 
   if (!this->frst_player_) {
-    Coordinates input = pl->getMove();
     if (this->judge_->getOptions(*this->board_, second_player).empty()) {
       pl->hasMove(false);
       return;
     }
+    Coordinates input = pl->getMove();
     pl->hasMove(true);
     this->judge_->turnTiles(*this->board_, input, pl->getId());
     this->previous_move_ = input.move(Coordinates(1, 1));
