@@ -3,9 +3,9 @@ project(Othello)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_subdirectory(gtest/googletest-master)
-include_directories(gtest/googletest-master/googletest/include)
-include_directories(gtest/googletest-master/googlemock/include)
+add_subdirectory(gtest/googletest-release-1.8.0)
+include_directories(gtest/googletest-release-1.8.0/googletest/include)
+include_directories(gtest/googletest-release-1.8.0/googlemock/include)
 
 set(SOURCE_FILES
         include/AIplayer.h
