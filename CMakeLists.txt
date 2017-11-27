@@ -48,7 +48,7 @@ set(TEST_FILES
         src/GameLogic.cpp
         src/HumanPlayer.cpp
         src/Player.cpp
-        test/BoardTest.h test/GameLogicTest.h)
+        test/BoardTest.h test/BasicRulesTest.h)
 
 add_executable(Othello ${SOURCE_FILES})
 add_executable(Test ${TEST_FILES})
