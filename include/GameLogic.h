@@ -6,6 +6,10 @@
 #include <list>
 #include "Coordinates.h"
 #include "Board.h"
+
+/**
+ * Holds all the logic of the game.
+ */
 class GameLogic {
 public:
     /**

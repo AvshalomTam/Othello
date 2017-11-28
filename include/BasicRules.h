@@ -10,7 +10,7 @@
 #include <list>
 
 /**
- * Contains all the logic and the rules of the game.
+ * Contains all the logic and the rules of the basic game.
  */
 class BasicRules : public GameLogic {
 public:

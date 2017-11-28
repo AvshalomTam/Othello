@@ -5,6 +5,9 @@
 #define CHARBOARD_H
 #include "Board.h"
 
+/**
+ * A board made of char.
+ */
 class CharBoard : public Board {
   public:
     /**

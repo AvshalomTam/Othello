@@ -8,6 +8,9 @@
 #include "Board.h"
 using namespace std;
 
+/**
+ * Contains all the prints needed for the gameflow.
+ */
 class GameFlowLook {
  public:
   /**

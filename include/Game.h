@@ -12,6 +12,9 @@
 #include "GameLogic.h"
 #include "Menu.h"
 #include "GameFlowLook.h"
+/**
+ * Game of Reversi/Othello.
+ */
 class Game {
 public:
     /**

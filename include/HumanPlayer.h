@@ -5,6 +5,9 @@
 #define HUMANPLAYER_H
 #include "Player.h"
 
+/**
+ * Representing a human player.
+ */
 class HumanPlayer : public Player {
 public:
     /**

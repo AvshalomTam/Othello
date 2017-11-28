@@ -5,6 +5,10 @@
 #define CONSOLEMENU_H
 
 #include "Menu.h"
+
+/**
+ * Menu at beginning of the game, using the console.
+ */
 class ConsoleMenu : public Menu {
  public:
   /**

@@ -5,6 +5,9 @@
 #define MENU_H
 enum game_type {local, computer, online};
 
+/**
+ * Menu at opening of the game.
+ */
 class Menu {
  public:
   /**

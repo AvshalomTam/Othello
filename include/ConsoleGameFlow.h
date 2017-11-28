@@ -5,6 +5,10 @@
 #define CONSOLEGAMEFLOW_H
 
 #include "GameFlowLook.h"
+
+/**
+ * All the prints of the gameflow, using console.
+ */
 class ConsoleGameFlow : public GameFlowLook{
  public:
   void/**
