@@ -7,7 +7,13 @@
 #include "Menu.h"
 class ConsoleMenu : public Menu {
  public:
+  /**
+   * Prints a menu. Let's the player choose between playing against pc or player.
+   */
   void printMenu();
+  /**
+   * Sets the type of the game (versus pc or player).
+   */
   void setGameType();
 };
 

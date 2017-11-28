@@ -6,7 +6,7 @@
 using namespace std;
 
 void ConsoleMenu::printMenu() {
-  cout << "\tOTHELLO" << endl << endl;
+  cout << endl << "\tOTHELLO" << endl << endl;
   cout << "Who is your opponent?" << endl << endl;
   cout << "(P) player" << endl;
   cout << "(C) computer" << endl << endl;
@@ -15,12 +15,17 @@ void ConsoleMenu::printMenu() {
 
 void ConsoleMenu::setGameType() {
   char choice;
-  cout << "Your choice: ";
-  cin >> choice;
-  if (choice == 'P') {
-    this->type_ = local;
-  }
-  else if (choice == 'C') {
-    this->type_ = computer;
+  while (true) {
+    cout << "Your choice: ";
+    cin >> choice;
+    if (choice == 'P' || choice == 'p') {
+      this->type_ = local;
+      break;
+    }
+    if (choice == 'C' || choice == 'c') {
+      this->type_ = computer;
+      break;
+    }
+    cout << "wrong input" << endl;
   }
 }
