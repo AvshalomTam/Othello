@@ -7,33 +7,36 @@
 #include "gtest/gtest.h"
 #include "../include/CharBoard.h"
 
+/**
+ * Testing Board.
+ */
 class BoardTest: public testing::Test {
  public:
-  BoardTest(): b1() {}
+  BoardTest(): board_() {}
 
  protected:
-  CharBoard b1;
+  CharBoard board_;
 };
 
 TEST_F(BoardTest, InitializeTest) {
-  EXPECT_EQ(b1.getCell(Coordinates(3, 3)), second_player);
-  EXPECT_EQ(b1.getCell(Coordinates(4, 4)), second_player);
-  EXPECT_EQ(b1.getCell(Coordinates(3, 4)), first_player);
-  EXPECT_EQ(b1.getCell(Coordinates(4, 3)), first_player);
-  EXPECT_EQ(b1.getCell(Coordinates(7, 7)), empty);
+  EXPECT_EQ(board_.getCell(Coordinates(3, 3)), second_player);
+  EXPECT_EQ(board_.getCell(Coordinates(4, 4)), second_player);
+  EXPECT_EQ(board_.getCell(Coordinates(3, 4)), first_player);
+  EXPECT_EQ(board_.getCell(Coordinates(4, 3)), first_player);
+  EXPECT_EQ(board_.getCell(Coordinates(7, 7)), empty);
 }
 
 TEST_F(BoardTest, MoveTest) {
-  b1.setCell(Coordinates(5, 6), first_player);
-  EXPECT_EQ(b1.getCell(Coordinates(5, 6)), first_player);
-  b1.setCell(Coordinates(1, 2), second_player);
-  EXPECT_EQ(b1.getCell(Coordinates(1, 2)), second_player);
+  board_.setCell(Coordinates(5, 6), first_player);
+  EXPECT_EQ(board_.getCell(Coordinates(5, 6)), first_player);
+  board_.setCell(Coordinates(1, 2), second_player);
+  EXPECT_EQ(board_.getCell(Coordinates(1, 2)), second_player);
 }
 
 TEST_F(BoardTest, ScoreTest) {
-  b1.setCell(Coordinates(5, 6), first_player);
-  EXPECT_EQ(b1.getScore(first_player), 3);
-  EXPECT_EQ(b1.getScore(second_player), 2);
+  board_.setCell(Coordinates(5, 6), first_player);
+  EXPECT_EQ(board_.getScore(first_player), 3);
+  EXPECT_EQ(board_.getScore(second_player), 2);
 }
 
 #endif //BOARDTEST_H

@@ -11,7 +11,7 @@ set(GAME_FILES src/main.cpp)
 set(TEST_FILES
         test/gtest_main.cpp
         test/BoardTest.h
-        test/BasicRulesTest.h)
+        test/BasicRulesTest.h test/AIplayerTest.h)
 set(SOURCE_FILES
         include/AIplayer.h
         include/BasicRules.h
