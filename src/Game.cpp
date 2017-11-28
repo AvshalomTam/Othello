@@ -120,6 +120,7 @@ void Game::playOneTurn() {
 
 Game::~Game() {
   delete this->menu_;
+  delete this->game_flow_;
   delete this->pl1_;
   delete this->pl2_;
   delete this->board_;
