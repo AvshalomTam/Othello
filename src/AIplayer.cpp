@@ -2,7 +2,6 @@
 // 203829478 Avshalom Tam
 
 #include <list>
-#include <iostream>
 #include "../include/AIplayer.h"
 
 AIplayer::AIplayer(const Board& board, const GameLogic& judge, cell numplayer) : Player(numplayer),

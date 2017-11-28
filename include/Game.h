@@ -10,6 +10,8 @@
 #include "Board.h"
 #include "HumanPlayer.h"
 #include "GameLogic.h"
+#include "Menu.h"
+#include "GameFlowLook.h"
 class Game {
 public:
     /**
@@ -33,6 +35,8 @@ public:
      */
     ~Game();
 private:
+    Menu* menu_;
+    GameFlowLook* game_flow_;
     Board* board_; // pointer, so it can point to inherited
     Player* pl1_; // pointer, so it can point to inherited
     Player* pl2_; // pointer, so it can point to inherited

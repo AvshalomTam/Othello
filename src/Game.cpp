@@ -1,21 +1,29 @@
 // EM168887 Steve Gutfreund
 // 203829478 Avshalom Tam
 
-#include <iostream>
 #include "../include/Game.h"
 #include "../include/CharBoard.h"
 #include "../include/BasicRules.h"
 #include "../include/AIplayer.h"
-
-using namespace std;
+#include "../include/ConsoleMenu.h"
+#include "../include/ConsoleGameFlow.h"
 
 Game::Game() : frst_player_(true) {}
 
 void Game::initialize() {
-  this->board_ = new CharBoard();
+  this->menu_ = new ConsoleMenu();
+  this->game_flow_ = new ConsoleGameFlow();
+  this->board_ = new CharBoard(4);
   this->judge_ = new BasicRules();
-  this->pl1_ = new HumanPlayer(first_player);
-  this->pl2_ = new AIplayer(*this->board_, *this->judge_, second_player);
+  this->menu_->printMenu();
+  if (this->menu_->getGameType() == local) {
+    this->pl1_ = new HumanPlayer(first_player);
+    this->pl2_ = new HumanPlayer(second_player);
+  }
+  else if (this->menu_->getGameType() == computer) {
+    this->pl1_ = new HumanPlayer(first_player);
+    this->pl2_ = new AIplayer(*this->board_, *this->judge_, second_player);
+  }
   this->pl1_->setName("X");
   this->pl2_->setName("O");
 }
@@ -27,25 +35,21 @@ void Game::run() {
   }
   while ((this->pl1_->played() || this->pl2_->played()) && (!this->judge_->boardIsFull(*this->board_)));
 
-  cout << endl << endl << "G A M E   O V E R" << endl << endl;
-  board_->printBoard();
+  this->board_->printBoard();
 
   //printing the game results
   int winner = this->judge_->checkWinner(*this->board_);
-  cout << endl;
   if (winner == 0) {
-    cout << "DRAW GAME !!!!";
+    this->game_flow_->printResult();
   }
   else {
     if (winner == first_player) {
-      cout << this->pl1_->getName();
+      this->game_flow_->printResult(this->pl1_->getName());
     }
     else {
-      cout << this->pl2_->getName();
+      this->game_flow_->printResult(this->pl2_->getName());
     }
-    cout << " wins the game.";
   }
-  cout << endl << endl;
 }
 
 void Game::playOneTurn() {
@@ -61,7 +65,7 @@ void Game::playOneTurn() {
     pre_pl = this->pl1_;
   }
 
-  if (!this->frst_player_) {
+  if (this->menu_->getGameType() == computer && !this->frst_player_) {
     if (this->judge_->getOptions(*this->board_, second_player).empty()) {
       pl->hasMove(false);
       return;
@@ -73,22 +77,19 @@ void Game::playOneTurn() {
     return;
   }
 
-  cout << "Current board:" << endl << endl;
-  board_->printBoard();
-  cout << endl;
+  this->game_flow_->printCurrentBoard(*this->board_);
 
   //previous player's move
   if (pre_pl->played()) {
-    cout << pre_pl->getName() << " played " << this->previous_move_.toString() << endl << endl;
+    this->game_flow_->printPreviousMove(pre_pl->getName(), this->previous_move_.toString());
   }
 
-  cout << pl->getName() << ": It's your move." << endl;
+  this->game_flow_->printTurn(pl->getName());
 
   //checking if player has any options
   list <Coordinates> options = this->judge_->getOptions(*this->board_, pl->getId());
   if (options.empty()) {
-    cout << "No possible moves. Play passes to the other player. Press any key to continue." << endl;
-    cin.get();
+    this->game_flow_->printNoMove();
     pl->hasMove(false);
     return;
   }
@@ -96,38 +97,29 @@ void Game::playOneTurn() {
   while (true) {
     pl->hasMove(true);
     //printing the player's options
-    cout << "Your possible moves: ";
-    for (list<Coordinates>::iterator it = options.begin(); it != options.end(); ++it) {
-      if (it == options.begin()) {
-        cout << it->move(Coordinates(1, 1)).toString();
-      }
-      else {
-        cout << "," << it->move(Coordinates(1, 1)).toString();
-      }
-    }
-    cout << endl;
+    this->game_flow_->printOptions(options);
 
-    cout << "Please enter your move row,col: ";
+    this->game_flow_->printMoveRequest();
     try {
       Coordinates input = pl->getMove().move(Coordinates(-1, -1));
       //checking if player's choice is one of the options
       if (this->judge_->isValidChoice(*this->board_, input, pl->getId())) {
         this->previous_move_ = input.move(Coordinates(1, 1));
         this->judge_->turnTiles(*this->board_, input, pl->getId());
-        cout << endl << endl;
         break;
       }
       else {
         throw "That's none of your choices!";
       }
     } catch (const char* error) {
-      cout << endl << error << endl << endl;
+      this->game_flow_->printInputError(error);
       continue;
     }
   }
 }
 
 Game::~Game() {
+  delete this->menu_;
   delete this->pl1_;
   delete this->pl2_;
   delete this->board_;
