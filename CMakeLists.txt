@@ -11,7 +11,8 @@ set(GAME_FILES src/main.cpp)
 set(TEST_FILES
         test/gtest_main.cpp
         test/BoardTest.h
-        test/BasicRulesTest.h test/AIplayerTest.h)
+        test/BasicRulesTest.h
+        test/AIplayerTest.h)
 set(SOURCE_FILES
         include/AIplayer.h
         include/BasicRules.h
@@ -22,6 +23,10 @@ set(SOURCE_FILES
         include/GameLogic.h
         include/HumanPlayer.h
         include/Player.h
+        include/Menu.h
+        include/ConsoleMenu.h
+        include/GameFlowLook.h
+        include/ConsoleGameFlow.h
         src/AIplayer.cpp
         src/BasicRules.cpp
         src/Board.cpp
@@ -30,7 +35,11 @@ set(SOURCE_FILES
         src/Game.cpp
         src/GameLogic.cpp
         src/HumanPlayer.cpp
-        src/Player.cpp src/Menu.cpp include/Menu.h src/ConsoleMenu.cpp include/ConsoleMenu.h src/GameFlowLook.cpp include/GameFlowLook.h src/ConsoleGameFlow.cpp include/ConsoleGameFlow.h)
+        src/Player.cpp
+        src/Menu.cpp
+        src/ConsoleMenu.cpp
+        src/GameFlowLook.cpp
+        src/ConsoleGameFlow.cpp)
 
 add_executable(Othello ${SOURCE_FILES} ${GAME_FILES})
 add_executable(Test ${SOURCE_FILES} ${TEST_FILES})
