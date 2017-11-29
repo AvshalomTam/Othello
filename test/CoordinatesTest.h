@@ -1,8 +1,18 @@
-//
-// Created by steve on 11/29/17.
-//
+// EM168887 Steve Gutfreund
+// 203829478 Avshalom Tam
 
-#ifndef OTHELLO_COORDINATESTEST_H
-#define OTHELLO_COORDINATESTEST_H
+#ifndef COORDINATESTEST_H
+#define COORDINATESTEST_H
 
-#endif //OTHELLO_COORDINATESTEST_H
+#include <gtest/gtest.h>
+class CoordinatesTest : public testing::Test {
+ public:
+
+ protected:
+};
+
+TEST_F(CoordinatesTest, Move) {
+  EXPECT_EQ(1, 1);
+}
+
+#endif //COORDINATESTEST_H

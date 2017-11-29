@@ -49,6 +49,9 @@ public:
      * Destructor.
      */
     int getScore(cell num_player);
+    /**
+     * Destructor.
+     */
     ~Board();
 private:
     // a 2D array representing the status of the board
