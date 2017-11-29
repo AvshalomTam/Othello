@@ -5,14 +5,18 @@ CMakeFiles/Othello.dir/main.cpp.o
  /home/avshalom/CLionProjects/Othello/include/Board.h
  /home/avshalom/CLionProjects/Othello/include/Coordinates.h
  /home/avshalom/CLionProjects/Othello/include/Game.h
+ /home/avshalom/CLionProjects/Othello/include/GameFlowLook.h
  /home/avshalom/CLionProjects/Othello/include/GameLogic.h
  /home/avshalom/CLionProjects/Othello/include/HumanPlayer.h
+ /home/avshalom/CLionProjects/Othello/include/Menu.h
  /home/avshalom/CLionProjects/Othello/include/Player.h
+ /home/avshalom/CLionProjects/Othello/include/PreviousInfo.h
  /home/avshalom/CLionProjects/Othello/main.cpp
 CMakeFiles/Othello.dir/src/AIplayer.cpp.o
  /home/avshalom/CLionProjects/Othello/include/AIplayer.h
  /home/avshalom/CLionProjects/Othello/include/Board.h
  /home/avshalom/CLionProjects/Othello/include/Coordinates.h
+ /home/avshalom/CLionProjects/Othello/include/GameFlowLook.h
  /home/avshalom/CLionProjects/Othello/include/GameLogic.h
  /home/avshalom/CLionProjects/Othello/include/Player.h
  /home/avshalom/CLionProjects/Othello/src/AIplayer.cpp
@@ -58,6 +62,7 @@ CMakeFiles/Othello.dir/src/Game.cpp.o
  /home/avshalom/CLionProjects/Othello/include/HumanPlayer.h
  /home/avshalom/CLionProjects/Othello/include/Menu.h
  /home/avshalom/CLionProjects/Othello/include/Player.h
+ /home/avshalom/CLionProjects/Othello/include/PreviousInfo.h
  /home/avshalom/CLionProjects/Othello/src/Game.cpp
 CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o
  /home/avshalom/CLionProjects/Othello/include/Board.h
@@ -70,9 +75,13 @@ CMakeFiles/Othello.dir/src/GameLogic.cpp.o
  /home/avshalom/CLionProjects/Othello/include/GameLogic.h
  /home/avshalom/CLionProjects/Othello/src/GameLogic.cpp
 CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o
+ /home/avshalom/CLionProjects/Othello/include/Board.h
  /home/avshalom/CLionProjects/Othello/include/Coordinates.h
+ /home/avshalom/CLionProjects/Othello/include/GameFlowLook.h
+ /home/avshalom/CLionProjects/Othello/include/GameLogic.h
  /home/avshalom/CLionProjects/Othello/include/HumanPlayer.h
  /home/avshalom/CLionProjects/Othello/include/Player.h
+ /home/avshalom/CLionProjects/Othello/include/PreviousInfo.h
  /home/avshalom/CLionProjects/Othello/src/HumanPlayer.cpp
 CMakeFiles/Othello.dir/src/Menu.cpp.o
  /home/avshalom/CLionProjects/Othello/include/Menu.h
@@ -81,3 +90,8 @@ CMakeFiles/Othello.dir/src/Player.cpp.o
  /home/avshalom/CLionProjects/Othello/include/Coordinates.h
  /home/avshalom/CLionProjects/Othello/include/Player.h
  /home/avshalom/CLionProjects/Othello/src/Player.cpp
+CMakeFiles/Othello.dir/src/PreviousInfo.cpp.o
+ /home/avshalom/CLionProjects/Othello/include/Coordinates.h
+ /home/avshalom/CLionProjects/Othello/include/Player.h
+ /home/avshalom/CLionProjects/Othello/include/PreviousInfo.h
+ /home/avshalom/CLionProjects/Othello/src/PreviousInfo.cpp

@@ -651,6 +651,36 @@ src/Player.cpp.s:
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
 
+src/PreviousInfo.o: src/PreviousInfo.cpp.o
+
+.PHONY : src/PreviousInfo.o
+
+# target to build an object file
+src/PreviousInfo.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/PreviousInfo.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/PreviousInfo.cpp.o
+.PHONY : src/PreviousInfo.cpp.o
+
+src/PreviousInfo.i: src/PreviousInfo.cpp.i
+
+.PHONY : src/PreviousInfo.i
+
+# target to preprocess a source file
+src/PreviousInfo.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/PreviousInfo.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/PreviousInfo.cpp.i
+.PHONY : src/PreviousInfo.cpp.i
+
+src/PreviousInfo.s: src/PreviousInfo.cpp.s
+
+.PHONY : src/PreviousInfo.s
+
+# target to generate assembly for a file
+src/PreviousInfo.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/PreviousInfo.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/PreviousInfo.cpp.s
+.PHONY : src/PreviousInfo.cpp.s
+
 test/gtest_main.o: test/gtest_main.cpp.o
 
 .PHONY : test/gtest_main.o
@@ -738,6 +768,9 @@ help:
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
+	@echo "... src/PreviousInfo.o"
+	@echo "... src/PreviousInfo.i"
+	@echo "... src/PreviousInfo.s"
 	@echo "... test/gtest_main.o"
 	@echo "... test/gtest_main.i"
 	@echo "... test/gtest_main.s"

@@ -4,14 +4,18 @@
 CMakeFiles/Othello.dir/main.cpp.o: ../include/Board.h
 CMakeFiles/Othello.dir/main.cpp.o: ../include/Coordinates.h
 CMakeFiles/Othello.dir/main.cpp.o: ../include/Game.h
+CMakeFiles/Othello.dir/main.cpp.o: ../include/GameFlowLook.h
 CMakeFiles/Othello.dir/main.cpp.o: ../include/GameLogic.h
 CMakeFiles/Othello.dir/main.cpp.o: ../include/HumanPlayer.h
+CMakeFiles/Othello.dir/main.cpp.o: ../include/Menu.h
 CMakeFiles/Othello.dir/main.cpp.o: ../include/Player.h
+CMakeFiles/Othello.dir/main.cpp.o: ../include/PreviousInfo.h
 CMakeFiles/Othello.dir/main.cpp.o: ../main.cpp
 
 CMakeFiles/Othello.dir/src/AIplayer.cpp.o: ../include/AIplayer.h
 CMakeFiles/Othello.dir/src/AIplayer.cpp.o: ../include/Board.h
 CMakeFiles/Othello.dir/src/AIplayer.cpp.o: ../include/Coordinates.h
+CMakeFiles/Othello.dir/src/AIplayer.cpp.o: ../include/GameFlowLook.h
 CMakeFiles/Othello.dir/src/AIplayer.cpp.o: ../include/GameLogic.h
 CMakeFiles/Othello.dir/src/AIplayer.cpp.o: ../include/Player.h
 CMakeFiles/Othello.dir/src/AIplayer.cpp.o: ../src/AIplayer.cpp
@@ -57,6 +61,7 @@ CMakeFiles/Othello.dir/src/Game.cpp.o: ../include/GameLogic.h
 CMakeFiles/Othello.dir/src/Game.cpp.o: ../include/HumanPlayer.h
 CMakeFiles/Othello.dir/src/Game.cpp.o: ../include/Menu.h
 CMakeFiles/Othello.dir/src/Game.cpp.o: ../include/Player.h
+CMakeFiles/Othello.dir/src/Game.cpp.o: ../include/PreviousInfo.h
 CMakeFiles/Othello.dir/src/Game.cpp.o: ../src/Game.cpp
 
 CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o: ../include/Board.h
@@ -69,9 +74,13 @@ CMakeFiles/Othello.dir/src/GameLogic.cpp.o: ../include/Coordinates.h
 CMakeFiles/Othello.dir/src/GameLogic.cpp.o: ../include/GameLogic.h
 CMakeFiles/Othello.dir/src/GameLogic.cpp.o: ../src/GameLogic.cpp
 
+CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o: ../include/Board.h
 CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o: ../include/Coordinates.h
+CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o: ../include/GameFlowLook.h
+CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o: ../include/GameLogic.h
 CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o: ../include/HumanPlayer.h
 CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o: ../include/Player.h
+CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o: ../include/PreviousInfo.h
 CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o: ../src/HumanPlayer.cpp
 
 CMakeFiles/Othello.dir/src/Menu.cpp.o: ../include/Menu.h
@@ -80,4 +89,9 @@ CMakeFiles/Othello.dir/src/Menu.cpp.o: ../src/Menu.cpp
 CMakeFiles/Othello.dir/src/Player.cpp.o: ../include/Coordinates.h
 CMakeFiles/Othello.dir/src/Player.cpp.o: ../include/Player.h
 CMakeFiles/Othello.dir/src/Player.cpp.o: ../src/Player.cpp
+
+CMakeFiles/Othello.dir/src/PreviousInfo.cpp.o: ../include/Coordinates.h
+CMakeFiles/Othello.dir/src/PreviousInfo.cpp.o: ../include/Player.h
+CMakeFiles/Othello.dir/src/PreviousInfo.cpp.o: ../include/PreviousInfo.h
+CMakeFiles/Othello.dir/src/PreviousInfo.cpp.o: ../src/PreviousInfo.cpp
 

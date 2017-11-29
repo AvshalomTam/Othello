@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o"
   "CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o"
   "CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o"
+  "CMakeFiles/Othello.dir/src/PreviousInfo.cpp.o"
   "CMakeFiles/Othello.dir/main.cpp.o"
   "Othello.pdb"
   "Othello"

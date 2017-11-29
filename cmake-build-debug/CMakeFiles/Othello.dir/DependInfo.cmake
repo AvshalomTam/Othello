@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/avshalom/CLionProjects/Othello/src/HumanPlayer.cpp" "/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o"
   "/home/avshalom/CLionProjects/Othello/src/Menu.cpp" "/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles/Othello.dir/src/Menu.cpp.o"
   "/home/avshalom/CLionProjects/Othello/src/Player.cpp" "/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles/Othello.dir/src/Player.cpp.o"
+  "/home/avshalom/CLionProjects/Othello/src/PreviousInfo.cpp" "/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles/Othello.dir/src/PreviousInfo.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

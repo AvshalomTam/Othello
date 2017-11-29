@@ -15,6 +15,8 @@ GameLogic.h
 /home/avshalom/CLionProjects/Othello/include/GameLogic.h
 Player.h
 /home/avshalom/CLionProjects/Othello/include/Player.h
+GameFlowLook.h
+/home/avshalom/CLionProjects/Othello/include/GameFlowLook.h
 
 /home/avshalom/CLionProjects/Othello/include/BasicRules.h
 Board.h
@@ -53,6 +55,12 @@ HumanPlayer.h
 /home/avshalom/CLionProjects/Othello/include/HumanPlayer.h
 GameLogic.h
 /home/avshalom/CLionProjects/Othello/include/GameLogic.h
+Menu.h
+/home/avshalom/CLionProjects/Othello/include/Menu.h
+GameFlowLook.h
+/home/avshalom/CLionProjects/Othello/include/GameFlowLook.h
+PreviousInfo.h
+/home/avshalom/CLionProjects/Othello/include/PreviousInfo.h
 
 /home/avshalom/CLionProjects/Othello/include/GameFlowLook.h
 string
@@ -73,12 +81,24 @@ Board.h
 /home/avshalom/CLionProjects/Othello/include/HumanPlayer.h
 Player.h
 /home/avshalom/CLionProjects/Othello/include/Player.h
+GameLogic.h
+/home/avshalom/CLionProjects/Othello/include/GameLogic.h
+GameFlowLook.h
+/home/avshalom/CLionProjects/Othello/include/GameFlowLook.h
+PreviousInfo.h
+/home/avshalom/CLionProjects/Othello/include/PreviousInfo.h
 
 /home/avshalom/CLionProjects/Othello/include/Menu.h
 
 /home/avshalom/CLionProjects/Othello/include/Player.h
 Coordinates.h
 /home/avshalom/CLionProjects/Othello/include/Coordinates.h
+
+/home/avshalom/CLionProjects/Othello/include/PreviousInfo.h
+Coordinates.h
+/home/avshalom/CLionProjects/Othello/include/Coordinates.h
+Player.h
+/home/avshalom/CLionProjects/Othello/include/Player.h
 
 /home/avshalom/CLionProjects/Othello/main.cpp
 iostream
@@ -161,4 +181,8 @@ iostream
 /home/avshalom/CLionProjects/Othello/src/Player.cpp
 ../include/Player.h
 /home/avshalom/CLionProjects/Othello/include/Player.h
+
+/home/avshalom/CLionProjects/Othello/src/PreviousInfo.cpp
+../include/PreviousInfo.h
+/home/avshalom/CLionProjects/Othello/include/PreviousInfo.h
 

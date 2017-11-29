@@ -453,6 +453,10 @@
 			<Option target="Test"/>
 			<Option target="Othello"/>
 		</Unit>
+		<Unit filename="/home/avshalom/CLionProjects/Othello/include/PreviousInfo.h">
+			<Option target="Test"/>
+			<Option target="Othello"/>
+		</Unit>
 		<Unit filename="/home/avshalom/CLionProjects/Othello/main.cpp">
 			<Option target="Othello"/>
 		</Unit>
@@ -505,6 +509,10 @@
 			<Option target="Othello"/>
 		</Unit>
 		<Unit filename="/home/avshalom/CLionProjects/Othello/src/Player.cpp">
+			<Option target="Test"/>
+			<Option target="Othello"/>
+		</Unit>
+		<Unit filename="/home/avshalom/CLionProjects/Othello/src/PreviousInfo.cpp">
 			<Option target="Test"/>
 			<Option target="Othello"/>
 		</Unit>
