@@ -63,6 +63,11 @@ void Game::playOneTurn() {
   }
 
   this->game_flow_->printCurrentBoard(*this->board_);
+  if (this->game_info_->preHadMove()) {
+    this->game_flow_->printPreviousMove(this->game_info_->getName(), this->game_info_->getPreMove().toString());
+  }
+
+  this->game_flow_->printTurn(pl->getName());
 
   //if the player has no moves
   if (!this->judge_->hasOptions(*this->board_, pl->getId())) {

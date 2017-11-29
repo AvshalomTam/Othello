@@ -11,10 +11,6 @@ HumanPlayer::HumanPlayer(cell numplayer, Board& board, GameLogic& judge, GameFlo
 Coordinates HumanPlayer::getMove() {
   Coordinates input;
   this->hasMove(true);
-  if (this->game_info_.preHadMove()) {
-    this->gameflow_.printPreviousMove(this->game_info_.getName(), this->game_info_.getPreMove().toString());
-  }
-  this->gameflow_.printTurn(this->getName());
 
   list <Coordinates> options = this->judge_.getOptions(this->board_, this->getId());
   while (true) {
