@@ -46,7 +46,8 @@ public:
     */
     virtual Board* copy() const = 0;
     /**
-     * Destructor.
+     * Returns score of player.
+     * @param num_player number of player
      */
     int getScore(cell num_player);
     /**
