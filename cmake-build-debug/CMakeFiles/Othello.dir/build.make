@@ -249,33 +249,9 @@ CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o.provides: CMakeFiles/Othello.dir/sr
 CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o.provides.build: CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o
 
 
-CMakeFiles/Othello.dir/src/main.cpp.o: CMakeFiles/Othello.dir/flags.make
-CMakeFiles/Othello.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Othello.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Othello.dir/src/main.cpp.o -c /home/avshalom/CLionProjects/Othello/src/main.cpp
-
-CMakeFiles/Othello.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Othello.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/avshalom/CLionProjects/Othello/src/main.cpp > CMakeFiles/Othello.dir/src/main.cpp.i
-
-CMakeFiles/Othello.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Othello.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/avshalom/CLionProjects/Othello/src/main.cpp -o CMakeFiles/Othello.dir/src/main.cpp.s
-
-CMakeFiles/Othello.dir/src/main.cpp.o.requires:
-
-.PHONY : CMakeFiles/Othello.dir/src/main.cpp.o.requires
-
-CMakeFiles/Othello.dir/src/main.cpp.o.provides: CMakeFiles/Othello.dir/src/main.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/main.cpp.o.provides.build
-.PHONY : CMakeFiles/Othello.dir/src/main.cpp.o.provides
-
-CMakeFiles/Othello.dir/src/main.cpp.o.provides.build: CMakeFiles/Othello.dir/src/main.cpp.o
-
-
 CMakeFiles/Othello.dir/src/Player.cpp.o: CMakeFiles/Othello.dir/flags.make
 CMakeFiles/Othello.dir/src/Player.cpp.o: ../src/Player.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Othello.dir/src/Player.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Othello.dir/src/Player.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Othello.dir/src/Player.cpp.o -c /home/avshalom/CLionProjects/Othello/src/Player.cpp
 
 CMakeFiles/Othello.dir/src/Player.cpp.i: cmake_force
@@ -297,6 +273,126 @@ CMakeFiles/Othello.dir/src/Player.cpp.o.provides: CMakeFiles/Othello.dir/src/Pla
 CMakeFiles/Othello.dir/src/Player.cpp.o.provides.build: CMakeFiles/Othello.dir/src/Player.cpp.o
 
 
+CMakeFiles/Othello.dir/src/Menu.cpp.o: CMakeFiles/Othello.dir/flags.make
+CMakeFiles/Othello.dir/src/Menu.cpp.o: ../src/Menu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Othello.dir/src/Menu.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Othello.dir/src/Menu.cpp.o -c /home/avshalom/CLionProjects/Othello/src/Menu.cpp
+
+CMakeFiles/Othello.dir/src/Menu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Othello.dir/src/Menu.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/avshalom/CLionProjects/Othello/src/Menu.cpp > CMakeFiles/Othello.dir/src/Menu.cpp.i
+
+CMakeFiles/Othello.dir/src/Menu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Othello.dir/src/Menu.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/avshalom/CLionProjects/Othello/src/Menu.cpp -o CMakeFiles/Othello.dir/src/Menu.cpp.s
+
+CMakeFiles/Othello.dir/src/Menu.cpp.o.requires:
+
+.PHONY : CMakeFiles/Othello.dir/src/Menu.cpp.o.requires
+
+CMakeFiles/Othello.dir/src/Menu.cpp.o.provides: CMakeFiles/Othello.dir/src/Menu.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Menu.cpp.o.provides.build
+.PHONY : CMakeFiles/Othello.dir/src/Menu.cpp.o.provides
+
+CMakeFiles/Othello.dir/src/Menu.cpp.o.provides.build: CMakeFiles/Othello.dir/src/Menu.cpp.o
+
+
+CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o: CMakeFiles/Othello.dir/flags.make
+CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o: ../src/ConsoleMenu.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o -c /home/avshalom/CLionProjects/Othello/src/ConsoleMenu.cpp
+
+CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/avshalom/CLionProjects/Othello/src/ConsoleMenu.cpp > CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.i
+
+CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/avshalom/CLionProjects/Othello/src/ConsoleMenu.cpp -o CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.s
+
+CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o.requires:
+
+.PHONY : CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o.requires
+
+CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o.provides: CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o.provides.build
+.PHONY : CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o.provides
+
+CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o.provides.build: CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o
+
+
+CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o: CMakeFiles/Othello.dir/flags.make
+CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o: ../src/GameFlowLook.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o -c /home/avshalom/CLionProjects/Othello/src/GameFlowLook.cpp
+
+CMakeFiles/Othello.dir/src/GameFlowLook.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Othello.dir/src/GameFlowLook.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/avshalom/CLionProjects/Othello/src/GameFlowLook.cpp > CMakeFiles/Othello.dir/src/GameFlowLook.cpp.i
+
+CMakeFiles/Othello.dir/src/GameFlowLook.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Othello.dir/src/GameFlowLook.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/avshalom/CLionProjects/Othello/src/GameFlowLook.cpp -o CMakeFiles/Othello.dir/src/GameFlowLook.cpp.s
+
+CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o.requires:
+
+.PHONY : CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o.requires
+
+CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o.provides: CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o.provides.build
+.PHONY : CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o.provides
+
+CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o.provides.build: CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o
+
+
+CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o: CMakeFiles/Othello.dir/flags.make
+CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o: ../src/ConsoleGameFlow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o -c /home/avshalom/CLionProjects/Othello/src/ConsoleGameFlow.cpp
+
+CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/avshalom/CLionProjects/Othello/src/ConsoleGameFlow.cpp > CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.i
+
+CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/avshalom/CLionProjects/Othello/src/ConsoleGameFlow.cpp -o CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.s
+
+CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o.requires:
+
+.PHONY : CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o.requires
+
+CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o.provides: CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o.provides.build
+.PHONY : CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o.provides
+
+CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o.provides.build: CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o
+
+
+CMakeFiles/Othello.dir/main.cpp.o: CMakeFiles/Othello.dir/flags.make
+CMakeFiles/Othello.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Othello.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Othello.dir/main.cpp.o -c /home/avshalom/CLionProjects/Othello/main.cpp
+
+CMakeFiles/Othello.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Othello.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/avshalom/CLionProjects/Othello/main.cpp > CMakeFiles/Othello.dir/main.cpp.i
+
+CMakeFiles/Othello.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Othello.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/avshalom/CLionProjects/Othello/main.cpp -o CMakeFiles/Othello.dir/main.cpp.s
+
+CMakeFiles/Othello.dir/main.cpp.o.requires:
+
+.PHONY : CMakeFiles/Othello.dir/main.cpp.o.requires
+
+CMakeFiles/Othello.dir/main.cpp.o.provides: CMakeFiles/Othello.dir/main.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/main.cpp.o.provides.build
+.PHONY : CMakeFiles/Othello.dir/main.cpp.o.provides
+
+CMakeFiles/Othello.dir/main.cpp.o.provides.build: CMakeFiles/Othello.dir/main.cpp.o
+
+
 # Object files for target Othello
 Othello_OBJECTS = \
 "CMakeFiles/Othello.dir/src/AIplayer.cpp.o" \
@@ -307,8 +403,12 @@ Othello_OBJECTS = \
 "CMakeFiles/Othello.dir/src/Game.cpp.o" \
 "CMakeFiles/Othello.dir/src/GameLogic.cpp.o" \
 "CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o" \
-"CMakeFiles/Othello.dir/src/main.cpp.o" \
-"CMakeFiles/Othello.dir/src/Player.cpp.o"
+"CMakeFiles/Othello.dir/src/Player.cpp.o" \
+"CMakeFiles/Othello.dir/src/Menu.cpp.o" \
+"CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o" \
+"CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o" \
+"CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o" \
+"CMakeFiles/Othello.dir/main.cpp.o"
 
 # External object files for target Othello
 Othello_EXTERNAL_OBJECTS =
@@ -321,11 +421,15 @@ Othello: CMakeFiles/Othello.dir/src/Coordinates.cpp.o
 Othello: CMakeFiles/Othello.dir/src/Game.cpp.o
 Othello: CMakeFiles/Othello.dir/src/GameLogic.cpp.o
 Othello: CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o
-Othello: CMakeFiles/Othello.dir/src/main.cpp.o
 Othello: CMakeFiles/Othello.dir/src/Player.cpp.o
+Othello: CMakeFiles/Othello.dir/src/Menu.cpp.o
+Othello: CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o
+Othello: CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o
+Othello: CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o
+Othello: CMakeFiles/Othello.dir/main.cpp.o
 Othello: CMakeFiles/Othello.dir/build.make
 Othello: CMakeFiles/Othello.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Othello"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable Othello"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Othello.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -341,8 +445,12 @@ CMakeFiles/Othello.dir/requires: CMakeFiles/Othello.dir/src/Coordinates.cpp.o.re
 CMakeFiles/Othello.dir/requires: CMakeFiles/Othello.dir/src/Game.cpp.o.requires
 CMakeFiles/Othello.dir/requires: CMakeFiles/Othello.dir/src/GameLogic.cpp.o.requires
 CMakeFiles/Othello.dir/requires: CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o.requires
-CMakeFiles/Othello.dir/requires: CMakeFiles/Othello.dir/src/main.cpp.o.requires
 CMakeFiles/Othello.dir/requires: CMakeFiles/Othello.dir/src/Player.cpp.o.requires
+CMakeFiles/Othello.dir/requires: CMakeFiles/Othello.dir/src/Menu.cpp.o.requires
+CMakeFiles/Othello.dir/requires: CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o.requires
+CMakeFiles/Othello.dir/requires: CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o.requires
+CMakeFiles/Othello.dir/requires: CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o.requires
+CMakeFiles/Othello.dir/requires: CMakeFiles/Othello.dir/main.cpp.o.requires
 
 .PHONY : CMakeFiles/Othello.dir/requires
 

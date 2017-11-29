@@ -16,6 +16,10 @@ enum cell {empty, first_player, second_player};
 class Board {
 public:
     /**
+    * Default constructor. set board of size 8x8
+    */
+    Board();
+    /**
      * Constructor.
      * @param size of board (size x size)
      */
@@ -46,9 +50,19 @@ public:
     */
     virtual Board* copy() const = 0;
     /**
-     * Destructor.
-     */
+    * count board cells from specific type.
+    * @param number of the player
+    * @return number of cells of the player in the board
+    */
     int getScore(cell num_player);
+    /**
+    * initialize the Board.
+    * @param size of board (size)
+    */
+    void initializeBoard(int size);
+    /**
+    * Destructor.
+    */
     ~Board();
 private:
     // a 2D array representing the status of the board

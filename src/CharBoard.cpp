@@ -6,7 +6,7 @@
 
 using namespace std;
 
-CharBoard::CharBoard() : Board(8) {}
+CharBoard::CharBoard() : Board() {}
 
 CharBoard::CharBoard(int size) : Board(size) {}
 

@@ -7,8 +7,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/Othello.dir/src/Game.cpp.o"
   "CMakeFiles/Othello.dir/src/GameLogic.cpp.o"
   "CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o"
-  "CMakeFiles/Othello.dir/src/main.cpp.o"
   "CMakeFiles/Othello.dir/src/Player.cpp.o"
+  "CMakeFiles/Othello.dir/src/Menu.cpp.o"
+  "CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o"
+  "CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o"
+  "CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o"
+  "CMakeFiles/Othello.dir/main.cpp.o"
   "Othello.pdb"
   "Othello"
 )

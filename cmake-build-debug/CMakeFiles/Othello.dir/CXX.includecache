@@ -34,6 +34,14 @@ Coordinates.h
 Board.h
 /home/avshalom/CLionProjects/Othello/include/Board.h
 
+/home/avshalom/CLionProjects/Othello/include/ConsoleGameFlow.h
+GameFlowLook.h
+/home/avshalom/CLionProjects/Othello/include/GameFlowLook.h
+
+/home/avshalom/CLionProjects/Othello/include/ConsoleMenu.h
+Menu.h
+/home/avshalom/CLionProjects/Othello/include/Menu.h
+
 /home/avshalom/CLionProjects/Othello/include/Coordinates.h
 string
 -
@@ -45,6 +53,14 @@ HumanPlayer.h
 /home/avshalom/CLionProjects/Othello/include/HumanPlayer.h
 GameLogic.h
 /home/avshalom/CLionProjects/Othello/include/GameLogic.h
+
+/home/avshalom/CLionProjects/Othello/include/GameFlowLook.h
+string
+-
+list
+-
+Board.h
+/home/avshalom/CLionProjects/Othello/include/Board.h
 
 /home/avshalom/CLionProjects/Othello/include/GameLogic.h
 list
@@ -58,12 +74,22 @@ Board.h
 Player.h
 /home/avshalom/CLionProjects/Othello/include/Player.h
 
+/home/avshalom/CLionProjects/Othello/include/Menu.h
+
 /home/avshalom/CLionProjects/Othello/include/Player.h
 Coordinates.h
 /home/avshalom/CLionProjects/Othello/include/Coordinates.h
 
+/home/avshalom/CLionProjects/Othello/main.cpp
+iostream
+-
+include/Game.h
+/home/avshalom/CLionProjects/Othello/include/Game.h
+
 /home/avshalom/CLionProjects/Othello/src/AIplayer.cpp
 list
+-
+iostream
 -
 ../include/AIplayer.h
 /home/avshalom/CLionProjects/Othello/include/AIplayer.h
@@ -84,13 +110,23 @@ iostream
 iostream
 -
 
+/home/avshalom/CLionProjects/Othello/src/ConsoleGameFlow.cpp
+iostream
+-
+../include/ConsoleGameFlow.h
+/home/avshalom/CLionProjects/Othello/include/ConsoleGameFlow.h
+
+/home/avshalom/CLionProjects/Othello/src/ConsoleMenu.cpp
+../include/ConsoleMenu.h
+/home/avshalom/CLionProjects/Othello/include/ConsoleMenu.h
+iostream
+-
+
 /home/avshalom/CLionProjects/Othello/src/Coordinates.cpp
 ../include/Coordinates.h
 /home/avshalom/CLionProjects/Othello/include/Coordinates.h
 
 /home/avshalom/CLionProjects/Othello/src/Game.cpp
-iostream
--
 ../include/Game.h
 /home/avshalom/CLionProjects/Othello/include/Game.h
 ../include/CharBoard.h
@@ -99,6 +135,14 @@ iostream
 /home/avshalom/CLionProjects/Othello/include/BasicRules.h
 ../include/AIplayer.h
 /home/avshalom/CLionProjects/Othello/include/AIplayer.h
+../include/ConsoleMenu.h
+/home/avshalom/CLionProjects/Othello/include/ConsoleMenu.h
+../include/ConsoleGameFlow.h
+/home/avshalom/CLionProjects/Othello/include/ConsoleGameFlow.h
+
+/home/avshalom/CLionProjects/Othello/src/GameFlowLook.cpp
+../include/GameFlowLook.h
+/home/avshalom/CLionProjects/Othello/include/GameFlowLook.h
 
 /home/avshalom/CLionProjects/Othello/src/GameLogic.cpp
 ../include/GameLogic.h
@@ -110,13 +154,11 @@ iostream
 ../include/HumanPlayer.h
 /home/avshalom/CLionProjects/Othello/include/HumanPlayer.h
 
+/home/avshalom/CLionProjects/Othello/src/Menu.cpp
+../include/Menu.h
+/home/avshalom/CLionProjects/Othello/include/Menu.h
+
 /home/avshalom/CLionProjects/Othello/src/Player.cpp
 ../include/Player.h
 /home/avshalom/CLionProjects/Othello/include/Player.h
-
-/home/avshalom/CLionProjects/Othello/src/main.cpp
-iostream
--
-../include/Game.h
-/home/avshalom/CLionProjects/Othello/include/Game.h
 

@@ -56,6 +56,52 @@ CMAKE_BINARY_DIR = /home/avshalom/CLionProjects/Othello/cmake-build-debug
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -111,6 +157,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Test
+
+# Build rule for target.
+Test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test
+.PHONY : Test
+
+# fast build rule for target.
+Test/fast:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
+.PHONY : Test/fast
+
+#=============================================================================
 # Target rules for targets named Othello
 
 # Build rule for target.
@@ -123,12 +182,92 @@ Othello/fast:
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/build
 .PHONY : Othello/fast
 
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) -f gtest/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googletest-release-1.8.0/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) -f gtest/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build.make gtest/googletest-release-1.8.0/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f gtest/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f gtest/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 src/AIplayer.o: src/AIplayer.cpp.o
 
 .PHONY : src/AIplayer.o
 
 # target to build an object file
 src/AIplayer.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/AIplayer.cpp.o
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/AIplayer.cpp.o
 .PHONY : src/AIplayer.cpp.o
 
@@ -138,6 +277,7 @@ src/AIplayer.i: src/AIplayer.cpp.i
 
 # target to preprocess a source file
 src/AIplayer.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/AIplayer.cpp.i
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/AIplayer.cpp.i
 .PHONY : src/AIplayer.cpp.i
 
@@ -147,6 +287,7 @@ src/AIplayer.s: src/AIplayer.cpp.s
 
 # target to generate assembly for a file
 src/AIplayer.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/AIplayer.cpp.s
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/AIplayer.cpp.s
 .PHONY : src/AIplayer.cpp.s
 
@@ -156,6 +297,7 @@ src/BasicRules.o: src/BasicRules.cpp.o
 
 # target to build an object file
 src/BasicRules.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/BasicRules.cpp.o
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/BasicRules.cpp.o
 .PHONY : src/BasicRules.cpp.o
 
@@ -165,6 +307,7 @@ src/BasicRules.i: src/BasicRules.cpp.i
 
 # target to preprocess a source file
 src/BasicRules.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/BasicRules.cpp.i
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/BasicRules.cpp.i
 .PHONY : src/BasicRules.cpp.i
 
@@ -174,6 +317,7 @@ src/BasicRules.s: src/BasicRules.cpp.s
 
 # target to generate assembly for a file
 src/BasicRules.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/BasicRules.cpp.s
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/BasicRules.cpp.s
 .PHONY : src/BasicRules.cpp.s
 
@@ -183,6 +327,7 @@ src/Board.o: src/Board.cpp.o
 
 # target to build an object file
 src/Board.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Board.cpp.o
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Board.cpp.o
 .PHONY : src/Board.cpp.o
 
@@ -192,6 +337,7 @@ src/Board.i: src/Board.cpp.i
 
 # target to preprocess a source file
 src/Board.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Board.cpp.i
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Board.cpp.i
 .PHONY : src/Board.cpp.i
 
@@ -201,6 +347,7 @@ src/Board.s: src/Board.cpp.s
 
 # target to generate assembly for a file
 src/Board.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Board.cpp.s
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Board.cpp.s
 .PHONY : src/Board.cpp.s
 
@@ -210,6 +357,7 @@ src/CharBoard.o: src/CharBoard.cpp.o
 
 # target to build an object file
 src/CharBoard.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/CharBoard.cpp.o
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/CharBoard.cpp.o
 .PHONY : src/CharBoard.cpp.o
 
@@ -219,6 +367,7 @@ src/CharBoard.i: src/CharBoard.cpp.i
 
 # target to preprocess a source file
 src/CharBoard.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/CharBoard.cpp.i
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/CharBoard.cpp.i
 .PHONY : src/CharBoard.cpp.i
 
@@ -228,8 +377,69 @@ src/CharBoard.s: src/CharBoard.cpp.s
 
 # target to generate assembly for a file
 src/CharBoard.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/CharBoard.cpp.s
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/CharBoard.cpp.s
 .PHONY : src/CharBoard.cpp.s
+
+src/ConsoleGameFlow.o: src/ConsoleGameFlow.cpp.o
+
+.PHONY : src/ConsoleGameFlow.o
+
+# target to build an object file
+src/ConsoleGameFlow.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/ConsoleGameFlow.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o
+.PHONY : src/ConsoleGameFlow.cpp.o
+
+src/ConsoleGameFlow.i: src/ConsoleGameFlow.cpp.i
+
+.PHONY : src/ConsoleGameFlow.i
+
+# target to preprocess a source file
+src/ConsoleGameFlow.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/ConsoleGameFlow.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.i
+.PHONY : src/ConsoleGameFlow.cpp.i
+
+src/ConsoleGameFlow.s: src/ConsoleGameFlow.cpp.s
+
+.PHONY : src/ConsoleGameFlow.s
+
+# target to generate assembly for a file
+src/ConsoleGameFlow.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/ConsoleGameFlow.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.s
+.PHONY : src/ConsoleGameFlow.cpp.s
+
+src/ConsoleMenu.o: src/ConsoleMenu.cpp.o
+
+.PHONY : src/ConsoleMenu.o
+
+# target to build an object file
+src/ConsoleMenu.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/ConsoleMenu.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o
+.PHONY : src/ConsoleMenu.cpp.o
+
+src/ConsoleMenu.i: src/ConsoleMenu.cpp.i
+
+.PHONY : src/ConsoleMenu.i
+
+# target to preprocess a source file
+src/ConsoleMenu.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/ConsoleMenu.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.i
+.PHONY : src/ConsoleMenu.cpp.i
+
+src/ConsoleMenu.s: src/ConsoleMenu.cpp.s
+
+.PHONY : src/ConsoleMenu.s
+
+# target to generate assembly for a file
+src/ConsoleMenu.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/ConsoleMenu.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.s
+.PHONY : src/ConsoleMenu.cpp.s
 
 src/Coordinates.o: src/Coordinates.cpp.o
 
@@ -237,6 +447,7 @@ src/Coordinates.o: src/Coordinates.cpp.o
 
 # target to build an object file
 src/Coordinates.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Coordinates.cpp.o
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Coordinates.cpp.o
 .PHONY : src/Coordinates.cpp.o
 
@@ -246,6 +457,7 @@ src/Coordinates.i: src/Coordinates.cpp.i
 
 # target to preprocess a source file
 src/Coordinates.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Coordinates.cpp.i
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Coordinates.cpp.i
 .PHONY : src/Coordinates.cpp.i
 
@@ -255,6 +467,7 @@ src/Coordinates.s: src/Coordinates.cpp.s
 
 # target to generate assembly for a file
 src/Coordinates.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Coordinates.cpp.s
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Coordinates.cpp.s
 .PHONY : src/Coordinates.cpp.s
 
@@ -264,6 +477,7 @@ src/Game.o: src/Game.cpp.o
 
 # target to build an object file
 src/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Game.cpp.o
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Game.cpp.o
 .PHONY : src/Game.cpp.o
 
@@ -273,6 +487,7 @@ src/Game.i: src/Game.cpp.i
 
 # target to preprocess a source file
 src/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Game.cpp.i
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Game.cpp.i
 .PHONY : src/Game.cpp.i
 
@@ -282,8 +497,39 @@ src/Game.s: src/Game.cpp.s
 
 # target to generate assembly for a file
 src/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Game.cpp.s
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
+
+src/GameFlowLook.o: src/GameFlowLook.cpp.o
+
+.PHONY : src/GameFlowLook.o
+
+# target to build an object file
+src/GameFlowLook.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/GameFlowLook.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o
+.PHONY : src/GameFlowLook.cpp.o
+
+src/GameFlowLook.i: src/GameFlowLook.cpp.i
+
+.PHONY : src/GameFlowLook.i
+
+# target to preprocess a source file
+src/GameFlowLook.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/GameFlowLook.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameFlowLook.cpp.i
+.PHONY : src/GameFlowLook.cpp.i
+
+src/GameFlowLook.s: src/GameFlowLook.cpp.s
+
+.PHONY : src/GameFlowLook.s
+
+# target to generate assembly for a file
+src/GameFlowLook.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/GameFlowLook.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameFlowLook.cpp.s
+.PHONY : src/GameFlowLook.cpp.s
 
 src/GameLogic.o: src/GameLogic.cpp.o
 
@@ -291,6 +537,7 @@ src/GameLogic.o: src/GameLogic.cpp.o
 
 # target to build an object file
 src/GameLogic.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/GameLogic.cpp.o
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameLogic.cpp.o
 .PHONY : src/GameLogic.cpp.o
 
@@ -300,6 +547,7 @@ src/GameLogic.i: src/GameLogic.cpp.i
 
 # target to preprocess a source file
 src/GameLogic.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/GameLogic.cpp.i
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameLogic.cpp.i
 .PHONY : src/GameLogic.cpp.i
 
@@ -309,6 +557,7 @@ src/GameLogic.s: src/GameLogic.cpp.s
 
 # target to generate assembly for a file
 src/GameLogic.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/GameLogic.cpp.s
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameLogic.cpp.s
 .PHONY : src/GameLogic.cpp.s
 
@@ -318,6 +567,7 @@ src/HumanPlayer.o: src/HumanPlayer.cpp.o
 
 # target to build an object file
 src/HumanPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/HumanPlayer.cpp.o
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o
 .PHONY : src/HumanPlayer.cpp.o
 
@@ -327,6 +577,7 @@ src/HumanPlayer.i: src/HumanPlayer.cpp.i
 
 # target to preprocess a source file
 src/HumanPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/HumanPlayer.cpp.i
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/HumanPlayer.cpp.i
 .PHONY : src/HumanPlayer.cpp.i
 
@@ -336,8 +587,39 @@ src/HumanPlayer.s: src/HumanPlayer.cpp.s
 
 # target to generate assembly for a file
 src/HumanPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/HumanPlayer.cpp.s
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/HumanPlayer.cpp.s
 .PHONY : src/HumanPlayer.cpp.s
+
+src/Menu.o: src/Menu.cpp.o
+
+.PHONY : src/Menu.o
+
+# target to build an object file
+src/Menu.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Menu.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Menu.cpp.o
+.PHONY : src/Menu.cpp.o
+
+src/Menu.i: src/Menu.cpp.i
+
+.PHONY : src/Menu.i
+
+# target to preprocess a source file
+src/Menu.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Menu.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Menu.cpp.i
+.PHONY : src/Menu.cpp.i
+
+src/Menu.s: src/Menu.cpp.s
+
+.PHONY : src/Menu.s
+
+# target to generate assembly for a file
+src/Menu.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Menu.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Menu.cpp.s
+.PHONY : src/Menu.cpp.s
 
 src/Player.o: src/Player.cpp.o
 
@@ -345,6 +627,7 @@ src/Player.o: src/Player.cpp.o
 
 # target to build an object file
 src/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Player.cpp.o
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Player.cpp.o
 .PHONY : src/Player.cpp.o
 
@@ -354,6 +637,7 @@ src/Player.i: src/Player.cpp.i
 
 # target to preprocess a source file
 src/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Player.cpp.i
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Player.cpp.i
 .PHONY : src/Player.cpp.i
 
@@ -363,35 +647,36 @@ src/Player.s: src/Player.cpp.s
 
 # target to generate assembly for a file
 src/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Player.cpp.s
 	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Player.cpp.s
 .PHONY : src/Player.cpp.s
 
-src/main.o: src/main.cpp.o
+test/gtest_main.o: test/gtest_main.cpp.o
 
-.PHONY : src/main.o
+.PHONY : test/gtest_main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+test/gtest_main.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/gtest_main.cpp.o
+.PHONY : test/gtest_main.cpp.o
 
-src/main.i: src/main.cpp.i
+test/gtest_main.i: test/gtest_main.cpp.i
 
-.PHONY : src/main.i
+.PHONY : test/gtest_main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+test/gtest_main.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/gtest_main.cpp.i
+.PHONY : test/gtest_main.cpp.i
 
-src/main.s: src/main.cpp.s
+test/gtest_main.s: test/gtest_main.cpp.s
 
-.PHONY : src/main.s
+.PHONY : test/gtest_main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+test/gtest_main.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/gtest_main.cpp.s
+.PHONY : test/gtest_main.cpp.s
 
 # Help Target
 help:
@@ -399,9 +684,21 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... Test"
 	@echo "... Othello"
+	@echo "... gmock_main"
+	@echo "... gmock"
+	@echo "... gtest_main"
+	@echo "... gtest"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... src/AIplayer.o"
 	@echo "... src/AIplayer.i"
 	@echo "... src/AIplayer.s"
@@ -414,24 +711,36 @@ help:
 	@echo "... src/CharBoard.o"
 	@echo "... src/CharBoard.i"
 	@echo "... src/CharBoard.s"
+	@echo "... src/ConsoleGameFlow.o"
+	@echo "... src/ConsoleGameFlow.i"
+	@echo "... src/ConsoleGameFlow.s"
+	@echo "... src/ConsoleMenu.o"
+	@echo "... src/ConsoleMenu.i"
+	@echo "... src/ConsoleMenu.s"
 	@echo "... src/Coordinates.o"
 	@echo "... src/Coordinates.i"
 	@echo "... src/Coordinates.s"
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
+	@echo "... src/GameFlowLook.o"
+	@echo "... src/GameFlowLook.i"
+	@echo "... src/GameFlowLook.s"
 	@echo "... src/GameLogic.o"
 	@echo "... src/GameLogic.i"
 	@echo "... src/GameLogic.s"
 	@echo "... src/HumanPlayer.o"
 	@echo "... src/HumanPlayer.i"
 	@echo "... src/HumanPlayer.s"
+	@echo "... src/Menu.o"
+	@echo "... src/Menu.i"
+	@echo "... src/Menu.s"
 	@echo "... src/Player.o"
 	@echo "... src/Player.i"
 	@echo "... src/Player.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... test/gtest_main.o"
+	@echo "... test/gtest_main.i"
+	@echo "... test/gtest_main.s"
 .PHONY : help
 
 
