@@ -13,8 +13,7 @@ set(TEST_FILES
         test/BoardTest.h
         test/BasicRulesTest.h
         test/AIplayerTest.h
-        test/CoordinatesTest.h
-        )
+        test/CoordinatesTest.h)
 set(SOURCE_FILES
         include/AIplayer.h
         include/BasicRules.h
