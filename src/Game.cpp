@@ -13,7 +13,7 @@ Game::Game() : frst_player_(true) {}
 void Game::initialize() {
   this->menu_ = new ConsoleMenu();
   this->game_flow_ = new ConsoleGameFlow();
-  this->board_ = new CharBoard(4);
+  this->board_ = new CharBoard();
   this->judge_ = new BasicRules();
   this->menu_->printMenu();
   if (this->menu_->getGameType() == local) {
@@ -120,7 +120,6 @@ void Game::playOneTurn() {
 
 Game::~Game() {
   delete this->menu_;
-  delete this->game_flow_;
   delete this->pl1_;
   delete this->pl2_;
   delete this->board_;

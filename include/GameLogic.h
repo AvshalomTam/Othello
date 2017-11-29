@@ -31,7 +31,7 @@ public:
      * @param c coordinates
      * @param num_player the player who wants to turn some tiles
      */
-    virtual void turnTiles(Board &board, Coordinates &c, cell num_player) = 0;
+    virtual void turnTiles(Board &board, Coordinates &c, cell num_player) const = 0;
     /**
      * Checks who's the winner of the game.
      * @return number of player who won and 0 for a draw

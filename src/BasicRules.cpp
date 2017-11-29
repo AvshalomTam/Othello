@@ -70,7 +70,7 @@ bool isValidPath(const Board &board, const Coordinates &c, cell num_player, cons
     return false;
 }
 
-void BasicRules::turnTiles(Board &board, Coordinates &c, cell num_player) {
+void BasicRules::turnTiles(Board &board, Coordinates &c, cell num_player) const {
     if (!isValidOption(board, c, num_player)) {
         return;
     }

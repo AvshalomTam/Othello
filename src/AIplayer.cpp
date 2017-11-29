@@ -15,13 +15,13 @@ Coordinates AIplayer::getMove() const {
   best_move = *computerOptions.begin();
   for (list<Coordinates>::iterator it = computerOptions.begin(); it != computerOptions.end(); ++it) {
     Board* copyboard = this->board_.copy();
-    copyboard->setCell(*it, second_player);
+    this->judge_.turnTiles(*copyboard, *it, second_player);
 
-    max = copyboard->getScore(first_player) - copyboard->getScore(second_player);
+    max = copyboard->getScore(first_player) - copyboard->getScore(second_player); //score for no move
     list <Coordinates> playerOptions = this->judge_.getOptions(*copyboard, first_player);
     for (list<Coordinates>::iterator it_pl = playerOptions.begin(); it_pl != playerOptions.end(); ++it_pl) {
       Board* tmp_board = copyboard->copy();
-      tmp_board->setCell(*it_pl, first_player);
+      this->judge_.turnTiles(*tmp_board, *it_pl, first_player);
       score = tmp_board->getScore(first_player) - tmp_board->getScore(second_player);
       if (score > max) {
         max = score;
