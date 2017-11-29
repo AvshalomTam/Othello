@@ -59,6 +59,7 @@ TEST_F(BasicRulesTest, OptionsSecondRoundTest) {
     EXPECT_EQ(it2->toString(), real[i].toString());
   }
 }
+
 //test of options in third round after changing the board twice
 TEST_F(BasicRulesTest, OptionThirdRoundTest) {
   setUp3();

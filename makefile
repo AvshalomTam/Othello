@@ -4,8 +4,8 @@
 a.out: main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o Menu.o ConsoleMenu.o GameFlowLook.o ConsoleGameFlow.o
 	g++ main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o Menu.o ConsoleMenu.o GameFlowLook.o ConsoleGameFlow.o
 
-main.o: src/main.cpp include/Game.h
-	g++ -c src/main.cpp
+main.o: main.cpp include/Game.h
+	g++ -c main.cpp
 
 Board.o: include/Coordinates.h src/Board.cpp include/Board.h
 	g++ -c src/Board.cpp

@@ -2,7 +2,7 @@
 // 203829478 Avshalom Tam
 
 #include <iostream>
-#include "../include/Game.h"
+#include "include/Game.h"
 
 using namespace std;
 

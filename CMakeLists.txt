@@ -7,7 +7,7 @@ add_subdirectory(gtest/googletest-release-1.8.0)
 include_directories(gtest/googletest-release-1.8.0/googletest/include)
 include_directories(gtest/googletest-release-1.8.0/googlemock/include)
 
-set(GAME_FILES src/main.cpp)
+set(GAME_FILES main.cpp)
 set(TEST_FILES
         test/gtest_main.cpp
         test/BoardTest.h

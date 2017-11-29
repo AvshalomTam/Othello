@@ -15,16 +15,16 @@ class BoardTest : public testing::Test {
   CharBoard board_;
 };
 
-//test the correction of board's start values
+//test the correction of board's starting values
 TEST_F(BoardTest, InitializeTest) {
-  EXPECT_EQ(board_.getCell(Coordinates(3, 3)), second_player) << "Cell(3,3) should equal 2"; //actually 4,4 cell
-  EXPECT_EQ(board_.getCell(Coordinates(4, 4)), second_player) << "Cell(4,4) should equal 2"; //actually 5,5 cell
-  EXPECT_EQ(board_.getCell(Coordinates(3, 4)), first_player) << "Cell(3,4) should equal 1"; //actually 4,5 cell
-  EXPECT_EQ(board_.getCell(Coordinates(4, 3)), first_player) << "Cell(4,3) should equal 1"; //actually 5,4 cell
+  EXPECT_EQ(board_.getCell(Coordinates(3, 3)), second_player) << "Cell(3,3) should be equal 2"; //actually 4,4 cell
+  EXPECT_EQ(board_.getCell(Coordinates(4, 4)), second_player) << "Cell(4,4) should be equal 2"; //actually 5,5 cell
+  EXPECT_EQ(board_.getCell(Coordinates(3, 4)), first_player) << "Cell(3,4) should be equal 1"; //actually 4,5 cell
+  EXPECT_EQ(board_.getCell(Coordinates(4, 3)), first_player) << "Cell(4,3) should be equal 1"; //actually 5,4 cell
   for (int i = 0; i < board_.getSize(); i++) {
     for (int j = 0; j < board_.getSize(); j++) {
       if ((i != 3) && (i != 4) && (j != 3) && (j != 4)) {
-        EXPECT_EQ(board_.getCell(Coordinates(i, j)), empty) << "Every other Cell should equal 0";
+        EXPECT_EQ(board_.getCell(Coordinates(i, j)), empty) << "Every other Cell should be equal 0";
       }
     }
   }
