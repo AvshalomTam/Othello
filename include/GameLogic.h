@@ -13,6 +13,13 @@
 class GameLogic {
 public:
     /**
+     * Checks if num+player has any moves.
+     * @param board Board object
+     * @param num_player player's number
+     * @return true if he has any move, false otherwise
+     */
+    virtual bool hasOptions(const Board &board, cell num_player) = 0;
+    /**
      * Creates a list of all the options the player has according to the player's number.
      * @param num_player player's number
      * @return list of coordinates

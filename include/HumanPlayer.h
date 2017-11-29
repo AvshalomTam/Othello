@@ -4,6 +4,9 @@
 #ifndef HUMANPLAYER_H
 #define HUMANPLAYER_H
 #include "Player.h"
+#include "GameLogic.h"
+#include "GameFlowLook.h"
+#include "PreviousInfo.h"
 
 /**
  * Representing a human player.
@@ -14,12 +17,17 @@ public:
      * Constructor.
      * @param numplayer first_player or second_player
      */
-    HumanPlayer(cell numplayer);
+    HumanPlayer(cell numplayer, Board& board, GameLogic& judge, GameFlowLook& gameflow, PreviousInfo& game_info);
     /**
      * Gets coordinates in board where the player wants to put his tile
      * @return coordinates
      */
-    Coordinates getMove() const;
+    Coordinates getMove();
+ private:
+    Board& board_;
+    GameLogic& judge_;
+    GameFlowLook& gameflow_;
+    PreviousInfo& game_info_;
 };
 
 #endif //HUMANPLAYER_H

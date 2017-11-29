@@ -52,6 +52,15 @@ class GameFlowLook {
    * @param name of the winning player
    */
   virtual void printResult(string name = "draw") = 0;
+  /**
+   * Gets an input from a (human) player and returns it as a string.
+   * @return string
+   */
+  virtual string input() = 0;
+  /**
+   * Printing an appropiate message.
+   */
+  virtual void pcCalculating() = 0;
 };
 
 #endif //GAMEFLOWLOOK_H

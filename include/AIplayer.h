@@ -8,17 +8,19 @@
 #include "Board.h"
 #include "GameLogic.h"
 #include "Player.h"
+#include "GameFlowLook.h"
 
 /**
  * Representing a pc player.
  */
 class AIplayer : public Player {
   public:
-    AIplayer(const Board& board, const GameLogic& judge, cell numplayer);
-    Coordinates getMove() const;
+    AIplayer(const Board& board, const GameLogic& judge, GameFlowLook& gameflow, cell numplayer);
+    Coordinates getMove();
  private:
     const Board& board_;
     const GameLogic& judge_;
+    GameFlowLook& gameflow_;
 };
 
 #endif //AIPLAYER_H

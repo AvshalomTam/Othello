@@ -2,13 +2,14 @@
 // 203829478 Avshalom Tam
 
 #include <list>
+#include <iostream>
 #include "../include/AIplayer.h"
 
-AIplayer::AIplayer(const Board& board, const GameLogic& judge, cell numplayer) : Player(numplayer),
-                                                                                 board_(board), judge_(judge) {}
-Coordinates AIplayer::getMove() const {
+AIplayer::AIplayer(const Board& board, const GameLogic& judge, GameFlowLook& gameflow, cell numplayer) : Player(numplayer),
+                                                                                 board_(board), judge_(judge), gameflow_(gameflow) {}
+Coordinates AIplayer::getMove() {
   int score;
-  int max;
+  signed int max;
   int minMax = this->board_.getSize() * this->board_.getSize();
   Coordinates best_move;
   list <Coordinates> computerOptions = this->judge_.getOptions(this->board_, second_player);
@@ -17,7 +18,7 @@ Coordinates AIplayer::getMove() const {
     Board* copyboard = this->board_.copy();
     this->judge_.turnTiles(*copyboard, *it, second_player);
 
-    max = copyboard->getScore(first_player) - copyboard->getScore(second_player); //score for no move
+    max = -1 * this->board_.getSize() * this->board_.getSize();
     list <Coordinates> playerOptions = this->judge_.getOptions(*copyboard, first_player);
     for (list<Coordinates>::iterator it_pl = playerOptions.begin(); it_pl != playerOptions.end(); ++it_pl) {
       Board* tmp_board = copyboard->copy();
@@ -28,12 +29,12 @@ Coordinates AIplayer::getMove() const {
       }
       delete tmp_board;
     }
-
     if (max < minMax) {
       minMax = max;
       best_move = *it;
     }
     delete copyboard;
   }
+  this->gameflow_.pcCalculating();
   return best_move;
 }

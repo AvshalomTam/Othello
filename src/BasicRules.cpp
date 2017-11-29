@@ -22,6 +22,10 @@ bool isValidOption(const Board &board, const Coordinates &c, cell num_player);
  */
 bool isValidPath(const Board &board, const Coordinates &c, cell num_player, const Coordinates &vector);
 
+bool BasicRules::hasOptions(const Board &board, cell num_player) {
+  return !this->getOptions(board, num_player).empty();
+}
+
 list<Coordinates> BasicRules::getOptions(const Board &board, cell num_player) const {
     //iterating over the whole board in order to check every cell
     list <Coordinates> options;

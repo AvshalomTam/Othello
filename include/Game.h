@@ -12,6 +12,7 @@
 #include "GameLogic.h"
 #include "Menu.h"
 #include "GameFlowLook.h"
+#include "PreviousInfo.h"
 /**
  * Game of Reversi/Othello.
  */
@@ -44,8 +45,8 @@ private:
     Player* pl1_; // pointer, so it can point to inherited
     Player* pl2_; // pointer, so it can point to inherited
     GameLogic* judge_; // pointer, so it can point to inherited
+    PreviousInfo* game_info_;
     bool frst_player_; // boolean telling who's turn it is
-    Coordinates previous_move_;
 };
 
 #endif //GAME_H

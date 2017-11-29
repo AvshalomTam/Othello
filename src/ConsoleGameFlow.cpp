@@ -55,3 +55,14 @@ void ConsoleGameFlow::printResult(string name) {
   }
   cout << endl << endl;
 }
+
+void ConsoleGameFlow::pcCalculating() {
+  cout << "Computer is calculating a move. Press any key to continue." << endl;
+}
+
+string ConsoleGameFlow::input() {
+  string s;
+  cin >> s;
+  cin.get();
+  return s;
+}

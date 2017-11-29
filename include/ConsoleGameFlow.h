@@ -50,6 +50,15 @@ class ConsoleGameFlow : public GameFlowLook{
    * @param name of the winning player
    */
   void printResult(string name = "draw");
+  /**
+   * Printing an appropiate message.
+   */
+  void pcCalculating();
+  /**
+   * Gets an input from a (human) player and returns it as a string.
+   * @return string
+   */
+  string input();
 };
 
 #endif //CONSOLEGAMEFLOW_H

@@ -1,0 +1,8 @@
+//
+// Created by steve on 11/29/17.
+//
+
+#ifndef OTHELLO_COORDINATESTEST_H
+#define OTHELLO_COORDINATESTEST_H
+
+#endif //OTHELLO_COORDINATESTEST_H

@@ -32,7 +32,7 @@ public:
      * Gets a move from the player.
      * @return coordinates
      */
-    virtual Coordinates getMove() const = 0;
+    virtual Coordinates getMove() = 0;
     /**
      * Sets had_move to be true or false according to played.
      * @param played stating if the player had a move
