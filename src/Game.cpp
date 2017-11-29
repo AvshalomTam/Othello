@@ -18,11 +18,11 @@ void Game::initialize() {
   this->menu_->printMenu();
   this->game_info_ = new PreviousInfo();
   if (this->menu_->getGameType() == local) {
-    this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_, *this->game_info_);
-    this->pl2_ = new HumanPlayer(second_player, *this->board_, *this->judge_, *this->game_flow_, *this->game_info_);
+    this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_);
+    this->pl2_ = new HumanPlayer(second_player, *this->board_, *this->judge_, *this->game_flow_);
   }
   else if (this->menu_->getGameType() == computer) {
-    this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_, *this->game_info_);
+    this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_);
     this->pl2_ = new AIplayer(*this->board_, *this->judge_, *this->game_flow_, second_player);
   }
   this->pl1_->setName("X");

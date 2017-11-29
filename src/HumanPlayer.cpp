@@ -5,8 +5,8 @@
 #include "../include/HumanPlayer.h"
 using namespace std;
 
-HumanPlayer::HumanPlayer(cell numplayer, Board& board, GameLogic& judge, GameFlowLook& gameflow, PreviousInfo& game_info) :
-    Player(numplayer),  board_(board), judge_(judge), gameflow_(gameflow), game_info_(game_info) {}
+HumanPlayer::HumanPlayer(cell numplayer, Board& board, GameLogic& judge, GameFlowLook& gameflow) :
+    Player(numplayer),  board_(board), judge_(judge), gameflow_(gameflow) {}
 
 Coordinates HumanPlayer::getMove() {
   Coordinates input;

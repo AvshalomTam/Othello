@@ -16,8 +16,11 @@ public:
     /**
      * Constructor.
      * @param numplayer first_player or second_player
+     * @param board Board object
+     * @param judge Gamelogic object
+     * @param gameflow GameFlowLook object
      */
-    HumanPlayer(cell numplayer, Board& board, GameLogic& judge, GameFlowLook& gameflow, PreviousInfo& game_info);
+    HumanPlayer(cell numplayer, Board& board, GameLogic& judge, GameFlowLook& gameflow);
     /**
      * Gets coordinates in board where the player wants to put his tile
      * @return coordinates
@@ -27,7 +30,6 @@ public:
     Board& board_;
     GameLogic& judge_;
     GameFlowLook& gameflow_;
-    PreviousInfo& game_info_;
 };
 
 #endif //HUMANPLAYER_H

@@ -19,7 +19,7 @@ void ConsoleGameFlow::printTurn(string name) {
 }
 
 void ConsoleGameFlow::printNoMove() {
-  cout << "No possible moves. Play passes to the other player. Press ENTER key to continue." << endl;
+  cout << "No possible moves. Play passes to the other player. Press ENTER to continue." << endl;
   cin.get();
 }
 
@@ -57,7 +57,7 @@ void ConsoleGameFlow::printResult(string name) {
 }
 
 void ConsoleGameFlow::pcCalculating() {
-  cout << "Computer is calculating a move. Press ENTER key to continue.";
+  cout << "Computer is calculating a move. Press ENTER to continue.";
   cin.get();
   cout << endl;
 }
