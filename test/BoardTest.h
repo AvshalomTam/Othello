@@ -66,5 +66,6 @@ TEST_F(BoardTest, ScoreTest) {
   EXPECT_EQ(board_.getScore(first_player), 3) << "number of Xs is not 3" ;
   EXPECT_EQ(board_.getScore(second_player), 3) << "number of Os is not 3";
   EXPECT_EQ(board_.getScore(empty), 58) << "number of Os is not 58";
+
 }
 #endif //BOARDTEST_H

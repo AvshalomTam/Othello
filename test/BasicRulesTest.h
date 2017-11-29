@@ -103,5 +103,6 @@ TEST_F(BasicRulesTest, boardIsFullTest) {
     }
   }
   EXPECT_TRUE(judge_.boardIsFull(board_));
+
 }
 #endif //BASICRULESTEST_H
