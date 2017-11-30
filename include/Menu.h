@@ -1,6 +1,3 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #ifndef MENU_H
 #define MENU_H
 enum game_type {local, computer, online};

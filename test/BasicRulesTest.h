@@ -1,6 +1,3 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #ifndef BASICRULESTEST_H
 #define BASICRULESTEST_H
 
@@ -14,8 +11,8 @@ class BasicRulesTest : public testing::Test {
  public:
   BasicRulesTest() : board_(), judge_() {}
   /**
- * Setting Up the board and making 4 moves.
- */
+   * Setting Up the board and making 4 moves.
+   */
   virtual void SetUp() {
     Coordinates move = Coordinates(2, 3);
     judge_.turnTiles(board_, move, first_player); //actually puts 1 in cell 3,4
@@ -27,8 +24,8 @@ class BasicRulesTest : public testing::Test {
     judge_.turnTiles(board_, move, second_player); //actually puts 2 in cell 2,4
   }
   /**
-  * making another 2 moves in the game by turning tiles in the board.
-  */
+   * making another 2 moves in the game by turning tiles in the board.
+   */
   void setUp2() {
     Coordinates move = Coordinates(0, 3);
     judge_.turnTiles(board_, move, first_player); //actually puts 1 in cell 1,4
@@ -36,8 +33,8 @@ class BasicRulesTest : public testing::Test {
     judge_.turnTiles(board_, move, second_player); //actually puts 2 in cell 1,5
   }
   /**
-  * making another 2 moves in the game by turning tiles in the board.
-  */
+   * making another 2 moves in the game by turning tiles in the board.
+   */
   void setUp3() {
     setUp2();
     Coordinates move = Coordinates(0, 5);

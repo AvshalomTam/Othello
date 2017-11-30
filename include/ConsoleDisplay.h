@@ -1,15 +1,12 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
+#ifndef ConsoleDisplay_H
+#define ConsoleDisplay_H
 
-#ifndef CONSOLEGAMEFLOW_H
-#define CONSOLEGAMEFLOW_H
-
-#include "GameFlowLook.h"
+#include "Display.h"
 
 /**
  * All the prints of the gameflow, using console.
  */
-class ConsoleGameFlow : public GameFlowLook{
+class ConsoleDisplay : public Display{
  public:
   void/**
    * Prints the current state of board.
@@ -61,4 +58,4 @@ class ConsoleGameFlow : public GameFlowLook{
   string input();
 };
 
-#endif //CONSOLEGAMEFLOW_H
+#endif //ConsoleDisplay_H

@@ -1,13 +1,10 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #ifndef COORDINATESTEST_H
 #define COORDINATESTEST_H
 
 #include <gtest/gtest.h>
 class CoordinatesTest : public testing::Test {
  public:
-  CoordinatesTest() : coor1(Coordinates("1,2")), coor2(Coordinates(3, 5)), coor3(Coordinates()) {}
+  CoordinatesTest() : coor1("1,2"), coor2(3, 5), coor3() {}
   virtual void SetUp() {
     coor3 = coor1.move(coor2);
   }
@@ -15,6 +12,13 @@ class CoordinatesTest : public testing::Test {
   Coordinates coor1, coor2, coor3;
 };
 
+//testing different kinds of constructors
+TEST_F(CoordinatesTest, ConstructorsTest) {
+  EXPECT_EQ(coor1.toString(), "(1,2)");
+  EXPECT_EQ(coor2.toString(), "(3,5)");
+}
+
+//testing move function
 TEST_F(CoordinatesTest, MoveTest) {
   Coordinates tempCoor = Coordinates(4,7);
   EXPECT_EQ(coor3.toString(), tempCoor.toString());

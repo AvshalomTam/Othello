@@ -1,6 +1,3 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #ifndef BOARDTEST_H
 #define BOARDTEST_H
 
@@ -12,10 +9,10 @@
  */
 class BoardTest : public testing::Test {
  public:
-  BoardTest() : board_(), testBoard4(4), testBoard7(7) {}
+  BoardTest() : board_(), board_4_(4), board_7_(7) {}
 
  protected:
-  CharBoard board_, testBoard4, testBoard7;
+  CharBoard board_, board_4_, board_7_;
 };
 
 //test the correction of board's starting values of cells
@@ -38,13 +35,13 @@ TEST_F(BoardTest, SizeTest) {
   //testing the default size of board (which is 8 without any specific value given to board constructor)
   EXPECT_EQ(board_.getSize(), 8);
   //testing specific size of board given to board constructor.
-  EXPECT_EQ(testBoard4.getSize(), 4);
+  EXPECT_EQ(board_4_.getSize(), 4);
   //testing another specific size of board given to board constructor.
-  EXPECT_EQ(testBoard7.getSize(), 7);
+  EXPECT_EQ(board_7_.getSize(), 7);
 }
 
 //testing setCell function
-TEST_F(BoardTest, MoveTest) {
+TEST_F(BoardTest, SetTest) {
   board_.setCell(Coordinates(5, 6), first_player);
   EXPECT_EQ(board_.getCell(Coordinates(5, 6)), first_player);
   board_.setCell(Coordinates(1, 2), second_player);

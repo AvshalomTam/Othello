@@ -1,6 +1,3 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #ifndef PREVIOUSINFO_H
 #define PREVIOUSINFO_H
 

@@ -1,6 +1,3 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #include "../include/PreviousInfo.h"
 
 PreviousInfo::PreviousInfo() : pre_had_move_(false) {}

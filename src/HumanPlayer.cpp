@@ -1,11 +1,8 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #include <iostream>
 #include "../include/HumanPlayer.h"
 using namespace std;
 
-HumanPlayer::HumanPlayer(cell numplayer, Board& board, GameLogic& judge, GameFlowLook& gameflow) :
+HumanPlayer::HumanPlayer(cell numplayer, Board& board, GameLogic& judge, Display& gameflow) :
     Player(numplayer),  board_(board), judge_(judge), gameflow_(gameflow) {}
 
 Coordinates HumanPlayer::getMove() {
@@ -25,6 +22,7 @@ Coordinates HumanPlayer::getMove() {
       }
     } catch (const char* error) {
       this->gameflow_.printInputError(error);
+      this->message();
       continue;
     }
   }

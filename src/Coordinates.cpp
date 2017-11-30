@@ -1,6 +1,3 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #include "../include/Coordinates.h"
 
 string intToString(int num);

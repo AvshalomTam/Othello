@@ -1,8 +1,5 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
-#ifndef GAMEFLOWLOOK_H
-#define GAMEFLOWLOOK_H
+#ifndef Display_H
+#define Display_H
 #include <string>
 #include <list>
 #include "Board.h"
@@ -11,7 +8,7 @@ using namespace std;
 /**
  * Contains all the prints needed for the gameflow.
  */
-class GameFlowLook {
+class Display {
  public:
   /**
    * Prints the current state of board.
@@ -63,4 +60,4 @@ class GameFlowLook {
   virtual void pcCalculating() = 0;
 };
 
-#endif //GAMEFLOWLOOK_H
+#endif //Display_H

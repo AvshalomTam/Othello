@@ -1,6 +1,3 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #ifndef CHARBOARD_H
 #define CHARBOARD_H
 #include "Board.h"

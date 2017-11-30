@@ -1,8 +1,8 @@
 # EM168887
 # Steve Gutfreund
 
-a.out: main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o Menu.o ConsoleMenu.o GameFlowLook.o ConsoleGameFlow.o PreviousInfo.o
-	g++ main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o Menu.o ConsoleMenu.o GameFlowLook.o ConsoleGameFlow.o PreviousInfo.o
+a.out: main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o Menu.o ConsoleMenu.o Display.o ConsoleDisplay.o PreviousInfo.o
+	g++ main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o Menu.o ConsoleMenu.o Display.o ConsoleDisplay.o PreviousInfo.o
 
 main.o: main.cpp include/Game.h
 	g++ -c main.cpp
@@ -40,11 +40,11 @@ Menu.o: src/Menu.cpp include/Menu.h
 ConsoleMenu.o:  src/ConsoleMenu.cpp include/ConsoleMenu.h include/Menu.h
 	g++ -c src/ConsoleMenu.cpp
 
-GameFlowLook.o: src/GameFlowLook.cpp include/GameFlowLook.h
-	g++ -c src/GameFlowLook.cpp
+Display.o: src/Display.cpp include/Display.h
+	g++ -c src/Display.cpp
 
-ConsoleGameFlow.o:  src/ConsoleGameFlow.cpp include/ConsoleGameFlow.h include/GameFlowLook.h
-	g++ -c src/ConsoleGameFlow.cpp
+ConsoleDisplay.o:  src/ConsoleDisplay.cpp include/ConsoleDisplay.h include/Display.h
+	g++ -c src/ConsoleDisplay.cpp
 
 PreviousInfo.o:	src/PreviousInfo.cpp include/PreviousInfo.h include/Coordinates.h include/Player.h
 	g++ -c src/PreviousInfo.cpp

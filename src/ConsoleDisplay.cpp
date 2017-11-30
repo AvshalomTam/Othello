@@ -1,29 +1,26 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #include <iostream>
-#include "../include/ConsoleGameFlow.h"
+#include "../include/ConsoleDisplay.h"
 
-void ConsoleGameFlow::printCurrentBoard(Board &board) {
+void ConsoleDisplay::printCurrentBoard(Board &board) {
   cout << endl << "Current board:" << endl << endl;
   board.printBoard();
   cout << endl;
 }
 
-void ConsoleGameFlow::printPreviousMove(string name, string coordinate) {
+void ConsoleDisplay::printPreviousMove(string name, string coordinate) {
   cout << name << " played " << coordinate << endl << endl;
 }
 
-void ConsoleGameFlow::printTurn(string name) {
+void ConsoleDisplay::printTurn(string name) {
   cout << name << ": It's your move." << endl;
 }
 
-void ConsoleGameFlow::printNoMove() {
+void ConsoleDisplay::printNoMove() {
   cout << "No possible moves. Play passes to the other player. Press ENTER to continue." << endl;
   cin.get();
 }
 
-void ConsoleGameFlow::printOptions(list<Coordinates> &options) {
+void ConsoleDisplay::printOptions(list<Coordinates> &options) {
   //printing the player's options
   cout << "Your possible moves: ";
   for (list<Coordinates>::iterator it = options.begin(); it != options.end(); ++it) {
@@ -37,15 +34,15 @@ void ConsoleGameFlow::printOptions(list<Coordinates> &options) {
   cout << endl;
 }
 
-void ConsoleGameFlow::printMoveRequest() {
+void ConsoleDisplay::printMoveRequest() {
   cout << "Please enter your move row,col: ";
 }
 
-void ConsoleGameFlow::printInputError(const char* error) {
+void ConsoleDisplay::printInputError(const char* error) {
   cout << endl << error << endl << endl;
 }
 
-void ConsoleGameFlow::printResult(string name) {
+void ConsoleDisplay::printResult(string name) {
   cout << endl << "G A M E   O V E R" << endl << endl;
   if (!name.compare("draw")) {
     cout << "DRAW GAME !!!!";
@@ -56,13 +53,13 @@ void ConsoleGameFlow::printResult(string name) {
   cout << endl << endl;
 }
 
-void ConsoleGameFlow::pcCalculating() {
+void ConsoleDisplay::pcCalculating() {
   cout << "Computer is calculating a move. Press ENTER to continue.";
   cin.get();
   cout << endl;
 }
 
-string ConsoleGameFlow::input() {
+string ConsoleDisplay::input() {
   string s;
   cin >> s;
   cin.get();

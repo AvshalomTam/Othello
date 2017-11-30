@@ -1,18 +1,15 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #include "../include/Game.h"
 #include "../include/CharBoard.h"
 #include "../include/BasicRules.h"
 #include "../include/AIplayer.h"
 #include "../include/ConsoleMenu.h"
-#include "../include/ConsoleGameFlow.h"
+#include "../include/ConsoleDisplay.h"
 
 Game::Game() : frst_player_(true) {}
 
 void Game::initialize() {
   this->menu_ = new ConsoleMenu();
-  this->game_flow_ = new ConsoleGameFlow();
+  this->game_flow_ = new ConsoleDisplay();
   this->board_ = new CharBoard();
   this->judge_ = new BasicRules();
   this->menu_->printMenu();
@@ -85,6 +82,7 @@ void Game::playOneTurn(Player &pl) {
 
 Game::~Game() {
   delete this->menu_;
+  delete this->game_flow_;
   delete this->pl1_;
   delete this->pl2_;
   delete this->board_;

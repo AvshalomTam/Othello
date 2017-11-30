@@ -1,11 +1,7 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #include <list>
-#include <iostream>
 #include "../include/AIplayer.h"
 
-AIplayer::AIplayer(const Board& board, const GameLogic& judge, GameFlowLook& gameflow, cell numplayer) : Player(numplayer),
+AIplayer::AIplayer(const Board& board, const GameLogic& judge, Display& gameflow, cell numplayer) : Player(numplayer),
                                                                                  board_(board), judge_(judge), gameflow_(gameflow) {}
 Coordinates AIplayer::getMove() {
   int score;

@@ -1,13 +1,10 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #ifndef AIPLAYERTEST_H
 #define AIPLAYERTEST_H
 #include <gtest/gtest.h>
 #include "../include/CharBoard.h"
 #include "../include/BasicRules.h"
 #include "../include/AIplayer.h"
-#include "../include/ConsoleGameFlow.h"
+#include "../include/ConsoleDisplay.h"
 
 /**
  * Testing AIplayer.
@@ -44,7 +41,7 @@ class AIplayerTest : public testing::Test {
   CharBoard board_;
   BasicRules judge_;
   AIplayer pl_;
-  ConsoleGameFlow gameflow_;
+  ConsoleDisplay gameflow_;
 };
 
 //testing getMove function several times

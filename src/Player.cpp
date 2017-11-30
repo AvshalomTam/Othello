@@ -1,6 +1,3 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #include "../include/Player.h"
 
 Player::Player(cell num_player) : had_move_(false), player_id_(num_player) {}

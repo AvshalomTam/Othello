@@ -1,11 +1,8 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #ifndef HUMANPLAYER_H
 #define HUMANPLAYER_H
 #include "Player.h"
 #include "GameLogic.h"
-#include "GameFlowLook.h"
+#include "Display.h"
 #include "PreviousInfo.h"
 
 /**
@@ -18,9 +15,9 @@ public:
      * @param numplayer first_player or second_player
      * @param board Board object
      * @param judge Gamelogic object
-     * @param gameflow GameFlowLook object
+     * @param gameflow Display object
      */
-    HumanPlayer(cell numplayer, Board& board, GameLogic& judge, GameFlowLook& gameflow);
+    HumanPlayer(cell numplayer, Board& board, GameLogic& judge, Display& gameflow);
     /**
      * Gets coordinates in board where the player wants to put his tile
      * @return coordinates
@@ -33,7 +30,7 @@ public:
  private:
     Board& board_;
     GameLogic& judge_;
-    GameFlowLook& gameflow_;
+    Display& gameflow_;
 };
 
 #endif //HUMANPLAYER_H

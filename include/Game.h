@@ -1,9 +1,3 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
-/**
- * Runs a game of Reversi.
- */
 #ifndef GAME_H
 #define GAME_H
 
@@ -11,7 +5,7 @@
 #include "HumanPlayer.h"
 #include "GameLogic.h"
 #include "Menu.h"
-#include "GameFlowLook.h"
+#include "Display.h"
 #include "PreviousInfo.h"
 /**
  * Game of Reversi/Othello.
@@ -41,7 +35,7 @@ public:
     ~Game();
 private:
     Menu* menu_;
-    GameFlowLook* game_flow_;
+    Display* game_flow_;
     Board* board_; // pointer, so it can point to inherited
     Player* pl1_; // pointer, so it can point to inherited
     Player* pl2_; // pointer, so it can point to inherited

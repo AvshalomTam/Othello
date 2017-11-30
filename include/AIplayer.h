@@ -1,6 +1,3 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #ifndef AIPLAYER_H
 #define AIPLAYER_H
 
@@ -8,7 +5,7 @@
 #include "Board.h"
 #include "GameLogic.h"
 #include "Player.h"
-#include "GameFlowLook.h"
+#include "Display.h"
 
 /**
  * Representing a pc player.
@@ -19,10 +16,10 @@ class AIplayer : public Player {
      * Constructor.
      * @param board Board object
      * @param judge Gamlogic object
-     * @param gameflow GameFlowLook object
+     * @param gameflow Display object
      * @param numplayer number of player
      */
-    AIplayer(const Board& board, const GameLogic& judge, GameFlowLook& gameflow, cell numplayer);
+    AIplayer(const Board& board, const GameLogic& judge, Display& gameflow, cell numplayer);
     /**
      * Gets coordinates in board where the player wants to put his tile
      * @return coordinates
@@ -35,7 +32,7 @@ class AIplayer : public Player {
  private:
     const Board& board_;
     const GameLogic& judge_;
-    GameFlowLook& gameflow_;
+    Display& gameflow_;
 };
 
 #endif //AIPLAYER_H

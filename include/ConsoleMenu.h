@@ -1,6 +1,3 @@
-// EM168887 Steve Gutfreund
-// 203829478 Avshalom Tam
-
 #ifndef CONSOLEMENU_H
 #define CONSOLEMENU_H
 
