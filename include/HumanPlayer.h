@@ -26,6 +26,10 @@ public:
      * @return coordinates
      */
     Coordinates getMove();
+    /**
+     * Prints an appropieate message.
+     */
+   void message();
  private:
     Board& board_;
     GameLogic& judge_;

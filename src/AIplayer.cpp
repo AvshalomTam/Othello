@@ -35,6 +35,9 @@ Coordinates AIplayer::getMove() {
     }
     delete copyboard;
   }
-  this->gameflow_.pcCalculating();
   return best_move;
+}
+
+void AIplayer::message() {
+  this->gameflow_.pcCalculating();
 }

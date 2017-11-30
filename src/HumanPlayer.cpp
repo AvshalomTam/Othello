@@ -12,12 +12,7 @@ Coordinates HumanPlayer::getMove() {
   Coordinates input;
   this->hasMove(true);
 
-  list <Coordinates> options = this->judge_.getOptions(this->board_, this->getId());
   while (true) {
-    //printing the player's options
-    this->gameflow_.printOptions(options);
-
-    this->gameflow_.printMoveRequest();
     try {
       string s = this->gameflow_.input();
       input = Coordinates(s).move(Coordinates(-1, -1));
@@ -34,4 +29,13 @@ Coordinates HumanPlayer::getMove() {
     }
   }
   return input;
+}
+
+void HumanPlayer::message() {
+  list <Coordinates> options = this->judge_.getOptions(this->board_, this->getId());
+  //printing the player's options
+  this->gameflow_.printOptions(options);
+
+  this->gameflow_.printMoveRequest();
+
 }

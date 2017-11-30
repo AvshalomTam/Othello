@@ -47,6 +47,10 @@ public:
      * @return number of the player, 1 or 2
      */
     cell getId() const;
+    /**
+     * Prints an appropieate message.
+     */
+    virtual void message() = 0;
 private:
     bool had_move_;
     cell player_id_;

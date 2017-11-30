@@ -77,6 +77,7 @@ void Game::playOneTurn() {
     return;
   }
 
+  pl->message();
   Coordinates input = pl->getMove();
   this->game_info_->hadMove(true);
   pl->hasMove(true);
