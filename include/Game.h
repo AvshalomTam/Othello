@@ -32,8 +32,9 @@ public:
     void run();
     /**
      * Player plays a turn.
+     * @param pl reference to player
      */
-    void playOneTurn();
+    void playOneTurn(Player &pl);
     /**
      * Destructor.
      */

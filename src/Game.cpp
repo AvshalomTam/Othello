@@ -31,7 +31,12 @@ void Game::initialize() {
 
 void Game::run() {
   do {
-    this->playOneTurn();
+    if (this->frst_player_) {
+      this->playOneTurn(*this->pl1_);
+    }
+    else {
+      this->playOneTurn(*this->pl2_);
+    }
     this->frst_player_ = !this->frst_player_;
   }
   while ((this->pl1_->played() || this->pl2_->played()) && (!this->judge_->boardIsFull(*this->board_)));
@@ -53,37 +58,29 @@ void Game::run() {
   }
 }
 
-void Game::playOneTurn() {
-  Player *pl;
-  if (this->frst_player_) {
-    pl = this->pl1_;
-  }
-  else {
-    pl = this->pl2_;
-  }
-
+void Game::playOneTurn(Player &pl) {
   this->game_flow_->printCurrentBoard(*this->board_);
   if (this->game_info_->preHadMove()) {
     this->game_flow_->printPreviousMove(this->game_info_->getName(), this->game_info_->getPreMove().toString());
   }
 
-  this->game_flow_->printTurn(pl->getName());
+  this->game_flow_->printTurn(pl.getName());
 
   //if the player has no moves
-  if (!this->judge_->hasOptions(*this->board_, pl->getId())) {
+  if (!this->judge_->hasOptions(*this->board_, pl.getId())) {
     this->game_info_->hadMove(false);
-    pl->hasMove(false);
+    pl.hasMove(false);
     this->game_flow_->printNoMove();
     return;
   }
 
-  pl->message();
-  Coordinates input = pl->getMove();
+  pl.message();
+  Coordinates input = pl.getMove();
   this->game_info_->hadMove(true);
-  pl->hasMove(true);
-  this->judge_->turnTiles(*this->board_, input, pl->getId());
+  pl.hasMove(true);
+  this->judge_->turnTiles(*this->board_, input, pl.getId());
   this->game_info_->setPreMove(input.move(Coordinates(1, 1)));
-  this->game_info_->setPreName(pl->getName());
+  this->game_info_->setPreName(pl.getName());
 }
 
 Game::~Game() {
