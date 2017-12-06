@@ -7,42 +7,42 @@ add_subdirectory(gtest/googletest-release-1.8.0)
 include_directories(gtest/googletest-release-1.8.0/googletest/include)
 include_directories(gtest/googletest-release-1.8.0/googlemock/include)
 
-set(GAME_FILES main.cpp)
+set(GAME_FILES src/client/main.cpp)
 set(TEST_FILES
-        test/gtest_main.cpp
-        test/BoardTest.h
-        test/BasicRulesTest.h
-        test/AIplayerTest.h
-        test/CoordinatesTest.h)
+        src/client/test/gtest_main.cpp
+        src/client/test/BoardTest.h
+        src/client/test/BasicRulesTest.h
+        src/client/test/AIplayerTest.h
+        src/client/test/CoordinatesTest.h)
 set(SOURCE_FILES
-        include/AIplayer.h
-        include/BasicRules.h
-        include/Board.h
-        include/CharBoard.h
-        include/Coordinates.h
-        include/Game.h
-        include/GameLogic.h
-        include/HumanPlayer.h
-        include/Player.h
-        include/Menu.h
-        include/ConsoleMenu.h
-        include/Display.h
-        include/ConsoleDisplay.h
-        include/PreviousInfo.h
-        src/AIplayer.cpp
-        src/BasicRules.cpp
-        src/Board.cpp
-        src/CharBoard.cpp
-        src/Coordinates.cpp
-        src/Game.cpp
-        src/GameLogic.cpp
-        src/HumanPlayer.cpp
-        src/Player.cpp
-        src/Menu.cpp
-        src/ConsoleMenu.cpp
-        src/Display.cpp
-        src/ConsoleDisplay.cpp
-        src/PreviousInfo.cpp)
+        src/client/include/AIplayer.h
+        src/client/include/BasicRules.h
+        src/client/include/Board.h
+        src/client/include/CharBoard.h
+        src/client/include/Coordinates.h
+        src/client/include/Game.h
+        src/client/include/GameLogic.h
+        src/client/include/HumanPlayer.h
+        src/client/include/Player.h
+        src/client/include/Menu.h
+        src/client/include/ConsoleMenu.h
+        src/client/include/Display.h
+        src/client/include/ConsoleDisplay.h
+        src/client/include/PreviousInfo.h
+        src/client/src/AIplayer.cpp
+        src/client/src/BasicRules.cpp
+        src/client/src/Board.cpp
+        src/client/src/CharBoard.cpp
+        src/client/src/Coordinates.cpp
+        src/client/src/Game.cpp
+        src/client/src/GameLogic.cpp
+        src/client/src/HumanPlayer.cpp
+        src/client/src/Player.cpp
+        src/client/src/Menu.cpp
+        src/client/src/ConsoleMenu.cpp
+        src/client/src/Display.cpp
+        src/client/src/ConsoleDisplay.cpp
+        src/client/src/PreviousInfo.cpp)
 
 add_executable(Othello ${SOURCE_FILES} ${GAME_FILES})
 add_executable(Test ${SOURCE_FILES} ${TEST_FILES})
