@@ -30,44 +30,14 @@ void Game::initialize() {
     this->pl2_ = new AIplayer(*this->board_, *this->judge_, *this->game_flow_, second_player);
   }
   else if (this->menu_->getGameType() == remote) {
-    const char* serverIP = "127.0.0.1";
-    int serverPort = 6000;
-    // Create a socket point
-    int clientSocket = socket(AF_INET, SOCK_STREAM, 0);
-    if (clientSocket == -1) {
-      throw "Error opening socket";
-    }
-    // Convert the ip string to a network address
-    struct in_addr address;
-    if (!inet_aton(serverIP, &address)) {
-      throw "Can't parse IP address";
-    }
-    // Get a hostent structure for the given host address
-    struct hostent *server;
-    server = gethostbyaddr((const void *)&address, sizeof(address), AF_INET);
-    if (server == NULL) {
-      throw "Host is unreachable";
-    }
-
-    // Create a structure for the server address
-    struct sockaddr_in serverAddress;
-    bzero((char *)&address, sizeof(address));
-
-    serverAddress.sin_family = AF_INET;
-    memcpy((char *)&serverAddress.sin_addr.s_addr, (char *)server->h_addr, server->h_length);
-    // htons converts values between host and network byte orders
-    serverAddress.sin_port = htons(serverPort);
-
-    // Establish a connection with the TCP server
-    if (connect(clientSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) == -1) {
-      throw "Error connecting to server";
-    }
+    const char* serverIP = getServerIP();
+    int serverPort = this->getServerPort();
+    int clientSocket = getClientSocket(serverIP, serverPort);
     char* number;
     int n = read(clientSocket, number, sizeof(number));
     if (n == -1) {
       throw "Error reading from server";
     }
-
     if (strcmp(number, "1") == 0) {
       this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_);
       this->pl2_ = new RemotePlayer(clientSocket, *this->game_flow_, second_player);
@@ -76,7 +46,6 @@ void Game::initialize() {
       this->pl2_ = new HumanPlayer(second_player, *this->board_, *this->judge_, *this->game_flow_);
       this->pl1_ = new RemotePlayer(clientSocket, *this->game_flow_, first_player);
     }
-
   }
   this->pl1_->setName("X");
   this->pl2_->setName("O");
@@ -112,7 +81,6 @@ void Game::run() {
 }
 
 void Game::playOneTurn(Player &pl) {
-
   this->game_flow_->printCurrentBoard(*this->board_);
   //prints previous player move
   if (this->game_info_->preHadMove()) {
@@ -138,6 +106,47 @@ void Game::playOneTurn(Player &pl) {
   this->game_info_->setPreName(pl.getName());
 }
 
+int Game::getServerPort() {
+  return 6000;
+}
+
+const char* Game::getServerIP() {
+  return "127.0.0.1";
+}
+
+int Game::getClientSocket(const char* serverIP, int serverPort) {
+  // Create a socket point
+  int clientSocket = socket(AF_INET, SOCK_STREAM, 0);
+  if (clientSocket == -1) {
+    throw "Error opening socket";
+  }
+  // Convert the ip string to a network address
+  struct in_addr address;
+  if (!inet_aton(serverIP, &address)) {
+    throw "Can't parse IP address";
+  }
+  // Get a hostent structure for the given host address
+  struct hostent *server;
+  server = gethostbyaddr((const void *)&address, sizeof(address), AF_INET);
+  if (server == NULL) {
+    throw "Host is unreachable";
+  }
+  // Create a structure for the server address
+  struct sockaddr_in serverAddress;
+  bzero((char *)&address, sizeof(address));
+
+  serverAddress.sin_family = AF_INET;
+  memcpy((char *)&serverAddress.sin_addr.s_addr, (char *)server->h_addr, server->h_length);
+  // htons converts values between host and network byte orders
+  serverAddress.sin_port = htons(serverPort);
+
+  // Establish a connection with the TCP server
+  if (connect(clientSocket, (struct sockaddr *)&serverAddress, sizeof(serverAddress)) == -1) {
+    throw "Error connecting to server";
+  }
+  return clientSocket;
+}
+
 Game::~Game() {
   delete this->menu_;
   delete this->game_flow_;
@@ -147,3 +156,4 @@ Game::~Game() {
   delete this->judge_;
   delete this->game_info_;
 }
+

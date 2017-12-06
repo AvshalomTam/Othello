@@ -12,7 +12,7 @@ void ConsoleDisplay::printPreviousMove(string name, string coordinate) {
 }
 
 void ConsoleDisplay::printTurn(string name) {
-  cout << name << ": It's your move." << endl;
+  cout << "It is " << name <<"'s turn." << endl;
 }
 
 void ConsoleDisplay::printNoMove() {

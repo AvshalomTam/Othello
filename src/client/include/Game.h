@@ -32,6 +32,12 @@ public:
     /**
      * Destructor.
      */
+    int getServerPort();
+    const char* getServerIP();
+
+    int getClientSocket(const char* serverIP, int serverPort);
+
+
     ~Game();
 private:
     Menu* menu_;
