@@ -5,7 +5,7 @@
 #include <unistd.h>
 #include "../include/Display.h"
 #include "../include/RemotePlayer.h"
-RemotePlayer::RemotePlayer(int clientSocket, Display &gameflow, cell numplayer) :
+RemotePlayer::RemotePlayer(cell numplayer, int clientSocket, Display &gameflow) :
     Player(numplayer), clientSocket_(clientSocket), gameflow_(gameflow) {}
 
 Coordinates RemotePlayer::getMove() {

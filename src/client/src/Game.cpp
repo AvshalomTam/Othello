@@ -19,8 +19,10 @@ void Game::initialize() {
   this->game_flow_ = new ConsoleDisplay();
   this->board_ = new CharBoard();
   this->judge_ = new BasicRules();
-  this->menu_->printMenu();
   this->game_info_ = new PreviousInfo();
+  //print the menu
+  this->menu_->printMenu();
+  //check which type of game to initialize and play
   if (this->menu_->getGameType() == local) {
     this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_);
     this->pl2_ = new HumanPlayer(second_player, *this->board_, *this->judge_, *this->game_flow_);
@@ -40,11 +42,11 @@ void Game::initialize() {
     }
     if (strcmp(number, "1") == 0) {
       this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_);
-      this->pl2_ = new RemotePlayer(clientSocket, *this->game_flow_, second_player);
+      this->pl2_ = new RemotePlayer(second_player, clientSocket, *this->game_flow_);
     }
     else {
       this->pl2_ = new HumanPlayer(second_player, *this->board_, *this->judge_, *this->game_flow_);
-      this->pl1_ = new RemotePlayer(clientSocket, *this->game_flow_, first_player);
+      this->pl1_ = new RemotePlayer(first_player, clientSocket, *this->game_flow_);
     }
   }
   this->pl1_->setName("X");
@@ -62,9 +64,7 @@ void Game::run() {
     this->frst_player_ = !this->frst_player_;
   }
   while ((this->pl1_->played() || this->pl2_->played()) && (!this->judge_->boardIsFull(*this->board_)));
-
   this->board_->printBoard();
-
   //printing the game results
   int winner = this->judge_->checkWinner(*this->board_);
   if (winner == 0) {
@@ -96,8 +96,8 @@ void Game::playOneTurn(Player &pl) {
     this->game_flow_->printNoMove();
     return;
   }
-
   pl.message();
+  //get move from current player
   Coordinates input = pl.getMove();
   this->game_info_->hadMove(true);
   pl.hasMove(true);

@@ -6,13 +6,13 @@
 /**
  * All the prints of the gameflow, using console.
  */
-class ConsoleDisplay : public Display{
+class ConsoleDisplay : public Display {
  public:
-  void/**
+   /**
    * Prints the current state of board.
    * @param board Board object
    */
-  printCurrentBoard(Board &board);
+  void printCurrentBoard(Board &board);
   /**
    * Prints the previous players move.
    * @param name of player

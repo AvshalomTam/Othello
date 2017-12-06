@@ -9,7 +9,7 @@
 class RemotePlayer : public Player {
  public:
 
-  RemotePlayer(int clientSocket, Display& gameflow, cell numplayer);
+  RemotePlayer(cell numplayer, int clientSocket, Display &gameflow);
   Coordinates getMove();
   void message();
  private:
