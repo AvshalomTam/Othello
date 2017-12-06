@@ -66,7 +66,7 @@ void Server::start() {
 void Server::handleClients(int clientSocket1, int clientSocket2) {
   int n;
   int m;
-  char *num;
+  const char *num;
 
   num = "1";
   n = write(clientSocket1, num, sizeof(num));

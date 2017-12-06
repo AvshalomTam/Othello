@@ -65,3 +65,6 @@ string ConsoleDisplay::input() {
   cin.get();
   return s;
 }
+void ConsoleDisplay::waitingForPlayer() {
+  cout << "waiting for other player's move..." << endl;
+}

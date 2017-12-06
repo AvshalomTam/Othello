@@ -6,7 +6,8 @@ void ConsoleMenu::printMenu() {
   cout << endl << "\tOTHELLO" << endl << endl;
   cout << "Who is your opponent?" << endl << endl;
   cout << "(P) player" << endl;
-  cout << "(C) computer" << endl << endl;
+  cout << "(C) computer" << endl;
+  cout << "(R) remote player" << endl << endl;
   this->setGameType();
 }
 
@@ -21,6 +22,10 @@ void ConsoleMenu::setGameType() {
     }
     if (choice == 'C' || choice == 'c') {
       this->type_ = computer;
+      break;
+    }
+    if (choice == 'R' || choice == 'r') {
+      this->type_ = remote;
       break;
     }
     cout << "wrong input" << endl;

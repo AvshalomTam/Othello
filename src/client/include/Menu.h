@@ -1,6 +1,6 @@
 #ifndef MENU_H
 #define MENU_H
-enum game_type {local, computer, online};
+enum game_type {local, computer, remote};
 
 /**
  * Menu at opening of the game.

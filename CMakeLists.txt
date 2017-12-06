@@ -42,7 +42,7 @@ set(SOURCE_FILES
         src/client/src/ConsoleMenu.cpp
         src/client/src/Display.cpp
         src/client/src/ConsoleDisplay.cpp
-        src/client/src/PreviousInfo.cpp)
+        src/client/src/PreviousInfo.cpp src/client/src/RemotePlayer.cpp src/client/include/RemotePlayer.h)
 set(SERVER_FILES
         src/server/main_s.cpp
         src/server/Server.cpp

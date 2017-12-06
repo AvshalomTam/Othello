@@ -56,6 +56,7 @@ class ConsoleDisplay : public Display{
    * @return string
    */
   string input();
+  void waitingForPlayer();
 };
 
 #endif //ConsoleDisplay_H

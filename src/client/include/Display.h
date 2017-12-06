@@ -58,6 +58,8 @@ class Display {
    * Printing an appropiate message.
    */
   virtual void pcCalculating() = 0;
+
+  virtual void waitingForPlayer() = 0;
 };
 
 #endif //Display_H
