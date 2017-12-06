@@ -43,8 +43,13 @@ set(SOURCE_FILES
         src/client/src/Display.cpp
         src/client/src/ConsoleDisplay.cpp
         src/client/src/PreviousInfo.cpp)
+set(SERVER_FILES
+        src/server/main_s.cpp
+        src/server/Server.cpp
+        src/server/Server.h)
 
 add_executable(Othello ${SOURCE_FILES} ${GAME_FILES})
 add_executable(Test ${SOURCE_FILES} ${TEST_FILES})
+add_executable(Server_Re6 ${SERVER_FILES})
 
 target_link_libraries(Test gtest gtest_main)
