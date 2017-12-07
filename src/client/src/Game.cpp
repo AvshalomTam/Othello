@@ -38,7 +38,7 @@ void Game::initialize() {
     this->pl2_ = new AIplayer(*this->board_, *this->judge_, *this->game_flow_, second_player, *this->move_tracker_);
   }
   else if (this->menu_->getGameType() == remote) {
-    const char* filePath = "../exe/server_settings.txt";
+    const char* filePath = "../exe/client_settings.txt";
     int clientSocket = connectToServer(filePath);
     int number;
     int n = read(clientSocket, &number, sizeof(number));
