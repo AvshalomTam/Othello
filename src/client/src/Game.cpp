@@ -22,10 +22,8 @@ void Game::initialize() {
   this->game_flow_ = new ConsoleDisplay();
   this->board_ = new CharBoard(3);
   this->judge_ = new BasicRules();
-  this->game_info_ = new MoveTracker();
   //print the menu
   this->menu_->printMenu();
-
   //check which type of game to initialize and play
   if (this->menu_->getGameType() == local) {
     this->move_tracker_ = new MoveTracker();
@@ -140,7 +138,6 @@ Game::~Game() {
   delete this->pl2_;
   delete this->board_;
   delete this->judge_;
-  delete this->game_info_;
   if (this->move_tracker_ != NULL)
     delete this->move_tracker_;
   if (this->server_messenger_ != NULL)
