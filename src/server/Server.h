@@ -7,11 +7,12 @@
 
 class Server {
  public:
-  Server(int port);
+  Server();
   void start();
   void stop();
   void handleClients(int clientSocket1, int clientSocket2);
   int middleMan(int clientSocketRead, int clientSocketWrite);
+  int getPort(const char* filePath);
  private:
   int port;
   int serverSocket; // the socket's file descriptor

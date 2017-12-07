@@ -29,7 +29,7 @@ class Game {
      * @param pl reference to player
      */
     void playOneTurn(Player &pl);
-    int connectToServer(string filePath);
+    int connectToServer(const char* filePath);
     /**
      * Destructor.
      */

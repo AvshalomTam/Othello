@@ -5,6 +5,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <iostream>
+#include <fstream>
 #include "../include/Game.h"
 #include "../include/CharBoard.h"
 #include "../include/BasicRules.h"
@@ -37,7 +38,8 @@ void Game::initialize() {
     this->pl2_ = new AIplayer(*this->board_, *this->judge_, *this->game_flow_, second_player, *this->move_tracker_);
   }
   else if (this->menu_->getGameType() == remote) {
-    int clientSocket = connectToServer("filePath");
+    const char* filePath = "../exe/server_settings.txt";
+    int clientSocket = connectToServer(filePath);
     int number;
     int n = read(clientSocket, &number, sizeof(number));
     if (n == -1) {
@@ -97,9 +99,26 @@ void Game::playOneTurn(Player &pl) {
   }
 }
 
-int Game::connectToServer(string filePath) {
-  const char *serverIP = "127.0.0.1";
-  int serverPort = 5050;
+int Game::connectToServer(const char* filePath) {
+  //allocating places
+  string serverIP;
+  const char* serverIP_c;
+  int serverPort;
+  //open file
+  ifstream inFile;
+  inFile.open(filePath);
+  if (inFile.is_open()) {
+    //reading first line
+    inFile >> serverPort;
+    //reading second line
+    inFile >> serverIP;
+  }
+  else {
+    throw "Error opening file";
+  }
+  //close the file
+  inFile.close();
+  serverIP_c = serverIP.c_str();
   // Create a socket point
   int clientSocket = socket(AF_INET, SOCK_STREAM, 0);
   if (clientSocket == -1) {
@@ -107,7 +126,7 @@ int Game::connectToServer(string filePath) {
   }
   // Convert the ip string to a network address
   struct in_addr address;
-  if (!inet_aton(serverIP, &address)) {
+  if (!inet_aton(serverIP_c, &address)) {
     throw "Can't parse IP address";
   }
   // Get a hostent structure for the given host address

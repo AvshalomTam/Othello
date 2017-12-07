@@ -9,14 +9,18 @@
 #include <string.h>
 #include <iostream>
 #include <stdio.h>
+#include <fstream>
 
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 10
 #define MAX_TRANSMISSION_SIZE 10
 
-Server::Server(int port): port(port), serverSocket(0) {}
+Server::Server(): serverSocket(0) {}
 
 void Server::start() {
+  const char* filePath = "../exe/server_settings.txt";
+  //get port from file
+  this->port = getPort(filePath);
   // create a socket point
   serverSocket = socket(AF_INET, SOCK_STREAM, 0);
   if (serverSocket == -1) {
@@ -116,4 +120,20 @@ int Server::middleMan(int clientSocketRead, int clientSocketWrite) {
 
 void Server::stop() {
   close(serverSocket);
+}
+
+int Server::getPort(const char *filePath) {
+  int port;
+  ifstream inFile;
+  inFile.open(filePath);
+  if (inFile.is_open()) {
+    //reading first line
+    inFile >> port;
+  }
+  else {
+    throw "Error opening file";
+  }
+  //close the file
+  inFile.close();
+  return port;
 }
