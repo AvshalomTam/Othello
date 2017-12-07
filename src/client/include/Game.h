@@ -41,7 +41,6 @@ class Game {
     Player* pl1_; // pointer, so it can point to inherited
     Player* pl2_; // pointer, so it can point to inherited
     GameLogic* judge_; // pointer, so it can point to inherited
-    MoveTracker* game_info_;
     Listener* move_tracker_ = NULL;
     Listener* server_messenger_ = NULL;
     bool frst_player_; // boolean telling who's turn it is

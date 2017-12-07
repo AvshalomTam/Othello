@@ -96,6 +96,10 @@ void Server::handleClients(int clientSocket1, int clientSocket2) {
 int Server::middleMan(int clientSocketRead, int clientSocketWrite) {
   char coordinates[MAX_TRANSMISSION_SIZE] = "\0";
   int n = read(clientSocketRead, coordinates, sizeof(coordinates));
+  //if client closed the connection
+  if (n == 0) {
+    return 0;
+  }
   if (n == -1) {
     cout << "Error reading from socket" << endl;
     return 0;
@@ -107,9 +111,6 @@ int Server::middleMan(int clientSocketRead, int clientSocketWrite) {
     return 0;
   }
 
-  if (strcmp(coordinates, "End") == 0) {
-    return 0;
-  }
   return 1;
 }
 

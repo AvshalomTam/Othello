@@ -22,8 +22,10 @@ void Game::initialize() {
   this->game_flow_ = new ConsoleDisplay();
   this->board_ = new CharBoard(3);
   this->judge_ = new BasicRules();
-  //Print the menu
+  //print the menu
+  //hi
   this->menu_->printMenu();
+
   //check which type of game to initialize and play
   if (this->menu_->getGameType() == local) {
     this->move_tracker_ = new MoveTracker();
@@ -67,7 +69,7 @@ void Game::run() {
     }
     this->frst_player_ = !this->frst_player_;
   }
-  while ((this->pl1_->played() || this->pl2_->played()));
+  while ((this->pl1_->played() || this->pl2_->played()) && !this->judge_->boardIsFull(*this->board_));
 
   this->board_->printBoard();
   //printing the game results
@@ -138,9 +140,7 @@ Game::~Game() {
   delete this->pl2_;
   delete this->board_;
   delete this->judge_;
-  if (this->move_tracker_ != NULL)
-    delete this->move_tracker_;
-  if (this->server_messenger_ != NULL)
-    delete this->server_messenger_;
+  delete this->move_tracker_;
+  delete this->server_messenger_;
 }
 

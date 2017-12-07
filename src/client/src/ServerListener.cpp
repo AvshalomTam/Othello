@@ -8,7 +8,6 @@
 #include "../include/Listener.h"
 #include "../include/ServerListener.h"
 #define NO_MOVE Coordinates(-1, -1)
-#define END Coordinates(-2, -2)
 
 string intStringConvert(int num);
 
@@ -27,9 +26,6 @@ void ServerListener::setPreMove(Coordinates c) {
   string msg;
   if (NO_MOVE.isEqual(c)) {
     msg = "NoMove" + '\0';
-  }
-  else if (END.isEqual(c)) {
-    msg = "End" + '\0';
   }
   else {
     msg = intStringConvert(c.getX()) + "," + intStringConvert(c.getY()) + '\0';
@@ -50,6 +46,10 @@ void ServerListener::hadMove(bool had_move) {
 
 bool ServerListener::preHadMove() {
   return this->listener_->preHadMove();
+}
+
+ServerListener::~ServerListener() {
+  close(this->client_socket_);
 }
 
 string intStringConvert(int num) {

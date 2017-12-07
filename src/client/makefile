@@ -1,6 +1,3 @@
-# EM168887
-# Steve Gutfreund
-
 a.out: main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o RemotePlayer.o Menu.o ConsoleMenu.o Display.o ConsoleDisplay.o Listener.o MoveTracker.o ServerListener.o
 	g++ main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o RemotePlayer.o Menu.o ConsoleMenu.o Display.o ConsoleDisplay.o Listener.o MoveTracker.o ServerListener.o
 

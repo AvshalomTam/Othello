@@ -21,7 +21,7 @@ Coordinates RemotePlayer::getMove() {
   if (n == -1) {
     throw "Error reading from socket";
   }
-  if ((strcmp(input, "NoMove") == 0) || (strcmp(input, "End") == 0)) {
+  if (strcmp(input, "NoMove") == 0) {
     this->listener_.hadMove(false);
     this->hasMove(false);
     return NO_MOVE;

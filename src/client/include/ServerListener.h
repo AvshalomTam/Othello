@@ -38,6 +38,7 @@ class ServerListener : public Listener {
    * @return true if previous player had a move, false otherwise
    */
   bool preHadMove();
+  ~ServerListener();
  private:
   int client_socket_;
   Listener *listener_;
