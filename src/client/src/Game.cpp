@@ -23,7 +23,6 @@ void Game::initialize() {
   this->board_ = new CharBoard(3);
   this->judge_ = new BasicRules();
   //print the menu
-  //hi
   this->menu_->printMenu();
 
   //check which type of game to initialize and play
