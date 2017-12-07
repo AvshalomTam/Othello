@@ -12,10 +12,9 @@
 
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 10
+#define MAX_TRANSMISSION_SIZE 10
 
-Server::Server(int port): port(port), serverSocket(0) {
-  cout << "Server" << endl;
-}
+Server::Server(int port): port(port), serverSocket(0) {}
 
 void Server::start() {
   // create a socket point
@@ -45,16 +44,16 @@ void Server::start() {
 
     // Accept a new client connection
     int clientSocket1 = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
-    cout << "Client 1 connected" << endl;
     if (clientSocket1 == -1)
       throw "Error on accept 1";
+    cout << "Client 1 accepted on socket : " << clientSocket1 << endl;
 
     int clientSocket2 = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
-    cout << "Client 2 connected" << endl;
     if (clientSocket2 == -1)
       throw "Error on accept 2";
+    cout << "Client 2 accepted on socket : " << clientSocket2 << endl;
 
-    handleClients(clientSocket1, clientSocket2);
+    this->handleClients(clientSocket1, clientSocket2);
 
     // Close communication with the client
     close(clientSocket1);
@@ -65,27 +64,28 @@ void Server::start() {
 // Handle requests from a specific client
 void Server::handleClients(int clientSocket1, int clientSocket2) {
   int n;
-  int m;
-  const char *num;
+  int num;
 
-  num = "1";
-  n = write(clientSocket1, num, sizeof(num));
+  num = 1;
+  n = write(clientSocket1, &num, sizeof(num));
   if (n == -1) {
     cout << "Error writing to socket 1" << endl;
     return;
   }
-  num = "2";
-  n = write(clientSocket2, num, sizeof(num));
+  num = 2;
+  n = write(clientSocket2, &num, sizeof(num));
   if (n == -1) {
     cout << "Error writing to socket 2" << endl;
     return;
   }
 
   bool first_socket = true;
+  int m;
   do {
     if (first_socket) {
       m = middleMan(clientSocket1, clientSocket2);
-    } else {
+    }
+    else {
       m = middleMan(clientSocket2, clientSocket1);
     }
     first_socket = !first_socket;
@@ -93,18 +93,17 @@ void Server::handleClients(int clientSocket1, int clientSocket2) {
 }
 
 int Server::middleMan(int clientSocketRead, int clientSocketWrite) {
-  char *msg;
-  int n = read(clientSocketRead, msg, sizeof(msg));
+  char coordinates[MAX_TRANSMISSION_SIZE];
+  int n = read(clientSocketRead, coordinates, sizeof(coordinates));
   if (n == -1) {
     cout << "Error reading from socket" << endl;
     return 0;
   }
-
-  if (strcmp(msg, "End") == 0) {
+  if (strcmp(coordinates, "End") == 0) {
     return 0;
   }
 
-  n = write(clientSocketWrite, msg, sizeof(msg));
+  n = write(clientSocketWrite, coordinates, sizeof(coordinates));
   if (n == -1) {
     cout << "Error writing to socket" << endl;
     return 0;

@@ -10,13 +10,11 @@ class Server {
   Server(int port);
   void start();
   void stop();
-
+  void handleClients(int clientSocket1, int clientSocket2);
+  int middleMan(int clientSocketRead, int clientSocketWrite);
  private:
   int port;
   int serverSocket; // the socket's file descriptor
-
-  void handleClients(int clientSocket1, int clientSocket2);
-  int middleMan(int clientSocketRead, int clientSocketWrite);
 };
 
 #endif //SERVER_SERVER_H

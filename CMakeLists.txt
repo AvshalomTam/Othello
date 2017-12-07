@@ -28,7 +28,7 @@ set(SOURCE_FILES
         src/client/include/ConsoleMenu.h
         src/client/include/Display.h
         src/client/include/ConsoleDisplay.h
-        src/client/include/PreviousInfo.h
+        src/client/include/MoveTracker.h
         src/client/src/AIplayer.cpp
         src/client/src/BasicRules.cpp
         src/client/src/Board.cpp
@@ -42,7 +42,7 @@ set(SOURCE_FILES
         src/client/src/ConsoleMenu.cpp
         src/client/src/Display.cpp
         src/client/src/ConsoleDisplay.cpp
-        src/client/src/PreviousInfo.cpp src/client/src/RemotePlayer.cpp src/client/include/RemotePlayer.h src/client/src/Listener.cpp src/client/include/Listener.h)
+        src/client/src/MoveTracker.cpp src/client/src/RemotePlayer.cpp src/client/include/RemotePlayer.h src/client/src/Listener.cpp src/client/include/Listener.h src/client/include/ServerListener.h src/client/src/ServerListener.cpp)
 set(SERVER_FILES
         src/server/main_s.cpp
         src/server/Server.cpp

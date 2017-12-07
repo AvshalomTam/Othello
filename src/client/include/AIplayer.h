@@ -6,6 +6,7 @@
 #include "GameLogic.h"
 #include "Player.h"
 #include "Display.h"
+#include "Listener.h"
 
 /**
  * Representing a pc player.
@@ -19,7 +20,7 @@ class AIplayer : public Player {
      * @param gameflow Display object
      * @param numplayer number of player
      */
-    AIplayer(const Board& board, const GameLogic& judge, Display& gameflow, cell numplayer);
+    AIplayer(Board& board, GameLogic& judge, Display& gameflow, cell numplayer, Listener& listener);
     /**
      * Gets coordinates in board where the player wants to put his tile
      * @return coordinates
@@ -30,9 +31,10 @@ class AIplayer : public Player {
      */
     void message();
  private:
-    const Board& board_;
-    const GameLogic& judge_;
+    Board& board_;
+    GameLogic& judge_;
     Display& gameflow_;
+    Listener& listener_;
 };
 
 #endif //AIPLAYER_H

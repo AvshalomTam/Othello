@@ -5,13 +5,14 @@
 #include "../include/BasicRules.h"
 #include "../include/AIplayer.h"
 #include "../include/ConsoleDisplay.h"
+#include "../include/MoveTracker.h"
 
 /**
  * Testing AIplayer.
  */
 class AIplayerTest : public testing::Test {
  public:
-  AIplayerTest(): board_(), judge_(), gameflow_(),  pl_(AIplayer(board_, judge_, gameflow_, second_player)) {}
+  AIplayerTest(): board_(), judge_(), gameflow_(), move_tracker(), pl_(AIplayer(board_, judge_, gameflow_, second_player, move_tracker)) {}
 
   virtual void SetUp() {
     Coordinates move = Coordinates(2, 3);
@@ -38,6 +39,7 @@ class AIplayerTest : public testing::Test {
     judge_.turnTiles(board_, move, first_player); //actually puts in cell 1,2
   }
  protected:
+  MoveTracker move_tracker;
   CharBoard board_;
   BasicRules judge_;
   AIplayer pl_;

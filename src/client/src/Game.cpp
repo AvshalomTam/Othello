@@ -4,6 +4,7 @@
 #include <netdb.h>
 #include <string.h>
 #include <unistd.h>
+#include <iostream>
 #include "../include/Game.h"
 #include "../include/CharBoard.h"
 #include "../include/BasicRules.h"
@@ -11,6 +12,8 @@
 #include "../include/ConsoleMenu.h"
 #include "../include/ConsoleDisplay.h"
 #include "../include/RemotePlayer.h"
+#include "../include/ServerListener.h"
+#define NO_MOVE Coordinates(-1, -1)
 
 Game::Game() : frst_player_(true) {}
 
@@ -19,34 +22,37 @@ void Game::initialize() {
   this->game_flow_ = new ConsoleDisplay();
   this->board_ = new CharBoard();
   this->judge_ = new BasicRules();
-  this->game_info_ = new PreviousInfo();
+  this->game_info_ = new MoveTracker();
   //print the menu
   this->menu_->printMenu();
+
   //check which type of game to initialize and play
   if (this->menu_->getGameType() == local) {
-    this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_);
-    this->pl2_ = new HumanPlayer(second_player, *this->board_, *this->judge_, *this->game_flow_);
+    this->move_tracker_ = new MoveTracker();
+    this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_, *this->move_tracker_);
+    this->pl2_ = new HumanPlayer(second_player, *this->board_, *this->judge_, *this->game_flow_, *this->move_tracker_);
   }
   else if (this->menu_->getGameType() == computer) {
-    this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_);
-    this->pl2_ = new AIplayer(*this->board_, *this->judge_, *this->game_flow_, second_player);
+    this->move_tracker_ = new MoveTracker();
+    this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_, *this->move_tracker_);
+    this->pl2_ = new AIplayer(*this->board_, *this->judge_, *this->game_flow_, second_player, *this->move_tracker_);
   }
   else if (this->menu_->getGameType() == remote) {
-    const char* serverIP = getServerIP();
-    int serverPort = this->getServerPort();
-    int clientSocket = getClientSocket(serverIP, serverPort);
-    char* number;
-    int n = read(clientSocket, number, sizeof(number));
+    int clientSocket = connectToServer("filePath");
+    int number;
+    int n = read(clientSocket, &number, sizeof(number));
     if (n == -1) {
       throw "Error reading from server";
     }
-    if (strcmp(number, "1") == 0) {
-      this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_);
-      this->pl2_ = new RemotePlayer(second_player, clientSocket, *this->game_flow_);
+    this->move_tracker_ = new MoveTracker();
+    this->server_messenger_ = new ServerListener(this->move_tracker_, clientSocket);
+    if (number == 1) {
+      this->pl1_ = new HumanPlayer(first_player, *this->board_, *this->judge_, *this->game_flow_, *this->server_messenger_);
+      this->pl2_ = new RemotePlayer(second_player, clientSocket, *this->game_flow_, *this->move_tracker_);
     }
     else {
-      this->pl2_ = new HumanPlayer(second_player, *this->board_, *this->judge_, *this->game_flow_);
-      this->pl1_ = new RemotePlayer(first_player, clientSocket, *this->game_flow_);
+      this->pl1_ = new RemotePlayer(first_player, clientSocket, *this->game_flow_, *this->move_tracker_);
+      this->pl2_ = new HumanPlayer(second_player, *this->board_, *this->judge_, *this->game_flow_, *this->server_messenger_);
     }
   }
   this->pl1_->setName("X");
@@ -64,6 +70,7 @@ void Game::run() {
     this->frst_player_ = !this->frst_player_;
   }
   while ((this->pl1_->played() || this->pl2_->played()) && (!this->judge_->boardIsFull(*this->board_)));
+
   this->board_->printBoard();
   //printing the game results
   int winner = this->judge_->checkWinner(*this->board_);
@@ -82,39 +89,19 @@ void Game::run() {
 
 void Game::playOneTurn(Player &pl) {
   this->game_flow_->printCurrentBoard(*this->board_);
-  //prints previous player move
-  if (this->game_info_->preHadMove()) {
-    this->game_flow_->printPreviousMove(this->game_info_->getName(), this->game_info_->getPreMove().toString());
-  }
-  //prints whose turn it is
-  this->game_flow_->printTurn(pl.getName());
 
-  //if the player has no moves
-  if (!this->judge_->hasOptions(*this->board_, pl.getId())) {
-    this->game_info_->hadMove(false);
-    pl.hasMove(false);
-    this->game_flow_->printNoMove();
-    return;
-  }
   pl.message();
   //get move from current player
   Coordinates input = pl.getMove();
-  this->game_info_->hadMove(true);
-  pl.hasMove(true);
-  this->judge_->turnTiles(*this->board_, input, pl.getId());
-  this->game_info_->setPreMove(input.move(Coordinates(1, 1)));
-  this->game_info_->setPreName(pl.getName());
+  Coordinates no_move = NO_MOVE;
+  if (!input.isEqual(no_move)) {
+    this->judge_->turnTiles(*this->board_, input, pl.getId());
+  }
 }
 
-int Game::getServerPort() {
-  return 6000;
-}
-
-const char* Game::getServerIP() {
-  return "127.0.0.1";
-}
-
-int Game::getClientSocket(const char* serverIP, int serverPort) {
+int Game::connectToServer(string filePath) {
+  const char *serverIP = "127.0.0.1";
+  int serverPort = 5050;
   // Create a socket point
   int clientSocket = socket(AF_INET, SOCK_STREAM, 0);
   if (clientSocket == -1) {
@@ -155,5 +142,9 @@ Game::~Game() {
   delete this->board_;
   delete this->judge_;
   delete this->game_info_;
+  if (this->move_tracker_ != NULL)
+    delete this->move_tracker_;
+  if (this->server_messenger_ != NULL)
+    delete this->server_messenger_;
 }
 

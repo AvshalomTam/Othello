@@ -1,14 +1,16 @@
-#ifndef PREVIOUSINFO_H
-#define PREVIOUSINFO_H
+//
+// Created by steve on 12/6/17.
+//
 
-#include "Coordinates.h"
-#include "Player.h"
-class PreviousInfo {
+#ifndef OTHELLO_SERVERLISTENER_H
+#define OTHELLO_SERVERLISTENER_H
+#include "Listener.h"
+class ServerListener : public Listener {
  public:
   /**
    * Constructor.
    */
-  PreviousInfo();
+  ServerListener(Listener *listener, int clientSocket);
   /**
    * Sets the name of the previous player.
    * @param name string
@@ -37,9 +39,7 @@ class PreviousInfo {
    */
   bool preHadMove();
  private:
-  Coordinates previous_move_;
-  string pre_name_;
-  bool pre_had_move_;
+  int client_socket_;
+  Listener *listener_;
 };
-
-#endif //PREVIOUSINFO_H
+#endif //OTHELLO_SERVERLISTENER_H

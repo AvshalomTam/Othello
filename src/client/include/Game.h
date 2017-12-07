@@ -6,12 +6,12 @@
 #include "GameLogic.h"
 #include "Menu.h"
 #include "Display.h"
-#include "PreviousInfo.h"
+#include "MoveTracker.h"
 /**
  * Game of Reversi/Othello.
  */
 class Game {
-public:
+  public:
     /**
      * Constructor.
      */
@@ -29,21 +29,21 @@ public:
      * @param pl reference to player
      */
     void playOneTurn(Player &pl);
+    int connectToServer(string filePath);
     /**
      * Destructor.
      */
-    int getServerPort();
-    const char* getServerIP();
-    int getClientSocket(const char* serverIP, int serverPort);
     ~Game();
-private:
+  private:
     Menu* menu_;
     Display* game_flow_;
     Board* board_; // pointer, so it can point to inherited
     Player* pl1_; // pointer, so it can point to inherited
     Player* pl2_; // pointer, so it can point to inherited
     GameLogic* judge_; // pointer, so it can point to inherited
-    PreviousInfo* game_info_;
+    MoveTracker* game_info_;
+    Listener* move_tracker_ = NULL;
+    Listener* server_messenger_ = NULL;
     bool frst_player_; // boolean telling who's turn it is
 };
 

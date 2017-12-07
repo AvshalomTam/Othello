@@ -1,43 +1,46 @@
-//
-// Created by avshalom on 12/6/17.
-//
+#ifndef PREVIOUSINFO_H
+#define PREVIOUSINFO_H
 
-#ifndef OTHELLO_LISTENER_H
-#define OTHELLO_LISTENER_H
 #include "Coordinates.h"
-class Listener {
+#include "Player.h"
+#include "Listener.h"
+class MoveTracker : public Listener {
  public:
+  /**
+   * Constructor.
+   */
+  MoveTracker();
   /**
    * Sets the name of the previous player.
    * @param name string
    */
-  virtual void setPreName(string name) = 0;
+  void setPreName(string name);
   /**
    * @return name of previous player
    */
-  virtual string getName() = 0;
+  string getName();
   /**
    * Sets the move of the previous player.
    * @param c Coordinates
    */
-  virtual void setPreMove(Coordinates c) = 0;
+  void setPreMove(Coordinates c);
   /**
    * @return previous move
    */
-  virtual Coordinates getPreMove() = 0;
+  Coordinates getPreMove();
   /**
    * Sets boolean saying if previous player had a move.
    * @param had_move boolean
    */
-  virtual void hadMove(bool had_move) = 0;
+  void hadMove(bool had_move);
   /**
    * @return true if previous player had a move, false otherwise
    */
-  virtual bool preHadMove() = 0;
+  bool preHadMove();
  private:
   Coordinates previous_move_;
   string pre_name_;
   bool pre_had_move_;
 };
 
-#endif //OTHELLO_LISTENER_H
+#endif //PREVIOUSINFO_H

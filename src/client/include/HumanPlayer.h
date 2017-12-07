@@ -3,7 +3,7 @@
 #include "Player.h"
 #include "GameLogic.h"
 #include "Display.h"
-#include "PreviousInfo.h"
+#include "MoveTracker.h"
 
 /**
  * Representing a human player.
@@ -17,7 +17,7 @@ public:
      * @param judge Gamelogic object
      * @param gameflow Display object
      */
-    HumanPlayer(cell numplayer, Board& board, GameLogic& judge, Display& gameflow);
+    HumanPlayer(cell numplayer, Board& board, GameLogic& judge, Display& gameflow, Listener& listener);
     /**
      * Gets coordinates in board where the player wants to put his tile
      * @return coordinates
@@ -31,6 +31,7 @@ public:
     Board& board_;
     GameLogic& judge_;
     Display& gameflow_;
+    Listener& listener_;
 };
 
 #endif //HUMANPLAYER_H

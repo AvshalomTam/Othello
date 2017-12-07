@@ -1,9 +1,15 @@
 #include <list>
 #include "../include/AIplayer.h"
+#define NO_MOVE Coordinates(-1, -1)
 
-AIplayer::AIplayer(const Board& board, const GameLogic& judge, Display& gameflow, cell numplayer) : Player(numplayer),
-                                                                                 board_(board), judge_(judge), gameflow_(gameflow) {}
+AIplayer::AIplayer(Board& board, GameLogic& judge, Display& gameflow, cell numplayer, Listener& listener) :
+    Player(numplayer), board_(board), judge_(judge), gameflow_(gameflow), listener_(listener) {}
 Coordinates AIplayer::getMove() {
+  if (!this->judge_.hasOptions(this->board_, this->getId())) {
+    this->listener_.hadMove(false);
+    this->hasMove(false);
+    return NO_MOVE;
+  }
   int score;
   signed int max;
   int minMax = this->board_.getSize() * this->board_.getSize();
@@ -31,9 +37,17 @@ Coordinates AIplayer::getMove() {
     }
     delete copyboard;
   }
+  this->listener_.hadMove(true);
+  this->listener_.setPreMove(best_move);
+  this->listener_.setPreName(this->getName());
+  this->hasMove(true);
   return best_move;
 }
 
 void AIplayer::message() {
+  if (!this->judge_.hasOptions(this->board_, this->getId())) {
+    this->gameflow_.printNoMove();
+    return;
+  }
   this->gameflow_.pcCalculating();
 }
