@@ -1,17 +1,28 @@
 #include <iostream>
 #include "../include/HumanPlayer.h"
 #define NO_MOVE Coordinates(-1, -1)
+#define END Coordinates(-2, -2)
 using namespace std;
 
 HumanPlayer::HumanPlayer(cell numplayer, Board& board, GameLogic& judge, Display& gameflow, Listener& listener) :
     Player(numplayer),  board_(board), judge_(judge), gameflow_(gameflow), listener_(listener) {}
 
 Coordinates HumanPlayer::getMove() {
-  if (!this->judge_.hasOptions(this->board_, this->getId())) {
+  if (!this->listener_.preHadMove() && !this->judge_.hasOptions(this->board_, this->getId())) {
     this->listener_.hadMove(false);
+    this->listener_.setPreMove(END);
+    this->listener_.setPreName(this->getName());
     this->hasMove(false);
     return NO_MOVE;
   }
+  if (!this->judge_.hasOptions(this->board_, this->getId())) {
+    this->listener_.hadMove(false);
+    this->listener_.setPreMove(NO_MOVE);
+    this->listener_.setPreName(this->getName());
+    this->hasMove(false);
+    return NO_MOVE;
+  }
+
   Coordinates input;
   this->hasMove(true);
 

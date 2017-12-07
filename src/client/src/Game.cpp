@@ -20,7 +20,7 @@ Game::Game() : frst_player_(true) {}
 void Game::initialize() {
   this->menu_ = new ConsoleMenu();
   this->game_flow_ = new ConsoleDisplay();
-  this->board_ = new CharBoard();
+  this->board_ = new CharBoard(3);
   this->judge_ = new BasicRules();
   this->game_info_ = new MoveTracker();
   //print the menu
@@ -69,7 +69,7 @@ void Game::run() {
     }
     this->frst_player_ = !this->frst_player_;
   }
-  while ((this->pl1_->played() || this->pl2_->played()) && (!this->judge_->boardIsFull(*this->board_)));
+  while ((this->pl1_->played() || this->pl2_->played()));
 
   this->board_->printBoard();
   //printing the game results
@@ -93,8 +93,7 @@ void Game::playOneTurn(Player &pl) {
   pl.message();
   //get move from current player
   Coordinates input = pl.getMove();
-  Coordinates no_move = NO_MOVE;
-  if (!input.isEqual(no_move)) {
+  if (!NO_MOVE.isEqual(input)) {
     this->judge_->turnTiles(*this->board_, input, pl.getId());
   }
 }

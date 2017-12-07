@@ -40,7 +40,7 @@ void Server::start() {
   socklen_t clientAddressLen;
 
   while (true) {
-    cout << "Waiting for clients connections..." << endl;
+    cout << "Waiting for 2 clients..." << endl;
 
     // Accept a new client connection
     int clientSocket1 = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
@@ -58,6 +58,7 @@ void Server::start() {
     // Close communication with the client
     close(clientSocket1);
     close(clientSocket2);
+    cout << "Clients disconnected" << endl << endl;
   }
 }
 
@@ -93,19 +94,20 @@ void Server::handleClients(int clientSocket1, int clientSocket2) {
 }
 
 int Server::middleMan(int clientSocketRead, int clientSocketWrite) {
-  char coordinates[MAX_TRANSMISSION_SIZE];
+  char coordinates[MAX_TRANSMISSION_SIZE] = "\0";
   int n = read(clientSocketRead, coordinates, sizeof(coordinates));
   if (n == -1) {
     cout << "Error reading from socket" << endl;
-    return 0;
-  }
-  if (strcmp(coordinates, "End") == 0) {
     return 0;
   }
 
   n = write(clientSocketWrite, coordinates, sizeof(coordinates));
   if (n == -1) {
     cout << "Error writing to socket" << endl;
+    return 0;
+  }
+
+  if (strcmp(coordinates, "End") == 0) {
     return 0;
   }
   return 1;

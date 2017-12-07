@@ -7,6 +7,8 @@
 #include <cstring>
 #include "../include/Listener.h"
 #include "../include/ServerListener.h"
+#define NO_MOVE Coordinates(-1, -1)
+#define END Coordinates(-2, -2)
 
 string intStringConvert(int num);
 
@@ -22,8 +24,17 @@ string ServerListener::getName() {
 
 void ServerListener::setPreMove(Coordinates c) {
   this->listener_->setPreMove(c);
-  string coordinates = intStringConvert(c.getX()) + "," + intStringConvert(c.getY()) +'\0';
-  int n = write(this->client_socket_, coordinates.data(), coordinates.size());
+  string msg;
+  if (NO_MOVE.isEqual(c)) {
+    msg = "NoMove" + '\0';
+  }
+  else if (END.isEqual(c)) {
+    msg = "End" + '\0';
+  }
+  else {
+    msg = intStringConvert(c.getX()) + "," + intStringConvert(c.getY()) + '\0';
+  }
+  int n = write(this->client_socket_, msg.data(), msg.size());
   if (n == -1) {
     throw "Error writing to socket";
   }
