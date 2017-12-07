@@ -22,7 +22,7 @@ void Game::initialize() {
   this->game_flow_ = new ConsoleDisplay();
   this->board_ = new CharBoard(3);
   this->judge_ = new BasicRules();
-  //print the menu
+  //Print the menu
   this->menu_->printMenu();
   //check which type of game to initialize and play
   if (this->menu_->getGameType() == local) {
