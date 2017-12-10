@@ -7,6 +7,7 @@
 #include "Menu.h"
 #include "Display.h"
 #include "MoveTracker.h"
+#include "PlayerFactory.h"
 /**
  * Game of Reversi/Othello.
  */
@@ -29,20 +30,18 @@ class Game {
      * @param pl reference to player
      */
     void playOneTurn(Player &pl);
-    int connectToServer(const char* filePath);
     /**
      * Destructor.
      */
     ~Game();
   private:
+    PlayerFactory* factory;
     Menu* menu_;
     Display* game_flow_;
     Board* board_; // pointer, so it can point to inherited
     Player* pl1_; // pointer, so it can point to inherited
     Player* pl2_; // pointer, so it can point to inherited
     GameLogic* judge_; // pointer, so it can point to inherited
-    Listener* move_tracker_ = NULL;
-    Listener* server_messenger_ = NULL;
     bool frst_player_; // boolean telling who's turn it is
 };
 

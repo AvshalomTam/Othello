@@ -19,7 +19,6 @@ class Menu {
    * @return type of game
    */
   game_type getGameType();
-
  protected:
   game_type type_;
 };

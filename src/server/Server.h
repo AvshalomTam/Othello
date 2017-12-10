@@ -8,7 +8,7 @@
 class Server {
  public:
   Server();
-  void start();
+  void start(const char* filePath);
   void stop();
   void handleClients(int clientSocket1, int clientSocket2);
   int middleMan(int clientSocketRead, int clientSocketWrite);

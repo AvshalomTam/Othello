@@ -17,8 +17,7 @@ using namespace std;
 
 Server::Server(): serverSocket(0) {}
 
-void Server::start() {
-  const char* filePath = "../exe/server_settings.txt";
+void Server::start(const char* filePath) {
   //get port from file
   this->port = getPort(filePath);
   // create a socket point

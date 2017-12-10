@@ -1,5 +1,5 @@
-a.out: main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o RemotePlayer.o Menu.o ConsoleMenu.o Display.o ConsoleDisplay.o Listener.o MoveTracker.o ServerListener.o
-	g++ main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o RemotePlayer.o Menu.o ConsoleMenu.o Display.o ConsoleDisplay.o Listener.o MoveTracker.o ServerListener.o
+a.out: main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o RemotePlayer.o Menu.o ConsoleMenu.o Display.o ConsoleDisplay.o Listener.o MoveTracker.o ServerListener.o PlayerFactory.o
+	g++ main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o RemotePlayer.o Menu.o ConsoleMenu.o Display.o ConsoleDisplay.o Listener.o MoveTracker.o ServerListener.o PlayerFactory.o
 
 main.o: main.cpp include/Game.h
 	g++ -c main.cpp
@@ -13,7 +13,7 @@ CharBoard.o:	src/CharBoard.cpp include/CharBoard.h include/Board.h
 Coordinates.o: src/Coordinates.cpp include/Coordinates.h
 	g++ -c src/Coordinates.cpp
 
-Game.o: include/HumanPlayer.h include/GameLogic.h src/Game.cpp include/Game.h
+Game.o: include/HumanPlayer.h include/GameLogic.h include/PlayerFactory.h src/Game.cpp include/Game.h
 	g++ -c src/Game.cpp
 
 HumanPlayer.o: include/Player.h include/Display.h include/Listener.h src/HumanPlayer.cpp include/HumanPlayer.h
@@ -33,6 +33,9 @@ AIplayer.o:	include/Coordinates.h include/Board.h include/GameLogic.h include/Pl
 
 RemotePlayer.o:	include/Player.h include/Display.h include/Listener.h src/RemotePlayer.cpp include/RemotePlayer.h
 	g++ -c src/RemotePlayer.cpp
+
+PlayerFactory.o:	include/Board.h include/GameLogic.h include/Display.h include/Listener.h include/Player.h include/Menu.h src/PlayerFactory.cpp include/PlayerFactory.h
+	g++ -c src/PlayerFactory.cpp
 
 Menu.o: src/Menu.cpp include/Menu.h
 	g++ -c src/Menu.cpp
