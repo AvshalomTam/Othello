@@ -7,8 +7,5 @@ main_s.o:	main_s.cpp include/Server.h
 Server.o:	src/Server.cpp src/Server.cpp
 	g++ -c src/Server.cpp
 
-run:
-	../../exe/a.out_server
-
 clean:
 	rm -f *.o ../../exe/a.out_server

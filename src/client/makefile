@@ -58,8 +58,6 @@ MoveTracker.o:	src/MoveTracker.cpp include/MoveTracker.h include/Coordinates.h i
 ServerListener.o: src/ServerListener.cpp include/ServerListener.h include/Listener.h
 	g++ -c src/ServerListener.cpp
 
-run:
-	../../exe/a.out_client
 
 clean:
 	rm -f *.o ../../exe/a.out_client
