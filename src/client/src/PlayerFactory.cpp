@@ -28,8 +28,7 @@ PlayerFactory::PlayerFactory(Board &board, GameLogic &judge, Display &display, g
     this->pl2_ = new AIplayer(board, judge, display, second_player, *this->move_tracker_);
   }
   else if (type == remote) {
-    const char* filePath = "../../exe/client_settings.txt";
-    int clientSocket = connectToServer(filePath);
+    int clientSocket = connectToServer(file_path);
     int number;
     int n = read(clientSocket, &number, sizeof(number));
     if (n == -1) {
