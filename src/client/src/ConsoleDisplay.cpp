@@ -69,3 +69,7 @@ string ConsoleDisplay::input() {
 void ConsoleDisplay::waitingForPlayer() {
   cout << "waiting for other player's move..." << endl << endl;
 }
+
+void ConsoleDisplay::waitForOtherPlayerConnect() {
+  cout << "Waiting for other player to join..." << endl;
+}

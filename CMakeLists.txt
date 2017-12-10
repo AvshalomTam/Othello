@@ -53,8 +53,8 @@ set(SOURCE_FILES
         src/client/include/PlayerFactory.h)
 set(SERVER_FILES
         src/server/main_s.cpp
-        src/server/Server.cpp
-        src/server/Server.h)
+        src/server/src/Server.cpp
+        src/server/include/Server.h)
 
 add_executable(Othello ${SOURCE_FILES} ${GAME_FILES})
 add_executable(Test ${SOURCE_FILES} ${TEST_FILES})

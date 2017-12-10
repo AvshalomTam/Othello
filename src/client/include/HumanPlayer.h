@@ -24,7 +24,7 @@ public:
      */
     Coordinates getMove();
     /**
-     * Prints an appropieate message.
+     * Prints an appropiate message.
      */
    void message();
  private:

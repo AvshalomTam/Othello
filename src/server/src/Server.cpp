@@ -2,7 +2,7 @@
 // Created by steve on 12/5/17.
 //
 
-#include "Server.h"
+#include "../include/Server.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
@@ -14,6 +14,10 @@
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 10
 #define MAX_TRANSMISSION_SIZE 10
+enum {wait = -5};
+
+int middleMan(int clientSocketRead, int clientSocketWrite);
+int getPort(const char *filePath);
 
 Server::Server(): serverSocket(0) {}
 
@@ -50,6 +54,11 @@ void Server::start(const char* filePath) {
     if (clientSocket1 == -1)
       throw "Error on accept 1";
     cout << "Client 1 accepted on socket : " << clientSocket1 << endl;
+
+    int num = wait;
+    int n = write(clientSocket1, &num, sizeof(num));
+    if (n == -1)
+      throw "Error communicating";
 
     int clientSocket2 = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
     if (clientSocket2 == -1)
@@ -96,7 +105,7 @@ void Server::handleClients(int clientSocket1, int clientSocket2) {
   } while (m != 0);
 }
 
-int Server::middleMan(int clientSocketRead, int clientSocketWrite) {
+int middleMan(int clientSocketRead, int clientSocketWrite) {
   char coordinates[MAX_TRANSMISSION_SIZE] = "\0";
   int n = read(clientSocketRead, coordinates, sizeof(coordinates));
   //if client closed the connection
@@ -121,7 +130,7 @@ void Server::stop() {
   close(serverSocket);
 }
 
-int Server::getPort(const char *filePath) {
+int getPort(const char *filePath) {
   int port;
   ifstream inFile;
   inFile.open(filePath);

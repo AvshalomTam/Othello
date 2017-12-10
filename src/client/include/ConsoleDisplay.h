@@ -56,7 +56,14 @@ class ConsoleDisplay : public Display {
    * @return string
    */
   string input();
+  /**
+   * Prints a message to player that he needs to wait for the other player's move.
+   */
   void waitingForPlayer();
+  /**
+   * Prints a message to player he needs to wait untill another player joins the game.
+   */
+  void waitForOtherPlayerConnect();
 };
 
 #endif //ConsoleDisplay_H

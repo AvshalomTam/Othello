@@ -4,6 +4,9 @@
 #include "Coordinates.h"
 #include "Player.h"
 #include "Listener.h"
+/**
+ * An object of this class 'listens' to the game in order to remember the previous move for each turn.
+ */
 class MoveTracker : public Listener {
  public:
   /**

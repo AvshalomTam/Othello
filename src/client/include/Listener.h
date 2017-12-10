@@ -5,6 +5,10 @@
 #ifndef OTHELLO_LISTENER_H
 #define OTHELLO_LISTENER_H
 #include "Coordinates.h"
+/**
+ * This class represents a listener to the game.
+ * He gathers info for 'some reason' (depends on the actual implementation).
+ */
 class Listener {
  public:
   /**

@@ -5,6 +5,10 @@
 #ifndef OTHELLO_SERVERLISTENER_H
 #define OTHELLO_SERVERLISTENER_H
 #include "Listener.h"
+/**
+ * An object of this class 'listens' to the game in order to 'report' the (needed) moves to the server.
+ * It has a member of Listener (composition) so that this can listen to whatever he needs to.
+ */
 class ServerListener : public Listener {
  public:
   /**
@@ -38,6 +42,9 @@ class ServerListener : public Listener {
    * @return true if previous player had a move, false otherwise
    */
   bool preHadMove();
+  /**
+   * Destructor.
+   */
   ~ServerListener();
  private:
   int client_socket_;

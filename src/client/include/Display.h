@@ -58,8 +58,14 @@ class Display {
    * Printing an appropiate message.
    */
   virtual void pcCalculating() = 0;
-
+  /**
+   * Prints a message to player that he needs to wait for the other player's move.
+   */
   virtual void waitingForPlayer() = 0;
+  /**
+   * Prints a message to player he needs to wait untill another player joins the game.
+   */
+  virtual void waitForOtherPlayerConnect() = 0;
 };
 
 #endif //Display_H

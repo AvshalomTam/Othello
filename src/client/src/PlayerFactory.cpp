@@ -12,11 +12,11 @@
 #include "../include/AIplayer.h"
 #include "../include/ServerListener.h"
 #include "../include/RemotePlayer.h"
-
+enum {wait = -5};
 int connectToServer(const char* filePath);
 
 PlayerFactory::PlayerFactory(Board &board, GameLogic &judge, Display &display, game_type type, const char *file_path) {
-  //check which type of game to initialize and play
+  //checks which type of game was chosen
   if (type == local) {
     this->move_tracker_ = new MoveTracker();
     this->pl1_ = new HumanPlayer(first_player, board, judge, display, *this->move_tracker_);
@@ -33,6 +33,13 @@ PlayerFactory::PlayerFactory(Board &board, GameLogic &judge, Display &display, g
     int n = read(clientSocket, &number, sizeof(number));
     if (n == -1) {
       throw "Error reading from server";
+    }
+    if (number == wait) {
+      display.waitForOtherPlayerConnect();
+      n = read(clientSocket, &number, sizeof(number));
+      if (n == -1) {
+        throw "Error reading from server";
+      }
     }
     this->move_tracker_ = new MoveTracker();
     this->server_messenger_ = new ServerListener(this->move_tracker_, clientSocket);
