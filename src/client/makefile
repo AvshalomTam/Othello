@@ -1,5 +1,5 @@
 a.out: main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o RemotePlayer.o Menu.o ConsoleMenu.o Display.o ConsoleDisplay.o Listener.o MoveTracker.o ServerListener.o PlayerFactory.o
-	g++ -o a.out_client main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o RemotePlayer.o Menu.o ConsoleMenu.o Display.o ConsoleDisplay.o Listener.o MoveTracker.o ServerListener.o PlayerFactory.o
+	g++ -o ../../exe/a.out_client main.o Board.o CharBoard.o Coordinates.o Game.o HumanPlayer.o Player.o GameLogic.o BasicRules.o AIplayer.o RemotePlayer.o Menu.o ConsoleMenu.o Display.o ConsoleDisplay.o Listener.o MoveTracker.o ServerListener.o PlayerFactory.o
 
 main.o: main.cpp include/Game.h
 	g++ -c main.cpp
@@ -59,10 +59,10 @@ ServerListener.o: src/ServerListener.cpp include/ServerListener.h include/Listen
 	g++ -c src/ServerListener.cpp
 
 run:
-	./a.out_client
+	../../exe/a.out_client
 
 clean:
-	rm -f *.o a.out
+	rm -f *.o ../../exe/a.out_client
 
 memory:
 	valgrind ./a.out
