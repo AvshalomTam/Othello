@@ -20,7 +20,7 @@ class Game {
     /**
      * Initializes the board, the players etc.
      */
-    void initialize();
+    void initialize(const char* filePath);
     /**
      * Runs the game.
      */

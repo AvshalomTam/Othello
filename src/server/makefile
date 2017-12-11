@@ -1,11 +1,12 @@
-a.out:	main_s.o Server.o
-	g++ -o ../../exe/a.out_server main_s.o Server.o
-
-main_s.o:	main_s.cpp include/Server.h
-	g++	-c main_s.cpp
-
-Server.o:	src/Server.cpp src/Server.cpp
-	g++ -c src/Server.cpp
-
-clean:
+a.out:  compile
+	g++ -o ../../exe/a.out_server *.o
 	rm -f *.o
+
+compile:	*.cpp include/*.h src/*.cpp
+	g++ -c *.cpp src/*.cpp
+
+memory:
+	valgrind ../../exe/a.out_server
+
+full_memory:
+	valgrind --leak-check=full ../../exe/a.out_server

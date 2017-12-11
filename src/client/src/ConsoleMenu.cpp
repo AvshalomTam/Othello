@@ -4,27 +4,27 @@ using namespace std;
 
 void ConsoleMenu::printMenu() {
   cout << endl << "\tOTHELLO" << endl << endl;
-  cout << "Who is your opponent?" << endl << endl;
-  cout << "(P) player" << endl;
-  cout << "(C) computer" << endl;
-  cout << "(R) remote player" << endl << endl;
+  cout << "Choose an opponent type:" << endl << endl;
+  cout << "1. a human local player" << endl;
+  cout << "2. an AI player" << endl;
+  cout << "3. a remote player" << endl << endl;
   this->setGameType();
 }
 
 void ConsoleMenu::setGameType() {
-  char choice;
+  int choice;
   while (true) {
     cout << "Your choice: ";
     cin >> choice;
-    if (choice == 'P' || choice == 'p') {
+    if (choice == 1) {
       this->type_ = local;
       break;
     }
-    if (choice == 'C' || choice == 'c') {
+    if (choice == 2) {
       this->type_ = computer;
       break;
     }
-    if (choice == 'R' || choice == 'r') {
+    if (choice == 3) {
       this->type_ = remote;
       break;
     }

@@ -49,7 +49,7 @@ void Server::start(const char* filePath) {
     int clientSocket1 = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
     if (clientSocket1 == -1)
       throw "Error on accept 1";
-    cout << "Client 1 accepted on socket : " << clientSocket1 << endl;
+    cout << "Client 1 accepted" << endl;
 
     int num = wait;
     int n = write(clientSocket1, &num, sizeof(num));
@@ -59,7 +59,7 @@ void Server::start(const char* filePath) {
     int clientSocket2 = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
     if (clientSocket2 == -1)
       throw "Error on accept 2";
-    cout << "Client 2 accepted on socket : " << clientSocket2 << endl;
+    cout << "Client 2 accepted" << endl;
 
     this->handleClients(clientSocket1, clientSocket2);
 

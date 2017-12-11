@@ -8,7 +8,7 @@
 
 Game::Game() : frst_player_(true) {}
 
-void Game::initialize() {
+void Game::initialize(const char* filePath) {
   this->menu_ = new ConsoleMenu();
   this->game_flow_ = new ConsoleDisplay();
   this->board_ = new CharBoard();
@@ -16,7 +16,7 @@ void Game::initialize() {
   //print the menu
   this->menu_->printMenu();
   this->factory = new PlayerFactory(*this->board_, *this->judge_, *this->game_flow_,
-                                    this->menu_->getGameType(), "client_settings.txt");
+                                    this->menu_->getGameType(), filePath);
   this->pl1_ = factory->getFirstPlayer();
   this->pl2_ = factory->getSecondPlayer();
   this->pl1_->setName("X");
