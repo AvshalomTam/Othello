@@ -8,4 +8,4 @@ Server.o:	src/Server.cpp src/Server.cpp
 	g++ -c src/Server.cpp
 
 clean:
-	rm -f *.o ../../exe/a.out_server
+	rm -f *.o

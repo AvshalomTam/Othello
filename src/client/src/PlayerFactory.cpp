@@ -16,6 +16,8 @@ enum {wait = -5};
 int connectToServer(const char* filePath);
 
 PlayerFactory::PlayerFactory(Board &board, GameLogic &judge, Display &display, game_type type, const char *file_path) {
+  this->move_tracker_ = NULL;
+  this->server_messenger_ = NULL;
   //checks which type of game was chosen
   if (type == local) {
     this->move_tracker_ = new MoveTracker();

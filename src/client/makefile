@@ -60,7 +60,7 @@ ServerListener.o: src/ServerListener.cpp include/ServerListener.h include/Listen
 
 
 clean:
-	rm -f *.o ../../exe/a.out_client
+	rm -f *.o
 
 memory:
 	valgrind ./a.out

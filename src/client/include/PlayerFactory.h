@@ -36,8 +36,8 @@ class PlayerFactory {
  private:
   Player *pl1_;
   Player *pl2_;
-  Listener* move_tracker_ = NULL;
-  Listener* server_messenger_ = NULL;
+  Listener* move_tracker_;
+  Listener* server_messenger_;
 };
 
 #endif //OTHELLO_PLAYERFACTORY_H
