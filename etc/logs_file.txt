@@ -1,21 +1,56 @@
-b970g06 - Avshalom, 10 hours ago : final push. end of ex3.
-b970f06 - SimSteve, 10 hours ago : took main out of src directory.
-92d89e8 - Avshalom, 15 hours ago : added tests to BoardTest, BasicRulesTest and AIplayerTest.
-011725c - SimSteve, 17 hours ago : added info.txt.
-0186ee2 - SimSteve, 17 hours ago : added AIplayerTest.
-46666e9 - SimSteve, 17 hours ago : added some more documentations.
-68c51a2 - SimSteve, 17 hours ago : added documentation.
-38b02c9 - SimSteve, 18 hours ago : updated makefile.
-2afd6a3 - SimSteve, 19 hours ago : changed Game to be generic (not printing only to console) added classes for menu added classes for the printing of the gameflow.
-3da18b6 - SimSteve, 2 days ago : google test
-25d44fd - SimSteve, 2 days ago : Added tests to Board and BasicRules.
-5e10d74 - SimSteve, 2 days ago : Added google tests to Board.
-ae42f56 - Avshalom, 7 days ago : added decisions.docx file describing oop and other consideration while working on shared project.
-4ac1a47 - Avshalom, 7 days ago : fixed a bug that caused an endless loop for certain game moves.
-a3759fe - Avshalom, 7 days ago : adjusted the game flow to enable AIplayer
-3dba843 - SimSteve, 8 days ago : Added a copy function in Board
-717c8ac - SimSteve, 8 days ago : added some explenation
-b2a7b5d - SimSteve, 8 days ago : Changed type of board from int** to cell** (enum type)
-fd8b634 - SimSteve, 9 days ago : added all the files
-1599255 - SimSteve, 9 days ago : uploaded the files
-a49a2de - Steve Gutfreund, 9 days ago : Initial commit
+31798b6 - SimSteve, 67 minutes ago : ex4 finished
+289366a - Avshalom, 90 minutes ago : updated logs_file
+289366a - Avshalom, 2 hours ago : fixed server's binding problem by changing port number
+c922a64 - SimSteve, 15 hours ago : final edit
+c8e38c2 - SimSteve, 16 hours ago : edited the makefiles so that the a.out file are in directory exe
+42984a1 - SimSteve, 16 hours ago : added some comments
+db09a75 - SimSteve, 17 hours ago : added makefile for server
+a1c62c8 - SimSteve, 18 hours ago : created a PlayerFactory to create the appropriate player objects according to game type
+3727ad2 - SimSteve, 4 days ago : corrected the client settings file
+33a1b13 - SimSteve, 4 days ago : made two separate setting files; client and server
+d629dc8 - Avshalom, 4 days ago : added exe folder + txt file and now, clients and server read from file
+2333c08 - SimSteve, 4 days ago : added some documentation
+3fa2f06 - SimSteve, 4 days ago : client closes the connection (and not sending "End")
+289366a - Avshalom, 4 days ago : delete some code
+521a8fd - Avshalom, 4 days ago : deleted unecessery files
+cfa7aa3 - SimSteve, 4 days ago : changed a print
+0c53b93 - SimSteve, 4 days ago : Handled "NoMove" & "End"
+1bf74ac - SimSteve, 4 days ago : connected all the parts (listeners, server, game etc)
+cd768d7 - Avshalom, 5 days ago : added class listener
+85b5faf - Avshalom, 5 days ago : added 3 assistant functions to Game
+e551524 - Avshalom, 5 days ago : added log file to git
+2bc53bc - SimSteve, 5 days ago : organized the files
+7099ab4 - SimSteve, 5 days ago : organized the folders
+5359fff - SimSteve, 5 days ago : organized folders + created server
+eff6490 - SimSteve, 11 days ago : erased our ID
+8c48bb1 - SimSteve, 11 days ago : changed a bit game class, playoneturn() gets the current player
+e6c94c1 - Avshalom, 12 days ago : added log file to git
+e44be8b - SimSteve, 12 days ago : fixed
+d371a53 - Avshalom, 12 days ago : added tests 2
+d3f17fb - Avshalom, 12 days ago : Merge remote-tracking branch 'origin/master'
+6151e96 - SimSteve, 12 days ago : added google test
+a600c96 - Avshalom, 12 days ago : Merge branch 'master'+ added comments
+8fc53e2 - SimSteve, 12 days ago : game is totally generic
+7d365c3 - SimSteve, 12 days ago : google test
+10863c6 - SimSteve, 12 days ago : fixed a bug in AIplayer
+b970f06 - SimSteve, 12 days ago : took main out of src directory
+92d89e8 - Avshalom, 13 days ago : added tests
+011725c - SimSteve, 13 days ago : added info.txt
+0186ee2 - SimSteve, 13 days ago : added AIplayerTest
+46666e9 - SimSteve, 13 days ago : added some more documentations
+68c51a2 - SimSteve, 13 days ago : added documentation
+38b02c9 - SimSteve, 13 days ago : updated makefile
+2afd6a3 - SimSteve, 13 days ago : changed Game to be generic (not printing only to console) added classes for menu added classes for the printing of the gameflow
+3da18b6 - SimSteve, 2 weeks ago : google test
+25d44fd - SimSteve, 2 weeks ago : Added tests to Board and BasicRules
+5e10d74 - SimSteve, 2 weeks ago : Added google tests to Board
+4235ffd - Avshalom, 3 weeks ago : added decisions.docx file describing oop and other consideration while working on shared project.
+4ac1a47 - Avshalom, 3 weeks ago : fixed a bug that caused an endless loop for certain game moves.
+a3759fe - Avshalom, 3 weeks ago : adjusted the game flow to enable AIplayer
+7e6a856 - SimSteve, 3 weeks ago : Added a copy function in Board
+717c8ac - SimSteve, 3 weeks ago : added some explanation
+b2a7b5d - SimSteve, 3 weeks ago : Changed type of board from int** to cell** (enum type)
+a08e928 - Avshalom, 3 weeks ago : added names and other information in all the files.
+fd8b634 - SimSteve, 3 weeks ago : added all the files
+1599255 - SimSteve, 3 weeks ago : uploaded the files
+a49a2de - SimSteve, 3 weeks ago : Initial commit
