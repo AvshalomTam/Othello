@@ -11,7 +11,7 @@ Game::Game() : frst_player_(true) {}
 void Game::initialize(const char* filePath) {
   this->menu_ = new ConsoleMenu();
   this->game_flow_ = new ConsoleDisplay();
-  this->board_ = new CharBoard();
+  this->board_ = new CharBoard(4);
   this->judge_ = new BasicRules();
   //print the menu
   this->menu_->printMenu();

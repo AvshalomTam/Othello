@@ -8,7 +8,7 @@ using namespace std;
 
 int main() {
     Game game;
-    game.initialize("client_settings.txt");
+    game.initialize("../exe/client_settings.txt");
     game.run();
     return 0;
 }
