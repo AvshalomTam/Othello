@@ -12,19 +12,19 @@ void ConsoleMenu::printMenu() {
 }
 
 void ConsoleMenu::setGameType() {
-  int choice;
+  char choice;
   while (true) {
     cout << "Your choice: ";
     cin >> choice;
-    if (choice == 1) {
+    if (choice == '1') {
       this->type_ = local;
       break;
     }
-    if (choice == 2) {
+    if (choice == '2') {
       this->type_ = computer;
       break;
     }
-    if (choice == 3) {
+    if (choice == '3') {
       this->type_ = remote;
       break;
     }
