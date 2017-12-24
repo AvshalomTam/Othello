@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <iostream>
 #include <cstring>
+#include <cstdlib>
 #include "../include/Listener.h"
 #include "../include/ServerListener.h"
 #define NO_MOVE Coordinates(-1, -1)
@@ -33,6 +34,9 @@ void ServerListener::setPreMove(Coordinates c) {
   int n = write(this->client_socket_, msg.data(), msg.size());
   if (n == -1) {
     throw "Error writing to socket";
+  }
+  if (n == 0) {
+    exit(0);
   }
 }
 

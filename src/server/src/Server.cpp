@@ -6,6 +6,7 @@
 #include <iostream>
 #include <stdio.h>
 #include <fstream>
+#include <pthread.h>
 
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 10
@@ -14,6 +15,14 @@ enum {wait = -5};
 
 int middleMan(int clientSocketRead, int clientSocketWrite);
 int getPort(const char *filePath);
+static void handleClients(int clientSocket1, int clientSocket2);
+static void* operateGame(void *tArgs);
+
+struct connection_info {
+  struct sockaddr_in clientAddress;
+  socklen_t clientAddressLen;
+  int serverSocket;
+};
 
 Server::Server(): serverSocket(0) {}
 
@@ -42,11 +51,31 @@ void Server::start(const char* filePath) {
   struct sockaddr_in clientAddress;
   socklen_t clientAddressLen;
 
+  connection_info info;
+  info.clientAddress = clientAddress;
+  info.clientAddressLen = clientAddressLen;
+  info.serverSocket = serverSocket;
+  pthread_t games_thread;
+  int rc = pthread_create(&games_thread, NULL, operateGame, &info);
+  if (rc) {
+    cout << "Error: unable to create thread, " << rc << endl;
+    return;
+  }
+
+  string end_server;
+  do {
+    cin >> end_server;
+  }
+  while (end_server != "exit");
+}
+
+static void* operateGame(void *tArgs) {
+  struct connection_info *args = (struct connection_info *)tArgs;
   while (true) {
     cout << "Waiting for 2 clients..." << endl;
 
     // Accept a new client connection
-    int clientSocket1 = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
+    int clientSocket1 = accept(args->serverSocket, (struct sockaddr *) &(args->clientAddress), &(args->clientAddressLen));
     if (clientSocket1 == -1)
       throw "Error on accept 1";
     cout << "Client 1 accepted" << endl;
@@ -56,12 +85,12 @@ void Server::start(const char* filePath) {
     if (n == -1)
       throw "Error communicating";
 
-    int clientSocket2 = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
+    int clientSocket2 = accept(args->serverSocket, (struct sockaddr *) &(args->clientAddress), &(args->clientAddressLen));
     if (clientSocket2 == -1)
       throw "Error on accept 2";
     cout << "Client 2 accepted" << endl;
 
-    this->handleClients(clientSocket1, clientSocket2);
+    handleClients(clientSocket1, clientSocket2);
 
     // Close communication with the client
     close(clientSocket1);
@@ -71,7 +100,7 @@ void Server::start(const char* filePath) {
 }
 
 // Handle requests from a specific client
-void Server::handleClients(int clientSocket1, int clientSocket2) {
+static void handleClients(int clientSocket1, int clientSocket2) {
   int n;
   int num;
 

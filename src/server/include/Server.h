@@ -21,7 +21,8 @@ class Server {
    * @param clientSocket1 socket from which client 1 listens
    * @param clientSocket2 socket from which client 2 listens
    */
-  void handleClients(int clientSocket1, int clientSocket2);
+  /*static void handleClients(int clientSocket1, int clientSocket2);
+  static void *operateGame(void *tArgs);*/
  private:
   int port;
   int serverSocket; // the socket's file descriptor

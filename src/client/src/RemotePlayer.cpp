@@ -5,6 +5,7 @@
 #include <unistd.h>
 #include <string.h>
 #include <iostream>
+#include <cstdlib>
 #include "../include/Display.h"
 #include "../include/RemotePlayer.h"
 #define NO_MOVE Coordinates(-1, -1)
@@ -20,6 +21,9 @@ Coordinates RemotePlayer::getMove() {
   int n = read(this->clientSocket_, input, sizeof(input));
   if (n == -1) {
     throw "Error reading from socket";
+  }
+  if (n == 0) {
+    exit(0);
   }
   if (strcmp(input, "NoMove") == 0) {
     this->listener_.hadMove(false);

@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.8)
 project(Othello)
+find_package(Threads)
 
 set(CMAKE_CXX_STANDARD 98)
 
@@ -61,3 +62,4 @@ add_executable(Test ${SOURCE_FILES} ${TEST_FILES})
 add_executable(Server_Re6 ${SERVER_FILES})
 
 target_link_libraries(Test gtest gtest_main)
+target_link_libraries(Server_Re6 ${CMAKE_THREAD_LIBS_INIT})
