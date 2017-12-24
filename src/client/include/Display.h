@@ -66,6 +66,11 @@ class Display {
    * Prints a message to player he needs to wait untill another player joins the game.
    */
   virtual void waitForOtherPlayerConnect() = 0;
+  /**
+   * Prints a message to player that the server has been disconnected.
+   * @param str an appropiate message
+   */
+  virtual void serverDisconnect(const char *str) = 0;
 };
 
 #endif //Display_H

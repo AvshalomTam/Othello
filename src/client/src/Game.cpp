@@ -24,16 +24,19 @@ void Game::initialize(const char* filePath) {
 }
 
 void Game::run() {
-  do {
-    if (this->frst_player_) {
-      this->playOneTurn(*this->pl1_);
-    }
-    else {
-      this->playOneTurn(*this->pl2_);
-    }
-    this->frst_player_ = !this->frst_player_;
+  try {
+    do {
+      if (this->frst_player_) {
+        this->playOneTurn(*this->pl1_);
+      } else {
+        this->playOneTurn(*this->pl2_);
+      }
+      this->frst_player_ = !this->frst_player_;
+    } while ((this->pl1_->played() || this->pl2_->played()) && !this->judge_->boardIsFull(*this->board_));
+  } catch (const char* e) {
+    this->game_flow_->serverDisconnect(e);
+    return;
   }
-  while ((this->pl1_->played() || this->pl2_->played()) && !this->judge_->boardIsFull(*this->board_));
 
   this->board_->printBoard();
   //printing the game results
@@ -55,10 +58,15 @@ void Game::playOneTurn(Player &pl) {
   this->game_flow_->printCurrentBoard(*this->board_);
 
   pl.message();
-  //get move from current player
-  Coordinates input = pl.getMove();
-  if (!NO_MOVE.isEqual(input)) {
-    this->judge_->turnTiles(*this->board_, input, pl.getId());
+
+  try {
+    //get move from current player
+    Coordinates input = pl.getMove();
+    if (!NO_MOVE.isEqual(input)) {
+      this->judge_->turnTiles(*this->board_, input, pl.getId());
+    }
+  } catch (const char* e) {
+    throw e;
   }
 }
 

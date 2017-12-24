@@ -23,7 +23,7 @@ Coordinates RemotePlayer::getMove() {
     throw "Error reading from socket";
   }
   if (n == 0) {
-    exit(0);
+    throw "Server disconnected. Game finished.";
   }
   if (strcmp(input, "NoMove") == 0) {
     this->listener_.hadMove(false);

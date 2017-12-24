@@ -73,3 +73,7 @@ void ConsoleDisplay::waitingForPlayer() {
 void ConsoleDisplay::waitForOtherPlayerConnect() {
   cout << "Waiting for other player to join..." << endl;
 }
+
+void ConsoleDisplay::serverDisconnect(const char *str) {
+  cout << str << endl;
+}

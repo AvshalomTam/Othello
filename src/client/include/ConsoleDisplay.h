@@ -64,6 +64,11 @@ class ConsoleDisplay : public Display {
    * Prints a message to player he needs to wait untill another player joins the game.
    */
   void waitForOtherPlayerConnect();
+  /**
+   * Prints a message to player that the server has been disconnected.
+   * @param str an appropiate message
+   */
+  void serverDisconnect(const char *str);
 };
 
 #endif //ConsoleDisplay_H
