@@ -8,13 +8,13 @@ add_subdirectory(gtest/googletest-release-1.8.0)
 include_directories(gtest/googletest-release-1.8.0/googletest/include)
 include_directories(gtest/googletest-release-1.8.0/googlemock/include)
 
-set(GAME_FILES src/client/main.cpp)
+set(GAME_FILES src/client/main.cpp src/server/include/ClientHandler.h)
 set(TEST_FILES
         src/client/test/gtest_main.cpp
         src/client/test/BoardTest.h
         src/client/test/BasicRulesTest.h
         src/client/test/AIplayerTest.h
-        src/client/test/CoordinatesTest.h)
+        src/client/test/CoordinatesTest.h src/server/src/Command.cpp src/server/include/Command.h src/server/src/CommandsManager.cpp src/server/include/CommandsManager.h src/server/src/StartCommand.cpp src/server/include/StartCommand.h src/server/src/ListCommand.cpp src/server/include/ListCommand.h src/server/src/JoinCommand.cpp src/server/include/JoinCommand.h src/server/src/PlayCommand.cpp src/server/include/PlayCommand.h src/server/src/CloseCommand.cpp src/server/include/CloseCommand.h src/server/include/ClientHandler.h src/server/src/ClientHandler.cpp src/server/include/GameRoom.h src/server/src/GameRoom.cpp)
 set(SOURCE_FILES
         src/client/include/AIplayer.h
         src/client/include/BasicRules.h
@@ -55,7 +55,7 @@ set(SOURCE_FILES
 set(SERVER_FILES
         src/server/main_s.cpp
         src/server/src/Server.cpp
-        src/server/include/Server.h)
+        src/server/include/Server.h src/server/src/Command.cpp src/server/include/Command.h src/server/src/CommandsManager.cpp src/server/include/CommandsManager.h src/server/src/StartCommand.cpp src/server/include/StartCommand.h src/server/src/ListCommand.cpp src/server/include/ListCommand.h src/server/src/JoinCommand.cpp src/server/include/JoinCommand.h src/server/src/PlayCommand.cpp src/server/include/PlayCommand.h src/server/src/CloseCommand.cpp src/server/include/CloseCommand.h src/server/include/ClientHandler.h src/server/src/ClientHandler.cpp src/server/include/GameRoom.h src/server/src/GameRoom.cpp)
 
 add_executable(Othello ${SOURCE_FILES} ${GAME_FILES})
 add_executable(Test ${SOURCE_FILES} ${TEST_FILES})

@@ -36,6 +36,7 @@ void ServerListener::setPreMove(Coordinates c) {
     throw "Error writing to socket";
   }
   if (n == 0) {
+    close(this->client_socket_);
     throw "Server disconnected. Game finished.";
   }
 }

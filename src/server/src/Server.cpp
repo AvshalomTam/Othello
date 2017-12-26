@@ -1,4 +1,6 @@
 #include "../include/Server.h"
+#include "../include/ClientHandler.h"
+#include "../include/GameRoom.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
@@ -7,6 +9,7 @@
 #include <stdio.h>
 #include <fstream>
 #include <pthread.h>
+#include <vector>
 
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 10
@@ -16,7 +19,7 @@ enum {wait = -5};
 int middleMan(int clientSocketRead, int clientSocketWrite);
 int getPort(const char *filePath);
 static void handleClients(int clientSocket1, int clientSocket2);
-static void* operateGame(void *tArgs);
+static void* acceptClients(void *tArgs);
 
 struct connection_info {
   struct sockaddr_in clientAddress;
@@ -55,8 +58,9 @@ void Server::start(const char* filePath) {
   info.clientAddress = clientAddress;
   info.clientAddressLen = clientAddressLen;
   info.serverSocket = serverSocket;
+
   pthread_t games_thread;
-  int rc = pthread_create(&games_thread, NULL, operateGame, &info);
+  int rc = pthread_create(&games_thread, NULL, acceptClients, &info);
   if (rc) {
     cout << "Error: unable to create thread, " << rc << endl;
     return;
@@ -67,15 +71,29 @@ void Server::start(const char* filePath) {
     cin >> end_server;
   }
   while (end_server != "exit");
+  vector<GameRoom> list = ClientHandler::getList();
+  for (vector<GameRoom>::iterator it = list.begin(); it != list.end(); ++it) {
+    it->closeSockets();
+  }
+  close(serverSocket);
 }
 
-static void* operateGame(void *tArgs) {
-  struct connection_info *args = (struct connection_info *)tArgs;
+static void* acceptClients(void *tArgs) {
+  ClientHandler handler;
+  struct connection_info *args = (struct connection_info *) tArgs;
+  cout << "Waiting for clients..." << endl;
   while (true) {
-    cout << "Waiting for 2 clients..." << endl;
-
     // Accept a new client connection
-    int clientSocket1 = accept(args->serverSocket, (struct sockaddr *) &(args->clientAddress), &(args->clientAddressLen));
+    int clientSocket =
+        accept(args->serverSocket, (struct sockaddr *) &(args->clientAddress), &(args->clientAddressLen));
+    if (clientSocket == -1)
+      throw "Error on accept";
+    cout << "Client accepted" << endl;
+    handler.handle(clientSocket);
+  }
+}
+  /*
+
     if (clientSocket1 == -1)
       throw "Error on accept 1";
     cout << "Client 1 accepted" << endl;
@@ -97,7 +115,7 @@ static void* operateGame(void *tArgs) {
     close(clientSocket2);
     cout << "Clients disconnected" << endl << endl;
   }
-}
+}*/
 
 // Handle requests from a specific client
 static void handleClients(int clientSocket1, int clientSocket2) {
