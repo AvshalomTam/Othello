@@ -18,7 +18,6 @@ void ClientHandler::handle(int client_socket) {
 
 static void* serveClient(void *tArgs) {
   long client_socket = (long) tArgs;
-
   char buffer[50];
   for (int i = 0; i < 50; i++) {
     buffer[i] = '\0';
@@ -32,10 +31,9 @@ static void* serveClient(void *tArgs) {
     cout << "Error reading from socket" << endl;
     return 0;
   }
-
   bool two_words;
-  string command;
-  string argument;
+  char command[50];
+  char argument[50];
   char* pch;
   pch = strchr(buffer, ' ');
   if (pch == NULL) {
@@ -48,38 +46,6 @@ static void* serveClient(void *tArgs) {
     strcpy(command, buffer);
     strcpy(argument, pch + 1);
   }
-
-
-
-  /*
-  char command[50];
-  char argument[50];
-  bool space = false;
-  bool two_words = false;
-  for (int i = 0; i < 50; i++) {
-    if (buffer[i] != ' ' && !space) {
-      command[i] = buffer[i];
-    }
-    if (buffer[i] == ' ' && !space) {
-      space = true;
-      command[i] = '\0';
-    }
-    if (buffer[i] == '$' && !space) {
-      two_words = false;
-      command[i] = '\0';
-      break;
-    }
-    if (buffer[i] != ' ' && space) {
-      two_words = true;
-      argument[i - strlen(command)] = buffer[i];
-    }
-    if (buffer[i] == '$' && space) {
-      argument[i - strlen(command)] = '\0';
-      break;
-    }
-  }*/
-
-
 }
 
 static vector<GameRoom> ClientHandler::getList() {
