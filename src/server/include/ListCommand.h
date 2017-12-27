@@ -11,6 +11,8 @@ class ListCommand : public Command {
   ListCommand(vector<GameRoom> list);
   void execute(vector<string> list);
   ~ListCommand();
+ private:
+  vector<GameRoom> list;
 };
 
 #endif //OTHELLO_LISTCOMMAND_H

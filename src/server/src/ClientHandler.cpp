@@ -6,7 +6,7 @@
 #include "../include/GameRoom.h"
 
 vector<GameRoom> list;
-
+static void* serveClient(void *tArgs);
 void ClientHandler::handle(int client_socket) {
   pthread_t serve_client;
   int rc = pthread_create(&serve_client, NULL, serveClient, &client_socket);

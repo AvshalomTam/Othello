@@ -17,3 +17,10 @@ void GameRoom::closeSockets() {
     close(client_socket2_);
   }
 }
+
+int GameRoom::getClientSocket1() {
+  return this->client_socket1_;
+}
+int GameRoom::getClientSocket2() {
+  return this->client_socket2_;
+}

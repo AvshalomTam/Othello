@@ -7,6 +7,8 @@ class GameRoom {
  public:
   GameRoom(string name, int client_socket1);
   string getGameName();
+    int getClientSocket1();
+    int getClientSocket2();
   bool isActive();
   void closeSockets();
  private:
