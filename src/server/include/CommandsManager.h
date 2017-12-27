@@ -11,9 +11,9 @@
 #include "Command.h"
 class CommandsManager {
  public:
-  CommandsManager();
+  CommandsManager(vector<GameRoom> list);
   ~CommandsManager();
-  void executeCommand(string command, vector<GameRoom> list);
+  void executeCommand(string command, vector<string> list);
  private:
   map<string, Command *> commandsMap_;
 };

@@ -2,18 +2,14 @@
 #include "../include/StartCommand.h"
 #include "../include/ListCommand.h"
 #include "../include/JoinCommand.h"
-#include "../include/PlayCommand.h"
-#include "../include/CloseCommand.h"
 
-CommandsManager::CommandsManager() {
-  this->commandsMap_["start"] = new StartCommand();
-  this->commandsMap_["list_games"] = new ListCommand();
-  this->commandsMap_["join"] = new JoinCommand();
-  this->commandsMap_["play"] = new PlayCommand();
-  this->commandsMap_["close"] = new CloseCommand();
+CommandsManager::CommandsManager(vector<GameRoom> list) {
+  this->commandsMap_["start"] = new StartCommand(list);
+  this->commandsMap_["list_games"] = new ListCommand(list);
+  this->commandsMap_["join"] = new JoinCommand(list);
 }
 
-void CommandsManager::executeCommand(string command, vector<GameRoom> list) {
+void CommandsManager::executeCommand(string command, vector<string> list) {
   Command *commandObj = this->commandsMap_[command];
   commandObj->execute(list);
 }

@@ -48,6 +48,8 @@ static void* serveClient(void *tArgs) {
   }
 }
 
-static vector<GameRoom> ClientHandler::getList() {
-  return list;
+ClientHandler::~ClientHandler() {
+  for (vector<GameRoom>::iterator it = list.begin(); it != list.end(); ++it) {
+    it->closeSockets();
+  }
 }

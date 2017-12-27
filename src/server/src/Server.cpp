@@ -25,6 +25,7 @@ struct connection_info {
   struct sockaddr_in clientAddress;
   socklen_t clientAddressLen;
   int serverSocket;
+  ClientHandler handler;
 };
 
 Server::Server(): serverSocket(0) {}
@@ -59,6 +60,8 @@ void Server::start(const char* filePath) {
   info.clientAddressLen = clientAddressLen;
   info.serverSocket = serverSocket;
 
+  ClientHandler handler;
+  info.handler = handler;
   pthread_t games_thread;
   int rc = pthread_create(&games_thread, NULL, acceptClients, &info);
   if (rc) {
@@ -71,15 +74,10 @@ void Server::start(const char* filePath) {
     cin >> end_server;
   }
   while (end_server != "exit");
-  vector<GameRoom> list = ClientHandler::getList();
-  for (vector<GameRoom>::iterator it = list.begin(); it != list.end(); ++it) {
-    it->closeSockets();
-  }
   close(serverSocket);
 }
 
 static void* acceptClients(void *tArgs) {
-  ClientHandler handler;
   struct connection_info *args = (struct connection_info *) tArgs;
   cout << "Waiting for clients..." << endl;
   while (true) {
@@ -89,7 +87,7 @@ static void* acceptClients(void *tArgs) {
     if (clientSocket == -1)
       throw "Error on accept";
     cout << "Client accepted" << endl;
-    handler.handle(clientSocket);
+    args->handler.handle(clientSocket);
   }
 }
   /*

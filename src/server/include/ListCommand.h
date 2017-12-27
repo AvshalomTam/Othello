@@ -7,7 +7,10 @@
 
 #include "Command.h"
 class ListCommand : public Command {
-
+ public:
+  ListCommand(vector<GameRoom> list);
+  void execute(vector<string> list);
+  ~ListCommand();
 };
 
 #endif //OTHELLO_LISTCOMMAND_H

@@ -7,6 +7,7 @@ class ClientHandler {
  public:
   void handle(int client_socket);
   static vector<GameRoom> getList();
+  ~ClientHandler();
 };
 
 #endif //CLIENTHANDLER_H
