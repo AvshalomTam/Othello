@@ -7,10 +7,12 @@
 
 #include "Command.h"
 class JoinCommand : public Command {
- public:
-  JoinCommand(vector<GameRoom> list);
-  void execute(vector<string> list);
-  ~JoinCommand();
+	public:
+		JoinCommand(vector<GameRoom> list);
+		void execute(vector<string> list);
+		~JoinCommand();
+    private:
+        vector<GameRoom> list;
 };
 
 #endif //OTHELLO_JOINCOMMAND_H
