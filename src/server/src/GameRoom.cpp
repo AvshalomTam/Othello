@@ -24,3 +24,7 @@ int GameRoom::getClientSocket1() {
 int GameRoom::getClientSocket2() {
 	return this->client_socket2_;
 }
+
+void GameRoom::setSocket2(int socket) {
+	this->client_socket2_ = socket;
+}

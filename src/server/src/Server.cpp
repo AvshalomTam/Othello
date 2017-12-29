@@ -13,12 +13,9 @@
 
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 10
-#define MAX_TRANSMISSION_SIZE 10
 enum {wait = -5};
 
-int middleMan(int clientSocketRead, int clientSocketWrite);
 int getPort(const char *filePath);
-static void handleClients(int clientSocket1, int clientSocket2);
 static void* acceptClients(void *tArgs);
 
 struct connection_info {
@@ -89,82 +86,6 @@ static void* acceptClients(void *tArgs) {
 		cout << "Client accepted" << endl;
 		args->handler.handle(clientSocket);
 	}
-}
-	/*
-
-		if (clientSocket1 == -1)
-			throw "Error on accept 1";
-		cout << "Client 1 accepted" << endl;
-
-		int num = wait;
-		int n = write(clientSocket1, &num, sizeof(num));
-		if (n == -1)
-			throw "Error communicating";
-
-		int clientSocket2 = accept(args->serverSocket, (struct sockaddr *) &(args->clientAddress), &(args->clientAddressLen));
-		if (clientSocket2 == -1)
-			throw "Error on accept 2";
-		cout << "Client 2 accepted" << endl;
-
-		handleClients(clientSocket1, clientSocket2);
-
-		// Close communication with the client
-		close(clientSocket1);
-		close(clientSocket2);
-		cout << "Clients disconnected" << endl << endl;
-	}
-}*/
-
-// Handle requests from a specific client
-static void handleClients(int clientSocket1, int clientSocket2) {
-	int n;
-	int num;
-
-	num = 1;
-	n = write(clientSocket1, &num, sizeof(num));
-	if (n == -1) {
-		cout << "Error writing to socket 1" << endl;
-		return;
-	}
-	num = 2;
-	n = write(clientSocket2, &num, sizeof(num));
-	if (n == -1) {
-		cout << "Error writing to socket 2" << endl;
-		return;
-	}
-
-	bool first_socket = true;
-	int m;
-	do {
-		if (first_socket) {
-			m = middleMan(clientSocket1, clientSocket2);
-		}
-		else {
-			m = middleMan(clientSocket2, clientSocket1);
-		}
-		first_socket = !first_socket;
-	} while (m != 0);
-}
-
-int middleMan(int clientSocketRead, int clientSocketWrite) {
-	char coordinates[MAX_TRANSMISSION_SIZE] = "\0";
-	int n = read(clientSocketRead, coordinates, sizeof(coordinates));
-	//if client closed the connection
-	if (n == 0) {
-		return 0;
-	}
-	if (n == -1) {
-		cout << "Error reading from socket" << endl;
-		return 0;
-	}
-
-	n = write(clientSocketWrite, coordinates, sizeof(coordinates));
-	if (n == -1) {
-		cout << "Error writing to socket" << endl;
-		return 0;
-	}
-
-	return 1;
 }
 
 void Server::stop() {
