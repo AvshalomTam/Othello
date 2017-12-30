@@ -8,7 +8,7 @@ int middleMan(int clientSocketRead, int clientSocketWrite);
 #define MAX_TRANSMISSION_SIZE 10
 
 GameManager::GameManager() {}
-
+static void* connectGamers(void *tArgs);
 void GameManager::createGame(GameRoom room) {
     pthread_t games_thread;
     int rc = pthread_create(&games_thread, NULL, connectGamers, &room);

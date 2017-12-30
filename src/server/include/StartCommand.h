@@ -11,7 +11,7 @@ class StartCommand : public Command {
 	public:
 		StartCommand(vector<GameRoom> list);
 		void execute(vector<string> list);
-		~StartCommand();
+		//~StartCommand();
 	private:
 		vector<GameRoom> list_;
 };

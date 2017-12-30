@@ -5,9 +5,9 @@ using namespace std;
 
 class GameRoom {
   public:
-	GameRoom(string name, int client_socket1);
+	GameRoom(const char* name, int client_socket1);
 	void setSocket2(int socket);
-	string getGameName();
+	const char* getGameName();
 	int getClientSocket1();
 	int getClientSocket2();
 	bool isActive();
@@ -15,7 +15,7 @@ class GameRoom {
 	void finished();
 	bool isFinished();
   private:
-	string game_name_;
+	const char* game_name_;
 	int client_socket1_;
 	int client_socket2_;
 	bool is_finished_ = false;

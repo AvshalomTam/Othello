@@ -11,7 +11,7 @@ class JoinCommand : public Command {
   public:
 	JoinCommand(vector<GameRoom> list);
 	void execute(vector<string> list);
-	~JoinCommand();
+	//~JoinCommand();
   private:
 	vector<GameRoom> list_;
 	GameManager manager_;

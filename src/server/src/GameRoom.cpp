@@ -1,9 +1,9 @@
 #include <unistd.h>
 #include "../include/GameRoom.h"
 
-GameRoom::GameRoom(string name, int client_socket1) : game_name_(name), client_socket1_(client_socket1), client_socket2_(-1) {}
+GameRoom::GameRoom(const char* name, int client_socket1) : game_name_(name), client_socket1_(client_socket1), client_socket2_(-1) {}
 
-string GameRoom::getGameName() {
+const char* GameRoom::getGameName() {
 	return this->game_name_;
 }
 

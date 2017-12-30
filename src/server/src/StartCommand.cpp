@@ -18,7 +18,7 @@ void StartCommand::execute(vector<string> list) {
     }
 
     int n;
-    string game_name = list[1];
+    const char* game_name = list[1].c_str();
     for (vector<GameRoom>::iterator it = this->list_.begin(); it != this->list_.end(); ++it) {
         if (!strcmp(game_name, it->getGameName())) {
             int error = -1;

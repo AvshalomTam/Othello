@@ -1,6 +1,7 @@
 #include <cstring>
 #include <unistd.h>
 #include <iostream>
+#include <ostream>
 #include "../include/JoinCommand.h"
 using namespace std;
 vector<GameRoom> update(vector<GameRoom> list);
@@ -17,7 +18,7 @@ void JoinCommand::execute(vector<string> list) {
     }
 
     int n;
-    string game_name = list[1];
+    const char* game_name = list[1].c_str();
 
     this->list_ = update(this->list_);
     for (vector<GameRoom>::iterator it = this->list_.begin(); it != this->list_.end(); ++it) {

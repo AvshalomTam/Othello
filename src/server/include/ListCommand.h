@@ -10,7 +10,7 @@ class ListCommand : public Command {
 	public:
 		ListCommand(vector<GameRoom> list);
 		void execute(vector<string> list);
-		~ListCommand();
+		//~ListCommand();
 	private:
 		vector<GameRoom> list_;
 };
