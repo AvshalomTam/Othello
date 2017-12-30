@@ -5,7 +5,7 @@
 #include "../include/ListCommand.h"
 using namespace std;
 
-ListCommand::ListCommand(vector<GameRoom> list) : list(list) { }
+ListCommand::ListCommand(vector<GameRoom> list) : list_(list) { }
 
 void ListCommand::execute(vector<string> list) {
 	string sckt = list[0];
@@ -16,7 +16,7 @@ void ListCommand::execute(vector<string> list) {
 		i++;
 	}
 
-	for (vector<GameRoom>::iterator it = this->list.begin(); it != this->list.end(); ++it) {
+	for (vector<GameRoom>::iterator it = this->list_.begin(); it != this->list_.end(); ++it) {
 		if (!it->isActive()) {
 			//write to client the names of the open games
 			int n;

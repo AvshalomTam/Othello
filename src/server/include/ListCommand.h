@@ -12,7 +12,7 @@ class ListCommand : public Command {
 		void execute(vector<string> list);
 		~ListCommand();
 	private:
-		vector<GameRoom> list;
+		vector<GameRoom> list_;
 };
 
 #endif //OTHELLO_LISTCOMMAND_H

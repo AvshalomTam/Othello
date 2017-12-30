@@ -5,21 +5,13 @@
 using namespace std;
 
 int middleMan(int clientSocketRead, int clientSocketWrite);
-static void handleClients(int clientSocket1, int clientSocket2);
 #define MAX_TRANSMISSION_SIZE 10
-struct sockets {
-    int client_socket1;
-    int client_socket2;
-};
 
 GameManager::GameManager() {}
 
-void GameManager::createGame(int client_socket1, int client_socket2) {
-    sockets tArgs;
-    tArgs.client_socket1 = client_socket1;
-    tArgs.client_socket2 = client_socket2;
+void GameManager::createGame(GameRoom room) {
     pthread_t games_thread;
-    int rc = pthread_create(&games_thread, NULL, connectGamers, &tArgs);
+    int rc = pthread_create(&games_thread, NULL, connectGamers, &room);
     if (rc) {
         cout << "Error: unable to create thread, " << rc << endl;
         return;
@@ -27,43 +19,41 @@ void GameManager::createGame(int client_socket1, int client_socket2) {
 }
 
 static void* connectGamers(void *tArgs) {
-    struct sockets *args = (struct sockets *) tArgs;
+    GameRoom *room = (GameRoom *) tArgs;
+    int client_socket1 = room->getClientSocket1();
+    int client_socket2 = room->getClientSocket2();
 
-    handleClients(args->client_socket1, args->client_socket2);
-
-    // Close communication with the client
-    close(args->client_socket1);
-    close(args->client_socket2);
-}
-
-static void handleClients(int clientSocket1, int clientSocket2) {
     int n;
     int num;
 
     num = 1;
-    n = write(clientSocket1, &num, sizeof(num));
+    n = write(client_socket1, &num, sizeof(num));
     if (n == -1) {
         cout << "Error writing to socket 1" << endl;
-        return;
+        return NULL;
     }
     num = 2;
-    n = write(clientSocket2, &num, sizeof(num));
+    n = write(client_socket2, &num, sizeof(num));
     if (n == -1) {
         cout << "Error writing to socket 2" << endl;
-        return;
+        return NULL;
     }
 
     bool first_socket = true;
     int m;
     do {
         if (first_socket) {
-            m = middleMan(clientSocket1, clientSocket2);
+            m = middleMan(client_socket1, client_socket2);
         }
         else {
-            m = middleMan(clientSocket2, clientSocket1);
+            m = middleMan(client_socket2, client_socket1);
         }
         first_socket = !first_socket;
     } while (m != 0);
+
+    room->finished();
+    // Close communication with the client
+    room->closeSockets();
 }
 
 int middleMan(int clientSocketRead, int clientSocketWrite) {

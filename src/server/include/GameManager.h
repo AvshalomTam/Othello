@@ -1,10 +1,11 @@
 #ifndef OTHELLO_GAMEMANAGER_H
 #define OTHELLO_GAMEMANAGER_H
 
+#include "GameRoom.h"
 class GameManager {
   public:
     GameManager();
-    void createGame(int client_socket1, int client_socket2);
+    void createGame(GameRoom room);
 };
 
 #endif //OTHELLO_GAMEMANAGER_H

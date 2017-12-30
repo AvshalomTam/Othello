@@ -12,10 +12,13 @@ class GameRoom {
 	int getClientSocket2();
 	bool isActive();
 	void closeSockets();
+	void finished();
+	bool isFinished();
   private:
 	string game_name_;
 	int client_socket1_;
 	int client_socket2_;
+	bool is_finished_ = false;
 };
 
 #endif //OTHELLO_GAMEROOM_H

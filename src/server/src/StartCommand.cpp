@@ -6,7 +6,7 @@
 #include "../include/StartCommand.h"
 using namespace std;
 
-StartCommand::StartCommand(vector<GameRoom> list) : list(list) { }
+StartCommand::StartCommand(vector<GameRoom> list) : list_(list) { }
 
 void StartCommand::execute(vector<string> list) {
     string sckt = list[0];
@@ -19,7 +19,7 @@ void StartCommand::execute(vector<string> list) {
 
     int n;
     string game_name = list[1];
-    for (vector<GameRoom>::iterator it = this->list.begin(); it != this->list.end(); ++it) {
+    for (vector<GameRoom>::iterator it = this->list_.begin(); it != this->list_.end(); ++it) {
         if (!strcmp(game_name, it->getGameName())) {
             int error = -1;
             n = write(client_socket, &error, sizeof(error));
@@ -30,6 +30,8 @@ void StartCommand::execute(vector<string> list) {
             close(client_socket);
         }
     }
+    GameRoom game = GameRoom(game_name, client_socket);
+    this->list_.push_back(game);
     int wait = -5;
     n = write(client_socket, &wait, sizeof(wait));
     if (n == -1) {

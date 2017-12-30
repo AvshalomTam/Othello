@@ -21,10 +21,19 @@ void GameRoom::closeSockets() {
 int GameRoom::getClientSocket1() {
 	return this->client_socket1_;
 }
+
 int GameRoom::getClientSocket2() {
 	return this->client_socket2_;
 }
 
 void GameRoom::setSocket2(int socket) {
 	this->client_socket2_ = socket;
+}
+
+void GameRoom::finished() {
+    this->is_finished_ = true;
+}
+
+bool GameRoom::isFinished() {
+    return this->is_finished_;
 }

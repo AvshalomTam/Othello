@@ -6,13 +6,14 @@
 #define OTHELLO_STARTCOMMAND_H
 
 #include "Command.h"
+
 class StartCommand : public Command {
 	public:
 		StartCommand(vector<GameRoom> list);
 		void execute(vector<string> list);
 		~StartCommand();
 	private:
-		vector<GameRoom> list;
+		vector<GameRoom> list_;
 };
 
 #endif //OTHELLO_STARTCOMMAND_H
