@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
+      <config projectName="Othello" targetName="Server_Re6" />
       <config projectName="Othello" targetName="Othello" />
       <config projectName="Othello" targetName="gmock_main" />
       <config projectName="Othello" targetName="Test" />
@@ -16,18 +17,658 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b63f4bf1-12ec-42f2-bbeb-2064b0d6d96e" name="Default" comment="added tests 2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/logs_file.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/AIplayer.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/AIplayer.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/BasicRules.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/BasicRules.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/Board.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/Board.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/CharBoard.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/CharBoard.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/Game.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/Game.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/Player.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/Player.cpp.o" />
+    <list default="true" id="b63f4bf1-12ec-42f2-bbeb-2064b0d6d96e" name="Default" comment="added some comments">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/build-aux/.keep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/build-aux/.keep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/build-aux/.keep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/build-aux/.keep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/BUILD.bazel" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/CMakeLists.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/WORKSPACE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/appveyor.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/CHANGES" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/CMakeLists.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/CONTRIBUTORS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/Makefile.am" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/cmake/gmock.pc.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/cmake/gmock_main.pc.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/configure.ac" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/docs/CheatSheet.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/docs/CookBook.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/docs/DesignDoc.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/docs/DevGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/docs/Documentation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/docs/ForDummies.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/docs/FrequentlyAskedQuestions.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/docs/KnownIssues.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-actions.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-cardinalities.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-generated-actions.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-generated-actions.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-generated-function-mockers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-generated-function-mockers.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-generated-matchers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-generated-matchers.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-generated-nice-strict.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-generated-nice-strict.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-matchers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-more-actions.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-more-matchers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock-spec-builders.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/gmock.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/internal/custom/gmock-generated-actions.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/internal/custom/gmock-generated-actions.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/internal/custom/gmock-matchers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/internal/custom/gmock-port.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/internal/gmock-generated-internal-utils.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/internal/gmock-generated-internal-utils.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/internal/gmock-internal-utils.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/include/gmock/internal/gmock-port.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/make/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2005/gmock.sln" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2005/gmock.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2005/gmock_config.vsprops" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2005/gmock_main.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2005/gmock_test.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2010/gmock.sln" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2010/gmock.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2010/gmock_config.props" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2010/gmock_main.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2010/gmock_test.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2015/gmock.sln" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2015/gmock.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2015/gmock_config.props" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2015/gmock_main.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/msvc/2015/gmock_test.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/fuse_gmock_files.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/generator/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/generator/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/generator/README.cppclean" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/generator/cpp/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/generator/cpp/ast.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/generator/cpp/gmock_class.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/generator/cpp/gmock_class_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/generator/cpp/keywords.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/generator/cpp/tokenize.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/generator/cpp/utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/generator/gmock_gen.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/gmock-config.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/gmock_doctor.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/upload.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/scripts/upload_gmock.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/src/gmock-all.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/src/gmock-cardinalities.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/src/gmock-internal-utils.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/src/gmock-matchers.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/src/gmock-spec-builders.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/src/gmock.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/src/gmock_main.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/BUILD.bazel" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock-actions_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock-cardinalities_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock-generated-actions_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock-generated-function-mockers_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock-generated-internal-utils_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock-generated-matchers_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock-internal-utils_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock-matchers_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock-more-actions_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock-nice-strict_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock-port_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock-spec-builders_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_all_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_ex_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_leak_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_leak_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_link2_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_link_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_link_test.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_output_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_output_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_output_test_golden.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_stress_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googlemock/test/gmock_test_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/CHANGES" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/CMakeLists.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/CONTRIBUTORS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/Makefile.am" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/cmake/gtest.pc.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/cmake/gtest_main.pc.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/cmake/internal_utils.cmake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/codegear/gtest.cbproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/codegear/gtest.groupproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/codegear/gtest_all.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/codegear/gtest_link.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/codegear/gtest_main.cbproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/codegear/gtest_unittest.cbproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/configure.ac" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/docs/AdvancedGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/docs/DevGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/docs/Documentation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/docs/FAQ.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/docs/Pkgconfig.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/docs/Primer.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/docs/PumpManual.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/docs/Samples.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/docs/XcodeGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/gtest-death-test.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/gtest-message.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/gtest-param-test.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/gtest-param-test.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/gtest-printers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/gtest-spi.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/gtest-test-part.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/gtest-typed-test.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/gtest.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/gtest_pred_impl.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/gtest_prod.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/custom/gtest-port.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/custom/gtest-printers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/custom/gtest.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-death-test-internal.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-filepath.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-internal.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-linked_ptr.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-param-util-generated.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-param-util-generated.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-param-util.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-port-arch.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-port.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-string.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-tuple.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-tuple.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-type-util.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/include/gtest/internal/gtest-type-util.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/m4/acx_pthread.m4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/m4/gtest.m4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/make/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest-md.sln" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest-md.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest-md.vcxproj.filters" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest.sln" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest.vcxproj.filters" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest_main-md.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest_main-md.vcxproj.filters" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest_main.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest_main.vcxproj.filters" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest_prod_test-md.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest_prod_test-md.vcxproj.filters" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest_prod_test.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest_prod_test.vcxproj.filters" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest_unittest-md.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest_unittest-md.vcxproj.filters" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest_unittest.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/msvc/2010/gtest_unittest.vcxproj.filters" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/prime_tables.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample1.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample1.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample10_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample1_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample2.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample2.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample2_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample3-inl.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample3_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample4.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample4.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample4_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample5_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample6_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample7_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample8_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/samples/sample9_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/scripts/common.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/scripts/fuse_gtest_files.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/scripts/gen_gtest_pred_impl.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/scripts/gtest-config.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/scripts/pump.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/scripts/release_docs.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/scripts/test/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/scripts/upload.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/scripts/upload_gtest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/src/gtest-all.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/src/gtest-death-test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/src/gtest-filepath.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/src/gtest-internal-inl.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/src/gtest-port.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/src/gtest-printers.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/src/gtest-test-part.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/src/gtest-typed-test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/src/gtest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/src/gtest_main.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/BUILD.bazel" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-death-test_ex_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-death-test_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-filepath_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-linked_ptr_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-listener_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-message_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-options_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-param-test2_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-param-test_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-param-test_test.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-port_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-printers_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-test-part_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-tuple_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-typed-test2_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-typed-test_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-typed-test_test.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest-unittest-api_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_all_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_break_on_failure_unittest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_break_on_failure_unittest_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_catch_exceptions_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_catch_exceptions_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_color_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_color_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_env_var_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_env_var_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_environment_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_filter_unittest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_filter_unittest_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_help_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_help_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_list_tests_unittest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_list_tests_unittest_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_main_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_no_test_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_output_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_output_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_output_test_golden_lin.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_pred_impl_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_premature_exit_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_prod_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_repeat_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_shuffle_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_shuffle_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_sole_header_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_stress_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_test_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_throw_on_failure_ex_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_throw_on_failure_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_throw_on_failure_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_uninitialized_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_uninitialized_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_xml_outfile1_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_xml_outfile2_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_xml_outfiles_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_xml_output_unittest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_xml_output_unittest_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/gtest_xml_test_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/production.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/test/production.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Config/DebugProject.xcconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Config/FrameworkTarget.xcconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Config/General.xcconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Config/ReleaseProject.xcconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Config/StaticLibraryTarget.xcconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Config/TestTarget.xcconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Resources/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Samples/FrameworkSample/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Samples/FrameworkSample/WidgetFramework.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Samples/FrameworkSample/runtests.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Samples/FrameworkSample/widget.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Samples/FrameworkSample/widget.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Samples/FrameworkSample/widget_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Scripts/runtests.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/Scripts/versiongenerate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/googletest/xcode/gtest.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-master/travis.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/CMakeLists.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/appveyor.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/CHANGES" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/CMakeLists.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/CONTRIBUTORS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/Makefile.am" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/configure.ac" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/CheatSheet.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/CookBook.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/DesignDoc.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/DevGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/Documentation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/ForDummies.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/FrequentlyAskedQuestions.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/KnownIssues.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_5/CheatSheet.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_5/CookBook.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_5/Documentation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_5/ForDummies.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_5/FrequentlyAskedQuestions.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_6/CheatSheet.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_6/CookBook.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_6/Documentation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_6/ForDummies.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_6/FrequentlyAskedQuestions.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_7/CheatSheet.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_7/CookBook.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_7/Documentation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_7/ForDummies.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/docs/v1_7/FrequentlyAskedQuestions.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-actions.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-cardinalities.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-generated-actions.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-generated-actions.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-generated-function-mockers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-generated-function-mockers.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-generated-matchers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-generated-matchers.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-generated-nice-strict.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-generated-nice-strict.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-matchers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-more-actions.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-more-matchers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock-spec-builders.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/gmock.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/internal/custom/gmock-generated-actions.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/internal/custom/gmock-generated-actions.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/internal/custom/gmock-matchers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/internal/custom/gmock-port.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/internal/gmock-generated-internal-utils.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/internal/gmock-generated-internal-utils.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/internal/gmock-internal-utils.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/include/gmock/internal/gmock-port.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/make/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2005/gmock.sln" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2005/gmock.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2005/gmock_config.vsprops" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2005/gmock_main.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2005/gmock_test.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2010/gmock.sln" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2010/gmock.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2010/gmock_config.props" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2010/gmock_main.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2010/gmock_test.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2015/gmock.sln" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2015/gmock.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2015/gmock_config.props" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2015/gmock_main.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/msvc/2015/gmock_test.vcxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/fuse_gmock_files.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/generator/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/generator/README" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/generator/README.cppclean" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/generator/cpp/__init__.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/generator/cpp/ast.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/generator/cpp/gmock_class.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/generator/cpp/gmock_class_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/generator/cpp/keywords.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/generator/cpp/tokenize.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/generator/cpp/utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/generator/gmock_gen.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/gmock-config.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/gmock_doctor.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/upload.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/scripts/upload_gmock.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/src/gmock-all.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/src/gmock-cardinalities.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/src/gmock-internal-utils.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/src/gmock-matchers.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/src/gmock-spec-builders.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/src/gmock.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/src/gmock_main.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock-actions_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock-cardinalities_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock-generated-actions_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock-generated-function-mockers_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock-generated-internal-utils_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock-generated-matchers_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock-internal-utils_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock-matchers_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock-more-actions_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock-nice-strict_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock-port_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock-spec-builders_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_all_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_ex_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_leak_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_leak_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_link2_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_link_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_link_test.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_output_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_output_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_output_test_golden.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_stress_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googlemock/test/gmock_test_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/CHANGES" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/CMakeLists.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/CONTRIBUTORS" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/Makefile.am" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/cmake/internal_utils.cmake" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/codegear/gtest.cbproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/codegear/gtest.groupproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/codegear/gtest_all.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/codegear/gtest_link.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/codegear/gtest_main.cbproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/codegear/gtest_unittest.cbproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/configure.ac" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/AdvancedGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/DevGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/Documentation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/FAQ.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/Primer.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/PumpManual.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/Samples.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_5_AdvancedGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_5_Documentation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_5_FAQ.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_5_Primer.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_5_PumpManual.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_5_XcodeGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_6_AdvancedGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_6_Documentation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_6_FAQ.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_6_Primer.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_6_PumpManual.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_6_Samples.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_6_XcodeGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_7_AdvancedGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_7_Documentation.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_7_FAQ.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_7_Primer.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_7_PumpManual.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_7_Samples.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/V1_7_XcodeGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/docs/XcodeGuide.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/gtest-death-test.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/gtest-message.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/gtest-param-test.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/gtest-param-test.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/gtest-printers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/gtest-spi.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/gtest-test-part.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/gtest-typed-test.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/gtest.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/gtest_pred_impl.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/gtest_prod.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/custom/gtest-port.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/custom/gtest-printers.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/custom/gtest.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-death-test-internal.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-filepath.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-internal.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-linked_ptr.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-param-util-generated.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-param-util-generated.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-param-util.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-port-arch.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-port.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-string.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-tuple.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-tuple.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-type-util.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-type-util.h.pump" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/m4/acx_pthread.m4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/m4/gtest.m4" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/make/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/msvc/gtest-md.sln" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/msvc/gtest-md.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/msvc/gtest.sln" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/msvc/gtest.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/msvc/gtest_main-md.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/msvc/gtest_main.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/msvc/gtest_prod_test-md.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/msvc/gtest_prod_test.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/msvc/gtest_unittest-md.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/msvc/gtest_unittest.vcproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/prime_tables.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample1.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample1.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample10_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample1_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample2.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample2.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample2_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample3-inl.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample3_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample4.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample4.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample4_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample5_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample6_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample7_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample8_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/samples/sample9_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/scripts/common.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/scripts/fuse_gtest_files.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/scripts/gen_gtest_pred_impl.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/scripts/gtest-config.in" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/scripts/pump.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/scripts/release_docs.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/scripts/test/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/scripts/upload.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/scripts/upload_gtest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/src/gtest-all.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/src/gtest-death-test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/src/gtest-filepath.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/src/gtest-internal-inl.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/src/gtest-port.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/src/gtest-printers.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/src/gtest-test-part.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/src/gtest-typed-test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/src/gtest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/src/gtest_main.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-death-test_ex_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-death-test_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-filepath_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-linked_ptr_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-listener_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-message_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-options_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-param-test2_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-param-test_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-param-test_test.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-port_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-printers_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-test-part_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-tuple_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-typed-test2_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-typed-test_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-typed-test_test.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest-unittest-api_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_all_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_break_on_failure_unittest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_break_on_failure_unittest_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_catch_exceptions_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_catch_exceptions_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_color_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_color_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_env_var_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_env_var_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_environment_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_filter_unittest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_filter_unittest_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_help_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_help_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_list_tests_unittest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_list_tests_unittest_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_main_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_no_test_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_output_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_output_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_output_test_golden_lin.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_pred_impl_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_premature_exit_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_prod_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_repeat_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_shuffle_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_shuffle_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_sole_header_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_stress_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_test_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_throw_on_failure_ex_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_throw_on_failure_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_throw_on_failure_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_uninitialized_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_uninitialized_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_unittest.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_xml_outfile1_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_xml_outfile2_test_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_xml_outfiles_test.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_xml_output_unittest.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_xml_output_unittest_.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/gtest_xml_test_utils.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/production.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/test/production.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Config/DebugProject.xcconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Config/FrameworkTarget.xcconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Config/General.xcconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Config/ReleaseProject.xcconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Config/StaticLibraryTarget.xcconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Config/TestTarget.xcconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Resources/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Samples/FrameworkSample/Info.plist" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Samples/FrameworkSample/WidgetFramework.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Samples/FrameworkSample/runtests.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Samples/FrameworkSample/widget.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Samples/FrameworkSample/widget.h" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Samples/FrameworkSample/widget_test.cc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Scripts/runtests.sh" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/Scripts/versiongenerate.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/xcode/gtest.xcodeproj/project.pbxproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gtest/googletest-release-1.8.0/travis.sh" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/AIplayer.cpp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/BasicRules.cpp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/Board.cpp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/CharBoard.cpp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/Coordinates.cpp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/Game.cpp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/GameLogic.cpp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/src/Player.cpp.o" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_C.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeDetermineCompilerABI_CXX.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.out" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdC/a.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.out" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CompilerIdCXX/a.out" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Othello" afterPath="$PROJECT_DIR$/cmake-build-debug/Othello" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCCompiler.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeCXXCompiler.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.8.2/CMakeSystem.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
@@ -37,12 +678,16 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/cmake_clean.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/cmake_clean.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/depend.internal" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/depend.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/flags.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/flags.make" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/link.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/link.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/progress.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Othello.dir/progress.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/Othello.cbp" afterPath="$PROJECT_DIR$/cmake-build-debug/Othello.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,106 +698,32 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="AIplayerTest.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/AIplayerTest.h">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/src/Game.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding>
-                <element signature="e#101#125#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameFlowLook.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/GameFlowLook.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AIplayer.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/AIplayer.h">
+      <file leaf-file-name="PlayerFactory.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/client/src/PlayerFactory.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="450">
+              <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BasicRulesTest.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/BasicRulesTest.h">
+      <file leaf-file-name="ConsoleMenu.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/client/src/ConsoleMenu.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-224">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="gtest_main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/gtest_main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HumanPlayer.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/HumanPlayer.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-              <folding>
-                <marker date="1511990979903" expanded="true" signature="345:1069" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CoordinatesTest.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/CoordinatesTest.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoardTest.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/BoardTest.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreviousInfo.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PreviousInfo.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PreviousInfo.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/PreviousInfo.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="162">
+              <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -163,18 +734,46 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>Reversi</find>
-      <find>copy</find>
-      <find>Hi</find>
+      <find />
+      <find>avsh</find>
+      <find>googletest-master</find>
+      <find>cin</find>
       <find>judge</find>
       <find>b1</find>
-      <find>cout</find>
-      <find>print</find>
+      <find>should</find>
+      <find>pl</find>
+      <find>cur_pl</find>
       <find>HumanPlayer</find>
-      <find>game_in</find>
+      <find>testBoard4</find>
+      <find>testBoard7</find>
+      <find>GameFlowLook</find>
+      <find>ConsoleGameFlow</find>
+      <find>test/</find>
+      <find>PreviousInfo</find>
+      <find>this-&gt;judge_</find>
+      <find>this-&gt;display_</find>
+      <find>new</find>
+      <find>exit</find>
+      <find>wait</find>
+      <find />
     </findStrings>
     <replaceStrings>
+      <replace />
+      <replace>googletest-release-1.8.0</replace>
       <replace>judge_</replace>
       <replace>board_</replace>
+      <replace>should be</replace>
+      <replace>pl</replace>
+      <replace>board_4_</replace>
+      <replace>board_7_</replace>
+      <replace>Display</replace>
+      <replace>ConsoleDisplay</replace>
+      <replace>src/client/test/</replace>
+      <replace>Listener</replace>
+      <replace>MoveTracker</replace>
+      <replace>judge</replace>
+      <replace>display</replace>
+      <replace />
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -183,52 +782,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Board.cpp" />
-        <option value="$PROJECT_DIR$/Board.h" />
-        <option value="$PROJECT_DIR$/Coordinates.h" />
-        <option value="$PROJECT_DIR$/Coordinates.cpp" />
-        <option value="$PROJECT_DIR$/Game.cpp" />
-        <option value="$PROJECT_DIR$/Game.h" />
-        <option value="$PROJECT_DIR$/GameLogic.h" />
-        <option value="$PROJECT_DIR$/GameLogic.cpp" />
-        <option value="$PROJECT_DIR$/BasicRuless.cpp" />
-        <option value="$PROJECT_DIR$/BasicRuless.h" />
-        <option value="$PROJECT_DIR$/Player.h" />
-        <option value="$PROJECT_DIR$/Player.cpp" />
-        <option value="$PROJECT_DIR$/HumanPlayer.cpp" />
-        <option value="$PROJECT_DIR$/HumanPlayer.h" />
-        <option value="$PROJECT_DIR$/CharBoard.h" />
-        <option value="$PROJECT_DIR$/CharBoard.cpp" />
-        <option value="$PROJECT_DIR$/AIplayer.cpp" />
-        <option value="$PROJECT_DIR$/AIplayer.h" />
-        <option value="$PROJECT_DIR$/src/BasicRuless.cpp" />
-        <option value="$PROJECT_DIR$/src/GameLogic.cpp" />
-        <option value="$PROJECT_DIR$/makefile" />
-        <option value="$PROJECT_DIR$/include/GameLogic.h" />
-        <option value="$PROJECT_DIR$/src/Player.cpp" />
-        <option value="$PROJECT_DIR$/include/Player.h" />
-        <option value="$PROJECT_DIR$/src/BasicRules.cpp" />
-        <option value="$PROJECT_DIR$/include/AIplayer.h" />
-        <option value="$PROJECT_DIR$/src/AIplayer.cpp" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
-        <option value="$PROJECT_DIR$/src/Coordinates.cpp" />
-        <option value="$PROJECT_DIR$/include/BasicRules.h" />
-        <option value="$PROJECT_DIR$/include/Board.h" />
-        <option value="$PROJECT_DIR$/test/GameTest.h" />
-        <option value="$PROJECT_DIR$/test/CoordinatesTests.h" />
-        <option value="$PROJECT_DIR$/test/gtest_main.cpp" />
-        <option value="$PROJECT_DIR$/src/Board.cpp" />
-        <option value="$PROJECT_DIR$/src/CharBoard.cpp" />
-        <option value="$PROJECT_DIR$/include/Game.h" />
-        <option value="$PROJECT_DIR$/test/BoardTest.h" />
-        <option value="$PROJECT_DIR$/test/BasicRulesTest.h" />
-        <option value="$PROJECT_DIR$/test/CoordinatesTest.h" />
-        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/src/client/test/AIplayerTest.h" />
+        <option value="$PROJECT_DIR$/src/client/src/Player.cpp" />
+        <option value="$PROJECT_DIR$/src/client/include/Menu.h" />
+        <option value="$PROJECT_DIR$/src/client/include/ConsoleMenu.h" />
+        <option value="$PROJECT_DIR$/src/client/include/HumanPlayer.h" />
+        <option value="$PROJECT_DIR$/src/client/include/RemotePlayer.h" />
+        <option value="$PROJECT_DIR$/src/client/include/Listener.h" />
+        <option value="$PROJECT_DIR$/src/client/include/MoveTracker.h" />
+        <option value="$PROJECT_DIR$/src/client/include/ServerListener.h" />
+        <option value="$PROJECT_DIR$/src/server/Server.cpp" />
+        <option value="$PROJECT_DIR$/src/server/Server.h" />
+        <option value="$PROJECT_DIR$/src/client/include/PlayerFactory.h" />
+        <option value="$PROJECT_DIR$/src/server/makefile" />
+        <option value="$PROJECT_DIR$/src/client/makefile" />
+        <option value="$PROJECT_DIR$/src/client/include/Game.h" />
+        <option value="$PROJECT_DIR$/src/client/main.cpp" />
+        <option value="$PROJECT_DIR$/src/server/main_s.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/Game.cpp" />
-        <option value="$PROJECT_DIR$/include/HumanPlayer.h" />
-        <option value="$PROJECT_DIR$/src/HumanPlayer.cpp" />
-        <option value="$PROJECT_DIR$/test/AIplayerTest.h" />
+        <option value="$PROJECT_DIR$/src/client/include/ConsoleDisplay.h" />
+        <option value="$PROJECT_DIR$/src/client/src/ConsoleDisplay.cpp" />
+        <option value="$PROJECT_DIR$/src/client/include/Display.h" />
+        <option value="$PROJECT_DIR$/exe/server_settings.txt" />
+        <option value="$PROJECT_DIR$/exe/client_settings.txt" />
+        <option value="$PROJECT_DIR$/src/client/src/HumanPlayer.cpp" />
+        <option value="$PROJECT_DIR$/src/client/src/Game.cpp" />
+        <option value="$PROJECT_DIR$/src/client/src/ServerListener.cpp" />
+        <option value="$PROJECT_DIR$/src/client/src/RemotePlayer.cpp" />
+        <option value="$PROJECT_DIR$/src/server/include/CloseCommand.h" />
+        <option value="$PROJECT_DIR$/src/server/include/PlayCommand.h" />
+        <option value="$PROJECT_DIR$/src/server/include/Server.h" />
+        <option value="$PROJECT_DIR$/src/server/include/CommandsManager.h" />
+        <option value="$PROJECT_DIR$/src/server/include/Command.h" />
+        <option value="$PROJECT_DIR$/src/client/src/Coordinates.cpp" />
+        <option value="$PROJECT_DIR$/src/server/src/CommandsManager.cpp" />
+        <option value="$PROJECT_DIR$/src/server/include/ClientHandler.h" />
+        <option value="$PROJECT_DIR$/src/client/src/PlayerFactory.cpp" />
+        <option value="$PROJECT_DIR$/src/server/include/JoinCommand.h" />
+        <option value="$PROJECT_DIR$/src/server/include/StartCommand.h" />
+        <option value="$PROJECT_DIR$/src/server/src/StartCommand.cpp" />
+        <option value="$PROJECT_DIR$/src/server/include/ListCommand.h" />
+        <option value="$PROJECT_DIR$/src/server/src/ListCommand.cpp" />
+        <option value="$PROJECT_DIR$/src/server/include/GameManager.h" />
+        <option value="$PROJECT_DIR$/src/server/include/GameRoom.h" />
+        <option value="$PROJECT_DIR$/src/server/src/GameRoom.cpp" />
+        <option value="$PROJECT_DIR$/src/server/src/JoinCommand.cpp" />
+        <option value="$PROJECT_DIR$/src/server/src/Server.cpp" />
+        <option value="$PROJECT_DIR$/src/server/include/ThreadManager.h" />
+        <option value="$PROJECT_DIR$/src/server/src/ThreadManager.cpp" />
+        <option value="$PROJECT_DIR$/src/server/src/GameManager.cpp" />
+        <option value="$PROJECT_DIR$/src/server/src/ClientHandler.cpp" />
+        <option value="$PROJECT_DIR$/src/client/src/ConsoleMenu.cpp" />
       </list>
     </option>
   </component>
@@ -238,10 +842,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="-4" />
-    <option name="width" value="1360" />
-    <option name="height" value="610" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-1" />
+    <option name="width" value="961" />
+    <option name="height" value="1034" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -266,6 +870,30 @@
               <item name="Othello" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="Othello" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Othello" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Othello" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Othello" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Othello" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Othello" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Othello" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Othello" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="Othello" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -279,9 +907,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/test" />
+      <recent name="$PROJECT_DIR$/src/server/include" />
+      <recent name="$PROJECT_DIR$/src/server/src" />
       <recent name="$PROJECT_DIR$/include" />
       <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
@@ -298,7 +928,14 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/test/AIplayerTest.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/server/include/GameRoom.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/server/include/JoinCommand.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/server/include/ListCommand.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/server/include/StartCommand.h</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/server/src/GameManager.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/server/src/GameRoom.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/server/src/JoinCommand.cpp</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/src/server/src/StartCommand.cpp</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -406,11 +1043,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.gtest_main">
+  <component name="RunManager" selected="Application.Build All">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Othello" RUN_TARGET_NAME="Othello" EXPLICIT_BUILD_TARGET_NAME="all">
       <envs />
     </configuration>
     <configuration name="Othello" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Othello" TARGET_NAME="Othello" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Othello" RUN_TARGET_NAME="Othello">
+      <envs />
+    </configuration>
+    <configuration name="Server_Re6" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Othello" TARGET_NAME="Server_Re6" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Othello" RUN_TARGET_NAME="Server_Re6">
       <envs />
     </configuration>
     <configuration name="Test" type="CMakeGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Othello" TARGET_NAME="Test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Othello" RUN_TARGET_NAME="Test" TEST_MODE="SUITE_TEST">
@@ -428,14 +1068,15 @@
     <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Othello" TARGET_NAME="gtest_main" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Othello" RUN_TARGET_NAME="Test">
       <envs />
     </configuration>
-    <list size="7">
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.Othello" />
-      <item index="2" class="java.lang.String" itemvalue="Google Test.Test" />
-      <item index="3" class="java.lang.String" itemvalue="Application.gmock" />
-      <item index="4" class="java.lang.String" itemvalue="Application.gmock_main" />
-      <item index="5" class="java.lang.String" itemvalue="Application.gtest" />
-      <item index="6" class="java.lang.String" itemvalue="Application.gtest_main" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Server_Re6" />
+      <item index="3" class="java.lang.String" itemvalue="Google Test.Test" />
+      <item index="4" class="java.lang.String" itemvalue="Application.gmock" />
+      <item index="5" class="java.lang.String" itemvalue="Application.gmock_main" />
+      <item index="6" class="java.lang.String" itemvalue="Application.gtest" />
+      <item index="7" class="java.lang.String" itemvalue="Application.gtest_main" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -451,141 +1092,478 @@
       <workItem from="1511181501598" duration="1261000" />
       <workItem from="1511188036769" duration="334000" />
       <workItem from="1511188527636" duration="2189000" />
-      <workItem from="1511258380575" duration="2898000" />
-      <workItem from="1511263000492" duration="16806000" />
-      <workItem from="1511644365472" duration="8123000" />
-      <workItem from="1511818647983" duration="17224000" />
-      <workItem from="1511913147457" duration="31834000" />
-      <workItem from="1511988972612" duration="124000" />
-      <workItem from="1511989101267" duration="2524000" />
+      <workItem from="1511258380575" duration="3777000" />
+      <workItem from="1511262593906" duration="1574000" />
+      <workItem from="1511271720006" duration="9795000" />
+      <workItem from="1511339310403" duration="704000" />
+      <workItem from="1511344199785" duration="6348000" />
+      <workItem from="1511369619891" duration="62000" />
+      <workItem from="1511382845133" duration="182000" />
+      <workItem from="1511411875773" duration="30000" />
+      <workItem from="1511412240451" duration="1203000" />
+      <workItem from="1511637686901" duration="370000" />
+      <workItem from="1511638185598" duration="2516000" />
+      <workItem from="1511689868354" duration="1319000" />
+      <workItem from="1511775183120" duration="72000" />
+      <workItem from="1511775272193" duration="11735000" />
+      <workItem from="1511849123539" duration="2299000" />
+      <workItem from="1511855096269" duration="3455000" />
+      <workItem from="1511890679150" duration="36334000" />
+      <workItem from="1511985333993" duration="6753000" />
+      <workItem from="1512017130965" duration="5358000" />
+      <workItem from="1512076338575" duration="1674000" />
+      <workItem from="1512487303883" duration="189000" />
+      <workItem from="1512553799125" duration="1823000" />
+      <workItem from="1512559523021" duration="76000" />
+      <workItem from="1512559815203" duration="19822000" />
+      <workItem from="1512595231180" duration="2102000" />
+      <workItem from="1512597561399" duration="2688000" />
+      <workItem from="1512600277004" duration="20903000" />
+      <workItem from="1512662253622" duration="4992000" />
+      <workItem from="1512719563337" duration="1236000" />
+      <workItem from="1512722346117" duration="637000" />
+      <workItem from="1512725878438" duration="2087000" />
+      <workItem from="1512913183092" duration="232000" />
+      <workItem from="1512929408958" duration="27572000" />
+      <workItem from="1513091466059" duration="1839000" />
+      <workItem from="1513235887417" duration="108000" />
+      <workItem from="1514131567677" duration="12505000" />
+      <workItem from="1514300944710" duration="16259000" />
+      <workItem from="1514387089975" duration="841000" />
+      <workItem from="1514468970519" duration="14583000" />
+      <workItem from="1514651209069" duration="7081000" />
+      <workItem from="1514744948398" duration="8161000" />
     </task>
-    <task id="LOCAL-00001" summary="adjusted the game flow to enable AIplayer">
-      <created>1511349015676</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1511349015676</updated>
-    </task>
-    <task id="LOCAL-00002" summary="fixed a bug that caused an endless loop for certain game moves.">
-      <created>1511354810209</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1511354810209</updated>
-    </task>
-    <task id="LOCAL-00003" summary="added decisions.docx file describing oop and other consideration while working on shared project.">
-      <created>1511386486959</created>
+    <task id="LOCAL-00003" summary="Added a copy function in Board">
+      <created>1511284971737</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1511386486959</updated>
+      <updated>1511284971738</updated>
     </task>
-    <task id="LOCAL-00004" summary="added decisions.docx file describing oop and other consideration while working on shared project.">
-      <created>1511386571625</created>
+    <task id="LOCAL-00004" summary="Added a copy function in Board">
+      <created>1511285495923</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1511386571625</updated>
+      <updated>1511285495923</updated>
     </task>
-    <task id="LOCAL-00005" summary="added decisions.docx file describing oop and other consideration while working on shared project.">
-      <created>1511386661348</created>
+    <task id="LOCAL-00005" summary="Added google tests to Board">
+      <created>1511810891476</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1511386661348</updated>
+      <updated>1511810891476</updated>
     </task>
-    <task id="LOCAL-00006" summary="added decisions.docx file describing oop and other consideration while working on shared project.">
-      <created>1511386840597</created>
+    <task id="LOCAL-00006" summary="Added tests to Board and BasicRules">
+      <created>1511813877932</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1511386840597</updated>
+      <updated>1511813877932</updated>
     </task>
-    <task id="LOCAL-00007" summary="added decisions.docx file describing oop and other consideration while working on shared project.">
-      <created>1511386848591</created>
+    <task id="LOCAL-00007" summary="google test">
+      <created>1511815385667</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1511386848591</updated>
+      <updated>1511815385667</updated>
     </task>
-    <task id="LOCAL-00008" summary="added tests">
-      <created>1511912411420</created>
+    <task id="LOCAL-00008" summary="changed Game to be generic (not printing only to console)&#10;added classes for menu&#10;added classes for the printing of the gameflow">
+      <created>1511900599818</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1511912411420</updated>
+      <updated>1511900599818</updated>
     </task>
-    <task id="LOCAL-00009" summary="added tests 2">
-      <created>1511985609160</created>
+    <task id="LOCAL-00009" summary="updated makefile">
+      <created>1511901356220</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1511985609160</updated>
+      <updated>1511901356220</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="added documentation">
+      <created>1511906050272</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1511906050272</updated>
+    </task>
+    <task id="LOCAL-00011" summary="added some more documentations">
+      <created>1511906358225</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1511906358225</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added AIplayerTest">
+      <created>1511907461271</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1511907461271</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added info.txt">
+      <created>1511907641652</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1511907641652</updated>
+    </task>
+    <task id="LOCAL-00014" summary="took main out of src directory">
+      <created>1511930781309</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1511930781309</updated>
+    </task>
+    <task id="LOCAL-00015" summary="fixed a bug in AIplayer">
+      <created>1511950694623</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1511950694623</updated>
+    </task>
+    <task id="LOCAL-00016" summary="google test">
+      <created>1511982071970</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1511982071970</updated>
+    </task>
+    <task id="LOCAL-00017" summary="game is totaly generic">
+      <created>1511983145858</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1511983145858</updated>
+    </task>
+    <task id="LOCAL-00018" summary="google test">
+      <created>1511984630857</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1511984630857</updated>
+    </task>
+    <task id="LOCAL-00019" summary="google test">
+      <created>1511984744370</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1511984744370</updated>
+    </task>
+    <task id="LOCAL-00020" summary="fixed">
+      <created>1511987535236</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1511987535237</updated>
+    </task>
+    <task id="LOCAL-00021" summary="fixed">
+      <created>1511990942851</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1511990942851</updated>
+    </task>
+    <task id="LOCAL-00022" summary="fixed">
+      <created>1511991381783</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1511991381783</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fixed">
+      <created>1512017708706</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1512017708706</updated>
+    </task>
+    <task id="LOCAL-00024" summary="changed abit game class, playoneturn gets the current player">
+      <created>1512031477654</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1512031477654</updated>
+    </task>
+    <task id="LOCAL-00025" summary="erased our ID">
+      <created>1512077424986</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1512077424986</updated>
+    </task>
+    <task id="LOCAL-00026" summary="organized folders + created server">
+      <created>1512560186812</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1512560186812</updated>
+    </task>
+    <task id="LOCAL-00027" summary="organized the folders">
+      <created>1512561900003</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1512561900003</updated>
+    </task>
+    <task id="LOCAL-00028" summary="organized the files">
+      <created>1512562016653</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1512562016653</updated>
+    </task>
+    <task id="LOCAL-00029" summary="connected all the parts (listeners, server, game etc)">
+      <created>1512646008318</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1512646008318</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Handled &quot;NoMove&quot; &amp; &quot;End&quot;">
+      <created>1512655725883</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1512655725883</updated>
+    </task>
+    <task id="LOCAL-00031" summary="changed a print">
+      <created>1512659815699</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1512659815699</updated>
+    </task>
+    <task id="LOCAL-00032" summary="client closes the connection (and not sending &quot;End&quot;)">
+      <created>1512667725632</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1512667725632</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added some documentation">
+      <created>1512668019674</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1512668019674</updated>
+    </task>
+    <task id="LOCAL-00034" summary="made two separate setting files; client and server">
+      <created>1512686815407</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1512686815408</updated>
+    </task>
+    <task id="LOCAL-00035" summary="corrected the client settings file">
+      <created>1512687570007</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1512687570007</updated>
+    </task>
+    <task id="LOCAL-00036" summary="created a PlayerFactory to create the appropiate player objects according to game type">
+      <created>1512934702235</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1512934702235</updated>
+    </task>
+    <task id="LOCAL-00037" summary="added makefile for server">
+      <created>1512935650479</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1512935650479</updated>
+    </task>
+    <task id="LOCAL-00038" summary="added some comments">
+      <created>1512940540540</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1512940540540</updated>
+    </task>
+    <task id="LOCAL-00039" summary="edited the makefiles so that the a.out file are in directory exe">
+      <created>1512941408588</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1512941408588</updated>
+    </task>
+    <task id="LOCAL-00040" summary="final edit">
+      <created>1512944054871</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1512944054871</updated>
+    </task>
+    <task id="LOCAL-00041" summary="finished">
+      <created>1512994267958</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1512994267958</updated>
+    </task>
+    <task id="LOCAL-00042" summary="finished ex4">
+      <created>1513018570965</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1513018570965</updated>
+    </task>
+    <task id="LOCAL-00043" summary="moved the while loop from server to a seperate thread to be able to exit server">
+      <created>1514138444101</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1514138444101</updated>
+    </task>
+    <task id="LOCAL-00044" summary="added a safe exit by the clients whenever the server shuts down">
+      <created>1514149022085</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1514149022085</updated>
+    </task>
+    <task id="LOCAL-00045" summary="created a seperate class to handle clients and to allow threading">
+      <created>1514323036529</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1514323036529</updated>
+    </task>
+    <task id="LOCAL-00046" summary="added some comment">
+      <created>1514388523703</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1514388523704</updated>
+    </task>
+    <task id="LOCAL-00047" summary="added some comments">
+      <created>1514494042483</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1514494042483</updated>
+    </task>
+    <task id="LOCAL-00048" summary="implemented command join and created a GameManager">
+      <created>1514537475800</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1514537475800</updated>
+    </task>
+    <task id="LOCAL-00049" summary="added some comments">
+      <created>1514660415058</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1514660415058</updated>
+    </task>
+    <task id="LOCAL-00050" summary="added a class ThreadManager who manages all the open threads">
+      <created>1514751549047</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1514751549050</updated>
+    </task>
+    <task id="LOCAL-00051" summary="added some comments">
+      <created>1514753147641</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1514753147641</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Test - 2017.11.29 at 21h 14m 30s.xml">
-      <configuration name="Test" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="Othello - 2017.11.20 at 16h 36m 09s.xml">
+      <configuration name="Othello" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="Test - 2017.11.29 at 21h 36m 07s.xml">
-      <configuration name="Test" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="Othello - 2017.11.20 at 17h 08m 33s.xml">
+      <configuration name="Othello" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="Test - 2017.11.29 at 21h 39m 31s.xml">
-      <configuration name="Test" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="Othello - 2017.11.21 at 12h 00m 29s.xml">
+      <configuration name="Othello" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="Test - 2017.11.29 at 21h 41m 19s.xml">
-      <configuration name="Test" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="Othello - 2017.11.21 at 12h 03m 03s.xml">
+      <configuration name="Othello" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="Test - 2017.11.29 at 22h 12m 51s.xml">
-      <configuration name="Test" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="Othello - 2017.11.27 at 21h 34m 31s.xml">
+      <configuration name="Othello" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="Test - 2017.11.29 at 22h 50m 39s.xml">
-      <configuration name="Test" configurationId="CMakeGoogleTestRunConfigurationType" />
+    <history-entry file="Othello - 2017.11.29 at 21h 02m 36s.xml">
+      <configuration name="Othello" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
-    <history-entry file="Test - 2017.11.29 at 23h 05m 13s.xml">
-      <configuration name="Test" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Test - 2017.11.29 at 23h 28m 37s.xml">
-      <configuration name="Test" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Test - 2017.11.29 at 23h 29m 50s.xml">
-      <configuration name="Test" configurationId="CMakeGoogleTestRunConfigurationType" />
-    </history-entry>
-    <history-entry file="Test - 2017.11.29 at 23h 37m 29s.xml">
+    <history-entry file="Test - 2017.11.20 at 14h 43m 57s.xml">
       <configuration name="Test" configurationId="CMakeGoogleTestRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83317000" />
+    <option name="totallyTimeSpent" value="247361000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="-4" width="1362" height="723" extended-state="6" />
+    <frame x="-1" y="0" width="1922" height="1080" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26911765" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12708333" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.60755336" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32676518" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8029557" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.69786537" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278856" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890704" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56792647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32890704" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.84400654" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39938712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278856" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278856" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3278856" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32890704" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.56792647" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.12708333" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39938712" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -617,176 +1595,400 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="adjusted the game flow to enable AIplayer" />
-    <MESSAGE value="fixed a bug that caused an endless loop for certain board sizes" />
-    <MESSAGE value="fixed a bug that caused an endless loop for certain game moves." />
-    <MESSAGE value="added decisions.docx file describing oop and other consideration while working on shared project." />
-    <MESSAGE value="added tests" />
-    <MESSAGE value="added tests 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="added tests 2" />
+    <MESSAGE value="changed abit ga" />
+    <MESSAGE value="erased our ID" />
+    <MESSAGE value="organized folders + created server" />
+    <MESSAGE value="organized the folders" />
+    <MESSAGE value="organized the files" />
+    <MESSAGE value="connected all the parts (listeners, server, game etc)" />
+    <MESSAGE value="Handled &quot;NoMove&quot; &amp; &quot;End&quot;" />
+    <MESSAGE value="changed a print" />
+    <MESSAGE value="client closes the connection (and not sending &quot;End&quot;)" />
+    <MESSAGE value="added some documentation" />
+    <MESSAGE value="made two separate setting files; client and server" />
+    <MESSAGE value="corrected the client settings file" />
+    <MESSAGE value="created a PlayerFactory to create the appropiate player objects according to game type" />
+    <MESSAGE value="added makefile for server" />
+    <MESSAGE value="edited the makefiles so that the a.out file are in directory exe" />
+    <MESSAGE value="final edit" />
+    <MESSAGE value="finished" />
+    <MESSAGE value="finished ex4" />
+    <MESSAGE value="moved the while loop from server to a seperate thread to be able to exit server" />
+    <MESSAGE value="added a safe exit by the clients whenever the server shuts down" />
+    <MESSAGE value="created a seperate class to handle clients and to allow threading" />
+    <MESSAGE value="added some comment" />
+    <MESSAGE value="implemented command join and created a GameManager" />
+    <MESSAGE value="added a class ThreadManager who manages all the open threads" />
+    <MESSAGE value="added some comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="added some comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="44" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/makefile" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Othello.cbp" />
-    <entry file="file://$PROJECT_DIR$/src/GameLogic.cpp" />
-    <entry file="file://$PROJECT_DIR$/.~lock.decisions.docx#" />
-    <entry file="file://$PROJECT_DIR$/gtest/googletest-release-1.8.0/README.md" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
-    <entry file="file://$PROJECT_DIR$/src/main.cpp" />
-    <entry file="file://$PROJECT_DIR$/src/ConsoleMenu.cpp" />
-    <entry file="file://$PROJECT_DIR$/logs_file.txt" />
-    <entry file="file://$PROJECT_DIR$/info.txt" />
-    <entry file="file://$PROJECT_DIR$/include/GameLogic.h" />
-    <entry file="file://$PROJECT_DIR$/src/BasicRules.cpp" />
-    <entry file="file://$PROJECT_DIR$/include/Board.h" />
-    <entry file="file://$PROJECT_DIR$/include/BasicRules.h" />
-    <entry file="file://$PROJECT_DIR$/src/AIplayer.cpp" />
-    <entry file="file://$PROJECT_DIR$/src/Menu.cpp" />
-    <entry file="file://$PROJECT_DIR$/include/CharBoard.h" />
-    <entry file="file://$PROJECT_DIR$/include/ConsoleGameFlow.h" />
-    <entry file="file://$PROJECT_DIR$/include/ConsoleMenu.h" />
-    <entry file="file://$PROJECT_DIR$/include/Menu.h" />
-    <entry file="file://$PROJECT_DIR$/test/GameTest.h" />
-    <entry file="file://$PROJECT_DIR$/src/Coordinates.cpp" />
-    <entry file="file://$PROJECT_DIR$/include/Coordinates.h" />
-    <entry file="file://$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-linked_ptr.h" />
-    <entry file="file://$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-param-util.h" />
-    <entry file="file://$PROJECT_DIR$/gtest/googletest-release-1.8.0/CMakeLists.txt" />
-    <entry file="file://$PROJECT_DIR$/test/CoordinatesTests.h" />
-    <entry file="file://$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/gtest.h" />
-    <entry file="file://$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/include/gtest/internal/gtest-internal.h" />
-    <entry file="file://$PROJECT_DIR$/include/Game.h" />
-    <entry file="file://$PROJECT_DIR$/src/Board.cpp" />
-    <entry file="file://$PROJECT_DIR$/src/CharBoard.cpp" />
-    <entry file="file://$PROJECT_DIR$/include/Player.h" />
-    <entry file="file://$PROJECT_DIR$/src/Player.cpp" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/Makefile" />
-    <entry file="file://$PROJECT_DIR$/gtest/googletest-release-1.8.0/googletest/scripts/test/Makefile" />
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/src/client/include/HumanPlayer.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="414">
+          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/include/Menu.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/include/RemotePlayer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="41" lean-forward="false" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/include/Player.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1511951820662" expanded="true" signature="193:206" ph="{...}" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/include/Listener.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="12" lean-forward="false" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/include/MoveTracker.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="102" lean-forward="false" selection-start-line="7" selection-start-column="102" selection-end-line="7" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/include/PlayerFactory.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="39" column="29" lean-forward="false" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/makefile" />
+    <entry file="file://$PROJECT_DIR$/src/client/makefile" />
+    <entry file="file://$PROJECT_DIR$/src/client/include/Game.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="40" lean-forward="false" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/include/ServerListener.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="93" lean-forward="false" selection-start-line="9" selection-start-column="93" selection-end-line="9" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="64" column="32" lean-forward="false" selection-start-line="64" selection-start-column="32" selection-end-line="64" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/src/ConsoleDisplay.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="76" column="44" lean-forward="false" selection-start-line="76" selection-start-column="44" selection-end-line="76" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/include/ConsoleDisplay.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="70" column="30" lean-forward="false" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/include/Display.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="72" column="52" lean-forward="false" selection-start-line="72" selection-start-column="52" selection-end-line="72" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exe/server_settings.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/exe/client_settings.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" lean-forward="false" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/src/RemotePlayer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="25" column="29" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/src/ServerListener.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="37" column="15" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/src/Command.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/src/PlayCommand.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/server/src/CloseCommand.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/server/include/CloseCommand.h" />
+    <entry file="file://$PROJECT_DIR$/src/server/include/Server.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/src/HumanPlayer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="846">
+          <caret line="48" column="4" lean-forward="false" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/include/PlayCommand.h" />
+    <entry file="file://$PROJECT_DIR$/src/server/include/Command.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="2" lean-forward="true" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/src/Coordinates.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/include/ClientHandler.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/main_s.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="11" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/src/Player.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/include/JoinCommand.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+          <folding>
+            <element signature="e#101#121#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/include/ListCommand.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/include/GameManager.h">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="7" column="70" lean-forward="true" selection-start-line="7" selection-start-column="70" selection-end-line="7" selection-end-column="70" />
+          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.cpp">
+    <entry file="file://$PROJECT_DIR$/src/server/include/GameRoom.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="24" column="94" lean-forward="false" selection-start-line="24" selection-start-column="94" selection-end-line="24" selection-end-column="94" />
+        <state relative-caret-position="270">
+          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/HumanPlayer.h">
+    <entry file="file://$PROJECT_DIR$/src/server/src/GameRoom.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="31" column="28" lean-forward="false" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        <state relative-caret-position="666">
+          <caret line="37" column="29" lean-forward="false" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/include/StartCommand.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="31" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/include/ThreadManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="29" lean-forward="true" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="40" />
           <folding>
-            <marker date="1511990959230" expanded="true" signature="283:481" ph="/**...*/" />
-            <marker date="1511990959230" expanded="true" signature="575:685" ph="/**...*/" />
+            <element signature="e#49#69#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PreviousInfo.cpp">
+    <entry file="file://$PROJECT_DIR$/src/server/src/ThreadManager.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="504">
+          <caret line="28" column="42" lean-forward="false" selection-start-line="28" selection-start-column="33" selection-end-line="28" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HumanPlayer.cpp">
+    <entry file="file://$PROJECT_DIR$/src/server/src/CommandsManager.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+        <state relative-caret-position="180">
+          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/src/StartCommand.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="27" lean-forward="true" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
           <folding>
-            <marker date="1511990979903" expanded="true" signature="345:1069" ph="{...}" />
+            <element signature="e#0#17#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/CoordinatesTest.h">
+    <entry file="file://$PROJECT_DIR$/src/server/src/ListCommand.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="468">
+          <caret line="30" column="9" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/BoardTest.h">
+    <entry file="file://$PROJECT_DIR$/src/server/src/ClientHandler.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/BasicRulesTest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-224">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/gtest_main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/PreviousInfo.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/GameFlowLook.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/AIplayer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/AIplayerTest.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state relative-caret-position="662">
+          <caret line="78" column="49" lean-forward="true" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
           <folding>
-            <element signature="e#101#125#0" expanded="true" />
+            <element signature="e#0#19#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/src/JoinCommand.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="26" column="37" lean-forward="false" selection-start-line="26" selection-start-column="27" selection-end-line="26" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/src/GameManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#35#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/include/CommandsManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="e#109#126#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server/src/Server.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="77" column="25" lean-forward="false" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/src/PlayerFactory.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/src/Game.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/client/src/ConsoleMenu.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="24" lean-forward="true" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>

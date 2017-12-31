@@ -1,14 +1,4 @@
-/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/avshalom/CLionProjects/Othello
--- Found PythonInterp: /usr/bin/python (found version "2.7.13") 
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Looking for pthread_create
--- Looking for pthread_create - not found
--- Looking for pthread_create in pthreads
--- Looking for pthread_create in pthreads - not found
--- Looking for pthread_create in pthread
--- Looking for pthread_create in pthread - found
--- Found Threads: TRUE  
+/home/steve/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/steve/Desktop/Othello
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/avshalom/CLionProjects/Othello/cmake-build-debug
+-- Build files have been written to: /home/steve/Desktop/Othello/cmake-build-debug

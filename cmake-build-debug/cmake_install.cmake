@@ -1,4 +1,4 @@
-# Install script for directory: /home/avshalom/CLionProjects/Othello
+# Install script for directory: /home/steve/Desktop/Othello
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/avshalom/CLionProjects/Othello/cmake-build-debug/gtest/googletest-release-1.8.0/cmake_install.cmake")
+  include("/home/steve/Desktop/Othello/cmake-build-debug/gtest/googletest-release-1.8.0/cmake_install.cmake")
 
 endif()
 
@@ -46,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/avshalom/CLionProjects/Othello/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/steve/Desktop/Othello/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

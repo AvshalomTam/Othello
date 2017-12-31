@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/steve/Desktop/Othello/src/server/include/Server.h
+
+/home/steve/Desktop/Othello/src/server/main_s.cpp
+include/Server.h
+/home/steve/Desktop/Othello/src/server/include/Server.h
+iostream
+-
+stdlib.h
+-
+
+/home/steve/Desktop/Othello/src/server/src/Server.cpp
+../include/Server.h
+/home/steve/Desktop/Othello/src/server/include/Server.h
+sys/socket.h
+-
+netinet/in.h
+-
+unistd.h
+-
+string.h
+-
+iostream
+-
+stdio.h
+-
+fstream
+-
+pthread.h
+-
+

@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/steve/Downloads/clion-2017.2.3/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
+RM = /home/steve/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/avshalom/CLionProjects/Othello
+CMAKE_SOURCE_DIR = /home/steve/Desktop/Othello
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/avshalom/CLionProjects/Othello/cmake-build-debug
+CMAKE_BINARY_DIR = /home/steve/Desktop/Othello/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,37 +59,37 @@ CMAKE_BINARY_DIR = /home/avshalom/CLionProjects/Othello/cmake-build-debug
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/steve/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip
 
 # Special rule for the target install/strip
 install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+	/home/steve/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/steve/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local
 
 # Special rule for the target install/local
 install/local/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+	/home/steve/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
+	/home/steve/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install
 
 # Special rule for the target install
 install/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
+	/home/steve/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
 # Special rule for the target list_install_components
@@ -105,7 +105,7 @@ list_install_components/fast: list_install_components
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/steve/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -116,7 +116,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/avshalom/clion-2017.2.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/steve/Downloads/clion-2017.2.3/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -126,9 +126,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles /home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Othello/cmake-build-debug/CMakeFiles /home/steve/Desktop/Othello/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/avshalom/CLionProjects/Othello/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/steve/Desktop/Othello/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -155,6 +155,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named Server_Re6
+
+# Build rule for target.
+Server_Re6: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Server_Re6
+.PHONY : Server_Re6
+
+# fast build rule for target.
+Server_Re6/fast:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/build
+.PHONY : Server_Re6/fast
 
 #=============================================================================
 # Target rules for targets named Test
@@ -234,479 +247,923 @@ gtest/fast:
 	$(MAKE) -f gtest/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googletest-release-1.8.0/googlemock/gtest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
-main.o: main.cpp.o
+src/client/main.o: src/client/main.cpp.o
 
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/main.cpp.s
-.PHONY : main.cpp.s
-
-src/AIplayer.o: src/AIplayer.cpp.o
-
-.PHONY : src/AIplayer.o
+.PHONY : src/client/main.o
 
 # target to build an object file
-src/AIplayer.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/AIplayer.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/AIplayer.cpp.o
-.PHONY : src/AIplayer.cpp.o
+src/client/main.cpp.o:
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/main.cpp.o
+.PHONY : src/client/main.cpp.o
 
-src/AIplayer.i: src/AIplayer.cpp.i
+src/client/main.i: src/client/main.cpp.i
 
-.PHONY : src/AIplayer.i
+.PHONY : src/client/main.i
 
 # target to preprocess a source file
-src/AIplayer.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/AIplayer.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/AIplayer.cpp.i
-.PHONY : src/AIplayer.cpp.i
+src/client/main.cpp.i:
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/main.cpp.i
+.PHONY : src/client/main.cpp.i
 
-src/AIplayer.s: src/AIplayer.cpp.s
+src/client/main.s: src/client/main.cpp.s
 
-.PHONY : src/AIplayer.s
+.PHONY : src/client/main.s
 
 # target to generate assembly for a file
-src/AIplayer.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/AIplayer.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/AIplayer.cpp.s
-.PHONY : src/AIplayer.cpp.s
+src/client/main.cpp.s:
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/main.cpp.s
+.PHONY : src/client/main.cpp.s
 
-src/BasicRules.o: src/BasicRules.cpp.o
+src/client/src/AIplayer.o: src/client/src/AIplayer.cpp.o
 
-.PHONY : src/BasicRules.o
+.PHONY : src/client/src/AIplayer.o
 
 # target to build an object file
-src/BasicRules.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/BasicRules.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/BasicRules.cpp.o
-.PHONY : src/BasicRules.cpp.o
+src/client/src/AIplayer.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/AIplayer.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/AIplayer.cpp.o
+.PHONY : src/client/src/AIplayer.cpp.o
 
-src/BasicRules.i: src/BasicRules.cpp.i
+src/client/src/AIplayer.i: src/client/src/AIplayer.cpp.i
 
-.PHONY : src/BasicRules.i
+.PHONY : src/client/src/AIplayer.i
 
 # target to preprocess a source file
-src/BasicRules.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/BasicRules.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/BasicRules.cpp.i
-.PHONY : src/BasicRules.cpp.i
+src/client/src/AIplayer.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/AIplayer.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/AIplayer.cpp.i
+.PHONY : src/client/src/AIplayer.cpp.i
 
-src/BasicRules.s: src/BasicRules.cpp.s
+src/client/src/AIplayer.s: src/client/src/AIplayer.cpp.s
 
-.PHONY : src/BasicRules.s
+.PHONY : src/client/src/AIplayer.s
 
 # target to generate assembly for a file
-src/BasicRules.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/BasicRules.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/BasicRules.cpp.s
-.PHONY : src/BasicRules.cpp.s
+src/client/src/AIplayer.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/AIplayer.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/AIplayer.cpp.s
+.PHONY : src/client/src/AIplayer.cpp.s
 
-src/Board.o: src/Board.cpp.o
+src/client/src/BasicRules.o: src/client/src/BasicRules.cpp.o
 
-.PHONY : src/Board.o
+.PHONY : src/client/src/BasicRules.o
 
 # target to build an object file
-src/Board.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Board.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Board.cpp.o
-.PHONY : src/Board.cpp.o
+src/client/src/BasicRules.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/BasicRules.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/BasicRules.cpp.o
+.PHONY : src/client/src/BasicRules.cpp.o
 
-src/Board.i: src/Board.cpp.i
+src/client/src/BasicRules.i: src/client/src/BasicRules.cpp.i
 
-.PHONY : src/Board.i
+.PHONY : src/client/src/BasicRules.i
 
 # target to preprocess a source file
-src/Board.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Board.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Board.cpp.i
-.PHONY : src/Board.cpp.i
+src/client/src/BasicRules.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/BasicRules.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/BasicRules.cpp.i
+.PHONY : src/client/src/BasicRules.cpp.i
 
-src/Board.s: src/Board.cpp.s
+src/client/src/BasicRules.s: src/client/src/BasicRules.cpp.s
 
-.PHONY : src/Board.s
+.PHONY : src/client/src/BasicRules.s
 
 # target to generate assembly for a file
-src/Board.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Board.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Board.cpp.s
-.PHONY : src/Board.cpp.s
+src/client/src/BasicRules.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/BasicRules.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/BasicRules.cpp.s
+.PHONY : src/client/src/BasicRules.cpp.s
 
-src/CharBoard.o: src/CharBoard.cpp.o
+src/client/src/Board.o: src/client/src/Board.cpp.o
 
-.PHONY : src/CharBoard.o
+.PHONY : src/client/src/Board.o
 
 # target to build an object file
-src/CharBoard.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/CharBoard.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/CharBoard.cpp.o
-.PHONY : src/CharBoard.cpp.o
+src/client/src/Board.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Board.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Board.cpp.o
+.PHONY : src/client/src/Board.cpp.o
 
-src/CharBoard.i: src/CharBoard.cpp.i
+src/client/src/Board.i: src/client/src/Board.cpp.i
 
-.PHONY : src/CharBoard.i
+.PHONY : src/client/src/Board.i
 
 # target to preprocess a source file
-src/CharBoard.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/CharBoard.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/CharBoard.cpp.i
-.PHONY : src/CharBoard.cpp.i
+src/client/src/Board.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Board.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Board.cpp.i
+.PHONY : src/client/src/Board.cpp.i
 
-src/CharBoard.s: src/CharBoard.cpp.s
+src/client/src/Board.s: src/client/src/Board.cpp.s
 
-.PHONY : src/CharBoard.s
+.PHONY : src/client/src/Board.s
 
 # target to generate assembly for a file
-src/CharBoard.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/CharBoard.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/CharBoard.cpp.s
-.PHONY : src/CharBoard.cpp.s
+src/client/src/Board.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Board.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Board.cpp.s
+.PHONY : src/client/src/Board.cpp.s
 
-src/ConsoleGameFlow.o: src/ConsoleGameFlow.cpp.o
+src/client/src/CharBoard.o: src/client/src/CharBoard.cpp.o
 
-.PHONY : src/ConsoleGameFlow.o
+.PHONY : src/client/src/CharBoard.o
 
 # target to build an object file
-src/ConsoleGameFlow.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/ConsoleGameFlow.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.o
-.PHONY : src/ConsoleGameFlow.cpp.o
+src/client/src/CharBoard.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/CharBoard.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/CharBoard.cpp.o
+.PHONY : src/client/src/CharBoard.cpp.o
 
-src/ConsoleGameFlow.i: src/ConsoleGameFlow.cpp.i
+src/client/src/CharBoard.i: src/client/src/CharBoard.cpp.i
 
-.PHONY : src/ConsoleGameFlow.i
+.PHONY : src/client/src/CharBoard.i
 
 # target to preprocess a source file
-src/ConsoleGameFlow.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/ConsoleGameFlow.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.i
-.PHONY : src/ConsoleGameFlow.cpp.i
+src/client/src/CharBoard.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/CharBoard.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/CharBoard.cpp.i
+.PHONY : src/client/src/CharBoard.cpp.i
 
-src/ConsoleGameFlow.s: src/ConsoleGameFlow.cpp.s
+src/client/src/CharBoard.s: src/client/src/CharBoard.cpp.s
 
-.PHONY : src/ConsoleGameFlow.s
+.PHONY : src/client/src/CharBoard.s
 
 # target to generate assembly for a file
-src/ConsoleGameFlow.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/ConsoleGameFlow.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleGameFlow.cpp.s
-.PHONY : src/ConsoleGameFlow.cpp.s
+src/client/src/CharBoard.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/CharBoard.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/CharBoard.cpp.s
+.PHONY : src/client/src/CharBoard.cpp.s
 
-src/ConsoleMenu.o: src/ConsoleMenu.cpp.o
+src/client/src/ConsoleDisplay.o: src/client/src/ConsoleDisplay.cpp.o
 
-.PHONY : src/ConsoleMenu.o
+.PHONY : src/client/src/ConsoleDisplay.o
 
 # target to build an object file
-src/ConsoleMenu.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/ConsoleMenu.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.o
-.PHONY : src/ConsoleMenu.cpp.o
+src/client/src/ConsoleDisplay.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/ConsoleDisplay.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/ConsoleDisplay.cpp.o
+.PHONY : src/client/src/ConsoleDisplay.cpp.o
 
-src/ConsoleMenu.i: src/ConsoleMenu.cpp.i
+src/client/src/ConsoleDisplay.i: src/client/src/ConsoleDisplay.cpp.i
 
-.PHONY : src/ConsoleMenu.i
+.PHONY : src/client/src/ConsoleDisplay.i
 
 # target to preprocess a source file
-src/ConsoleMenu.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/ConsoleMenu.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.i
-.PHONY : src/ConsoleMenu.cpp.i
+src/client/src/ConsoleDisplay.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/ConsoleDisplay.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/ConsoleDisplay.cpp.i
+.PHONY : src/client/src/ConsoleDisplay.cpp.i
 
-src/ConsoleMenu.s: src/ConsoleMenu.cpp.s
+src/client/src/ConsoleDisplay.s: src/client/src/ConsoleDisplay.cpp.s
 
-.PHONY : src/ConsoleMenu.s
+.PHONY : src/client/src/ConsoleDisplay.s
 
 # target to generate assembly for a file
-src/ConsoleMenu.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/ConsoleMenu.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/ConsoleMenu.cpp.s
-.PHONY : src/ConsoleMenu.cpp.s
+src/client/src/ConsoleDisplay.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/ConsoleDisplay.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/ConsoleDisplay.cpp.s
+.PHONY : src/client/src/ConsoleDisplay.cpp.s
 
-src/Coordinates.o: src/Coordinates.cpp.o
+src/client/src/ConsoleMenu.o: src/client/src/ConsoleMenu.cpp.o
 
-.PHONY : src/Coordinates.o
+.PHONY : src/client/src/ConsoleMenu.o
 
 # target to build an object file
-src/Coordinates.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Coordinates.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Coordinates.cpp.o
-.PHONY : src/Coordinates.cpp.o
+src/client/src/ConsoleMenu.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/ConsoleMenu.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/ConsoleMenu.cpp.o
+.PHONY : src/client/src/ConsoleMenu.cpp.o
 
-src/Coordinates.i: src/Coordinates.cpp.i
+src/client/src/ConsoleMenu.i: src/client/src/ConsoleMenu.cpp.i
 
-.PHONY : src/Coordinates.i
+.PHONY : src/client/src/ConsoleMenu.i
 
 # target to preprocess a source file
-src/Coordinates.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Coordinates.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Coordinates.cpp.i
-.PHONY : src/Coordinates.cpp.i
+src/client/src/ConsoleMenu.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/ConsoleMenu.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/ConsoleMenu.cpp.i
+.PHONY : src/client/src/ConsoleMenu.cpp.i
 
-src/Coordinates.s: src/Coordinates.cpp.s
+src/client/src/ConsoleMenu.s: src/client/src/ConsoleMenu.cpp.s
 
-.PHONY : src/Coordinates.s
+.PHONY : src/client/src/ConsoleMenu.s
 
 # target to generate assembly for a file
-src/Coordinates.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Coordinates.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Coordinates.cpp.s
-.PHONY : src/Coordinates.cpp.s
+src/client/src/ConsoleMenu.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/ConsoleMenu.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/ConsoleMenu.cpp.s
+.PHONY : src/client/src/ConsoleMenu.cpp.s
 
-src/Game.o: src/Game.cpp.o
+src/client/src/Coordinates.o: src/client/src/Coordinates.cpp.o
 
-.PHONY : src/Game.o
+.PHONY : src/client/src/Coordinates.o
 
 # target to build an object file
-src/Game.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Game.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Game.cpp.o
-.PHONY : src/Game.cpp.o
+src/client/src/Coordinates.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Coordinates.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Coordinates.cpp.o
+.PHONY : src/client/src/Coordinates.cpp.o
 
-src/Game.i: src/Game.cpp.i
+src/client/src/Coordinates.i: src/client/src/Coordinates.cpp.i
 
-.PHONY : src/Game.i
+.PHONY : src/client/src/Coordinates.i
 
 # target to preprocess a source file
-src/Game.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Game.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Game.cpp.i
-.PHONY : src/Game.cpp.i
+src/client/src/Coordinates.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Coordinates.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Coordinates.cpp.i
+.PHONY : src/client/src/Coordinates.cpp.i
 
-src/Game.s: src/Game.cpp.s
+src/client/src/Coordinates.s: src/client/src/Coordinates.cpp.s
 
-.PHONY : src/Game.s
+.PHONY : src/client/src/Coordinates.s
 
 # target to generate assembly for a file
-src/Game.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Game.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Game.cpp.s
-.PHONY : src/Game.cpp.s
+src/client/src/Coordinates.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Coordinates.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Coordinates.cpp.s
+.PHONY : src/client/src/Coordinates.cpp.s
 
-src/GameFlowLook.o: src/GameFlowLook.cpp.o
+src/client/src/Display.o: src/client/src/Display.cpp.o
 
-.PHONY : src/GameFlowLook.o
+.PHONY : src/client/src/Display.o
 
 # target to build an object file
-src/GameFlowLook.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/GameFlowLook.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameFlowLook.cpp.o
-.PHONY : src/GameFlowLook.cpp.o
+src/client/src/Display.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Display.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Display.cpp.o
+.PHONY : src/client/src/Display.cpp.o
 
-src/GameFlowLook.i: src/GameFlowLook.cpp.i
+src/client/src/Display.i: src/client/src/Display.cpp.i
 
-.PHONY : src/GameFlowLook.i
+.PHONY : src/client/src/Display.i
 
 # target to preprocess a source file
-src/GameFlowLook.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/GameFlowLook.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameFlowLook.cpp.i
-.PHONY : src/GameFlowLook.cpp.i
+src/client/src/Display.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Display.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Display.cpp.i
+.PHONY : src/client/src/Display.cpp.i
 
-src/GameFlowLook.s: src/GameFlowLook.cpp.s
+src/client/src/Display.s: src/client/src/Display.cpp.s
 
-.PHONY : src/GameFlowLook.s
+.PHONY : src/client/src/Display.s
 
 # target to generate assembly for a file
-src/GameFlowLook.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/GameFlowLook.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameFlowLook.cpp.s
-.PHONY : src/GameFlowLook.cpp.s
+src/client/src/Display.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Display.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Display.cpp.s
+.PHONY : src/client/src/Display.cpp.s
 
-src/GameLogic.o: src/GameLogic.cpp.o
+src/client/src/Game.o: src/client/src/Game.cpp.o
 
-.PHONY : src/GameLogic.o
+.PHONY : src/client/src/Game.o
 
 # target to build an object file
-src/GameLogic.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/GameLogic.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameLogic.cpp.o
-.PHONY : src/GameLogic.cpp.o
+src/client/src/Game.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Game.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Game.cpp.o
+.PHONY : src/client/src/Game.cpp.o
 
-src/GameLogic.i: src/GameLogic.cpp.i
+src/client/src/Game.i: src/client/src/Game.cpp.i
 
-.PHONY : src/GameLogic.i
+.PHONY : src/client/src/Game.i
 
 # target to preprocess a source file
-src/GameLogic.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/GameLogic.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameLogic.cpp.i
-.PHONY : src/GameLogic.cpp.i
+src/client/src/Game.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Game.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Game.cpp.i
+.PHONY : src/client/src/Game.cpp.i
 
-src/GameLogic.s: src/GameLogic.cpp.s
+src/client/src/Game.s: src/client/src/Game.cpp.s
 
-.PHONY : src/GameLogic.s
+.PHONY : src/client/src/Game.s
 
 # target to generate assembly for a file
-src/GameLogic.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/GameLogic.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/GameLogic.cpp.s
-.PHONY : src/GameLogic.cpp.s
+src/client/src/Game.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Game.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Game.cpp.s
+.PHONY : src/client/src/Game.cpp.s
 
-src/HumanPlayer.o: src/HumanPlayer.cpp.o
+src/client/src/GameLogic.o: src/client/src/GameLogic.cpp.o
 
-.PHONY : src/HumanPlayer.o
+.PHONY : src/client/src/GameLogic.o
 
 # target to build an object file
-src/HumanPlayer.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/HumanPlayer.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/HumanPlayer.cpp.o
-.PHONY : src/HumanPlayer.cpp.o
+src/client/src/GameLogic.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/GameLogic.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/GameLogic.cpp.o
+.PHONY : src/client/src/GameLogic.cpp.o
 
-src/HumanPlayer.i: src/HumanPlayer.cpp.i
+src/client/src/GameLogic.i: src/client/src/GameLogic.cpp.i
 
-.PHONY : src/HumanPlayer.i
+.PHONY : src/client/src/GameLogic.i
 
 # target to preprocess a source file
-src/HumanPlayer.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/HumanPlayer.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/HumanPlayer.cpp.i
-.PHONY : src/HumanPlayer.cpp.i
+src/client/src/GameLogic.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/GameLogic.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/GameLogic.cpp.i
+.PHONY : src/client/src/GameLogic.cpp.i
 
-src/HumanPlayer.s: src/HumanPlayer.cpp.s
+src/client/src/GameLogic.s: src/client/src/GameLogic.cpp.s
 
-.PHONY : src/HumanPlayer.s
+.PHONY : src/client/src/GameLogic.s
 
 # target to generate assembly for a file
-src/HumanPlayer.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/HumanPlayer.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/HumanPlayer.cpp.s
-.PHONY : src/HumanPlayer.cpp.s
+src/client/src/GameLogic.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/GameLogic.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/GameLogic.cpp.s
+.PHONY : src/client/src/GameLogic.cpp.s
 
-src/Menu.o: src/Menu.cpp.o
+src/client/src/HumanPlayer.o: src/client/src/HumanPlayer.cpp.o
 
-.PHONY : src/Menu.o
+.PHONY : src/client/src/HumanPlayer.o
 
 # target to build an object file
-src/Menu.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Menu.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Menu.cpp.o
-.PHONY : src/Menu.cpp.o
+src/client/src/HumanPlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/HumanPlayer.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/HumanPlayer.cpp.o
+.PHONY : src/client/src/HumanPlayer.cpp.o
 
-src/Menu.i: src/Menu.cpp.i
+src/client/src/HumanPlayer.i: src/client/src/HumanPlayer.cpp.i
 
-.PHONY : src/Menu.i
+.PHONY : src/client/src/HumanPlayer.i
 
 # target to preprocess a source file
-src/Menu.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Menu.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Menu.cpp.i
-.PHONY : src/Menu.cpp.i
+src/client/src/HumanPlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/HumanPlayer.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/HumanPlayer.cpp.i
+.PHONY : src/client/src/HumanPlayer.cpp.i
 
-src/Menu.s: src/Menu.cpp.s
+src/client/src/HumanPlayer.s: src/client/src/HumanPlayer.cpp.s
 
-.PHONY : src/Menu.s
+.PHONY : src/client/src/HumanPlayer.s
 
 # target to generate assembly for a file
-src/Menu.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Menu.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Menu.cpp.s
-.PHONY : src/Menu.cpp.s
+src/client/src/HumanPlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/HumanPlayer.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/HumanPlayer.cpp.s
+.PHONY : src/client/src/HumanPlayer.cpp.s
 
-src/Player.o: src/Player.cpp.o
+src/client/src/Listener.o: src/client/src/Listener.cpp.o
 
-.PHONY : src/Player.o
+.PHONY : src/client/src/Listener.o
 
 # target to build an object file
-src/Player.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Player.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Player.cpp.o
-.PHONY : src/Player.cpp.o
+src/client/src/Listener.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Listener.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Listener.cpp.o
+.PHONY : src/client/src/Listener.cpp.o
 
-src/Player.i: src/Player.cpp.i
+src/client/src/Listener.i: src/client/src/Listener.cpp.i
 
-.PHONY : src/Player.i
+.PHONY : src/client/src/Listener.i
 
 # target to preprocess a source file
-src/Player.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Player.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Player.cpp.i
-.PHONY : src/Player.cpp.i
+src/client/src/Listener.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Listener.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Listener.cpp.i
+.PHONY : src/client/src/Listener.cpp.i
 
-src/Player.s: src/Player.cpp.s
+src/client/src/Listener.s: src/client/src/Listener.cpp.s
 
-.PHONY : src/Player.s
+.PHONY : src/client/src/Listener.s
 
 # target to generate assembly for a file
-src/Player.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/Player.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/Player.cpp.s
-.PHONY : src/Player.cpp.s
+src/client/src/Listener.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Listener.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Listener.cpp.s
+.PHONY : src/client/src/Listener.cpp.s
 
-src/PreviousInfo.o: src/PreviousInfo.cpp.o
+src/client/src/Menu.o: src/client/src/Menu.cpp.o
 
-.PHONY : src/PreviousInfo.o
+.PHONY : src/client/src/Menu.o
 
 # target to build an object file
-src/PreviousInfo.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/PreviousInfo.cpp.o
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/PreviousInfo.cpp.o
-.PHONY : src/PreviousInfo.cpp.o
+src/client/src/Menu.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Menu.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Menu.cpp.o
+.PHONY : src/client/src/Menu.cpp.o
 
-src/PreviousInfo.i: src/PreviousInfo.cpp.i
+src/client/src/Menu.i: src/client/src/Menu.cpp.i
 
-.PHONY : src/PreviousInfo.i
+.PHONY : src/client/src/Menu.i
 
 # target to preprocess a source file
-src/PreviousInfo.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/PreviousInfo.cpp.i
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/PreviousInfo.cpp.i
-.PHONY : src/PreviousInfo.cpp.i
+src/client/src/Menu.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Menu.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Menu.cpp.i
+.PHONY : src/client/src/Menu.cpp.i
 
-src/PreviousInfo.s: src/PreviousInfo.cpp.s
+src/client/src/Menu.s: src/client/src/Menu.cpp.s
 
-.PHONY : src/PreviousInfo.s
+.PHONY : src/client/src/Menu.s
 
 # target to generate assembly for a file
-src/PreviousInfo.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/PreviousInfo.cpp.s
-	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/PreviousInfo.cpp.s
-.PHONY : src/PreviousInfo.cpp.s
+src/client/src/Menu.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Menu.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Menu.cpp.s
+.PHONY : src/client/src/Menu.cpp.s
 
-test/gtest_main.o: test/gtest_main.cpp.o
+src/client/src/MoveTracker.o: src/client/src/MoveTracker.cpp.o
 
-.PHONY : test/gtest_main.o
+.PHONY : src/client/src/MoveTracker.o
 
 # target to build an object file
-test/gtest_main.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/gtest_main.cpp.o
-.PHONY : test/gtest_main.cpp.o
+src/client/src/MoveTracker.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/MoveTracker.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/MoveTracker.cpp.o
+.PHONY : src/client/src/MoveTracker.cpp.o
 
-test/gtest_main.i: test/gtest_main.cpp.i
+src/client/src/MoveTracker.i: src/client/src/MoveTracker.cpp.i
 
-.PHONY : test/gtest_main.i
+.PHONY : src/client/src/MoveTracker.i
 
 # target to preprocess a source file
-test/gtest_main.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/gtest_main.cpp.i
-.PHONY : test/gtest_main.cpp.i
+src/client/src/MoveTracker.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/MoveTracker.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/MoveTracker.cpp.i
+.PHONY : src/client/src/MoveTracker.cpp.i
 
-test/gtest_main.s: test/gtest_main.cpp.s
+src/client/src/MoveTracker.s: src/client/src/MoveTracker.cpp.s
 
-.PHONY : test/gtest_main.s
+.PHONY : src/client/src/MoveTracker.s
 
 # target to generate assembly for a file
-test/gtest_main.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/test/gtest_main.cpp.s
-.PHONY : test/gtest_main.cpp.s
+src/client/src/MoveTracker.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/MoveTracker.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/MoveTracker.cpp.s
+.PHONY : src/client/src/MoveTracker.cpp.s
+
+src/client/src/Player.o: src/client/src/Player.cpp.o
+
+.PHONY : src/client/src/Player.o
+
+# target to build an object file
+src/client/src/Player.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Player.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Player.cpp.o
+.PHONY : src/client/src/Player.cpp.o
+
+src/client/src/Player.i: src/client/src/Player.cpp.i
+
+.PHONY : src/client/src/Player.i
+
+# target to preprocess a source file
+src/client/src/Player.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Player.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Player.cpp.i
+.PHONY : src/client/src/Player.cpp.i
+
+src/client/src/Player.s: src/client/src/Player.cpp.s
+
+.PHONY : src/client/src/Player.s
+
+# target to generate assembly for a file
+src/client/src/Player.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/Player.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/Player.cpp.s
+.PHONY : src/client/src/Player.cpp.s
+
+src/client/src/PlayerFactory.o: src/client/src/PlayerFactory.cpp.o
+
+.PHONY : src/client/src/PlayerFactory.o
+
+# target to build an object file
+src/client/src/PlayerFactory.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/PlayerFactory.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/PlayerFactory.cpp.o
+.PHONY : src/client/src/PlayerFactory.cpp.o
+
+src/client/src/PlayerFactory.i: src/client/src/PlayerFactory.cpp.i
+
+.PHONY : src/client/src/PlayerFactory.i
+
+# target to preprocess a source file
+src/client/src/PlayerFactory.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/PlayerFactory.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/PlayerFactory.cpp.i
+.PHONY : src/client/src/PlayerFactory.cpp.i
+
+src/client/src/PlayerFactory.s: src/client/src/PlayerFactory.cpp.s
+
+.PHONY : src/client/src/PlayerFactory.s
+
+# target to generate assembly for a file
+src/client/src/PlayerFactory.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/PlayerFactory.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/PlayerFactory.cpp.s
+.PHONY : src/client/src/PlayerFactory.cpp.s
+
+src/client/src/RemotePlayer.o: src/client/src/RemotePlayer.cpp.o
+
+.PHONY : src/client/src/RemotePlayer.o
+
+# target to build an object file
+src/client/src/RemotePlayer.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/RemotePlayer.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/RemotePlayer.cpp.o
+.PHONY : src/client/src/RemotePlayer.cpp.o
+
+src/client/src/RemotePlayer.i: src/client/src/RemotePlayer.cpp.i
+
+.PHONY : src/client/src/RemotePlayer.i
+
+# target to preprocess a source file
+src/client/src/RemotePlayer.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/RemotePlayer.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/RemotePlayer.cpp.i
+.PHONY : src/client/src/RemotePlayer.cpp.i
+
+src/client/src/RemotePlayer.s: src/client/src/RemotePlayer.cpp.s
+
+.PHONY : src/client/src/RemotePlayer.s
+
+# target to generate assembly for a file
+src/client/src/RemotePlayer.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/RemotePlayer.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/RemotePlayer.cpp.s
+.PHONY : src/client/src/RemotePlayer.cpp.s
+
+src/client/src/ServerListener.o: src/client/src/ServerListener.cpp.o
+
+.PHONY : src/client/src/ServerListener.o
+
+# target to build an object file
+src/client/src/ServerListener.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/ServerListener.cpp.o
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/ServerListener.cpp.o
+.PHONY : src/client/src/ServerListener.cpp.o
+
+src/client/src/ServerListener.i: src/client/src/ServerListener.cpp.i
+
+.PHONY : src/client/src/ServerListener.i
+
+# target to preprocess a source file
+src/client/src/ServerListener.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/ServerListener.cpp.i
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/ServerListener.cpp.i
+.PHONY : src/client/src/ServerListener.cpp.i
+
+src/client/src/ServerListener.s: src/client/src/ServerListener.cpp.s
+
+.PHONY : src/client/src/ServerListener.s
+
+# target to generate assembly for a file
+src/client/src/ServerListener.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/src/ServerListener.cpp.s
+	$(MAKE) -f CMakeFiles/Othello.dir/build.make CMakeFiles/Othello.dir/src/client/src/ServerListener.cpp.s
+.PHONY : src/client/src/ServerListener.cpp.s
+
+src/client/test/gtest_main.o: src/client/test/gtest_main.cpp.o
+
+.PHONY : src/client/test/gtest_main.o
+
+# target to build an object file
+src/client/test/gtest_main.cpp.o:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/test/gtest_main.cpp.o
+.PHONY : src/client/test/gtest_main.cpp.o
+
+src/client/test/gtest_main.i: src/client/test/gtest_main.cpp.i
+
+.PHONY : src/client/test/gtest_main.i
+
+# target to preprocess a source file
+src/client/test/gtest_main.cpp.i:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/test/gtest_main.cpp.i
+.PHONY : src/client/test/gtest_main.cpp.i
+
+src/client/test/gtest_main.s: src/client/test/gtest_main.cpp.s
+
+.PHONY : src/client/test/gtest_main.s
+
+# target to generate assembly for a file
+src/client/test/gtest_main.cpp.s:
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/client/test/gtest_main.cpp.s
+.PHONY : src/client/test/gtest_main.cpp.s
+
+src/server/main_s.o: src/server/main_s.cpp.o
+
+.PHONY : src/server/main_s.o
+
+# target to build an object file
+src/server/main_s.cpp.o:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/main_s.cpp.o
+.PHONY : src/server/main_s.cpp.o
+
+src/server/main_s.i: src/server/main_s.cpp.i
+
+.PHONY : src/server/main_s.i
+
+# target to preprocess a source file
+src/server/main_s.cpp.i:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/main_s.cpp.i
+.PHONY : src/server/main_s.cpp.i
+
+src/server/main_s.s: src/server/main_s.cpp.s
+
+.PHONY : src/server/main_s.s
+
+# target to generate assembly for a file
+src/server/main_s.cpp.s:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/main_s.cpp.s
+.PHONY : src/server/main_s.cpp.s
+
+src/server/src/ClientHandler.o: src/server/src/ClientHandler.cpp.o
+
+.PHONY : src/server/src/ClientHandler.o
+
+# target to build an object file
+src/server/src/ClientHandler.cpp.o:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/ClientHandler.cpp.o
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/ClientHandler.cpp.o
+.PHONY : src/server/src/ClientHandler.cpp.o
+
+src/server/src/ClientHandler.i: src/server/src/ClientHandler.cpp.i
+
+.PHONY : src/server/src/ClientHandler.i
+
+# target to preprocess a source file
+src/server/src/ClientHandler.cpp.i:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/ClientHandler.cpp.i
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/ClientHandler.cpp.i
+.PHONY : src/server/src/ClientHandler.cpp.i
+
+src/server/src/ClientHandler.s: src/server/src/ClientHandler.cpp.s
+
+.PHONY : src/server/src/ClientHandler.s
+
+# target to generate assembly for a file
+src/server/src/ClientHandler.cpp.s:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/ClientHandler.cpp.s
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/ClientHandler.cpp.s
+.PHONY : src/server/src/ClientHandler.cpp.s
+
+src/server/src/Command.o: src/server/src/Command.cpp.o
+
+.PHONY : src/server/src/Command.o
+
+# target to build an object file
+src/server/src/Command.cpp.o:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/Command.cpp.o
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/Command.cpp.o
+.PHONY : src/server/src/Command.cpp.o
+
+src/server/src/Command.i: src/server/src/Command.cpp.i
+
+.PHONY : src/server/src/Command.i
+
+# target to preprocess a source file
+src/server/src/Command.cpp.i:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/Command.cpp.i
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/Command.cpp.i
+.PHONY : src/server/src/Command.cpp.i
+
+src/server/src/Command.s: src/server/src/Command.cpp.s
+
+.PHONY : src/server/src/Command.s
+
+# target to generate assembly for a file
+src/server/src/Command.cpp.s:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/Command.cpp.s
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/Command.cpp.s
+.PHONY : src/server/src/Command.cpp.s
+
+src/server/src/CommandsManager.o: src/server/src/CommandsManager.cpp.o
+
+.PHONY : src/server/src/CommandsManager.o
+
+# target to build an object file
+src/server/src/CommandsManager.cpp.o:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/CommandsManager.cpp.o
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/CommandsManager.cpp.o
+.PHONY : src/server/src/CommandsManager.cpp.o
+
+src/server/src/CommandsManager.i: src/server/src/CommandsManager.cpp.i
+
+.PHONY : src/server/src/CommandsManager.i
+
+# target to preprocess a source file
+src/server/src/CommandsManager.cpp.i:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/CommandsManager.cpp.i
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/CommandsManager.cpp.i
+.PHONY : src/server/src/CommandsManager.cpp.i
+
+src/server/src/CommandsManager.s: src/server/src/CommandsManager.cpp.s
+
+.PHONY : src/server/src/CommandsManager.s
+
+# target to generate assembly for a file
+src/server/src/CommandsManager.cpp.s:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/CommandsManager.cpp.s
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/CommandsManager.cpp.s
+.PHONY : src/server/src/CommandsManager.cpp.s
+
+src/server/src/GameManager.o: src/server/src/GameManager.cpp.o
+
+.PHONY : src/server/src/GameManager.o
+
+# target to build an object file
+src/server/src/GameManager.cpp.o:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/GameManager.cpp.o
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/GameManager.cpp.o
+.PHONY : src/server/src/GameManager.cpp.o
+
+src/server/src/GameManager.i: src/server/src/GameManager.cpp.i
+
+.PHONY : src/server/src/GameManager.i
+
+# target to preprocess a source file
+src/server/src/GameManager.cpp.i:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/GameManager.cpp.i
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/GameManager.cpp.i
+.PHONY : src/server/src/GameManager.cpp.i
+
+src/server/src/GameManager.s: src/server/src/GameManager.cpp.s
+
+.PHONY : src/server/src/GameManager.s
+
+# target to generate assembly for a file
+src/server/src/GameManager.cpp.s:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/GameManager.cpp.s
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/GameManager.cpp.s
+.PHONY : src/server/src/GameManager.cpp.s
+
+src/server/src/GameRoom.o: src/server/src/GameRoom.cpp.o
+
+.PHONY : src/server/src/GameRoom.o
+
+# target to build an object file
+src/server/src/GameRoom.cpp.o:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/GameRoom.cpp.o
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/GameRoom.cpp.o
+.PHONY : src/server/src/GameRoom.cpp.o
+
+src/server/src/GameRoom.i: src/server/src/GameRoom.cpp.i
+
+.PHONY : src/server/src/GameRoom.i
+
+# target to preprocess a source file
+src/server/src/GameRoom.cpp.i:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/GameRoom.cpp.i
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/GameRoom.cpp.i
+.PHONY : src/server/src/GameRoom.cpp.i
+
+src/server/src/GameRoom.s: src/server/src/GameRoom.cpp.s
+
+.PHONY : src/server/src/GameRoom.s
+
+# target to generate assembly for a file
+src/server/src/GameRoom.cpp.s:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/GameRoom.cpp.s
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/GameRoom.cpp.s
+.PHONY : src/server/src/GameRoom.cpp.s
+
+src/server/src/JoinCommand.o: src/server/src/JoinCommand.cpp.o
+
+.PHONY : src/server/src/JoinCommand.o
+
+# target to build an object file
+src/server/src/JoinCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/JoinCommand.cpp.o
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/JoinCommand.cpp.o
+.PHONY : src/server/src/JoinCommand.cpp.o
+
+src/server/src/JoinCommand.i: src/server/src/JoinCommand.cpp.i
+
+.PHONY : src/server/src/JoinCommand.i
+
+# target to preprocess a source file
+src/server/src/JoinCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/JoinCommand.cpp.i
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/JoinCommand.cpp.i
+.PHONY : src/server/src/JoinCommand.cpp.i
+
+src/server/src/JoinCommand.s: src/server/src/JoinCommand.cpp.s
+
+.PHONY : src/server/src/JoinCommand.s
+
+# target to generate assembly for a file
+src/server/src/JoinCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/JoinCommand.cpp.s
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/JoinCommand.cpp.s
+.PHONY : src/server/src/JoinCommand.cpp.s
+
+src/server/src/ListCommand.o: src/server/src/ListCommand.cpp.o
+
+.PHONY : src/server/src/ListCommand.o
+
+# target to build an object file
+src/server/src/ListCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/ListCommand.cpp.o
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/ListCommand.cpp.o
+.PHONY : src/server/src/ListCommand.cpp.o
+
+src/server/src/ListCommand.i: src/server/src/ListCommand.cpp.i
+
+.PHONY : src/server/src/ListCommand.i
+
+# target to preprocess a source file
+src/server/src/ListCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/ListCommand.cpp.i
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/ListCommand.cpp.i
+.PHONY : src/server/src/ListCommand.cpp.i
+
+src/server/src/ListCommand.s: src/server/src/ListCommand.cpp.s
+
+.PHONY : src/server/src/ListCommand.s
+
+# target to generate assembly for a file
+src/server/src/ListCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/ListCommand.cpp.s
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/ListCommand.cpp.s
+.PHONY : src/server/src/ListCommand.cpp.s
+
+src/server/src/Server.o: src/server/src/Server.cpp.o
+
+.PHONY : src/server/src/Server.o
+
+# target to build an object file
+src/server/src/Server.cpp.o:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/Server.cpp.o
+.PHONY : src/server/src/Server.cpp.o
+
+src/server/src/Server.i: src/server/src/Server.cpp.i
+
+.PHONY : src/server/src/Server.i
+
+# target to preprocess a source file
+src/server/src/Server.cpp.i:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/Server.cpp.i
+.PHONY : src/server/src/Server.cpp.i
+
+src/server/src/Server.s: src/server/src/Server.cpp.s
+
+.PHONY : src/server/src/Server.s
+
+# target to generate assembly for a file
+src/server/src/Server.cpp.s:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/Server.cpp.s
+.PHONY : src/server/src/Server.cpp.s
+
+src/server/src/StartCommand.o: src/server/src/StartCommand.cpp.o
+
+.PHONY : src/server/src/StartCommand.o
+
+# target to build an object file
+src/server/src/StartCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/StartCommand.cpp.o
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/StartCommand.cpp.o
+.PHONY : src/server/src/StartCommand.cpp.o
+
+src/server/src/StartCommand.i: src/server/src/StartCommand.cpp.i
+
+.PHONY : src/server/src/StartCommand.i
+
+# target to preprocess a source file
+src/server/src/StartCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/StartCommand.cpp.i
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/StartCommand.cpp.i
+.PHONY : src/server/src/StartCommand.cpp.i
+
+src/server/src/StartCommand.s: src/server/src/StartCommand.cpp.s
+
+.PHONY : src/server/src/StartCommand.s
+
+# target to generate assembly for a file
+src/server/src/StartCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/StartCommand.cpp.s
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/StartCommand.cpp.s
+.PHONY : src/server/src/StartCommand.cpp.s
+
+src/server/src/ThreadManager.o: src/server/src/ThreadManager.cpp.o
+
+.PHONY : src/server/src/ThreadManager.o
+
+# target to build an object file
+src/server/src/ThreadManager.cpp.o:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/ThreadManager.cpp.o
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/ThreadManager.cpp.o
+.PHONY : src/server/src/ThreadManager.cpp.o
+
+src/server/src/ThreadManager.i: src/server/src/ThreadManager.cpp.i
+
+.PHONY : src/server/src/ThreadManager.i
+
+# target to preprocess a source file
+src/server/src/ThreadManager.cpp.i:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/ThreadManager.cpp.i
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/ThreadManager.cpp.i
+.PHONY : src/server/src/ThreadManager.cpp.i
+
+src/server/src/ThreadManager.s: src/server/src/ThreadManager.cpp.s
+
+.PHONY : src/server/src/ThreadManager.s
+
+# target to generate assembly for a file
+src/server/src/ThreadManager.cpp.s:
+	$(MAKE) -f CMakeFiles/Server_Re6.dir/build.make CMakeFiles/Server_Re6.dir/src/server/src/ThreadManager.cpp.s
+	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/src/server/src/ThreadManager.cpp.s
+.PHONY : src/server/src/ThreadManager.cpp.s
 
 # Help Target
 help:
@@ -720,60 +1177,106 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... Server_Re6"
 	@echo "... Test"
 	@echo "... Othello"
 	@echo "... gmock_main"
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... src/AIplayer.o"
-	@echo "... src/AIplayer.i"
-	@echo "... src/AIplayer.s"
-	@echo "... src/BasicRules.o"
-	@echo "... src/BasicRules.i"
-	@echo "... src/BasicRules.s"
-	@echo "... src/Board.o"
-	@echo "... src/Board.i"
-	@echo "... src/Board.s"
-	@echo "... src/CharBoard.o"
-	@echo "... src/CharBoard.i"
-	@echo "... src/CharBoard.s"
-	@echo "... src/ConsoleGameFlow.o"
-	@echo "... src/ConsoleGameFlow.i"
-	@echo "... src/ConsoleGameFlow.s"
-	@echo "... src/ConsoleMenu.o"
-	@echo "... src/ConsoleMenu.i"
-	@echo "... src/ConsoleMenu.s"
-	@echo "... src/Coordinates.o"
-	@echo "... src/Coordinates.i"
-	@echo "... src/Coordinates.s"
-	@echo "... src/Game.o"
-	@echo "... src/Game.i"
-	@echo "... src/Game.s"
-	@echo "... src/GameFlowLook.o"
-	@echo "... src/GameFlowLook.i"
-	@echo "... src/GameFlowLook.s"
-	@echo "... src/GameLogic.o"
-	@echo "... src/GameLogic.i"
-	@echo "... src/GameLogic.s"
-	@echo "... src/HumanPlayer.o"
-	@echo "... src/HumanPlayer.i"
-	@echo "... src/HumanPlayer.s"
-	@echo "... src/Menu.o"
-	@echo "... src/Menu.i"
-	@echo "... src/Menu.s"
-	@echo "... src/Player.o"
-	@echo "... src/Player.i"
-	@echo "... src/Player.s"
-	@echo "... src/PreviousInfo.o"
-	@echo "... src/PreviousInfo.i"
-	@echo "... src/PreviousInfo.s"
-	@echo "... test/gtest_main.o"
-	@echo "... test/gtest_main.i"
-	@echo "... test/gtest_main.s"
+	@echo "... src/client/main.o"
+	@echo "... src/client/main.i"
+	@echo "... src/client/main.s"
+	@echo "... src/client/src/AIplayer.o"
+	@echo "... src/client/src/AIplayer.i"
+	@echo "... src/client/src/AIplayer.s"
+	@echo "... src/client/src/BasicRules.o"
+	@echo "... src/client/src/BasicRules.i"
+	@echo "... src/client/src/BasicRules.s"
+	@echo "... src/client/src/Board.o"
+	@echo "... src/client/src/Board.i"
+	@echo "... src/client/src/Board.s"
+	@echo "... src/client/src/CharBoard.o"
+	@echo "... src/client/src/CharBoard.i"
+	@echo "... src/client/src/CharBoard.s"
+	@echo "... src/client/src/ConsoleDisplay.o"
+	@echo "... src/client/src/ConsoleDisplay.i"
+	@echo "... src/client/src/ConsoleDisplay.s"
+	@echo "... src/client/src/ConsoleMenu.o"
+	@echo "... src/client/src/ConsoleMenu.i"
+	@echo "... src/client/src/ConsoleMenu.s"
+	@echo "... src/client/src/Coordinates.o"
+	@echo "... src/client/src/Coordinates.i"
+	@echo "... src/client/src/Coordinates.s"
+	@echo "... src/client/src/Display.o"
+	@echo "... src/client/src/Display.i"
+	@echo "... src/client/src/Display.s"
+	@echo "... src/client/src/Game.o"
+	@echo "... src/client/src/Game.i"
+	@echo "... src/client/src/Game.s"
+	@echo "... src/client/src/GameLogic.o"
+	@echo "... src/client/src/GameLogic.i"
+	@echo "... src/client/src/GameLogic.s"
+	@echo "... src/client/src/HumanPlayer.o"
+	@echo "... src/client/src/HumanPlayer.i"
+	@echo "... src/client/src/HumanPlayer.s"
+	@echo "... src/client/src/Listener.o"
+	@echo "... src/client/src/Listener.i"
+	@echo "... src/client/src/Listener.s"
+	@echo "... src/client/src/Menu.o"
+	@echo "... src/client/src/Menu.i"
+	@echo "... src/client/src/Menu.s"
+	@echo "... src/client/src/MoveTracker.o"
+	@echo "... src/client/src/MoveTracker.i"
+	@echo "... src/client/src/MoveTracker.s"
+	@echo "... src/client/src/Player.o"
+	@echo "... src/client/src/Player.i"
+	@echo "... src/client/src/Player.s"
+	@echo "... src/client/src/PlayerFactory.o"
+	@echo "... src/client/src/PlayerFactory.i"
+	@echo "... src/client/src/PlayerFactory.s"
+	@echo "... src/client/src/RemotePlayer.o"
+	@echo "... src/client/src/RemotePlayer.i"
+	@echo "... src/client/src/RemotePlayer.s"
+	@echo "... src/client/src/ServerListener.o"
+	@echo "... src/client/src/ServerListener.i"
+	@echo "... src/client/src/ServerListener.s"
+	@echo "... src/client/test/gtest_main.o"
+	@echo "... src/client/test/gtest_main.i"
+	@echo "... src/client/test/gtest_main.s"
+	@echo "... src/server/main_s.o"
+	@echo "... src/server/main_s.i"
+	@echo "... src/server/main_s.s"
+	@echo "... src/server/src/ClientHandler.o"
+	@echo "... src/server/src/ClientHandler.i"
+	@echo "... src/server/src/ClientHandler.s"
+	@echo "... src/server/src/Command.o"
+	@echo "... src/server/src/Command.i"
+	@echo "... src/server/src/Command.s"
+	@echo "... src/server/src/CommandsManager.o"
+	@echo "... src/server/src/CommandsManager.i"
+	@echo "... src/server/src/CommandsManager.s"
+	@echo "... src/server/src/GameManager.o"
+	@echo "... src/server/src/GameManager.i"
+	@echo "... src/server/src/GameManager.s"
+	@echo "... src/server/src/GameRoom.o"
+	@echo "... src/server/src/GameRoom.i"
+	@echo "... src/server/src/GameRoom.s"
+	@echo "... src/server/src/JoinCommand.o"
+	@echo "... src/server/src/JoinCommand.i"
+	@echo "... src/server/src/JoinCommand.s"
+	@echo "... src/server/src/ListCommand.o"
+	@echo "... src/server/src/ListCommand.i"
+	@echo "... src/server/src/ListCommand.s"
+	@echo "... src/server/src/Server.o"
+	@echo "... src/server/src/Server.i"
+	@echo "... src/server/src/Server.s"
+	@echo "... src/server/src/StartCommand.o"
+	@echo "... src/server/src/StartCommand.i"
+	@echo "... src/server/src/StartCommand.s"
+	@echo "... src/server/src/ThreadManager.o"
+	@echo "... src/server/src/ThreadManager.i"
+	@echo "... src/server/src/ThreadManager.s"
 .PHONY : help
 
 
