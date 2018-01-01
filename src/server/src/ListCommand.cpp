@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include "../include/ListCommand.h"
+#include "../include/MutexManager.h"
 using namespace std;
 
 ListCommand::ListCommand(vector<GameRoom> list) : list_(list) { }
@@ -16,6 +17,7 @@ void ListCommand::execute(vector<string> list) {
 		i++;
 	}
 
+	pthread_mutex_lock(MutexManager::getInstance()->getGameRoomsMutex());
 	for (vector<GameRoom>::iterator it = this->list_.begin(); it != this->list_.end(); ++it) {
 		if (!it->isActive()) {
 			//write to client the names of the open games
@@ -24,9 +26,12 @@ void ListCommand::execute(vector<string> list) {
 			n = write(client_socket, &game_name, sizeof(game_name));
 			if (n == -1) {
                 cout << "Error writing to socket 1" << endl;
+				pthread_mutex_unlock(MutexManager::getInstance()->getGameRoomsMutex());
+				close(client_socket);
 				return;
 			}
 		}
 	}
+	pthread_mutex_unlock(MutexManager::getInstance()->getGameRoomsMutex());
 	close(client_socket);
 }

@@ -7,33 +7,24 @@
 #include "../include/CommandsManager.h"
 #include "../include/ThreadManager.h"
 
-struct client_thread {
-    int client_socket;
-    pthread_t serve_client;
-};
-
 vector<GameRoom> list;
 CommandsManager manager = CommandsManager(list);
 
 static void* serveClient(void *tArgs);
 
 void ClientHandler::handle(int client_socket) {
-	ThreadManager *t_manager = ThreadManager::getInstance();
-    pthread_t serve_client;
-    client_thread tArgs;
-    tArgs.client_socket = client_socket;
-    tArgs.serve_client = serve_client;
-	int rc = pthread_create(&serve_client, NULL, serveClient, &tArgs);
+	pthread_t serve_client;
+    int rc = pthread_create(&serve_client, NULL, serveClient, &client_socket);
 	if (rc) {
 		cout << "Error: unable to create thread, " << rc << endl;
 		return;
 	}
-    t_manager->addThread(serve_client);
+	ThreadManager::getInstance()->addThread(serve_client);
 }
 
 static void* serveClient(void *tArgs) {
-    client_thread *targs = (client_thread *) tArgs;
-    int client_socket = targs->client_socket;
+    int *c_socket = (int *) tArgs;
+    int client_socket = *c_socket;
 	char buffer[50];
 	for (int i = 0; i < 50; i++) {
 		buffer[i] = '\0';
@@ -77,8 +68,7 @@ static void* serveClient(void *tArgs) {
 		command_arg.push_back(argument);
 	}
 	manager.executeCommand(command, command_arg);
-    ThreadManager *manager = ThreadManager::getInstance();
-    manager->deleteThread(targs->serve_client);
+    ThreadManager::getInstance()->deleteThread(pthread_self());
 }
 
 ClientHandler::~ClientHandler() {

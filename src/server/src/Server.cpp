@@ -2,6 +2,7 @@
 #include "../include/ClientHandler.h"
 #include "../include/GameRoom.h"
 #include "../include/ThreadManager.h"
+#include "../include/MutexManager.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
@@ -58,16 +59,15 @@ void Server::start(const char* filePath) {
 	info.clientAddressLen = clientAddressLen;
 	info.serverSocket = serverSocket;
 
-	ThreadManager *manager = ThreadManager::getInstance();
 	ClientHandler handler;
 	info.handler = handler;
 	pthread_t games_thread;
-	manager->addThread(games_thread);
 	int rc = pthread_create(&games_thread, NULL, acceptClients, &info);
 	if (rc) {
 		cout << "Error: unable to create thread, " << rc << endl;
 		return;
 	}
+	ThreadManager::getInstance()->addThread(games_thread);
 
 	string end_server;
 	do {
@@ -75,8 +75,9 @@ void Server::start(const char* filePath) {
 	}
 	while (end_server != "exit");
 	close(serverSocket);
-	manager->closeThreads();
+	ThreadManager::getInstance()->closeThreads();
 	delete ThreadManager::getInstance();
+	delete MutexManager::getInstance();
 }
 
 static void* acceptClients(void *tArgs) {

@@ -7,33 +7,25 @@ using namespace std;
 
 int middleMan(int clientSocketRead, int clientSocketWrite);
 #define MAX_TRANSMISSION_SIZE 10
-struct gameroom_thread {
-    GameRoom room;
-    pthread_t game_thread;
-};
 
 GameManager::GameManager() {}
 static void* connectGamers(void *tArgs);
 
 void GameManager::createGame(GameRoom room) {
-    ThreadManager *t_manager = ThreadManager::getInstance();
     pthread_t game_thread;
-    gameroom_thread tArgs;
-    tArgs.game_thread = game_thread;
-    tArgs.room = room;
-    int rc = pthread_create(&game_thread, NULL, connectGamers, &tArgs);
+
+    int rc = pthread_create(&game_thread, NULL, connectGamers, &room);
     if (rc) {
         cout << "Error: unable to create thread, " << rc << endl;
         return;
     }
-    t_manager->addThread(game_thread);
+    ThreadManager::getInstance()->addThread(game_thread);
 }
 
 static void* connectGamers(void *tArgs) {
-    gameroom_thread *targs = (gameroom_thread *) tArgs;
-    GameRoom room = targs->room;
-    int client_socket1 = room.getClientSocket1();
-    int client_socket2 = room.getClientSocket2();
+    GameRoom *room = (GameRoom *) tArgs;
+    int client_socket1 = room->getClientSocket1();
+    int client_socket2 = room->getClientSocket2();
 
     int n;
     int num;
@@ -63,11 +55,10 @@ static void* connectGamers(void *tArgs) {
         first_socket = !first_socket;
     } while (m != 0);
 
-    room.finished();
+    room->finished();
     // Close communication with the client
-    room.closeSockets();
-    ThreadManager *manager = ThreadManager::getInstance();
-    manager->deleteThread(targs->game_thread);
+    room->closeSockets();
+    ThreadManager::getInstance()->deleteThread(pthread_self());
 }
 
 int middleMan(int clientSocketRead, int clientSocketWrite) {

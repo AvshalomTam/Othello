@@ -15,6 +15,7 @@ class ThreadManager {
     ThreadManager();
     static vector<pthread_t> *list_;
     static ThreadManager *manager_;
+    static pthread_mutex_t lock;
 };
 
 #endif //THREADMANAGER_H
