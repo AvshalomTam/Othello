@@ -11,11 +11,10 @@ class ThreadManager {
     static void addThread(pthread_t p);
     static void closeThreads();
     static void deleteThread(pthread_t p);
-    ~ThreadManager();
   private:
     ThreadManager();
     static vector<pthread_t> *list_;
-    static ThreadManager *manager_ = NULL;
+    static ThreadManager *manager_;
 };
 
 #endif //THREADMANAGER_H

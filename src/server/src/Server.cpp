@@ -76,6 +76,7 @@ void Server::start(const char* filePath) {
 	while (end_server != "exit");
 	close(serverSocket);
 	manager->closeThreads();
+	delete ThreadManager::getInstance();
 }
 
 static void* acceptClients(void *tArgs) {

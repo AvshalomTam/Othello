@@ -1,18 +1,14 @@
 #include "../include/ThreadManager.h"
 
+ThreadManager* ThreadManager::manager_ = 0;
+
 ThreadManager* ThreadManager::getInstance() {
-    if (manager_ != NULL) {
+    if (manager_ == NULL) {
         manager_ = new ThreadManager();
         return manager_;
     }
     else {
         return manager_;
-    }
-}
-
-ThreadManager::~ThreadManager() {
-    if (manager_ != NULL) {
-        delete manager_;
     }
 }
 
