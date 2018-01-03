@@ -19,13 +19,6 @@ using namespace std;
 int getPort(const char *filePath);
 static void* acceptClients(void *tArgs);
 
-struct connection_info {
-	struct sockaddr_in clientAddress;
-	socklen_t clientAddressLen;
-	int serverSocket;
-	ClientHandler handler;
-};
-
 Server::Server(): serverSocket(0) {}
 
 void Server::start(const char* filePath) {

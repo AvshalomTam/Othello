@@ -22,11 +22,16 @@ PlayerFactory::PlayerFactory(Board &board, GameLogic &judge, Display &display, G
 		this->move_tracker_ = new MoveTracker();
 		this->pl1_ = new HumanPlayer(first_player, board, judge, display, *this->move_tracker_);
 		this->pl2_ = new HumanPlayer(second_player, board, judge, display, *this->move_tracker_);
+		this->pl1_->setName("X");
+		this->pl2_->setName("O");
 	}
 	else if (type == computer) {
 		this->move_tracker_ = new MoveTracker();
 		this->pl1_ = new HumanPlayer(first_player, board, judge, display, *this->move_tracker_);
 		this->pl2_ = new AIplayer(board, judge, display, second_player, *this->move_tracker_);
+		this->pl1_->setName("X");
+		this->pl2_->setName("O");
+		display.presentPlayer(this->pl1_->getName());
 	}
 	else if (type == remote) {
 		int number;
@@ -35,15 +40,24 @@ PlayerFactory::PlayerFactory(Board &board, GameLogic &judge, Display &display, G
 		if (n == -1) {
 			throw "Error reading from server";
 		}
+		if (n == 0) {
+			throw "Server disconnected.";
+		}
 		this->move_tracker_ = new MoveTracker();
 		this->server_messenger_ = new ServerListener(this->move_tracker_, clientSocket);
 		if (number == 1) {
 			this->pl1_ = new HumanPlayer(first_player, board, judge, display, *this->server_messenger_);
 			this->pl2_ = new RemotePlayer(second_player, clientSocket, display, *this->move_tracker_);
+			this->pl1_->setName("X");
+			this->pl2_->setName("O");
+			display.presentPlayer(this->pl1_->getName());
 		}
 		else {
 			this->pl1_ = new RemotePlayer(first_player, clientSocket, display, *this->move_tracker_);
 			this->pl2_ = new HumanPlayer(second_player, board, judge, display, *this->server_messenger_);
+			this->pl1_->setName("X");
+			this->pl2_->setName("O");
+			display.presentPlayer(this->pl2_->getName());
 		}
 	}
 }
@@ -59,4 +73,6 @@ Player* PlayerFactory::getSecondPlayer() {
 PlayerFactory::~PlayerFactory() {
 	delete this->move_tracker_;
 	delete this->server_messenger_;
+    delete this->pl1_;
+    delete this->pl2_;
 }

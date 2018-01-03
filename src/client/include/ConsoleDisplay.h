@@ -76,6 +76,7 @@ class ConsoleDisplay : public Display {
     void printUnableJoin();
     void pressAnyKey();
     void nonAvailable();
+    void presentPlayer(string name);
 };
 
 #endif //ConsoleDisplay_H

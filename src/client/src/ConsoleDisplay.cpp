@@ -107,3 +107,7 @@ void ConsoleDisplay::printUnableJoin() {
 void ConsoleDisplay::nonAvailable() {
     cout << endl << "There are no available games." << endl << endl;
 }
+
+void ConsoleDisplay::presentPlayer(string name) {
+    cout << endl << "\tYou play as " << name << endl;
+}

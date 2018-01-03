@@ -78,6 +78,7 @@ class Display {
     virtual void printUnableJoin() = 0;
     virtual void pressAnyKey() = 0;
     virtual void nonAvailable() = 0;
+    virtual void presentPlayer(string name) = 0;
 };
 
 #endif //Display_H

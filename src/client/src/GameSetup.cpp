@@ -4,6 +4,7 @@
 #include "../include/Menu.h"
 #include "../include/ConsoleMenu.h"
 #include "../include/ConsoleDisplay.h"
+#define MAX_NAME_LENGTH 50
 
 GameSetup::GameSetup(const char *filePath) : filepath_(filePath) {
     setMainMenu();
@@ -35,12 +36,6 @@ void GameSetup::setup() {
 int GameSetup::remoteSetup() {
     this->remote_menu_->printMenu();
     char choice = this->remote_menu_->getChoice();
-    int socket;
-    int n;
-    int number;
-    string command;
-    string game_name;
-    vector<char*> list;
     switch (choice) {
         case '1': return listGames();
 
@@ -140,25 +135,30 @@ int GameSetup::listGames() {
     if (n == -1) {
         throw "Error writing to server";
     }
-    char buffer[50] = "\0";
-    n = read(socket, buffer, sizeof(buffer));
+    char buffer[MAX_NAME_LENGTH] = "\0";
     int amount = 0;
+
+    n = read(socket, buffer, sizeof(buffer));
+    if (n == -1 ) {
+        throw "Error reading from server";
+    }
     while (n != 0) {
-        if (n == -1 ) {
-            throw "Error reading from server";
-        }
         amount++;
         this->display->printGameName(buffer);
-        for (int i = 0; i < 50; i++) {
-            buffer[i] = '\0';
-        }
         int ack = 1;
         n = write(socket, &ack, sizeof(int));
         if (n == -1 ) {
             throw "Error writing to server server";
         }
+        for (int i = 0; i < MAX_NAME_LENGTH; i++) {
+            buffer[i] = '\0';
+        }
         n = read(socket, buffer, sizeof(buffer));
+        if (n == -1 ) {
+            throw "Error reading from server";
+        }
     }
+
     if (amount == 0) {
         this->display->nonAvailable();
     }
@@ -176,10 +176,16 @@ int GameSetup::joinGame() {
     if (n == -1) {
         throw "Error writing to server";
     }
+    if (n == 0) {
+        throw "Server disconnected.";
+    }
     int number;
     n = read(socket, &number, sizeof(number));
     if (n == -1) {
         throw "Error reading from server";
+    }
+    if (n == 0) {
+        throw "Server disconnected.";
     }
     if (number == -1) {
         close(socket);
@@ -200,10 +206,16 @@ int GameSetup::startGame() {
     if (n == -1) {
         throw "Error writing to server";
     }
+    if (n == 0) {
+        throw "Server disconnected.";
+    }
     int number;
     n = read(socket, &number, sizeof(number));
     if (n == -1) {
         throw "Error reading from server";
+    }
+    if (n == 0) {
+        throw "Server disconnected.";
     }
     if (number == -1) {
         close(socket);

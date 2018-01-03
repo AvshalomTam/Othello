@@ -7,8 +7,12 @@
 using namespace std;
 
 int main() {
-    Game game;
-    game.initialize("../exe/client_settings.txt");
-    game.run();
+    try {
+        Game game;
+        game.initialize("../exe/client_settings.txt");
+        game.run();
+    } catch (const char* e) {
+        //just ignore and finish the game
+    }
     return 0;
 }
