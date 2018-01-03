@@ -6,7 +6,6 @@
 #include "Display.h"
 #include "Listener.h"
 #include "Player.h"
-#include "Menu2.h"
 #include "GameSetup.h"
 /**
  * This class creates objects of players according the game type.

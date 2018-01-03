@@ -4,7 +4,6 @@
 #include "Command.h"
 class CloseCommand : public Command {
   public:
-    CloseCommand();
     void execute(vector<string> list);
 };
 

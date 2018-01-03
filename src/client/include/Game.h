@@ -4,7 +4,6 @@
 #include "Board.h"
 #include "HumanPlayer.h"
 #include "GameLogic.h"
-#include "Menu2.h"
 #include "Display.h"
 #include "MoveTracker.h"
 #include "PlayerFactory.h"

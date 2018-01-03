@@ -2,7 +2,6 @@
 #include "../include/Game.h"
 #include "../include/CharBoard.h"
 #include "../include/BasicRules.h"
-#include "../include/ConsoleMenu2.h"
 #include "../include/ConsoleDisplay.h"
 #include "../include/ConsoleMenu.h"
 #define NO_MOVE Coordinates(-1, -1)

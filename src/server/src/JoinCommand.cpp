@@ -6,8 +6,6 @@
 #include "../include/RoomsManager.h"
 using namespace std;
 
-JoinCommand::JoinCommand() {}
-
 void JoinCommand::execute(vector<string> list) {
     int client_socket = atoi(list[0].c_str());
 

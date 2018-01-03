@@ -9,9 +9,7 @@
 
 class StartCommand : public Command {
 	public:
-		StartCommand();
 		void execute(vector<string> list);
-		//~StartCommand();
 };
 
 #endif //OTHELLO_STARTCOMMAND_H

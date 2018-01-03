@@ -5,9 +5,7 @@
 #include "GameManager.h"
 class JoinCommand : public Command {
   public:
-	JoinCommand();
 	void execute(vector<string> list);
-	//~JoinCommand();
   private:
 	GameManager manager_;
 };

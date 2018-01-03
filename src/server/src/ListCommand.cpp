@@ -7,8 +7,6 @@
 #include "../include/RoomsManager.h"
 using namespace std;
 
-ListCommand::ListCommand() {}
-
 void ListCommand::execute(vector<string> list) {
 	int client_socket = atoi(list[0].c_str());
 
