@@ -1,7 +1,3 @@
-//
-// Created by steve on 12/6/17.
-//
-
 #include <unistd.h>
 #include <iostream>
 #include <cstring>
@@ -36,7 +32,6 @@ void ServerListener::setPreMove(Coordinates c) {
     throw "Error writing to socket";
   }
   if (n == 0) {
-    close(this->client_socket_);
     throw "Server disconnected. Game finished.";
   }
 }

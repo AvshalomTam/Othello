@@ -23,7 +23,6 @@ Coordinates RemotePlayer::getMove() {
     throw "Error reading from socket";
   }
   if (n == 0) {
-    close(this->clientSocket_);
     throw "Server disconnected. Game finished.";
   }
   if (strcmp(input, "NoMove") == 0) {
@@ -41,6 +40,10 @@ Coordinates RemotePlayer::getMove() {
 
 void RemotePlayer::message() {
   this->gameflow_.waitingForPlayer();
+}
+
+RemotePlayer::~RemotePlayer() {
+  close(this->clientSocket_);
 }
 
 string convertToString(char *input) {
