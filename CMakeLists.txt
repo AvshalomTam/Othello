@@ -8,13 +8,26 @@ add_subdirectory(gtest/googletest-release-1.8.0)
 include_directories(gtest/googletest-release-1.8.0/googletest/include)
 include_directories(gtest/googletest-release-1.8.0/googlemock/include)
 
-set(GAME_FILES src/client/main.cpp src/server/include/ClientHandler.h)
+set(GAME_FILES src/client/main.cpp src/client/include/Menu.h src/client/src/Menu.cpp src/client/include/ConsoleMenu.h src/client/src/ConsoleMenu.cpp src/client/include/GameSetup.h src/client/src/GameSetup.cpp)
 set(TEST_FILES
         src/client/test/gtest_main.cpp
         src/client/test/BoardTest.h
         src/client/test/BasicRulesTest.h
         src/client/test/AIplayerTest.h
-        src/client/test/CoordinatesTest.h src/server/src/Command.cpp src/server/include/Command.h src/server/src/CommandsManager.cpp src/server/include/CommandsManager.h src/server/src/StartCommand.cpp src/server/include/StartCommand.h src/server/src/ListCommand.cpp src/server/include/ListCommand.h src/server/src/JoinCommand.cpp src/server/include/JoinCommand.h src/server/include/ClientHandler.h src/server/src/ClientHandler.cpp src/server/include/GameRoom.h src/server/src/GameRoom.cpp src/server/src/GameManager.cpp src/server/include/GameManager.h src/server/src/ThreadManager.cpp src/server/include/ThreadManager.h src/server/src/MutexManager.cpp src/server/include/MutexManager.h)
+        src/client/test/CoordinatesTest.h src/server/src/Command.cpp src/server/include/Command.h
+        src/server/src/CommandsManager.cpp src/server/include/CommandsManager.h
+        src/server/src/StartCommand.cpp src/server/include/StartCommand.h
+        src/server/src/ListCommand.cpp src/server/include/ListCommand.h
+        src/server/src/JoinCommand.cpp src/server/include/JoinCommand.h
+        src/server/include/ClientHandler.h src/server/src/ClientHandler.cpp
+        src/server/include/GameRoom.h src/server/src/GameRoom.cpp
+        src/server/src/GameManager.cpp src/server/include/GameManager.h
+        src/server/src/ThreadManager.cpp src/server/include/ThreadManager.h
+        src/server/src/CloseCommand.cpp
+        src/server/include/RoomsManager.h src/server/src/RoomsManager.cpp
+        src/client/include/Menu.h src/client/src/Menu.cpp
+        src/client/include/ConsoleMenu.h src/client/src/ConsoleMenu.cpp
+        src/client/include/GameSetup.h src/client/src/GameSetup.cpp)
 set(SOURCE_FILES
         src/client/include/AIplayer.h
         src/client/include/BasicRules.h
@@ -25,8 +38,6 @@ set(SOURCE_FILES
         src/client/include/GameLogic.h
         src/client/include/HumanPlayer.h
         src/client/include/Player.h
-        src/client/include/Menu.h
-        src/client/include/ConsoleMenu.h
         src/client/include/Display.h
         src/client/include/ConsoleDisplay.h
         src/client/include/MoveTracker.h
@@ -39,8 +50,6 @@ set(SOURCE_FILES
         src/client/src/GameLogic.cpp
         src/client/src/HumanPlayer.cpp
         src/client/src/Player.cpp
-        src/client/src/Menu.cpp
-        src/client/src/ConsoleMenu.cpp
         src/client/src/Display.cpp
         src/client/src/ConsoleDisplay.cpp
         src/client/src/MoveTracker.cpp
@@ -54,8 +63,18 @@ set(SOURCE_FILES
         src/client/include/PlayerFactory.h)
 set(SERVER_FILES
         src/server/main_s.cpp
-        src/server/src/Server.cpp
-        src/server/include/Server.h src/server/src/Command.cpp src/server/include/Command.h src/server/src/CommandsManager.cpp src/server/include/CommandsManager.h src/server/src/StartCommand.cpp src/server/include/StartCommand.h src/server/src/ListCommand.cpp src/server/include/ListCommand.h src/server/src/JoinCommand.cpp src/server/include/JoinCommand.h src/server/include/ClientHandler.h src/server/src/ClientHandler.cpp src/server/include/GameRoom.h src/server/src/GameRoom.cpp src/server/src/GameManager.cpp src/server/include/GameManager.h src/server/src/ThreadManager.cpp src/server/include/ThreadManager.h src/server/src/MutexManager.cpp src/server/include/MutexManager.h)
+        src/server/src/Server.cpp src/server/include/Server.h
+        src/server/src/Command.cpp src/server/include/Command.h
+        src/server/src/CommandsManager.cpp src/server/include/CommandsManager.h
+        src/server/src/StartCommand.cpp src/server/include/StartCommand.h
+        src/server/src/ListCommand.cpp src/server/include/ListCommand.h
+        src/server/src/JoinCommand.cpp src/server/include/JoinCommand.h
+        src/server/include/ClientHandler.h src/server/src/ClientHandler.cpp
+        src/server/include/GameRoom.h src/server/src/GameRoom.cpp
+        src/server/src/GameManager.cpp src/server/include/GameManager.h
+        src/server/src/ThreadManager.cpp src/server/include/ThreadManager.h
+        src/server/src/CloseCommand.cpp src/server/include/CloseCommand.h
+        src/server/include/RoomsManager.h src/server/src/RoomsManager.cpp)
 
 add_executable(Othello ${SOURCE_FILES} ${GAME_FILES})
 add_executable(Test ${SOURCE_FILES} ${TEST_FILES})

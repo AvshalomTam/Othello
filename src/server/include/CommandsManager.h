@@ -11,11 +11,14 @@
 #include "Command.h"
 class CommandsManager {
  public:
-  CommandsManager(vector<GameRoom> list);
-  ~CommandsManager();
-  void executeCommand(string command, vector<string> list);
+    static CommandsManager* getInstance();
+    void executeCommand(string command, vector<string> list);
+    ~CommandsManager();
  private:
-  map<string, Command *> commandsMap_;
+    CommandsManager();
+    static CommandsManager* instance;
+    map<string, Command *> commandsMap_;
+    static pthread_mutex_t lock;
 };
 
 #endif //OTHELLO_COMMANDSMANAGER_H

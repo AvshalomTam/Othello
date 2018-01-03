@@ -10,15 +10,14 @@ class GameRoom {
 	const char* getGameName();
 	int getClientSocket1();
 	int getClientSocket2();
+	void setActive();
 	bool isActive();
 	void closeSockets();
-	void finished();
-	bool isFinished();
   private:
 	const char* game_name_;
 	int client_socket1_;
 	int client_socket2_;
-	bool is_finished_ = false;
+	bool active_;
 };
 
 #endif //OTHELLO_GAMEROOM_H

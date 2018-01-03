@@ -1,6 +1,7 @@
 #ifndef ConsoleDisplay_H
 #define ConsoleDisplay_H
 
+#include <vector>
 #include "Display.h"
 
 /**
@@ -69,6 +70,10 @@ class ConsoleDisplay : public Display {
    * @param str an appropiate message
    */
   void serverDisconnect(const char *str);
+    void printListGames(vector<char*> list);
+    string getGameName();
+    void printNameOccupied();
+    void printUnableJoin();
 };
 
 #endif //ConsoleDisplay_H

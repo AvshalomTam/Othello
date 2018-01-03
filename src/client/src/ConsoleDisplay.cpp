@@ -77,3 +77,41 @@ void ConsoleDisplay::waitForOtherPlayerConnect() {
 void ConsoleDisplay::serverDisconnect(const char *str) {
   cout << str << endl;
 }
+
+void ConsoleDisplay::printListGames(vector<char *> list) {
+  cout << endl;
+  int i = 1;
+  for(vector<char*>::iterator it = list.begin(); it != list.end(); ++it) {
+    cout << i++ << ".\t";
+    cout << *it << endl;
+  }
+  if (list.empty()) {
+    cout << "No available games." << endl;
+  }
+  cout << endl;
+  cout << "Press any key (then hit ENTER) to continue." << endl;
+  char c;
+  cin >> c;
+}
+
+string ConsoleDisplay::getGameName() {
+  cout << "Please enter name of game: ";
+  string name;
+  cin >> name;
+  cout << endl;
+  return name;
+}
+
+void ConsoleDisplay::printNameOccupied() {
+  cout << "Name of game already in use." << endl << endl;
+  cout << "Press any key (then hit ENTER) to continue." << endl;
+  char c;
+  cin >> c;
+}
+
+void ConsoleDisplay::printUnableJoin() {
+  cout << "Can't join this game." << endl << endl;
+  cout << "Press any key (then hit ENTER) to continue." << endl;
+  char c;
+  cin >> c;
+}

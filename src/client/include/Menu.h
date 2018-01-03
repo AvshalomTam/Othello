@@ -1,26 +1,21 @@
-#ifndef MENU_H
-#define MENU_H
-enum game_type {local, computer, remote};
+#ifndef OTHELLO_TMP_H
+#define OTHELLO_TMP_H
+#include <string>
+#include <map>
+using namespace std;
 
-/**
- * Menu at opening of the game.
- */
 class Menu {
- public:
-  /**
-   * Prints a menu. Let's the player choose between playing against pc or player.
-   */
-  virtual void printMenu() = 0;
-  /**
-   * Sets the type of the game (versus pc or player).
-   */
-  virtual void setGameType() = 0;
-  /**
-   * @return type of game
-   */
-  game_type getGameType();
- protected:
-  game_type type_;
+  public:
+    Menu();
+    void title(string title);
+    void subTitle(string sub_title);
+    void addMenuOption(char key, string description);
+    virtual char getChoice() = 0;
+    virtual void printMenu() = 0;
+  protected:
+    string title_;
+    string sub_title_;
+    map<char, string> options;
 };
 
-#endif //MENU_H
+#endif //OTHELLO_TMP_H

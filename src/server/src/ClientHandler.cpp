@@ -3,12 +3,9 @@
 #include <unistd.h>
 #include <cstring>
 #include "../include/ClientHandler.h"
-#include "../include/GameRoom.h"
 #include "../include/CommandsManager.h"
 #include "../include/ThreadManager.h"
-
-vector<GameRoom> list;
-CommandsManager manager = CommandsManager(list);
+#include "../include/RoomsManager.h"
 
 static void* serveClient(void *tArgs);
 
@@ -25,10 +22,8 @@ void ClientHandler::handle(int client_socket) {
 static void* serveClient(void *tArgs) {
     int *c_socket = (int *) tArgs;
     int client_socket = *c_socket;
-	char buffer[50];
-	for (int i = 0; i < 50; i++) {
-		buffer[i] = '\0';
-	}
+	char buffer[50]  = "\0";
+
 	int n = read(client_socket, buffer, sizeof(buffer));
 	//if client closed the connection
 	if (n == 0) {
@@ -67,12 +62,10 @@ static void* serveClient(void *tArgs) {
 	if (two_words) {
 		command_arg.push_back(argument);
 	}
-	manager.executeCommand(command, command_arg);
+	CommandsManager::getInstance()->executeCommand(command, command_arg);
     ThreadManager::getInstance()->deleteThread(pthread_self());
 }
 
 ClientHandler::~ClientHandler() {
-	for (vector<GameRoom>::iterator it = list.begin(); it != list.end(); ++it) {
-		it->closeSockets();
-	}
+	RoomsManager::getInstance()->closeSockets();
 }

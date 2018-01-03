@@ -12,7 +12,7 @@ class Server {
    * Creates a socket and listens to incoming clients.
    * @param filePath path to file with information about ip and port
    */
-  void start(const char* filePath);
+  void start(char* filePath);
   /**
    * Closes the server.
    */

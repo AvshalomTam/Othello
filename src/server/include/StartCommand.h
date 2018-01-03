@@ -9,11 +9,9 @@
 
 class StartCommand : public Command {
 	public:
-		StartCommand(vector<GameRoom> list);
+		StartCommand();
 		void execute(vector<string> list);
 		//~StartCommand();
-	private:
-		vector<GameRoom> list_;
 };
 
 #endif //OTHELLO_STARTCOMMAND_H

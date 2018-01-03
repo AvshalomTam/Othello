@@ -1,33 +1,30 @@
-#include "../include/ConsoleMenu.h"
 #include <iostream>
-using namespace std;
+#include "../include/ConsoleMenu.h"
 
 void ConsoleMenu::printMenu() {
-	cout << endl << "\tOTHELLO" << endl << endl;
-	cout << "Choose an opponent type:" << endl << endl;
-	cout << "1. a human local player" << endl;
-	cout << "2. an AI player" << endl;
-	cout << "3. a remote player" << endl << endl;
-	this->setGameType();
+    if (this->title_ != "") {
+        cout << endl << "\t" + this->title_;
+    }
+    cout << endl << endl;
+    if (this->sub_title_ != "") {
+        cout << this->sub_title_ << endl << endl;
+    }
+    for (map<char, string>::iterator it = this->options.begin(); it != this->options.end(); ++it) {
+        cout <<"(" << it->first << ")" << " " << it->second << endl;
+    }
+    cout << endl;
 }
 
-void ConsoleMenu::setGameType() {
-	char choice;
-	while (true) {
-		cout << "Your choice: ";
-		cin >> choice;
-		if (choice == '1') {
-			this->type_ = local;
-			break;
-		}
-		if (choice == '2') {
-			this->type_ = computer;
-			break;
-		}
-		if (choice == '3') {
-			this->type_ = remote;
-			break;
-		}
-		cout << "wrong input" << endl;
-	}
+char ConsoleMenu::getChoice() {
+    char choice;
+    while (true) {
+        cout << "Your choice: ";
+        cin >> choice;
+        for (map<char, string>::iterator it = this->options.begin(); it != this->options.end(); ++it) {
+            if (choice == it->first) {
+                return choice;
+            }
+        }
+        cout << "wrong input" << endl;
+    }
 }

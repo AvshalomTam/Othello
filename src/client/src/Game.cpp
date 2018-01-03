@@ -2,25 +2,25 @@
 #include "../include/Game.h"
 #include "../include/CharBoard.h"
 #include "../include/BasicRules.h"
-#include "../include/ConsoleMenu.h"
+#include "../include/ConsoleMenu2.h"
 #include "../include/ConsoleDisplay.h"
+#include "../include/ConsoleMenu.h"
 #define NO_MOVE Coordinates(-1, -1)
 
 Game::Game() : frst_player_(true) {}
 
 void Game::initialize(const char* filePath) {
-  this->menu_ = new ConsoleMenu();
-  this->game_flow_ = new ConsoleDisplay();
-  this->board_ = new CharBoard(4);
-  this->judge_ = new BasicRules();
-  //print the menu
-  this->menu_->printMenu();
-  this->factory = new PlayerFactory(*this->board_, *this->judge_, *this->game_flow_,
-                                    this->menu_->getGameType(), filePath);
-  this->pl1_ = factory->getFirstPlayer();
-  this->pl2_ = factory->getSecondPlayer();
-  this->pl1_->setName("X");
-  this->pl2_->setName("O");
+    this->setup_ = new GameSetup(filePath);
+    this->setup_->setup();
+    this->game_flow_ = new ConsoleDisplay();
+    this->board_ = new CharBoard(4);
+    this->judge_ = new BasicRules();
+
+    this->factory = new PlayerFactory(*this->board_, *this->judge_, *this->game_flow_, *this->setup_);
+    this->pl1_ = factory->getFirstPlayer();
+    this->pl2_ = factory->getSecondPlayer();
+    this->pl1_->setName("X");
+    this->pl2_->setName("O");
 }
 
 void Game::run() {
@@ -71,7 +71,7 @@ void Game::playOneTurn(Player &pl) {
 }
 
 Game::~Game() {
-  delete this->menu_;
+    delete this->setup_;
   delete this->game_flow_;
   delete this->pl1_;
   delete this->pl2_;

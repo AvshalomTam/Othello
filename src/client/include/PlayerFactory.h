@@ -6,7 +6,8 @@
 #include "Display.h"
 #include "Listener.h"
 #include "Player.h"
-#include "Menu.h"
+#include "Menu2.h"
+#include "GameSetup.h"
 /**
  * This class creates objects of players according the game type.
  */
@@ -20,7 +21,7 @@ class PlayerFactory {
    * @param type game type (enum), local, computer or remote
    * @param file_path path to file containing the server information
    */
-  PlayerFactory(Board &board, GameLogic &judge, Display &display, game_type type, const char* file_path);
+  PlayerFactory(Board &board, GameLogic &judge, Display &display, GameSetup &setup);
   /**
    * @return the first player
    */

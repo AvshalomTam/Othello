@@ -2,7 +2,7 @@
 #include "../include/ClientHandler.h"
 #include "../include/GameRoom.h"
 #include "../include/ThreadManager.h"
-#include "../include/MutexManager.h"
+#include "../include/CommandsManager.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
@@ -15,7 +15,6 @@
 
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 10
-enum {wait = -5};
 
 int getPort(const char *filePath);
 static void* acceptClients(void *tArgs);
@@ -29,11 +28,32 @@ struct connection_info {
 
 Server::Server(): serverSocket(0) {}
 
-void Server::start(const char* filePath) {
+void Server::start(char* filePath) {
+	pthread_t games_thread;
+	int rc = pthread_create(&games_thread, NULL, acceptClients, filePath);
+	if (rc) {
+		cout << "Error: unable to create thread, " << rc << endl;
+		return;
+	}
+	ThreadManager::getInstance()->addThread(games_thread);
+
+	string end_server;
+	do {
+		cin >> end_server;
+	}
+	while (end_server != "exit");
+	close(serverSocket);
+	ThreadManager::getInstance()->closeThreads();
+	delete CommandsManager::getInstance();
+	delete ThreadManager::getInstance();
+}
+
+static void* acceptClients(void *tArgs) {
+	char* filePath = (char *) tArgs;
 	//get port from file
-	this->port = getPort(filePath);
+	int port = getPort(filePath);
 	// create a socket point
-	serverSocket = socket(AF_INET, SOCK_STREAM, 0);
+	int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
 	if (serverSocket == -1) {
 		throw "Error opening socket";
 	}
@@ -54,43 +74,17 @@ void Server::start(const char* filePath) {
 	struct sockaddr_in clientAddress;
 	socklen_t clientAddressLen;
 
-	connection_info info;
-	info.clientAddress = clientAddress;
-	info.clientAddressLen = clientAddressLen;
-	info.serverSocket = serverSocket;
-
 	ClientHandler handler;
-	info.handler = handler;
-	pthread_t games_thread;
-	int rc = pthread_create(&games_thread, NULL, acceptClients, &info);
-	if (rc) {
-		cout << "Error: unable to create thread, " << rc << endl;
-		return;
-	}
-	ThreadManager::getInstance()->addThread(games_thread);
 
-	string end_server;
-	do {
-		cin >> end_server;
-	}
-	while (end_server != "exit");
-	close(serverSocket);
-	ThreadManager::getInstance()->closeThreads();
-	delete ThreadManager::getInstance();
-	delete MutexManager::getInstance();
-}
-
-static void* acceptClients(void *tArgs) {
-	struct connection_info *args = (struct connection_info *) tArgs;
 	cout << "Waiting for clients..." << endl;
 	while (true) {
 		// Accept a new client connection
-		int clientSocket =
-				accept(args->serverSocket, (struct sockaddr *) &(args->clientAddress), &(args->clientAddressLen));
-		if (clientSocket == -1)
+		int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddress, &clientAddressLen);
+		if (clientSocket == -1) {
 			throw "Error on accept";
+		}
 		cout << "Client accepted" << endl;
-		args->handler.handle(clientSocket);
+		handler.handle(clientSocket);
 	}
 }
 

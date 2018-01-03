@@ -1,6 +1,7 @@
 #include "../include/GameManager.h"
 #include "pthread.h"
 #include "../include/ThreadManager.h"
+#include "../include/CommandsManager.h"
 #include <iostream>
 #include <unistd.h>
 using namespace std;
@@ -11,10 +12,10 @@ int middleMan(int clientSocketRead, int clientSocketWrite);
 GameManager::GameManager() {}
 static void* connectGamers(void *tArgs);
 
-void GameManager::createGame(GameRoom room) {
+void GameManager::createGame(GameRoom *room) {
     pthread_t game_thread;
 
-    int rc = pthread_create(&game_thread, NULL, connectGamers, &room);
+    int rc = pthread_create(&game_thread, NULL, connectGamers, room);
     if (rc) {
         cout << "Error: unable to create thread, " << rc << endl;
         return;
@@ -55,9 +56,12 @@ static void* connectGamers(void *tArgs) {
         first_socket = !first_socket;
     } while (m != 0);
 
-    room->finished();
+
     // Close communication with the client
     room->closeSockets();
+    vector<string> name;
+    name.push_back(room->getGameName());
+    CommandsManager::getInstance()->executeCommand("close", name);
     ThreadManager::getInstance()->deleteThread(pthread_self());
 }
 

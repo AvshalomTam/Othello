@@ -5,7 +5,7 @@
 class GameManager {
   public:
     GameManager();
-    void createGame(GameRoom room);
+    void createGame(GameRoom *room);
 };
 
 #endif //OTHELLO_GAMEMANAGER_H

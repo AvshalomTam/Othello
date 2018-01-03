@@ -2,36 +2,35 @@
 #include <unistd.h>
 #include <iostream>
 #include <string>
+#include <cstdlib>
 #include "../include/ListCommand.h"
-#include "../include/MutexManager.h"
+#include "../include/RoomsManager.h"
 using namespace std;
 
-ListCommand::ListCommand(vector<GameRoom> list) : list_(list) { }
+ListCommand::ListCommand() {}
 
 void ListCommand::execute(vector<string> list) {
-	string sckt = list[0];
-	int client_socket = 0;
-	int i = 0;
-	while (sckt[i] != '\0') {
-		client_socket = 10 * client_socket + sckt[i] - '0';
-		i++;
-	}
+	int client_socket = atoi(list[0].c_str());
 
-	pthread_mutex_lock(MutexManager::getInstance()->getGameRoomsMutex());
-	for (vector<GameRoom>::iterator it = this->list_.begin(); it != this->list_.end(); ++it) {
-		if (!it->isActive()) {
-			//write to client the names of the open games
-			int n;
-			string game_name = it->getGameName();
-			n = write(client_socket, &game_name, sizeof(game_name));
-			if (n == -1) {
-                cout << "Error writing to socket 1" << endl;
-				pthread_mutex_unlock(MutexManager::getInstance()->getGameRoomsMutex());
-				close(client_socket);
-				return;
-			}
+	vector<string> open_games = RoomsManager::getInstance()->getOpenRooms();
+	int ack;
+    for (vector<string>::iterator it = open_games.begin(); it != open_games.end(); ++it) {
+		//write to client the names of the open games
+		int n;
+		string game_name = *it;
+		n = write(client_socket, game_name.data(), game_name.size());
+		if (n == -1) {
+			cout << "Error writing to socket 1" << endl;
+			close(client_socket);
+			return;
 		}
+        n = read(client_socket, &ack, sizeof(int));
+        if (n == -1) {
+            cout << "Error writing to socket 1" << endl;
+            close(client_socket);
+            return;
+        }
+
 	}
-	pthread_mutex_unlock(MutexManager::getInstance()->getGameRoomsMutex());
 	close(client_socket);
 }

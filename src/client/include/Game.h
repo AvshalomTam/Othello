@@ -4,7 +4,7 @@
 #include "Board.h"
 #include "HumanPlayer.h"
 #include "GameLogic.h"
-#include "Menu.h"
+#include "Menu2.h"
 #include "Display.h"
 #include "MoveTracker.h"
 #include "PlayerFactory.h"
@@ -36,7 +36,7 @@ class Game {
     ~Game();
   private:
     PlayerFactory* factory;
-    Menu* menu_;
+    GameSetup* setup_;
     Display* game_flow_;
     Board* board_; // pointer, so it can point to inherited
     Player* pl1_; // pointer, so it can point to inherited
