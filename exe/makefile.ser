@@ -1,8 +1,8 @@
 a.out:  compile
-	g++ -o a.out_server *.o
+	g++ -pthread -o a.out_server *.o
 	rm -f *.o
 
 compile:	../src/server/*.cpp ../src/server/include/*.h ../src/server/src/*.cpp
-	g++ -c ../src/server/*.cpp ../src/server/src/*.cpp
+	g++ -pthread -c ../src/server/*.cpp ../src/server/src/*.cpp
 run:
 	./a.out_server

@@ -75,6 +75,7 @@ class ConsoleDisplay : public Display {
     void printNameOccupied();
     void printUnableJoin();
     void pressAnyKey();
+    void nonAvailable();
 };
 
 #endif //ConsoleDisplay_H

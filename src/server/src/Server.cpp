@@ -28,9 +28,9 @@ struct connection_info {
 
 Server::Server(): serverSocket(0) {}
 
-void Server::start(char* filePath) {
+void Server::start(const char* filePath) {
 	pthread_t games_thread;
-	int rc = pthread_create(&games_thread, NULL, acceptClients, filePath);
+	int rc = pthread_create(&games_thread, NULL, acceptClients, &filePath);
 	if (rc) {
 		cout << "Error: unable to create thread, " << rc << endl;
 		return;
@@ -49,7 +49,8 @@ void Server::start(char* filePath) {
 }
 
 static void* acceptClients(void *tArgs) {
-	char* filePath = (char *) tArgs;
+	const char** fPath = (const char **) tArgs;
+	const char* filePath = *fPath;
 	//get port from file
 	int port = getPort(filePath);
 	// create a socket point

@@ -103,3 +103,7 @@ void ConsoleDisplay::printNameOccupied() {
 void ConsoleDisplay::printUnableJoin() {
   cout << "Can't join this game." << endl << endl;
 }
+
+void ConsoleDisplay::nonAvailable() {
+    cout << endl << "There are no available games." << endl << endl;
+}

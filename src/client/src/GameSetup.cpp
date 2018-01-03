@@ -16,11 +16,11 @@ void GameSetup::setup() {
     this->main_menu_->printMenu();
     char choice = this->main_menu_->getChoice();
     switch (choice) {
-        case '1':   this->type_ = local;
-                    return;
+        case '1': this->type_ = local;
+            return;
 
-        case '2':   this->type_ = computer;
-                    return;
+        case '2': this->type_ = computer;
+            return;
 
         case '3':   while (true) {
                         int n = remoteSetup();
@@ -142,17 +142,25 @@ int GameSetup::listGames() {
     }
     char buffer[50] = "\0";
     n = read(socket, buffer, sizeof(buffer));
+    int amount = 0;
     while (n != 0) {
         if (n == -1 ) {
             throw "Error reading from server";
         }
+        amount++;
         this->display->printGameName(buffer);
+        for (int i = 0; i < 50; i++) {
+            buffer[i] = '\0';
+        }
         int ack = 1;
         n = write(socket, &ack, sizeof(int));
         if (n == -1 ) {
             throw "Error writing to server server";
         }
         n = read(socket, buffer, sizeof(buffer));
+    }
+    if (amount == 0) {
+        this->display->nonAvailable();
     }
     close(socket);
     this->display->pressAnyKey();

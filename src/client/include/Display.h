@@ -77,6 +77,7 @@ class Display {
     virtual void printNameOccupied() = 0;
     virtual void printUnableJoin() = 0;
     virtual void pressAnyKey() = 0;
+    virtual void nonAvailable() = 0;
 };
 
 #endif //Display_H
