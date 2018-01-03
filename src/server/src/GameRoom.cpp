@@ -1,11 +1,11 @@
 #include <unistd.h>
 #include "../include/GameRoom.h"
 
-GameRoom::GameRoom(const char* name, int client_socket1) : game_name_(name), client_socket1_(client_socket1), client_socket2_(-1) {
+GameRoom::GameRoom(string name, int client_socket1) : game_name_(name), client_socket1_(client_socket1), client_socket2_(-1) {
 	this->active_ = false;
 }
 
-const char* GameRoom::getGameName() {
+string GameRoom::getGameName() {
 	return this->game_name_;
 }
 
@@ -30,6 +30,10 @@ int GameRoom::getClientSocket1() {
 
 int GameRoom::getClientSocket2() {
 	return this->client_socket2_;
+}
+
+void GameRoom::setSocket1(int socket) {
+	this->client_socket1_ = socket;
 }
 
 void GameRoom::setSocket2(int socket) {

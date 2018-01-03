@@ -1,4 +1,5 @@
 #include <vector>
+#include <iostream>
 #include "../include/GameSetup.h"
 #include "../include/Menu.h"
 #include "../include/ConsoleMenu.h"
@@ -40,71 +41,12 @@ int GameSetup::remoteSetup() {
     string command;
     string game_name;
     vector<char*> list;
-    char buffer[50] = "\0";
     switch (choice) {
-        case '1':   socket = createConnection();
-                    command = "list_games";
-                    n = write(socket, command.data(), command.size());
-                    if (n == -1) {
-                        throw "Error writing to server";
-                    }
-                    n = read(socket, buffer, sizeof(buffer));
-                    while (n != 0) {
-                        if (n == -1 ) {
-                            throw "Error reading from server";
-                        }
-                        list.push_back(buffer);
-                        int ack = 1;
-                        n = write(socket, &ack, sizeof(int));
-                        if (n == -1 ) {
-                            throw "Error writing to server server";
-                        }
-                        n = read(socket, buffer, sizeof(buffer));
-                    }
-                    close(socket);
-                    this->display->printListGames(list);
-                    return 0;
+        case '1': return listGames();
 
-        case '2':   game_name = this->display->getGameName();
-                    command = "join ";
-                    command.append(game_name);
-                    socket = createConnection();
-                    n = write(socket, command.data(), command.size());
-                    if (n == -1) {
-                        throw "Error writing to server";
-                    }
-                    n = read(socket, &number, sizeof(number));
-                    if (n == -1) {
-                        throw "Error reading from server";
-                    }
-                    if (number == -1) {
-                        this->display->printUnableJoin();
-                        close(socket);
-                        return 0;
-                    }
-                    this->socket_ = socket;
-                    return 1;
+        case '2': return joinGame();
 
-        case '3':   game_name = this->display->getGameName();
-                    command = "start ";
-                    command.append(game_name);
-                    socket = createConnection();
-                    n = write(socket, command.data(), command.size());
-                    if (n == -1) {
-                        throw "Error writing to server";
-                    }
-                    n = read(socket, &number, sizeof(number));
-                    if (n == -1) {
-                        throw "Error reading from server";
-                    }
-                    if (number == -1) {
-                        this->display->printNameOccupied();
-                        close(socket);
-                        return 0;
-                    }
-                    this->display->waitForOtherPlayerConnect();
-                    this->socket_ = socket;
-                    return 1;
+        case '3': return startGame();
     }
 }
 
@@ -189,4 +131,79 @@ GameSetup::~GameSetup() {
     delete this->main_menu_;
     delete this->remote_menu_;
     delete this->display;
+}
+
+int GameSetup::listGames() {
+    int socket = createConnection();
+    string command = "list_games";
+    int n = write(socket, command.data(), command.size());
+    if (n == -1) {
+        throw "Error writing to server";
+    }
+    char buffer[50] = "\0";
+    n = read(socket, buffer, sizeof(buffer));
+    while (n != 0) {
+        if (n == -1 ) {
+            throw "Error reading from server";
+        }
+        this->display->printGameName(buffer);
+        int ack = 1;
+        n = write(socket, &ack, sizeof(int));
+        if (n == -1 ) {
+            throw "Error writing to server server";
+        }
+        n = read(socket, buffer, sizeof(buffer));
+    }
+    close(socket);
+    this->display->pressAnyKey();
+    return 0;
+}
+
+int GameSetup::joinGame() {
+    string game_name = this->display->getGameName();
+    string command = "join ";
+    command.append(game_name);
+    int socket = createConnection();
+    int n = write(socket, command.data(), command.size());
+    if (n == -1) {
+        throw "Error writing to server";
+    }
+    int number;
+    n = read(socket, &number, sizeof(number));
+    if (n == -1) {
+        throw "Error reading from server";
+    }
+    if (number == -1) {
+        close(socket);
+        this->display->printUnableJoin();
+        this->display->pressAnyKey();
+        return 0;
+    }
+    this->socket_ = socket;
+    return 1;
+}
+
+int GameSetup::startGame() {
+    string game_name = this->display->getGameName();
+    string command = "start ";
+    command.append(game_name);
+    int socket = createConnection();
+    int n = write(socket, command.data(), command.size());
+    if (n == -1) {
+        throw "Error writing to server";
+    }
+    int number;
+    n = read(socket, &number, sizeof(number));
+    if (n == -1) {
+        throw "Error reading from server";
+    }
+    if (number == -1) {
+        close(socket);
+        this->display->printNameOccupied();
+        this->display->pressAnyKey();
+        return 0;
+    }
+    this->display->waitForOtherPlayerConnect();
+    this->socket_ = socket;
+    return 1;
 }

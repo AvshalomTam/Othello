@@ -72,10 +72,11 @@ class Display {
    * @param str an appropiate message
    */
   virtual void serverDisconnect(const char *str) = 0;
-    virtual void printListGames(vector<char*> list) = 0;
+    virtual void printGameName(char* name) = 0;
     virtual string getGameName() = 0;
     virtual void printNameOccupied() = 0;
     virtual void printUnableJoin() = 0;
+    virtual void pressAnyKey() = 0;
 };
 
 #endif //Display_H

@@ -11,9 +11,8 @@ using namespace std;
 void StartCommand::execute(vector<string> list) {
     int client_socket = atoi(list[0].c_str());
 
-    const char *game_name = list[1].c_str();
-    GameRoom game = GameRoom(game_name, client_socket);
-    int n = RoomsManager::getInstance()->addRoom(game);
+    GameRoom room = GameRoom(list[1].c_str(), client_socket);
+    int n = (RoomsManager::getInstance())->addRoom(room);
 
     if (n == 0) {
         int error = -1;

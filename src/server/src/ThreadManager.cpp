@@ -29,16 +29,13 @@ void ThreadManager::closeThreads() {
 }
 
 void ThreadManager::deleteThread(pthread_t p) {
-    /*vector<pthread_t > tmp;
     vector<pthread_t >::iterator it;
     pthread_mutex_lock(&lock);
     for (it = list_.begin(); it != list_.end(); ++it) {
-        tmp.push_back(*it);
-    }
-    for (it = tmp.begin(); it != tmp.end(); ++it) {
         if (*it == p) {
-            list_.erase(it);
+            break;
         }
     }
-    pthread_mutex_unlock(&lock);*/
+    list_.erase(it);
+    pthread_mutex_unlock(&lock);
 }

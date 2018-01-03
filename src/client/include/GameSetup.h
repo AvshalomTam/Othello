@@ -25,6 +25,9 @@ class GameSetup {
     int createConnection();
     int getSocket();
     ~GameSetup();
+    int listGames();
+    int joinGame();
+    int startGame();
   private:
     game_type type_;
     int socket_;

@@ -5,16 +5,17 @@ using namespace std;
 
 class GameRoom {
   public:
-	GameRoom(const char* name, int client_socket1);
+	GameRoom(string name, int client_socket1);
+	void setSocket1(int socket);
 	void setSocket2(int socket);
-	const char* getGameName();
+	string getGameName();
 	int getClientSocket1();
 	int getClientSocket2();
 	void setActive();
 	bool isActive();
 	void closeSockets();
   private:
-	const char* game_name_;
+	string game_name_;
 	int client_socket1_;
 	int client_socket2_;
 	bool active_;

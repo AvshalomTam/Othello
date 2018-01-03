@@ -6,7 +6,7 @@
 class RoomsManager {
   public:
     static RoomsManager* getInstance();
-    int addRoom(GameRoom room);
+    int addRoom(GameRoom &room);
     void removeRoom(string room);
     GameRoom* addPLayer(string name);
     vector<string> getOpenRooms();

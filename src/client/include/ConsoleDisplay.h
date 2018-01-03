@@ -70,10 +70,11 @@ class ConsoleDisplay : public Display {
    * @param str an appropiate message
    */
   void serverDisconnect(const char *str);
-    void printListGames(vector<char*> list);
+    void printGameName(char* name);
     string getGameName();
     void printNameOccupied();
     void printUnableJoin();
+    void pressAnyKey();
 };
 
 #endif //ConsoleDisplay_H
