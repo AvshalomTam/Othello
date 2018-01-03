@@ -70,8 +70,17 @@ vector<string> RoomsManager::getOpenRooms() {
     return open;
 }
 
-void RoomsManager::closeSockets() {
+RoomsManager::~RoomsManager() {
+    if (this->list_.empty()) {
+        return;
+    }
     for (vector<GameRoom>::iterator it = this->list_.begin(); it != this->list_.end(); ++it) {
         it->closeSockets();
+    }
+}
+void RoomsManager::resetInstance() {
+    if (instance != 0) {
+        delete instance;
+        instance = 0;
     }
 }

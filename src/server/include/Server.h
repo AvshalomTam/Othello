@@ -1,7 +1,7 @@
 #ifndef SERVER_SERVER_H
 #define SERVER_SERVER_H
 
-
+#include "ClientHandler.h"
 class Server {
  public:
   /**
@@ -22,10 +22,8 @@ class Server {
    * @param clientSocket1 socket from which client 1 listens
    * @param clientSocket2 socket from which client 2 listens
    */
-  /*static void handleClients(int clientSocket1, int clientSocket2);
-  static void *operateGame(void *tArgs);*/
  private:
-  int port;
+    ClientHandler handler_;
   int serverSocket; // the socket's file descriptor
 };
 

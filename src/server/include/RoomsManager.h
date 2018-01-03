@@ -6,11 +6,12 @@
 class RoomsManager {
   public:
     static RoomsManager* getInstance();
+    static void resetInstance();
     int addRoom(GameRoom &room);
     void removeRoom(string room);
     GameRoom* addPLayer(string name);
     vector<string> getOpenRooms();
-    void closeSockets();
+    ~RoomsManager();
   private:
     static RoomsManager* instance;
     static pthread_mutex_t lock;

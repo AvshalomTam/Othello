@@ -8,12 +8,13 @@ using namespace std;
 class ThreadManager {
   public:
     static ThreadManager* getInstance();
+    static void resetInstance();
     void addThread(pthread_t p);
-    void closeThreads();
     void deleteThread(pthread_t p);
+    ~ThreadManager();
   private:
     vector<pthread_t> list_;
-    static ThreadManager *manager_;
+    static ThreadManager *instance;
     static pthread_mutex_t lock;
 };
 

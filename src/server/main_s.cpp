@@ -9,7 +9,7 @@ int main() {
     server.start("../exe/server_settings.txt");
   } catch (const char *msg) {
     cout << "Cannot start server. Reason: " << msg << endl;
-    exit(-1);
+    return 0;
   }
   server.stop();
   return 0;

@@ -3,6 +3,7 @@
 #include "../include/GameRoom.h"
 #include "../include/ThreadManager.h"
 #include "../include/CommandsManager.h"
+#include "../include/RoomsManager.h"
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <unistd.h>
@@ -16,14 +17,22 @@
 using namespace std;
 #define MAX_CONNECTED_CLIENTS 10
 
+struct thread_info {
+    const char* filePath;
+    ClientHandler handler;
+};
+
 int getPort(const char *filePath);
 static void* acceptClients(void *tArgs);
 
 Server::Server(): serverSocket(0) {}
 
 void Server::start(const char* filePath) {
+    thread_info t_args;
+    t_args.handler = this->handler_;
+    t_args.filePath = filePath;
 	pthread_t games_thread;
-	int rc = pthread_create(&games_thread, NULL, acceptClients, &filePath);
+	int rc = pthread_create(&games_thread, NULL, acceptClients, &t_args);
 	if (rc) {
 		cout << "Error: unable to create thread, " << rc << endl;
 		return;
@@ -35,15 +44,13 @@ void Server::start(const char* filePath) {
 		cin >> end_server;
 	}
 	while (end_server != "exit");
-	close(serverSocket);
-	ThreadManager::getInstance()->closeThreads();
-	delete CommandsManager::getInstance();
-	delete ThreadManager::getInstance();
 }
 
 static void* acceptClients(void *tArgs) {
-	const char** fPath = (const char **) tArgs;
-	const char* filePath = *fPath;
+	struct thread_info* t_info = (struct thread_info*) tArgs;
+    const char *filePath = t_info->filePath;
+    //const char** fPath = (const char **) tArgs;
+	//const char* filePath = *fPath;
 	//get port from file
 	int port = getPort(filePath);
 	// create a socket point
@@ -68,8 +75,6 @@ static void* acceptClients(void *tArgs) {
 	struct sockaddr_in clientAddress;
 	socklen_t clientAddressLen;
 
-	ClientHandler handler;
-
 	cout << "Waiting for clients..." << endl;
 	while (true) {
 		// Accept a new client connection
@@ -77,8 +82,7 @@ static void* acceptClients(void *tArgs) {
 		if (clientSocket == -1) {
 			throw "Error on accept";
 		}
-		cout << "Client accepted" << endl;
-		handler.handle(clientSocket);
+		t_info->handler.handle(clientSocket);
 	}
 }
 

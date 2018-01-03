@@ -12,6 +12,7 @@
 class CommandsManager {
  public:
     static CommandsManager* getInstance();
+    static void resetInstance();
     void executeCommand(string command, vector<string> list);
     ~CommandsManager();
  private:

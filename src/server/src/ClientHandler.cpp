@@ -19,6 +19,12 @@ void ClientHandler::handle(int client_socket) {
 	ThreadManager::getInstance()->addThread(serve_client);
 }
 
+ClientHandler::~ClientHandler() {
+	RoomsManager::resetInstance();
+	CommandsManager::resetInstance();
+	ThreadManager::resetInstance();
+}
+
 static void* serveClient(void *tArgs) {
     int *c_socket = (int *) tArgs;
     int client_socket = *c_socket;
@@ -64,8 +70,4 @@ static void* serveClient(void *tArgs) {
 	}
 	CommandsManager::getInstance()->executeCommand(command, command_arg);
     ThreadManager::getInstance()->deleteThread(pthread_self());
-}
-
-ClientHandler::~ClientHandler() {
-	RoomsManager::getInstance()->closeSockets();
 }

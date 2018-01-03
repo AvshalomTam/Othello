@@ -5,9 +5,9 @@
 using namespace std;
 
 class ClientHandler {
-	public:
-		void handle(int client_socket);
-		~ClientHandler();
+  public:
+	void handle(int client_socket);
+	~ClientHandler();
 };
 
 #endif //CLIENTHANDLER_H

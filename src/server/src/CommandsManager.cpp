@@ -1,3 +1,4 @@
+#include <iostream>
 #include "../include/CommandsManager.h"
 #include "../include/StartCommand.h"
 #include "../include/ListCommand.h"
@@ -32,8 +33,15 @@ void CommandsManager::executeCommand(string command, vector<string> list) {
 
 CommandsManager::~CommandsManager() {
 	map<string, Command *>::iterator it;
-	for (it = this->commandsMap_.begin(); it != this->commandsMap_.end(); it++) {
+	for (it = this->commandsMap_.begin(); it != this->commandsMap_.end(); ++it) {
 		delete it->second;
+	}
+}
+
+void CommandsManager::resetInstance() {
+	if (instance != 0) {
+		delete instance;
+		instance = 0;
 	}
 }
 
