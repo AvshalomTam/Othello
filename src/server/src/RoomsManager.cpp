@@ -78,6 +78,7 @@ RoomsManager::~RoomsManager() {
         it->closeSockets();
     }
 }
+
 void RoomsManager::resetInstance() {
     if (instance != 0) {
         delete instance;

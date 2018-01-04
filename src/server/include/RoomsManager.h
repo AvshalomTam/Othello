@@ -2,6 +2,7 @@
 #define OTHELLO_ROOMSMANAGER_H
 
 #include <vector>
+#include <list>
 #include "GameRoom.h"
 class RoomsManager {
   public:

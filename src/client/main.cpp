@@ -2,17 +2,18 @@
 // 203829478 Avshalom Tam
 
 #include <iostream>
+#include <cstdlib>
 #include "include/Game.h"
 
 using namespace std;
 
 int main() {
+    Game game;
     try {
-        Game game;
         game.initialize("../exe/client_settings.txt");
         game.run();
     } catch (const char* e) {
-        //just ignore and finish the game
+        exit(0);
     }
     return 0;
 }

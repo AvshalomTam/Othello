@@ -6,6 +6,7 @@
 #include <netdb.h>
 #include <strings.h>
 #include <cstring>
+#include <cstdlib>
 #include "../include/PlayerFactory.h"
 #include "../include/MoveTracker.h"
 #include "../include/HumanPlayer.h"
@@ -14,6 +15,8 @@
 #include "../include/RemotePlayer.h"
 
 PlayerFactory::PlayerFactory(Board &board, GameLogic &judge, Display &display, GameSetup &setup) {
+	this->pl1_ = NULL;
+	this->pl2_ = NULL;
 	this->move_tracker_ = NULL;
 	this->server_messenger_ = NULL;
 	game_type type = setup.getGameType();
@@ -38,9 +41,11 @@ PlayerFactory::PlayerFactory(Board &board, GameLogic &judge, Display &display, G
 		int clientSocket = setup.getSocket();
 		int n = read(clientSocket, &number, sizeof(number));
 		if (n == -1) {
+            close(clientSocket);
 			throw "Error reading from server";
 		}
 		if (n == 0) {
+            close(clientSocket);
 			throw "Server disconnected.";
 		}
 		this->move_tracker_ = new MoveTracker();
@@ -71,8 +76,16 @@ Player* PlayerFactory::getSecondPlayer() {
 }
 
 PlayerFactory::~PlayerFactory() {
-	delete this->move_tracker_;
-	delete this->server_messenger_;
-    delete this->pl1_;
-    delete this->pl2_;
+	if (NULL != this->move_tracker_) {
+		delete this->move_tracker_;
+	}
+	if (NULL != this->server_messenger_) {
+		delete this->server_messenger_;
+	}
+	if (NULL != this->pl1_) {
+		delete this->pl1_;
+	}
+	if (NULL != this->pl2_) {
+		delete this->pl2_;
+	}
 }

@@ -7,6 +7,9 @@
 #define MAX_NAME_LENGTH 50
 
 GameSetup::GameSetup(const char *filePath) : filepath_(filePath) {
+    this->display = NULL;
+    this->main_menu_ = NULL;
+    this->remote_menu_ = NULL;
     setMainMenu();
     setRemoteMenu();
     setServerAddress();
@@ -123,9 +126,15 @@ int GameSetup::createConnection() {
 }
 
 GameSetup::~GameSetup() {
-    delete this->main_menu_;
-    delete this->remote_menu_;
-    delete this->display;
+    if (NULL != this->main_menu_) {
+        delete this->main_menu_;
+    }
+    if (NULL != this->remote_menu_) {
+        delete this->remote_menu_;
+    }
+    if (NULL != this->display) {
+        delete this->display;
+    }
 }
 
 int GameSetup::listGames() {

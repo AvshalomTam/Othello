@@ -6,6 +6,7 @@
 #include "../include/CommandsManager.h"
 #include "../include/ThreadManager.h"
 #include "../include/RoomsManager.h"
+#define MAX_NAME_LENGTH 50
 
 static void* serveClient(void *tArgs);
 
@@ -20,15 +21,15 @@ void ClientHandler::handle(int client_socket) {
 }
 
 ClientHandler::~ClientHandler() {
+    ThreadManager::resetInstance();
 	RoomsManager::resetInstance();
 	CommandsManager::resetInstance();
-	ThreadManager::resetInstance();
 }
 
 static void* serveClient(void *tArgs) {
     int *c_socket = (int *) tArgs;
     int client_socket = *c_socket;
-	char buffer[50]  = "\0";
+	char buffer[MAX_NAME_LENGTH]  = "\0";
 
 	int n = read(client_socket, buffer, sizeof(buffer));
 	//if client closed the connection
@@ -40,8 +41,8 @@ static void* serveClient(void *tArgs) {
 		return 0;
 	}
 	bool two_words;
-	char command[50];
-	char argument[50];
+	char command[MAX_NAME_LENGTH];
+	char argument[MAX_NAME_LENGTH];
 	char* pch;
 	pch = strchr(buffer, ' ');
 	if (pch == NULL) {

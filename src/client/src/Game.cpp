@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstdlib>
 #include "../include/Game.h"
 #include "../include/CharBoard.h"
 #include "../include/BasicRules.h"
@@ -9,16 +10,24 @@
 Game::Game() : frst_player_(true) {}
 
 void Game::initialize(const char* filePath) {
-    this->board_ = new CharBoard(4);
+    this->board_ = new CharBoard();
     this->game_flow_ = new ConsoleDisplay();
     this->setup_ = new GameSetup(filePath);
     this->judge_ = new BasicRules();
+	this->factory = NULL;
 	try {
 		this->setup_->setup();
 		this->factory = new PlayerFactory(*this->board_, *this->judge_, *this->game_flow_, *this->setup_);
 	} catch (const char* e) {
 		this->game_flow_->serverDisconnect(e);
-		throw "finish";
+		if (NULL != this->factory) {
+			delete factory;
+		}
+		delete this->board_;
+		delete this->game_flow_;
+		delete this->setup_;
+		delete this->judge_;
+		throw "error";
 	}
 	this->pl1_ = factory->getFirstPlayer();
 	this->pl2_ = factory->getSecondPlayer();
