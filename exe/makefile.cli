@@ -1,0 +1,8 @@
+a.out:  compile
+	g++ -pthread -o a.out_client *.o
+	rm -f *.o
+
+compile:	../src/client/*.cpp ../src/client/include/*.h ../src/client/src/*.cpp
+	g++ -pthread -c ../src/client/*.cpp ../src/client/src/*.cpp
+run:
+	./a.out_client
