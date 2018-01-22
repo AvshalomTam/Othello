@@ -24,7 +24,7 @@ class Server {
    */
  private:
     ClientHandler handler_;
-  int serverSocket; // the socket's file descriptor
+    int serverSocket; // the socket's file descriptor
 };
 
 #endif //SERVER_SERVER_H

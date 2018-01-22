@@ -6,7 +6,7 @@ using namespace std;
 
 class Command {
 	public:
-		virtual void execute(vector<string> list) = 0;
+		virtual void execute(vector<string> list) {}
 		virtual ~Command() {}
 };
 

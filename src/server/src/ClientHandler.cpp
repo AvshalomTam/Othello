@@ -10,23 +10,21 @@
 
 static void* serveClient(void *tArgs);
 
+ClientHandler::ClientHandler() : pool(ThreadPool(THREADS_NUM)) { }
+
 void ClientHandler::handle(int client_socket) {
-	pthread_t serve_client;
-    int rc = pthread_create(&serve_client, NULL, serveClient, &client_socket);
-	if (rc) {
-		cout << "Error: unable to create thread, " << rc << endl;
-		return;
-	}
-	ThreadManager::getInstance()->addThread(serve_client);
+	Task* task = new Task(serveClient, &client_socket);
+    this->pool.addTask(task);
 }
 
 ClientHandler::~ClientHandler() {
-    ThreadManager::resetInstance();
+	this->pool.terminate();
+	ThreadManager::resetInstance();
 	RoomsManager::resetInstance();
 	CommandsManager::resetInstance();
 }
 
-static void* serveClient(void *tArgs) {
+void* serveClient(void *tArgs) {
     int *c_socket = (int *) tArgs;
     int client_socket = *c_socket;
 	char buffer[MAX_NAME_LENGTH]  = "\0";
@@ -70,5 +68,4 @@ static void* serveClient(void *tArgs) {
 		command_arg.push_back(argument);
 	}
 	CommandsManager::getInstance()->executeCommand(command, command_arg);
-    ThreadManager::getInstance()->deleteThread(pthread_self());
 }

@@ -49,9 +49,7 @@ void Server::start(const char* filePath) {
 static void* acceptClients(void *tArgs) {
 	struct thread_info* t_info = (struct thread_info*) tArgs;
     const char *filePath = t_info->filePath;
-    //const char** fPath = (const char **) tArgs;
-	//const char* filePath = *fPath;
-	//get port from file
+    //get port from file
 	int port = getPort(filePath);
 	// create a socket point
 	int serverSocket = socket(AF_INET, SOCK_STREAM, 0);
