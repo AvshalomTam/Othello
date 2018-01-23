@@ -13,7 +13,7 @@ int main() {
         game.initialize("../exe/client_settings.txt");
         game.run();
     } catch (const char* e) {
-        exit(0);
+        //exit(0);
     }
     return 0;
 }

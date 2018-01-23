@@ -36,6 +36,7 @@ CommandsManager::~CommandsManager() {
 	for (it = this->commandsMap_.begin(); it != this->commandsMap_.end(); ++it) {
 		delete it->second;
 	}
+	pthread_mutex_destroy(&lock);
 }
 
 void CommandsManager::resetInstance() {

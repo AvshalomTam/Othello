@@ -120,7 +120,7 @@ int GameSetup::createConnection() {
     }
     // Establish a connection with the TCP server
     if (connect(client_socket, (struct sockaddr *)&this->serverAddress, sizeof(this->serverAddress)) == -1) {
-        throw "Error connecting to server";
+        throw "Server disconnected";
     }
     return client_socket;
 }

@@ -15,6 +15,7 @@ class ThreadPool {
     void terminate();
     virtual ~ThreadPool();
   private:
+    int theadsNum;
     queue<Task *> tasksQueue;
     pthread_t* threads;
     void executeTasks();

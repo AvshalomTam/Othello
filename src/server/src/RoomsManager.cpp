@@ -71,6 +71,7 @@ vector<string> RoomsManager::getOpenRooms() {
 }
 
 RoomsManager::~RoomsManager() {
+    pthread_mutex_destroy(&lock);
     if (this->list_.empty()) {
         return;
     }

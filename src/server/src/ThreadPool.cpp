@@ -1,17 +1,12 @@
-//
-// Created by avshalom on 1/22/18.
-//
-
 #include "../include/ThreadPool.h"
 #include <unistd.h>
 #include <iostream>
-ThreadPool::ThreadPool(int threadsNum) :
-    stopped(false) {
+ThreadPool::ThreadPool(int threadsNum) : theadsNum(threadsNum), stopped(false) {
     threads = new pthread_t[threadsNum];
     for (int i = 0; i < threadsNum; i++) {
         pthread_create(threads + i, NULL, execute, this);
     }
-    pthread_mutex_init(&lock, NULL);
+    //pthread_mutex_init(&lock, NULL);
 }
 
 void* ThreadPool::execute(void *arg) {
@@ -49,9 +44,10 @@ void ThreadPool::terminate() {
         delete task;
         tasksQueue.pop();
     }
+    for (int i = 0; i < this->theadsNum; i++) {
+        pthread_cancel(threads[i]);
+    }
     delete[] threads;
 }
 
-ThreadPool::~ThreadPool() {
-    cout << "destructor of threadpool\n";
-}
+ThreadPool::~ThreadPool() {}
